@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Sep  9 10:15:14 2017
+# Process ID: 15208
+# Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14936 E:\Work_File\CEPC\Logic\DIF-Logic\ECAL_DIF\ECAL_DIF.xpr
+# Log file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/vivado.log
+# Journal file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Sep  9 10:15:14 2017
+# Process ID: 15208
+# Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14936 E:\Work_File\CEPC\Logic\DIF-Logic\ECAL_DIF\ECAL_DIF.xpr
+# Log file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/vivado.log
+# Journal file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 805.184 ; gain = 54.133
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sat Sep  9 10:59:42 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sat Sep  9 12:06:55 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  9 12:44:00 2017...

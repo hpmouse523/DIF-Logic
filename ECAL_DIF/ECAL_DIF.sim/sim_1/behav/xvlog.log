@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/sim/Ex_Fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ex_Fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sim_1/new/Sim_USB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Sim_USB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

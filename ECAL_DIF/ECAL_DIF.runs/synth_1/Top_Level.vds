@@ -1,0 +1,1165 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Sep 11 18:47:41 2017
+# Process ID: 16424
+# Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1
+# Command line: vivado.exe -log Top_Level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level.tcl
+# Log file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.vds
+# Journal file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_Level.tcl -notrace
+Command: synth_design -top Top_Level -part xc7a100tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6752 
+WARNING: [Synth 8-1102] /* in comment [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:466]
+WARNING: [Synth 8-1102] /* in comment [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:480]
+WARNING: [Synth 8-1102] /* in comment [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:484]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 376.441 ; gain = 92.434
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top_Level' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:21]
+	Parameter DATA_2_USB bound to: 16'b1010101001010101 
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (1#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
+INFO: [Synth 8-638] synthesizing module 'ODDR2' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:25676]
+	Parameter DDR_ALIGNMENT bound to: NONE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR2' (2#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:25676]
+INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22272]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUF' (3#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22272]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (4#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'PLL_40M' [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M.v:71]
+INFO: [Synth 8-638] synthesizing module 'PLL_40M_clk_wiz' [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_clk_wiz.v:69]
+INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:33019]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 21 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 12.500000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 21 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 84 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 2 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (5#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:33019]
+INFO: [Synth 8-256] done synthesizing module 'PLL_40M_clk_wiz' (6#1) [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'PLL_40M' (7#1) [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M.v:71]
+INFO: [Synth 8-638] synthesizing module 'USB_Con' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/USB_Con.vhd:36]
+INFO: [Synth 8-3491] module 'SlaveFifoRead' declared at 'E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:6' bound to instance 'SlaveFifoRead_inst' of component 'SlaveFifoRead' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/USB_Con.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'SlaveFifoRead' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:21]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:34]
+WARNING: [Synth 8-6014] Unused sequential element DRS_Eval_Config_Reg_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'SlaveFifoRead' (8#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:21]
+INFO: [Synth 8-3491] module 'SlaveFifoWrite' declared at 'E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:7' bound to instance 'SlaveFifoWrite_inst' of component 'SlaveFifoWrite' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/USB_Con.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'SlaveFifoWrite' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:24]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'SlaveFifoWrite' (9#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'USB_Con' (10#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/USB_Con.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'Ex_Fifo' [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/synth/Ex_Fifo.vhd:73]
+	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 16 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 2 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 4kx9 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 2 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 3 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 4093 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 4092 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_RD_DEPTH bound to: 4096 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 12 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter C_WR_DEPTH bound to: 4096 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 12 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_1_4' declared at 'e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd:38271' bound to instance 'U0' of component 'fifo_generator_v13_1_4' [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/synth/Ex_Fifo.vhd:540]
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed. 
+INFO: [Synth 8-256] done synthesizing module 'Ex_Fifo' (36#1) [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/synth/Ex_Fifo.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'usb_command_interpreter' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:21]
+	Parameter TOTAL_NUM_EX_TRIG bound to: 20'b00000000000111110100 
+	Parameter STATE_SET_DAC_IDLE bound to: 4'b0000 
+	Parameter STATE_SET_DAC_LOOP bound to: 4'b0001 
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:514]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:566]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:619]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:672]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:724]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:776]
+INFO: [Synth 8-256] done synthesizing module 'usb_command_interpreter' (37#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:21]
+WARNING: [Synth 8-3848] Net Out_Sr_Ck in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:40]
+WARNING: [Synth 8-3848] Net Out_Sr_In in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:41]
+WARNING: [Synth 8-3848] Net Out_Start_Acq in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:61]
+WARNING: [Synth 8-3848] Net Out_Start_Convb in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:67]
+WARNING: [Synth 8-3848] Net Sig_Start_Readout in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:132]
+WARNING: [Synth 8-3848] Net Out_Srin_Read in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:81]
+WARNING: [Synth 8-3848] Net Out_Ck_Read in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:82]
+WARNING: [Synth 8-3848] Net Out_SCLK_Cali in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:86]
+WARNING: [Synth 8-3848] Net Out_Din_Cali in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:87]
+WARNING: [Synth 8-3848] Net Out_CS_n_Cali in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:88]
+WARNING: [Synth 8-3848] Net Out_Control_ADG in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:89]
+WARNING: [Synth 8-3848] Net SMD1 in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:94]
+WARNING: [Synth 8-3848] Net SMD2 in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:95]
+WARNING: [Synth 8-3848] Net SMD4 in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:96]
+WARNING: [Synth 8-3848] Net Cnt_Trig in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:361]
+WARNING: [Synth 8-3848] Net Sig_Parallel_Data_Temp in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:360]
+WARNING: [Synth 8-3848] Net Sig_Parallel_Data_En in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:358]
+INFO: [Synth 8-256] done synthesizing module 'Top_Level' (38#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:21]
+WARNING: [Synth 8-3917] design Top_Level has port Out_Sr_Rstb driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Ramp_TDC_Ext driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Rampb_ADC_Ext driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port Out_Pwr_On_Dac driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[6] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[5] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[4] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port LED[1] driven by constant 0
+WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port IFCLK
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[11]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[10]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[9]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[8]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[7]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[6]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[5]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[4]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[3]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[2]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[1]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[0]
+WARNING: [Synth 8-3331] design wr_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port RD_EN
+WARNING: [Synth 8-3331] design wr_logic has unconnected port SRST_FULL_FF
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_BUSY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port EMPTY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port RAM_RD_EN
+WARNING: [Synth 8-3331] design wr_logic has unconnected port ALMOST_EMPTY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[11]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[10]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[9]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[8]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[7]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[6]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[5]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[4]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[3]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[2]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[1]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH[0]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[11]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[10]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[9]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[8]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[7]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[6]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[5]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[11]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[10]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[9]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[8]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[7]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[6]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[5]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design wr_logic has unconnected port PROG_FULL_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[11]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[10]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[9]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[8]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[7]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[6]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[5]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[4]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design rd_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_RST_BUSY
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RAM_WR_EN
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design rd_logic has unconnected port ALMOST_FULL_FB
+WARNING: [Synth 8-3331] design rd_logic has unconnected port FULL
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[11]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[10]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[9]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[8]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[7]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[6]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[5]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[4]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[3]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[2]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[1]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[0]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port PROG_EMPTY_THRESH[11]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port PROG_EMPTY_THRESH[10]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port PROG_EMPTY_THRESH[9]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port PROG_EMPTY_THRESH[8]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port PROG_EMPTY_THRESH[7]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port PROG_EMPTY_THRESH[6]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port PROG_EMPTY_THRESH[5]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 589.195 ; gain = 305.188
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[15] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[14] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[13] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[12] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[11] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[10] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[9] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[8] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[7] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[6] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[5] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[4] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[3] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[2] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[1] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[0] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:wr_en to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:558]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[19] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[18] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[17] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[16] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[15] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[14] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[13] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[12] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[11] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[10] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[9] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[8] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[7] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[6] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[5] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[4] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[3] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[2] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[1] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+WARNING: [Synth 8-3295] tying undriven pin usb_command_interpreter_Inst:Cnt_Trig[0] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:653]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 589.195 ; gain = 305.188
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+WARNING: [Netlist 29-151] Pin 'C1' on instance 'ODDR2_Clk_5M' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'C10_i__0_n_0' that is connected to this pin will not be connected to the replacement instance.
+WARNING: [Netlist 29-151] Pin 'C1' on instance 'ODDR2_Clk_40M' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'C10' that is connected to this pin will not be connected to the replacement instance.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_board.xdc] for cell 'PLL_40M_Inst/inst'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_board.xdc] for cell 'PLL_40M_Inst/inst'
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M.xdc] for cell 'PLL_40M_Inst/inst'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M.xdc] for cell 'PLL_40M_Inst/inst'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/Constraints/ECAL_DIF.xdc]
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/Constraints/ECAL_DIF.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/Constraints/ECAL_DIF.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_Insst/U0'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_Insst/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_late.xdc] for cell 'PLL_40M_Inst/inst'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_late.xdc] for cell 'PLL_40M_Inst/inst'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  OBUFDS => OBUFDS: 5 instances
+  ODDR2 => ODDR: 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 708.297 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 708.297 ; gain = 424.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 708.297 ; gain = 424.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for Ex_Fifo_Insst/U0. (constraint file  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc, line 13).
+Applied set_property DONT_TOUCH = true for PLL_40M_Inst/inst. (constraint file  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc, line 19).
+Applied set_property DONT_TOUCH = true for Ex_Fifo_Insst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for PLL_40M_Inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 708.297 ; gain = 424.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'presentstate_reg' in module 'SlaveFifoRead'
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:38]
+INFO: [Synth 8-5544] ROM "wrendata" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "j" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sloe" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "slrd" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'presentstate_reg' in module 'SlaveFifoWrite'
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:39]
+INFO: [Synth 8-5544] ROM "slwr_cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "slwr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "PktEnd_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FifoAddr_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "presentstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "presentstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "Out_Disable_Channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "State" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Reset" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Convb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Trig" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Readout" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "Out_Disable_Channel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "State" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Reset" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Convb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Trig" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_Readout" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LED" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element Cnt_Power_On_Reset_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:377]
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:38]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               idlestate |                              000 |                              000
+                  state0 |                              001 |                              001
+                  state1 |                              010 |                              010
+                  delay1 |                              011 |                              100
+                  state2 |                              100 |                              011
+                  delay2 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'presentstate_reg' using encoding 'sequential' in module 'SlaveFifoRead'
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoRead.vhd:38]
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:39]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               idlestate |                              000 |                              000
+                wr_state |                              001 |                              001
+               wr_pktend |                              010 |                              101
+                wr_step1 |                              011 |                              010
+                wr_step2 |                              100 |                              011
+                wr_step3 |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'presentstate_reg' using encoding 'sequential' in module 'SlaveFifoWrite'
+WARNING: [Synth 8-6014] Unused sequential element presentstate_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SlaveFifoWrite.vhd:39]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 708.297 ; gain = 424.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 70    
++---XORs : 
+	               12 Bit    Wide XORs := 2     
+	               11 Bit    Wide XORs := 2     
+	               10 Bit    Wide XORs := 2     
+	                9 Bit    Wide XORs := 2     
+	                8 Bit    Wide XORs := 2     
+	                7 Bit    Wide XORs := 2     
+	                6 Bit    Wide XORs := 2     
+	                5 Bit    Wide XORs := 2     
+	                4 Bit    Wide XORs := 2     
+	                3 Bit    Wide XORs := 2     
+	                2 Bit    Wide XORs := 2     
++---Registers : 
+	              192 Bit    Registers := 1     
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 13    
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 46    
++---Muxes : 
+	   2 Input    192 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   6 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 19    
+	   3 Input      6 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 11    
+	   4 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	  15 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 44    
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Top_Level 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module SlaveFifoRead 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 10    
+Module SlaveFifoWrite 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input      9 Bit        Muxes := 1     
+	  15 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 9     
+Module USB_Con 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module synchronizer_ff 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module reset_blk_ramfifo 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
+Module synchronizer_ff__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module clk_x_pntrs 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 22    
++---XORs : 
+	               12 Bit    Wide XORs := 2     
+	               11 Bit    Wide XORs := 2     
+	               10 Bit    Wide XORs := 2     
+	                9 Bit    Wide XORs := 2     
+	                8 Bit    Wide XORs := 2     
+	                7 Bit    Wide XORs := 2     
+	                6 Bit    Wide XORs := 2     
+	                5 Bit    Wide XORs := 2     
+	                4 Bit    Wide XORs := 2     
+	                3 Bit    Wide XORs := 2     
+	                2 Bit    Wide XORs := 2     
++---Registers : 
+	               12 Bit    Registers := 4     
+Module rd_bin_cntr 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+Module compare 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 12    
+Module rd_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module wr_bin_cntr 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+Module wr_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module usb_command_interpreter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 6     
++---Registers : 
+	              192 Bit    Registers := 1     
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   2 Input    192 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 19    
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 11    
+	   4 Input      4 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 42    
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element Cnt_Power_On_Reset_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:377]
+WARNING: [Synth 8-3917] design Top_Level has port Usb_Wu driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port Out_Sr_Rstb driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Ramp_TDC_Ext driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Rampb_ADC_Ext driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port Out_Pwr_On_Dac driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[6] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[5] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[4] driven by constant 1
+WARNING: [Synth 8-3917] design Top_Level has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port LED[1] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Trig_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/State_Trig_reg[3]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Trig_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/State_Trig_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\usb_command_interpreter_Inst/State_Trig_reg[1] )
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Readout_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/State_Readout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Readout_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/State_Readout_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\usb_command_interpreter_Inst/State_Readout_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\USB_Con_Inst/SlaveFifoWrite_inst/FifoAddr_o_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\USB_Con_Inst/SlaveFifoWrite_inst/FifoAddr_o_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/out_to_control_usb_data_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/LED_reg[5]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/LED_reg[4]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/LED_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/LED_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/LED_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/LED_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Sel_Work_Mode_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Valid_TA_for_Self_Mod_reg[4]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Valid_TA_for_Self_Mod_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Valid_TA_for_Self_Mod_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Valid_TA_for_Self_Mod_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Trig_Start_Stop_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Control_Trig_Mode_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Control_Trig_Mode_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Control_Trig_Mode_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Control_Trig_Mode_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[7]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[6]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[5]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[4]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Trig_Inside_Time_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[13]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[12]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[11]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[10]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[9]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[8]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[7]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[6]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[5]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[4]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Constant_Interval_Time_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[11]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[10]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[9]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[8]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[7]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[6]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[5]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[4]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Set_Hold_Delay_Time_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Sel_ADC_Test_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_ADG_Switch_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Reset_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Reset_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Reset_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Reset_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[7]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[6]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[5]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[4]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Reset_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Reset_ASIC_b_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Convb_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Convb_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Convb_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Convb_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[7]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[6]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[5]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[4]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[3]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[2]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Cnt_State_Conv_reg[0]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Start_Conver_b_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Trig_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/State_Readout_reg[1]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Start_Readout1_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_Start_Stop_ADG_reg) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[192]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[191]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[190]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[189]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[188]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[187]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[186]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[185]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[184]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[183]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[182]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[181]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[180]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[179]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[178]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[177]) is unused and will be removed from module Top_Level.
+WARNING: [Synth 8-3332] Sequential element (usb_command_interpreter_Inst/Out_AnaProb_SS1_SS10_PA_reg[176]) is unused and will be removed from module Top_Level.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Trig_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Out_Force_Trig_reg'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cnt_State_Readout_reg[4]' (FDCE) to 'usb_command_interpreter_Inst/Cnt_State_Readout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cnt_State_Readout_reg[5]' (FDCE) to 'usb_command_interpreter_Inst/Cnt_State_Readout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cnt_State_Readout_reg[6]' (FDCE) to 'usb_command_interpreter_Inst/Cnt_State_Readout_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\usb_command_interpreter_Inst/Cnt_State_Readout_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 708.297 ; gain = 424.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 708.297 ; gain = 424.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 708.297 ; gain = 424.289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:din[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Ex_Fifo_Insst:wr_en to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     4|
+|2     |CARRY4    |    12|
+|3     |LUT1      |    54|
+|4     |LUT2      |    61|
+|5     |LUT3      |    18|
+|6     |LUT4      |    42|
+|7     |LUT5      |    38|
+|8     |LUT6      |    49|
+|9     |MUXCY     |    24|
+|10    |MUXF7     |     1|
+|11    |ODDR2     |     2|
+|12    |PLLE2_ADV |     1|
+|13    |RAMB36E1  |     2|
+|14    |FDCE      |   175|
+|15    |FDPE      |    26|
+|16    |FDRE      |    68|
+|17    |IBUF      |     6|
+|18    |IOBUF     |    16|
+|19    |OBUF      |    27|
+|20    |OBUFDS    |     5|
+|21    |OBUFT     |    15|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------------------------+-----------------------------------------+------+
+|      |Instance                                                                 |Module                                   |Cells |
++------+-------------------------------------------------------------------------+-----------------------------------------+------+
+|1     |top                                                                      |                                         |   646|
+|2     |  PLL_40M_Inst                                                           |PLL_40M                                  |     4|
+|3     |    inst                                                                 |PLL_40M_clk_wiz                          |     4|
+|4     |  Ex_Fifo_Insst                                                          |Ex_Fifo                                  |   316|
+|5     |    U0                                                                   |fifo_generator_v13_1_4                   |   316|
+|6     |      inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth             |   316|
+|7     |        \gconvfifo.rf                                                    |fifo_generator_top                       |   316|
+|8     |          \grf.rf                                                        |fifo_generator_ramfifo                   |   316|
+|9     |            \gntv_or_sync_fifo.gcx.clkx                                  |clk_x_pntrs                              |   122|
+|10    |              \gnxpm_cdc.gsync_stage[1].rd_stg_inst                      |synchronizer_ff__parameterized0          |    12|
+|11    |              \gnxpm_cdc.gsync_stage[1].wr_stg_inst                      |synchronizer_ff__parameterized0_6        |    12|
+|12    |              \gnxpm_cdc.gsync_stage[2].rd_stg_inst                      |synchronizer_ff__parameterized0_7        |    25|
+|13    |              \gnxpm_cdc.gsync_stage[2].wr_stg_inst                      |synchronizer_ff__parameterized0_8        |    25|
+|14    |            \gntv_or_sync_fifo.gl0.rd                                    |rd_logic                                 |    78|
+|15    |              \gras.rsts                                                 |rd_status_flags_as                       |    28|
+|16    |                c0                                                       |compare_4                                |    12|
+|17    |                c1                                                       |compare_5                                |    12|
+|18    |              rpntr                                                      |rd_bin_cntr                              |    50|
+|19    |            \gntv_or_sync_fifo.gl0.wr                                    |wr_logic                                 |    90|
+|20    |              \gwas.wsts                                                 |wr_status_flags_as                       |    28|
+|21    |                c1                                                       |compare                                  |    12|
+|22    |                c2                                                       |compare_3                                |    12|
+|23    |              wpntr                                                      |wr_bin_cntr                              |    62|
+|24    |            \gntv_or_sync_fifo.mem                                       |memory                                   |     2|
+|25    |              \gbm.gbmg.gbmga.ngecc.bmg                                  |blk_mem_gen_v8_3_6                       |     2|
+|26    |                inst_blk_mem_gen                                         |blk_mem_gen_v8_3_6_synth                 |     2|
+|27    |                  \gnbram.gnativebmg.native_blk_mem_gen                  |blk_mem_gen_top                          |     2|
+|28    |                    \valid.cstr                                          |blk_mem_gen_generic_cstr                 |     2|
+|29    |                      \ramloop[0].ram.r                                  |blk_mem_gen_prim_width                   |     1|
+|30    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper                 |     1|
+|31    |                      \ramloop[1].ram.r                                  |blk_mem_gen_prim_width__parameterized0   |     1|
+|32    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized0 |     1|
+|33    |            rstblk                                                       |reset_blk_ramfifo                        |    24|
+|34    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff                          |     2|
+|35    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_0                        |     2|
+|36    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_1                        |     2|
+|37    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_2                        |     2|
+|38    |  USB_Con_Inst                                                           |USB_Con                                  |   150|
+|39    |    SlaveFifoRead_inst                                                   |SlaveFifoRead                            |   103|
+|40    |    SlaveFifoWrite_inst                                                  |SlaveFifoWrite                           |    47|
+|41    |  usb_command_interpreter_Inst                                           |usb_command_interpreter                  |    40|
++------+-------------------------------------------------------------------------+-----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1124 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:01:15 . Memory (MB): peak = 710.453 ; gain = 307.344
+Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:01:24 . Memory (MB): peak = 710.453 ; gain = 426.445
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
+WARNING: [Netlist 29-151] Pin 'C1' on instance 'ODDR2_Clk_5M' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'ODDR2_Clk_5M_i_1_n_0' that is connected to this pin will not be connected to the replacement instance.
+WARNING: [Netlist 29-151] Pin 'C1' on instance 'ODDR2_Clk_40M' of cell type 'ODDR2' does not have an equivalent function on the new cell type 'ODDR'. Net 'C10' that is connected to this pin will not be connected to the replacement instance.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 31 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 8 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 5 instances
+  ODDR2 => ODDR: 2 instances
+
+94 Infos, 312 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:27 . Memory (MB): peak = 712.887 ; gain = 432.250
+INFO: [Common 17-1381] The checkpoint 'E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 712.887 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 11 18:49:17 2017...
