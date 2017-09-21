@@ -6,6 +6,9 @@
 # IP: ip/Ex_Fifo/Ex_Fifo.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Ex_Fifo || ORIG_REF_NAME==Ex_Fifo}]
 
+# IP: ip/Fifo_Register/Fifo_Register.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Fifo_Register || ORIG_REF_NAME==Fifo_Register}]
+
 # IP: ip/PLL_40M/PLL_40M.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PLL_40M || ORIG_REF_NAME==PLL_40M}]
 
@@ -14,6 +17,9 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: ip/Ex_Fifo/Ex_Fifo_clocks.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==Ex_Fifo || ORIG_REF_NAME==Ex_Fifo}] {/U0 }]/U0 ]]
+
+# XDC: ip/Fifo_Register/Fifo_Register.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==Fifo_Register || ORIG_REF_NAME==Fifo_Register}] {/U0 }]/U0 ]]
 
 # XDC: ip/PLL_40M/PLL_40M_board.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==PLL_40M || ORIG_REF_NAME==PLL_40M}] {/inst }]/inst ]]

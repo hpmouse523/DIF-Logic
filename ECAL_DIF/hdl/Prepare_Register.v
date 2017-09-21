@@ -19,7 +19,7 @@ module Prepare_Register
   input [7:0]       In_Chip_ID_Bin, // 8 bits Chip ID 
   input             In_Select_TDC_On,
 
-
+	input [64:1]   		In_Mask_Word,
   /*-----------Exfifo--------------------------*/
   output reg        Out_Ex_Fifo_Wr_En,
   output reg  [7:0] Out_Ex_Fifo_Din,
@@ -72,7 +72,7 @@ assign        Parameter616[554]           =     1'b1;                   //Auto G
 assign        Parameter616[553:546]       =     8'b00001110;           //Delay for the trigger signals
 assign        Parameter616[545]           =     1'b0;                   //Power Pulsing mode
 assign        Parameter616[544]           =     1'b1;                   //Trig Delay Enabled
-assign        Parameter616[543:480]       =     64'b0;   //64'hffffffff00000000;//               //Alows to mask trigger channel 63:0 Low to H 0means no mask  ffffffff00000000 means mask 0~31
+assign        Parameter616[543:480]       =     In_Mask_Word;//64'b0;   //64'hffffffff00000000;//               //Alows to mask trigger channel 63:0 Low to H 0means no mask  ffffffff00000000 means mask 0~31
 assign        Parameter616[479:224]       =     256'b0;                 //Discri 4bit DAC from channel0-63 (from 0-63) recommend 0001 , now is 0000
 assign        Parameter616[223]           =     1'b0;                   //Power Pulsing mode
 assign        Parameter616[222]           =     1'b1;                   //Trigger enabled
@@ -225,7 +225,16 @@ always   @ (posedge Clk, negedge Rst_N)
               Para616_Shiftreg              <=  Parameter616;
               End_Flag                      <=  1'b1;
               Cnt_Sc_Num                    <=  12'b0;
-            end   
+            end
+		 default:
+			begin
+              Out_Ex_Fifo_Wr_En             <=  1'b0;
+              Out_Ex_Fifo_Din               <=  8'b0;
+              Para616_Shiftreg              <=  Parameter616;
+              Cnt_Sc_Num                    <=  12'b0;    
+              End_Flag                      <=  1'b0;
+
+			end			
         endcase 
       end   
   end   

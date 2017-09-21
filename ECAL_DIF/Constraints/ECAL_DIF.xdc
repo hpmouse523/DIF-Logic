@@ -145,9 +145,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports Out_Start_Readout1]
 set_property IOSTANDARD LVCMOS33 [get_ports Out_Start_Readout2]
 set_property IOSTANDARD LVDS_25 [get_ports Out_Trig_Ext_P]
 set_property IOSTANDARD LVCMOS33 [get_ports SMA_ExTrig_Cnt]
-set_property IOSTANDARD LVCMOS33 [get_ports SMD1]
-set_property IOSTANDARD LVCMOS33 [get_ports SMD2]
-set_property IOSTANDARD LVCMOS33 [get_ports SMD4]
+
 set_property PACKAGE_PIN K3 [get_ports In_Dout_1b]
 set_property PACKAGE_PIN K4 [get_ports In_Dout_2b]
 set_property PACKAGE_PIN P2 [get_ports In_End_Readout1]
@@ -186,10 +184,26 @@ set_property PACKAGE_PIN W9 [get_ports Out_Start_Rampb_ADC_Ext]
 set_property PACKAGE_PIN AA4 [get_ports Out_Start_Readout1]
 set_property PACKAGE_PIN Y7 [get_ports Out_Start_Readout2]
 set_property PACKAGE_PIN R3 [get_ports SMA_ExTrig_Cnt]
-set_property PACKAGE_PIN R2 [get_ports SMD1]
-set_property PACKAGE_PIN Y2 [get_ports SMD2]
-set_property PACKAGE_PIN W1 [get_ports SMD4]
+
 
 
 
 set_property PACKAGE_PIN P16 [get_ports {Usb_Fdata[3]}]
+
+
+
+
+
+
+
+
+set_property PACKAGE_PIN G13 [get_ports SMA4]
+set_property PACKAGE_PIN G15 [get_ports SMA5]
+set_property IOSTANDARD LVCMOS25 [get_ports SMA4]
+set_property IOSTANDARD LVCMOS25 [get_ports SMA5]
+set_property IOSTANDARD LVCMOS33 [get_ports SMA3]
+set_property PACKAGE_PIN B15 [get_ports SMA3]
+set_property IOSTANDARD LVCMOS33 [get_ports SMA1]
+set_property IOSTANDARD LVCMOS33 [get_ports SMA2]
+set_property PACKAGE_PIN B21 [get_ports SMA1]
+set_property PACKAGE_PIN A21 [get_ports SMA2]

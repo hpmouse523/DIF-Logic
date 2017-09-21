@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module usb_command_interpreter(
+module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
       input                 IFCLK,
       input                 clk,
       input                 reset_n,
@@ -529,7 +529,7 @@ always @ (posedge clk , negedge reset_n) begin
           end   
         STATE_SET_DAC_LOOP:
           begin
-            if(Cnt_State > 8'd8)
+            if(Cnt_State > 8'd16)
               begin
                 State     <=  STATE_SET_DAC_IDLE;
                 Out_Start_Config  <=  1'b0;
@@ -581,7 +581,7 @@ always @ (posedge clk , negedge reset_n) begin
           end   
         STATE_SET_DAC_LOOP:
           begin
-            if(Cnt_State_Reset > 8'd15)
+            if(Cnt_State_Reset > 8'd30)
               begin
                 State_Reset     <=  STATE_SET_DAC_IDLE;
                 Out_Reset_ASIC_b  <=  1'b1;
@@ -634,7 +634,7 @@ always @ (posedge clk , negedge reset_n) begin
           end   
         STATE_SET_DAC_LOOP:
           begin
-            if(Cnt_State_Rigister > 8'd10) //2means last for 60ns
+            if(Cnt_State_Rigister > 8'd20) //2means last for 60ns
               begin
                 State_Rigister     <=  STATE_SET_DAC_IDLE;
                 Out_Set_Register  <=  1'b0;
@@ -664,7 +664,7 @@ always @ (posedge clk , negedge reset_n) begin
   if(~reset_n)
     begin
       State_Convb               <=  STATE_SET_DAC_IDLE;
-      Out_Start_Conver_b    <=  1'b1;
+      Out_Start_Conver_b    <=  1'b0;
                 Cnt_State_Conv         <=  8'd0;
     end   
   else
@@ -675,29 +675,29 @@ always @ (posedge clk , negedge reset_n) begin
             if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffd0)
               begin
                 State_Convb     <=  STATE_SET_DAC_LOOP;
-                Out_Start_Conver_b  <=  1'b0;
+                Out_Start_Conver_b  <=  1'b1;
                 Cnt_State_Conv         <=  8'd0;
               end   
             else
               begin
                 State_Convb     <=  STATE_SET_DAC_IDLE;
                 Cnt_State_Conv         <=  8'd0;
-                Out_Start_Conver_b    <=  1'b1;
+                Out_Start_Conver_b    <=  1'b0;
               end   
           end   
         STATE_SET_DAC_LOOP:
           begin
-            if(Cnt_State_Conv > 8'd2) //2means last for 60ns
+            if(Cnt_State_Conv > 8'd40) //2means last for 37.5ns 40means 500+12.5
               begin
                 State_Convb     <=  STATE_SET_DAC_IDLE;
-                Out_Start_Conver_b  <=  1'b1;
+                Out_Start_Conver_b  <=  1'b0;
                 Cnt_State_Conv         <=  8'd0;
               end   
             else
               begin
                 State_Convb       <=  STATE_SET_DAC_LOOP;
                 Cnt_State_Conv   <=  Cnt_State_Conv + 1'b1;
-                Out_Start_Conver_b    <=  1'b0;
+                Out_Start_Conver_b    <=  1'b1;
               end   
           end   
       endcase
@@ -739,7 +739,7 @@ always @ (posedge clk , negedge reset_n) begin
           end   
         STATE_SET_DAC_LOOP:
           begin
-            if(Cnt_State_Trig > 8'd1)//1 means 2clk 40ns
+            if(Cnt_State_Trig > 8'd40)//1 means 2clk 40ns 40 means 500ns
               begin
                 State_Trig     <=  STATE_SET_DAC_IDLE;
                 Out_Force_Trig  <=  1'b0;
@@ -793,7 +793,7 @@ always @ (posedge clk , negedge reset_n) begin
           end   
         STATE_SET_DAC_LOOP:
           begin
-            if(Cnt_State_Readout > 8'd10)
+            if(Cnt_State_Readout > 8'd25)
               begin
                 State_Readout     <=  STATE_SET_DAC_IDLE;
                 Out_Start_Readout1  <=  1'b0;
