@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="Fifo_Auto_TA_synth_1" LaunchPart="xc7a100tfgg484-2" LaunchTime="1505447582">
-  <File Type="RDS-PROPCONSTRS" Name="Fifo_Auto_TA_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="Fifo_Auto_TA.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Fifo_Auto_TA_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Fifo_Auto_TA.vds"/>
   <File Type="RDS-UTIL" Name="Fifo_Auto_TA_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Fifo_Auto_TA_utilization_synth.pb"/>

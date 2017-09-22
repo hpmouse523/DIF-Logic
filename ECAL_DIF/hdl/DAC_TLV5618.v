@@ -5,7 +5,7 @@
   1.R1_R0 = 01 Write data to Buffer 
   2.R1_R0 = 10 Write data to OUTPUTA and update DAC B with buffer*/
 module DAC_TLV5618(
-  input           Clk,
+  input           Clk,//Max Clk is 20MHz Use 10 MHz as Clk
   input           Rst_n,
   input           Usb_Cmd_En,
   input           In_Sel_A_B,   //1 means Channel A  0means Channel B

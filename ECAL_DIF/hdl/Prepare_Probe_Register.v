@@ -135,53 +135,53 @@ always   @ (posedge Clk, negedge Rst_N)
   begin
     if(~Rst_N)
       begin
-        Sig_Ex_Fifo_Wr_En             <=  1'b0;
-        Sig_Ex_Fifo_Din               <=  8'b0;
-
-        Cnt_Prob_Num                    <=  12'b0;       
-        End_Flag                      <=  1'b0;
+				Sig_Ex_Fifo_Wr_En       <= 1'b0;
+				Sig_Ex_Fifo_Din         <= 8'b0;
+				Prob_Registers_Shiftreg <= Prob_Registers;
+				Cnt_Prob_Num            <= 12'b0;
+				End_Flag                <= 1'b0;
       end   
     else
-      begin
-              Sig_Ex_Fifo_Wr_En             <=  1'b0;
-              Sig_Ex_Fifo_Din               <=  8'b0;
-              Prob_Registers_Shiftreg              <=  Prob_Registers;
-              Cnt_Prob_Num                    <=  12'b0;    
-              End_Flag                      <=  1'b0;
-        case(State)
-          IDLE:
-            begin
-              Sig_Ex_Fifo_Wr_En             <=  1'b0;
-              Sig_Ex_Fifo_Din               <=  8'b0;
-              Prob_Registers_Shiftreg              <=  Prob_Registers;
-              Cnt_Prob_Num                    <=  12'b0;    
-              End_Flag                      <=  1'b0;
-              
-            end   
-          STATE_PROB_PROCESS:
-            begin
-              Sig_Ex_Fifo_Wr_En             <=  1'b1;
-              Sig_Ex_Fifo_Din               <=  Prob_Registers_Shiftreg[1544:1537];
-              Prob_Registers_Shiftreg              <=  Prob_Registers_Shiftreg;
-              End_Flag                      <=  1'b0;
-              Cnt_Prob_Num                    <=  Cnt_Prob_Num;
-            end   
-          STATE_PROB_LOOP:
-            begin
-              Sig_Ex_Fifo_Wr_En             <=  1'b0;
-              Sig_Ex_Fifo_Din               <=  Sig_Ex_Fifo_Din;
-              Prob_Registers_Shiftreg              <=  Prob_Registers_Shiftreg  << 8;
-              End_Flag                      <=  1'b0;
-              Cnt_Prob_Num                    <=  Cnt_Prob_Num  + 1'b1;
-            end   
-          STATE_PROB_END:
-            begin
-              Sig_Ex_Fifo_Wr_En             <=  1'b0;
-              Sig_Ex_Fifo_Din               <=  8'b0;
-              Prob_Registers_Shiftreg              <=  Prob_Registers;
-              End_Flag                      <=  1'b1;
-              Cnt_Prob_Num                    <=  12'b0;
-            end   
+		begin
+			Sig_Ex_Fifo_Wr_En             <= 1'b0;
+			Sig_Ex_Fifo_Din               <= 8'b0;
+			Prob_Registers_Shiftreg       <= Prob_Registers;
+			Cnt_Prob_Num                  <= 12'b0;
+			End_Flag                      <= 1'b0;
+			case(State)
+				IDLE:
+					begin
+						Sig_Ex_Fifo_Wr_En       <= 1'b0;
+						Sig_Ex_Fifo_Din         <= 8'b0;
+						Prob_Registers_Shiftreg <= Prob_Registers;
+						Cnt_Prob_Num            <= 12'b0;
+						End_Flag                <= 1'b0;
+
+					end   
+				STATE_PROB_PROCESS:
+					begin
+						Sig_Ex_Fifo_Wr_En       <= 1'b1;
+						Sig_Ex_Fifo_Din         <= Prob_Registers_Shiftreg[1544:1537];
+						Prob_Registers_Shiftreg <= Prob_Registers_Shiftreg;
+						End_Flag                <= 1'b0;
+						Cnt_Prob_Num            <= Cnt_Prob_Num;
+					end   
+				STATE_PROB_LOOP:
+					begin
+						Sig_Ex_Fifo_Wr_En       <= 1'b0;
+						Sig_Ex_Fifo_Din         <= Sig_Ex_Fifo_Din;
+						Prob_Registers_Shiftreg <= Prob_Registers_Shiftreg  << 8;
+						End_Flag                <= 1'b0;
+						Cnt_Prob_Num            <= Cnt_Prob_Num  + 1'b1;
+					end   
+				STATE_PROB_END:
+					begin
+						Sig_Ex_Fifo_Wr_En       <= 1'b0;
+						Sig_Ex_Fifo_Din         <= 8'b0;
+						Prob_Registers_Shiftreg <= Prob_Registers;
+						End_Flag                <= 1'b1;
+						Cnt_Prob_Num            <= 12'b0;
+					end   
         endcase 
       end   
   end   

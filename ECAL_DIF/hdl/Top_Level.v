@@ -135,9 +135,10 @@ module Top_Level(
 	wire        Sig_Set_SC_Auto_Scan;
 	wire        Sig_Start_SC_USB_Cmd;
 	wire [48:1]	Sig_Set_DAC_From_Auto;
-	wire	[9:1] Sig_TA_Thr_From_USB ;
+	wire	[9:0] Sig_TA_Thr_From_USB ;
 	wire [64:1] Sig_Mask_Word;
 	wire [64:1] Sig_Mask_Word_From_Auto;
+	wire [256:1] Sig_Mask_Word_From_Auto_256bit;
 	
 	assign Sig_Val_Evt = 1'b1; // 0 means disable discriminator outputsignal
 	// assign        Sig_Raz_Chn                   =   1'b1;//1means Erase active analogue column
@@ -194,39 +195,49 @@ module Top_Level(
 		.OB(Out_Ck_5N),         // Diff_n output (connect directly to top-level port)
 		.I(Sig_Ck_5)            // Buffer input
 		);
-	ODDR2 #(
-		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
-		.INIT(1'b0),            // Sets initial state of the Q output to 1'b0 or 1'b1
-		.SRTYPE("SYNC")         // Specifies "SYNC" or "ASYNC" set/reset
-	) ODDR2_Clk_5M
-	(
-		.Q(Sig_Ck_5),           // 1-bit DDR output data
-		.C0(Clk_10M),           // 1-bit clock input
-		.C1(~Clk_10M),          // 1-bit clock input
-		.CE(1'b1),              // 1-bit clock enable input
-		.D0(1'b1),              // 1-bit data input (associated with C0)
-		.D1(1'b0),              // 1-bit data input (associated with C1)
-		.R(1'b0),               // 1-bit reset input
-		.S(1'b0)                // 1-bit set input
-		);
+
+ODDR_Clk ODDR_Clk_10M (
+  .clk_in(Clk_10M),    // input wire clk_in
+  .clk_out(Sig_Ck_5)  // output wire clk_out
+);
+ODDR_Clk ODDR_Clk_40M (
+  .clk_in(Clk_40M),    // input wire clk_in
+  .clk_out(Sig_Ck_40)  // output wire clk_out
+);
+
+	// ODDR2 #(
+	//   .DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+	//   .INIT(1'b0),            // Sets initial state of the Q output to 1'b0 or 1'b1
+	//   .SRTYPE("SYNC")         // Specifies "SYNC" or "ASYNC" set/reset
+	// ) ODDR2_Clk_5M
+	// (
+	//   .Q(Sig_Ck_5),           // 1-bit DDR output data
+	//   .C0(Clk_10M),           // 1-bit clock input
+	//   .C1(~Clk_10M),          // 1-bit clock input
+	//   .CE(1'b1),              // 1-bit clock enable input
+	//   .D0(1'b1),              // 1-bit data input (associated with C0)
+	//   .D1(1'b0),              // 1-bit data input (associated with C1)
+	//   .R(1'b0),               // 1-bit reset input
+	//   .S(1'b0)                // 1-bit set input
+	//   );
 
 
 
-	ODDR2 #(
-		.DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
-		.INIT(1'b0),            // Sets initial state of the Q output to 1'b0 or 1'b1
-		.SRTYPE("SYNC")         // Specifies "SYNC" or "ASYNC" set/reset
-	) ODDR2_Clk_40M
-	(
-		.Q(Sig_Ck_40),          // 1-bit DDR output data
-		.C0(Clk_40M),           // 1-bit clock input
-		.C1(~Clk_40M),          // 1-bit clock input
-		.CE(1'b1),              // 1-bit clock enable input
-		.D0(1'b1),              // 1-bit data input (associated with C0)
-		.D1(1'b0),              // 1-bit data input (associated with C1)
-		.R(1'b0),               // 1-bit reset input
-		.S(1'b0)                // 1-bit set input
-		);
+	// ODDR2 #(
+	//   .DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
+	//   .INIT(1'b0),            // Sets initial state of the Q output to 1'b0 or 1'b1
+	//   .SRTYPE("SYNC")         // Specifies "SYNC" or "ASYNC" set/reset
+	// ) ODDR2_Clk_40M
+	// (
+	//   .Q(Sig_Ck_40),          // 1-bit DDR output data
+	//   .C0(Clk_40M),           // 1-bit clock input
+	//   .C1(~Clk_40M),          // 1-bit clock input
+	//   .CE(1'b1),              // 1-bit clock enable input
+	//   .D0(1'b1),              // 1-bit data input (associated with C0)
+	//   .D1(1'b0),              // 1-bit data input (associated with C1)
+	//   .R(1'b0),               // 1-bit reset input
+	//   .S(1'b0)                // 1-bit set input
+	//   );
 
 	OBUF #(
 		.DRIVE(12),             // Specify the output drive strength
@@ -513,15 +524,7 @@ module Top_Level(
 
 
 		);
-	//Clock Generator
-	/*  Clock_Generator Clock_Generator_Inst(
 
-		.CLK0_PAD(Clk_In),
-		.GL0(Clk_40M),
-		.GL1(Clk_100M),
-		.LOCK()
-
-);*/
 
 
 		Ex_Fifo Ex_Fifo_Insst (
@@ -556,18 +559,18 @@ module Top_Level(
 			.Out_Resetb_ASIC()
 			);
 
-//     [>DAC_TLV5618 Dac_For_Cali(
-//       .Clk(Clk_5M),
-//       .Rst_n(Rst_n_Delay2),
-//       .Usb_Cmd_En(Sig_Start_DAC),
-//       .In_Sel_A_B(1'b1),//Set Channel A
-//       .In_Set_Chn_DAC_Code(Sig_Set_DAC),
-//
-//       //IO of TLV5618
-//       .Out_SCLK(Out_SCLK_Cali),
-//       .Out_Din(Out_Din_Cali),
-//       .Out_CS_n(Out_CS_n_Cali)
-// );*/
+		DAC_TLV5618 Dac_For_Cali(
+			.Clk(Clk_10M),
+			.Rst_n(Rst_n_Delay2),
+			.Usb_Cmd_En(Sig_Start_DAC),
+			.In_Sel_A_B(1'b1),//Set Channel A
+			.In_Set_Chn_DAC_Code(Sig_Set_DAC),
+
+			//IO of TLV5618
+			.Out_SCLK(Out_SCLK_Cali),
+			.Out_Din(Out_Din_Cali),
+			.Out_CS_n(Out_CS_n_Cali)
+);
 
 
 
@@ -581,7 +584,7 @@ module Top_Level(
 
 				Auto_TA_Scan Auto_TA_Scan_Inst(                  // used to scan the DAC threshold
 					.Clk_10MHz(Clk_10M),
-					.Rst_N(Rst_N),
+					.Rst_N(Rst_n_Delay2),
 					.Ini_DAC(Sig_Set_Ini_DAC_for_Auto_Scan[10:1]), // need 10 bit  assert 12bit
 					.In_Trig_Ex_From_Signal(SMA_ExTrig_Cnt),       // need rising edge
 					.In_Hit_From_SKIROC(In_Trig_Outb),
@@ -590,7 +593,7 @@ module Top_Level(
 					.Out_Finish_Scan(Sig_Finish_Scan_Flag),
 					.Out_Set_SC(Sig_Set_SC_Auto_Scan),
 					.Out_Set_DAC(Sig_Set_DAC_From_Auto),           // 48bit but useful is 40bit
-					.Out_Mask_Code(Sig_Mask_Word_From_Auto),
+					.Out_Mask_Code(Sig_Mask_Word_From_Auto_256bit),
 					.Out_Fifo_Din(Sig_Parallel_Data_From_Auto_Scan_Temp),
 					.Out_Token_All(Sig_Select_Start_SC),
 					.Out_Fifo_Wr(Sig_Parallel_Data_En_From_Auto_Scan)
@@ -704,7 +707,7 @@ module Top_Level(
 				assign Out_Pwr_On_A            = Status_Power_On_Control;
 				assign Sig_Start_SC            = (Sig_Select_Start_SC == 1'b1)? Sig_Set_SC_Auto_Scan: Sig_Start_SC_USB_Cmd;
 				assign Set_TA_Thr_DAC_Sig_34   = (Sig_Select_Start_SC == 1'b1)? Sig_Set_DAC_From_Auto[46:37]:Sig_TA_Thr_From_USB;
-
+				assign Sig_Mask_Word_From_Auto = Sig_Mask_Word_From_Auto_256bit[256:193];
 				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? Sig_Mask_Word_From_Auto :64'd0;
 				assign Sig_Parallel_Data_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1) ? Sig_Parallel_Data_From_Auto_Scan:Sig_Parallel_Data;
 				assign Sig_Parallel_Data_En_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1)? Sig_Parallel_Data_En_From_Auto_Scan:Sig_Parallel_Data_En;
@@ -723,10 +726,7 @@ module Top_Level(
 
 
 
-				// assign                        Out_SCLK_TA          =    Out_SCLK_Cali;
-				// assign                        Out_Din_TA           =    Out_Din_Cali;
-				// assign                        Out_Cs_n_TA_DY5      =    Out_CS_n_Cali;
-				// assign                      Out_Cs_n_TA_DY8      =    Out_CS_n_Cali;
+
 				assign SMA1 = SMA_ExTrig_Cnt;
 
 
@@ -737,14 +737,14 @@ module Top_Level(
 				assign LED[5] = 1'b1;
 				assign LED[6] = Fifo_Empty;
 
-				//assign SMD1 = In_End_Readout1;
-				//assign SMD2 = Out_Rstb_Pa;
-				//assign SMD[3] = In_Chipsatb; SMD3 is SMA_ExTrig_Cnt now SMA3
-				//assign SMD4 = Sig_Start_Readout;*/
-				// (*mark_debug = "true"*) wire	Debug_Sig_Sr_In =	Out_Sr_In;
-				// (*mark_debug = "true"*) wire	Debug_Sig_Sr_Ck =	Out_Sr_Ck;
-				// (*mark_debug = "true"*) wire	Debug_Sig_Usb_FlagC	=	Usb_Flagc;
-				// (*mark_debug = "true"*) wire	Debug_Sig_Start_SC	=	Start_In_SC_Prob;
+
+				(*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
+				(*mark_debug = "true"*) wire	Debug_Sig_Out_Din_Cali =	Out_Din_Cali;
+				(*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
+				(*mark_debug = "true"*) wire	Debug_Sig_Sig_End_SC	=	Sig_End_SC;
+				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;
+				(*mark_debug = "true"*) wire [10:1] Debug_Sig_Set_TA_Thr_DAC_Sig_34	=	Set_TA_Thr_DAC_Sig_34;
+				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Set_SC_Auto_Scan	=	Sig_Set_SC_Auto_Scan;
 endmodule
 
 

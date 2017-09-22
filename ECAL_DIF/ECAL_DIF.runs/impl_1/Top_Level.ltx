@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <probeData version="2" minor="1">
   <probeset name="EDA_PROBESET" active="true">
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
         <Option Id="CORE_LOCATION" value="1:0"/>
         <Option Id="HW_ILA" value="u_ila_0"/>
         <Option Id="PROBE_PORT" value="0"/>
         <Option Id="PROBE_PORT_BITS" value="0"/>
-        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="10"/>
       </probeOptions>
       <nets>
-        <net name="Debug_Sig_Sr_Ck"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[10]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[9]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[8]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[7]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[6]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[5]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[4]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[3]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[2]"/>
+        <net name="Debug_Sig_Set_TA_Thr_DAC_Sig_34[1]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -24,7 +33,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="Debug_Sig_Sr_In"/>
+        <net name="Debug_Sig_Out_CS_n_Cali"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -37,7 +46,7 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="Debug_Sig_Start_SC"/>
+        <net name="Debug_Sig_Out_Din_Cali"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -50,7 +59,46 @@
         <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
       </probeOptions>
       <nets>
-        <net name="Debug_Sig_Usb_FlagC"/>
+        <net name="Debug_Sig_Out_SCLK_Cali"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="4"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_End_SC"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="5"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Select_Start_SC"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="BSCAN_SWITCH_INDEX" value="0"/>
+        <Option Id="CORE_LOCATION" value="1:0"/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="PROBE_PORT" value="6"/>
+        <Option Id="PROBE_PORT_BITS" value="0"/>
+        <Option Id="PROBE_PORT_BIT_COUNT" value="1"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Set_SC_Auto_Scan"/>
       </nets>
     </probe>
   </probeset>

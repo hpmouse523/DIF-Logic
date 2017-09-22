@@ -857,7 +857,7 @@ end
 //Set Delay time default 1us 50cyc
 always @ (posedge clk , negedge reset_n) begin
   if(~reset_n)
-    Out_Set_Hold_Delay_Time  <= 12'd1560;
+    Out_Set_Hold_Delay_Time  <= 12'h3ff;
   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:12] == 4'h6)
     Out_Set_Hold_Delay_Time <= in_from_usb_ControlWord[11:0];
     else

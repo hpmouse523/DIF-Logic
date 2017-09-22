@@ -255,16 +255,24 @@ always  @ (*)
             end   
           STATE_WAIT_2_READOUT:
             begin
-              if(Cnt_Wait_2_Readout< WAIT_2_READOUT)
-                begin
-                  State_Next        =   STATE_WAIT_2_READOUT;
-                end   
-              else
-                begin
-                  State_Next        =   STATE_START_READOUT;
-                end   
-            end   
+						if(Chipsatb_Rising_Edge)
+						begin
+							State_Next	= STATE_START_READOUT;
+						end		
+							else
+					 			begin
+              		if(Cnt_Wait_2_Readout< WAIT_2_READOUT)
+                		begin
+                  		State_Next        =   STATE_WAIT_2_READOUT;
+                		end   
+              		else
+                		begin
+                  		State_Next        =   STATE_START_READOUT;
+                		end   
+            		end
+						end		
           STATE_START_READOUT:
+
             begin
               if(Cnt_Start_Readout  < START_READOUT)
                 begin
@@ -274,7 +282,8 @@ always  @ (*)
                 begin
                   State_Next        =   STATE_WAIT_2_END;
                 end   
-            end   
+            end  
+
             STATE_WAIT_2_END://Readout end when time up to 5ms or receive endreadout signal flag
             begin
               if(End_Readout_Delay1  &&  !End_Readout_Delay2)

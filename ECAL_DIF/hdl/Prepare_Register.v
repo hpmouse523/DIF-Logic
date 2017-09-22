@@ -186,7 +186,7 @@ always   @ (posedge Clk, negedge Rst_N)
       begin
         Out_Ex_Fifo_Wr_En             <=  1'b0;
         Out_Ex_Fifo_Din               <=  8'b0;
-
+        Para616_Shiftreg              <=  Parameter616;
         Cnt_Sc_Num                    <=  12'b0;       
         End_Flag                      <=  1'b0;
       end   
@@ -206,7 +206,7 @@ always   @ (posedge Clk, negedge Rst_N)
             begin
               Out_Ex_Fifo_Wr_En             <=  1'b1;
               Out_Ex_Fifo_Din               <=  Para616_Shiftreg[616:609];
-              Para616_Shiftreg              <=  Para616_Shiftreg;
+
               End_Flag                      <=  1'b0;
               Cnt_Sc_Num                    <=  Cnt_Sc_Num;
             end   
@@ -226,15 +226,15 @@ always   @ (posedge Clk, negedge Rst_N)
               End_Flag                      <=  1'b1;
               Cnt_Sc_Num                    <=  12'b0;
             end
-		 default:
-			begin
+		 			default:
+						begin
               Out_Ex_Fifo_Wr_En             <=  1'b0;
               Out_Ex_Fifo_Din               <=  8'b0;
               Para616_Shiftreg              <=  Parameter616;
               Cnt_Sc_Num                    <=  12'b0;    
               End_Flag                      <=  1'b0;
 
-			end			
+						end			
         endcase 
       end   
   end   

@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L oddr_v1_0_0 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ODDR_Clk xil_defaultlib.ODDR_Clk xil_defaultlib.glbl -log elaborate.log
