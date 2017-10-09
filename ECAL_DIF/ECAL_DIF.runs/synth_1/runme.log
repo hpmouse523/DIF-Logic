@@ -14,26 +14,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12352 
+INFO: Helper process launched with PID 14376 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 373.758 ; gain = 77.371
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 374.992 ; gain = 77.414
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top_Level' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:21]
 	Parameter DATA_2_USB bound to: 16'b1010101001010101 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:741]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:742]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:743]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:744]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:745]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:746]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:747]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:748]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:749]
 INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (1#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
-INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-9516-Msy-PC/realtime/ODDR_Clk_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-9516-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-15260-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-15260-Msy-PC/realtime/ODDR_Clk_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22272]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DRIVE bound to: 12 - type: integer 
@@ -606,12 +604,12 @@ INFO: [Synth 8-638] synthesizing module 'usb_command_interpreter' [E:/Work_File/
 	Parameter TOTAL_NUM_EX_TRIG bound to: 20'b00000000000111110100 
 	Parameter STATE_SET_DAC_IDLE bound to: 4'b0000 
 	Parameter STATE_SET_DAC_LOOP bound to: 4'b0001 
-INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:514]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:566]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:619]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:672]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:724]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:776]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:545]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:597]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:650]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:703]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:755]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:807]
 INFO: [Synth 8-256] done synthesizing module 'usb_command_interpreter' (53#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:21]
 INFO: [Synth 8-638] synthesizing module 'Flag_LED' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Flag_LED.v:23]
 	Parameter TIME_05S bound to: 28'b0010011000100101101000000000 
@@ -630,9 +628,7 @@ WARNING: [Synth 8-3917] design Top_Level has port Out_Sr_Rstb driven by constant
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Ramp_TDC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Rampb_ADC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Pwr_On_Dac driven by constant 1
-WARNING: [Synth 8-3917] design Top_Level has port LED[5] driven by constant 1
-WARNING: [Synth 8-3917] design Top_Level has port LED[4] driven by constant 1
-WARNING: [Synth 8-3917] design Top_Level has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port LED[2] driven by constant 1
 WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port IFCLK
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
@@ -735,7 +731,7 @@ WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_
 WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[12]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:31 ; elapsed = 00:01:33 . Memory (MB): peak = 610.859 ; gain = 314.473
+Finished RTL Elaboration : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 611.402 ; gain = 313.824
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -757,7 +753,7 @@ WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[2] t
 WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[1] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:613]
 WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[0] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:613]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:32 ; elapsed = 00:01:33 . Memory (MB): peak = 610.859 ; gain = 314.473
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:37 ; elapsed = 00:01:38 . Memory (MB): peak = 611.402 ; gain = 313.824
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -766,10 +762,10 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-9516-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-9516-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-9516-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-9516-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-15260-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-15260-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-15260-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-15260-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
 Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Fifo_Register/Fifo_Register.xdc] for cell 'Fifo_Register_Inst/U0'
@@ -799,16 +795,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   OBUFDS => OBUFDS: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 791.320 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 792.430 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:47 ; elapsed = 00:01:49 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Constraint Validation : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:47 ; elapsed = 00:01:49 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -822,7 +818,7 @@ Applied set_property DONT_TOUCH = true for ODDR_Clk_10M. (constraint file  auto 
 Applied set_property DONT_TOUCH = true for ODDR_Clk_40M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for PLL_40M_Inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:01:49 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Prepare_Register'
 WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:128]
@@ -937,6 +933,7 @@ INFO: [Synth 8-5544] ROM "State_Reset" won't be mapped to Block RAM because addr
 INFO: [Synth 8-5544] ROM "State_Convb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Trig" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Readout" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Out_Set_Mask64" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "LED" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Sig_Out_LED" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Sig_Out_LED_Blink" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -1073,7 +1070,7 @@ WARNING: [Synth 8-6014] Unused sequential element Status_reg was removed.  [E:/W
 INFO: [Synth 8-3354] encoded FSM with state register 'Status_reg' using encoding 'sequential' in module 'Read_Register_Set'
 WARNING: [Synth 8-6014] Unused sequential element Status_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Read_Register_Set.v:79]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:56 ; elapsed = 00:01:58 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1119,7 +1116,7 @@ Detailed RTL Component Info :
 	              192 Bit    Registers := 1     
 	              128 Bit    Registers := 1     
 	               80 Bit    Registers := 4     
-	               64 Bit    Registers := 6     
+	               64 Bit    Registers := 7     
 	               32 Bit    Registers := 1     
 	               28 Bit    Registers := 2     
 	               20 Bit    Registers := 8     
@@ -1148,6 +1145,7 @@ Detailed RTL Component Info :
 	  12 Input     64 Bit        Muxes := 4     
 	   4 Input     64 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 2     
+	   3 Input     64 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     28 Bit        Muxes := 2     
 	   4 Input     28 Bit        Muxes := 2     
@@ -1179,7 +1177,7 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 33    
-	   2 Input      1 Bit        Muxes := 75    
+	   2 Input      1 Bit        Muxes := 77    
 	   9 Input      1 Bit        Muxes := 8     
 	   6 Input      1 Bit        Muxes := 19    
 	  10 Input      1 Bit        Muxes := 5     
@@ -1478,7 +1476,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	              192 Bit    Registers := 1     
 	              128 Bit    Registers := 1     
-	               64 Bit    Registers := 1     
+	               64 Bit    Registers := 2     
 	               32 Bit    Registers := 1     
 	               14 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
@@ -1493,13 +1491,14 @@ Detailed RTL Component Info :
 	   2 Input    192 Bit        Muxes := 1     
 	   2 Input    128 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 1     
+	   3 Input     64 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 19    
 	   3 Input      6 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 11    
 	   4 Input      4 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 42    
+	   2 Input      1 Bit        Muxes := 44    
 	   4 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
 Module Flag_LED 
@@ -1590,17 +1589,76 @@ WARNING: [Synth 8-3917] design Top_Level has port Out_Sr_Rstb driven by constant
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Ramp_TDC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Rampb_ADC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Pwr_On_Dac driven by constant 1
-WARNING: [Synth 8-3917] design Top_Level has port LED[5] driven by constant 1
-WARNING: [Synth 8-3917] design Top_Level has port LED[4] driven by constant 1
-WARNING: [Synth 8-3917] design Top_Level has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Level has port LED[2] driven by constant 1
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Register_Inst/\Para616_Shiftreg_reg[2] )
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[3]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[6]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[4]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[7]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[5]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[4]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[5]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[6]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[7]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[8]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[9]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[10]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[11]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[12]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[13]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[14]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[15]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[16]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[17]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[18]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[19]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[20]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[21]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[22]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[29]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[23]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[24]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[25]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[26]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[27]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[28]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[30]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[31]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[32]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[33]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[34]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[35]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[36]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[37]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[38]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[39]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[40]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[41]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[42]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[43]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[44]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[45]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[46]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[47]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[48]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[49]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[50]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[51]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[52]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[53]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[54]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[55]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[56]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[57]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[58]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[59]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[60]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[61]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[62]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[63]' (FDCE) to 'usb_command_interpreter_Inst/Out_Set_Mask64_reg[64]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/State_reg[3]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/State_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\State_reg[1] )
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Rigister_reg[2]' (FDC) to 'usb_command_interpreter_Inst/State_Rigister_reg[3]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Rigister_reg[2]' (FDC) to 'usb_command_interpreter_Inst/State_Rigister_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Rigister_reg[3]' (FDC) to 'usb_command_interpreter_Inst/State_Rigister_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\State_Rigister_reg[1] )
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Rigister_reg[0]' (FDC) to 'usb_command_interpreter_Inst/Out_Set_Register_reg'
@@ -1612,103 +1670,45 @@ INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Convb_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\State_Convb_reg[1] )
 INFO: [Synth 8-3886] merging instance 'Flag_LED8/State_reg[2]' (FDC) to 'Flag_LED8/State_reg[3]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Flag_LED8/\State_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Dac_For_Cali/\State_reg[1] )
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Readout_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/State_Readout_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/State_Readout_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/State_Readout_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\State_Readout_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (USB_Con_Inst/\SlaveFifoWrite_inst/FifoAddr_o_reg[0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (USB_Con_Inst/\SlaveFifoWrite_inst/FifoAddr_o_reg[1] )
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[11]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[14]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[12]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[15]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[11]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[12]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[15]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[13]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[16]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[19]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[22]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[20]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[23]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[21]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[24]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[27]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[30]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[20]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[23]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[21]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[24]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[27]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[30]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[28]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[31]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[29]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[32]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[35]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[38]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[36]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[39]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[29]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[32]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[35]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[38]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[36]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[39]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[37]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[40]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[43]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[46]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[44]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[47]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[45]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[48]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[51]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[54]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[44]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[47]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[45]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[48]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[51]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[54]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[52]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[55]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[53]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[56]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[59]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[62]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[60]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[63]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[53]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[56]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[59]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[62]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[60]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[63]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[61]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[64]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[67]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[70]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[68]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[71]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[69]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[72]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[75]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[78]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[76]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[79]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[77]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[80]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[83]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[86]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[84]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[87]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[85]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[88]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[91]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[94]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[92]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[95]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[93]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[96]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[99]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[102]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[100]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[103]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[101]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[104]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[107]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[110]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[108]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[111]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[109]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[112]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[115]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[118]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[116]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[119]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[117]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[120]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[123]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[126]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[124]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[127]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[125]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[128]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[131]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[134]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[132]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[135]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[133]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[136]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[139]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[142]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[140]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[143]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[141]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[144]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[147]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[150]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[148]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[151]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[149]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[152]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[155]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[158]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[156]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[159]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[157]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[160]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[163]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[166]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[164]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[167]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[165]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[168]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[171]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[174]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[172]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[175]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[173]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[176]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[179]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[182]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[180]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[183]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[181]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[184]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[187]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[190]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[188]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[191]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[189]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[192]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[195]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[198]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[196]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[199]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[197]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[200]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[205]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[208]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[213]' (FDPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[216]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[221]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[224]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[229]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[232]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[237]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[240]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[245]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[248]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[253]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[256]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[261]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[264]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[269]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[272]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[277]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[280]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[285]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[288]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[293]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[296]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[301]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[304]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[68]' (FDCPE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[71]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Register_Inst/Para616_Shiftreg_reg[69]' (FDCE) to 'Prepare_Register_Inst/Para616_Shiftreg_reg[72]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[18]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[10]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[2]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (SlaveFifoWrite_inst/FifoAddr_o_reg[1]) is unused and will be removed from module USB_Con.
 WARNING: [Synth 8-3332] Sequential element (SlaveFifoWrite_inst/FifoAddr_o_reg[0]) is unused and will be removed from module USB_Con.
 WARNING: [Synth 8-3332] Sequential element (Out_Pwr_On_D_reg) is unused and will be removed from module Sci_Acq.
 WARNING: [Synth 8-3332] Sequential element (Out_Resetb_ASIC_reg) is unused and will be removed from module Sci_Acq.
+WARNING: [Synth 8-3332] Sequential element (State_reg[1]) is unused and will be removed from module DAC_TLV5618.
 WARNING: [Synth 8-3332] Sequential element (Cnt_2_25000_reg[0]) is unused and will be removed from module Readout_Dout.
 WARNING: [Synth 8-3332] Sequential element (Cnt_2_25000_reg[1]) is unused and will be removed from module Readout_Dout.
 WARNING: [Synth 8-3332] Sequential element (Cnt_2_25000_reg[2]) is unused and will be removed from module Readout_Dout.
@@ -1801,10 +1801,7 @@ WARNING: [Synth 8-3332] Sequential element (Out_Disable_Channel_reg[26]) is unus
 WARNING: [Synth 8-3332] Sequential element (Out_Disable_Channel_reg[25]) is unused and will be removed from module usb_command_interpreter.
 WARNING: [Synth 8-3332] Sequential element (Out_Disable_Channel_reg[24]) is unused and will be removed from module usb_command_interpreter.
 WARNING: [Synth 8-3332] Sequential element (Out_Disable_Channel_reg[23]) is unused and will be removed from module usb_command_interpreter.
-WARNING: [Synth 8-3332] Sequential element (Out_Disable_Channel_reg[22]) is unused and will be removed from module usb_command_interpreter.
-WARNING: [Synth 8-3332] Sequential element (Out_Disable_Channel_reg[21]) is unused and will be removed from module usb_command_interpreter.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Dac_For_Cali/\State_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[16] )
@@ -1814,7 +1811,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_S
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cnt_State_Rigister_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cnt_State_Readout_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:31 ; elapsed = 00:02:34 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:40 ; elapsed = 00:02:42 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1826,13 +1823,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:02:45 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:51 ; elapsed = 00:02:54 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:45 ; elapsed = 00:02:48 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Timing Optimization : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1844,7 +1841,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:51 ; elapsed = 00:02:54 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Technology Mapping : Time (s): cpu = 00:03:01 ; elapsed = 00:03:03 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1868,7 +1865,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished IO Insertion : Time (s): cpu = 00:03:02 ; elapsed = 00:03:05 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1881,7 +1878,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:02 ; elapsed = 00:03:05 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1893,25 +1890,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:53 ; elapsed = 00:02:57 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:04 ; elapsed = 00:03:06 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:04 ; elapsed = 00:03:06 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:04 ; elapsed = 00:03:07 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:04 ; elapsed = 00:03:07 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1932,18 +1929,18 @@ Report Cell Usage:
 |2     |ODDR_Clk__1 |     1|
 |3     |BUFG        |     5|
 |4     |CARRY4      |   139|
-|5     |LUT1        |   501|
-|6     |LUT2        |  1343|
-|7     |LUT3        |  2159|
-|8     |LUT4        |  1003|
-|9     |LUT5        |   758|
-|10    |LUT6        |   755|
+|5     |LUT1        |   500|
+|6     |LUT2        |  1283|
+|7     |LUT3        |  2098|
+|8     |LUT4        |  1122|
+|9     |LUT5        |   768|
+|10    |LUT6        |   752|
 |11    |MUXCY       |    48|
-|12    |MUXF7       |     3|
+|12    |MUXF7       |     2|
 |13    |PLLE2_ADV   |     1|
 |14    |RAMB18E1    |     1|
 |15    |RAMB36E1    |     4|
-|16    |FDCE        |  3681|
+|16    |FDCE        |  3683|
 |17    |FDPE        |  1051|
 |18    |FDRE        |    91|
 |19    |LDC         |   541|
@@ -1958,7 +1955,7 @@ Report Instance Areas:
 +------+-------------------------------------------------------------------------+---------------------------------------------+------+
 |      |Instance                                                                 |Module                                       |Cells |
 +------+-------------------------------------------------------------------------+---------------------------------------------+------+
-|1     |top                                                                      |                                             | 12161|
+|1     |top                                                                      |                                             | 12166|
 |2     |  PLL_40M_Inst                                                           |PLL_40M                                      |     4|
 |3     |    inst                                                                 |PLL_40M_clk_wiz                              |     4|
 |4     |  Fifo_Register_Inst                                                     |Fifo_Register                                |   137|
@@ -2028,15 +2025,15 @@ Report Instance Areas:
 |68    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_3                            |     2|
 |69    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_4                            |     2|
 |70    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_5                            |     2|
-|71    |  Dac_For_Cali                                                           |DAC_TLV5618                                  |    25|
-|72    |  Auto_TA_Scan_Inst                                                      |Auto_TA_Scan                                 |  2803|
-|73    |    SKIROC_Auto_TA_Inst_Chip1                                            |SKIROC2_S_Para_Scan                          |   707|
-|74    |    SKIROC_Auto_TA_Inst_Chip2                                            |SKIROC2_S_Para_Scan_0                        |   687|
-|75    |    SKIROC_Auto_TA_Inst_Chip3                                            |SKIROC2_S_Para_Scan_1                        |   688|
-|76    |    SKIROC_Auto_TA_Inst_Chip4                                            |SKIROC2_S_Para_Scan_2                        |   719|
-|77    |  Flag_LED8                                                              |Flag_LED                                     |   204|
-|78    |  Prepare_Probe_Register_Inst                                            |Prepare_Probe_Register                       |  4128|
-|79    |  Prepare_Register_Inst                                                  |Prepare_Register                             |  1586|
+|71    |  Auto_TA_Scan_Inst                                                      |Auto_TA_Scan                                 |  2803|
+|72    |    SKIROC_Auto_TA_Inst_Chip1                                            |SKIROC2_S_Para_Scan                          |   707|
+|73    |    SKIROC_Auto_TA_Inst_Chip2                                            |SKIROC2_S_Para_Scan_0                        |   687|
+|74    |    SKIROC_Auto_TA_Inst_Chip3                                            |SKIROC2_S_Para_Scan_1                        |   688|
+|75    |    SKIROC_Auto_TA_Inst_Chip4                                            |SKIROC2_S_Para_Scan_2                        |   719|
+|76    |  Dac_For_Cali                                                           |DAC_TLV5618                                  |    20|
+|77    |  Flag_LED8                                                              |Flag_LED                                     |   205|
+|78    |  Prepare_Probe_Register_Inst                                            |Prepare_Probe_Register                       |  4127|
+|79    |  Prepare_Register_Inst                                                  |Prepare_Register                             |  1400|
 |80    |  Read_Register_Set_Inst                                                 |Read_Register_Set                            |   202|
 |81    |  Readout_Dout_Inst                                                      |Readout_Dout                                 |   119|
 |82    |    Gray_2_Bin_Inst                                                      |Gray_2_Bin                                   |     9|
@@ -2044,14 +2041,14 @@ Report Instance Areas:
 |84    |  USB_Con_Inst                                                           |USB_Con                                      |   432|
 |85    |    SlaveFifoRead_inst                                                   |SlaveFifoRead                                |   386|
 |86    |    SlaveFifoWrite_inst                                                  |SlaveFifoWrite                               |    46|
-|87    |  usb_command_interpreter_Inst                                           |usb_command_interpreter                      |  1231|
+|87    |  usb_command_interpreter_Inst                                           |usb_command_interpreter                      |  1429|
 +------+-------------------------------------------------------------------------+---------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 791.320 ; gain = 494.934
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:04 ; elapsed = 00:03:07 . Memory (MB): peak = 792.430 ; gain = 494.852
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1242 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:02:46 . Memory (MB): peak = 791.320 ; gain = 314.473
-Synthesis Optimization Complete : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 791.320 ; gain = 494.934
+Synthesis finished with 0 errors, 0 critical warnings and 1241 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:02:55 . Memory (MB): peak = 792.430 ; gain = 313.824
+Synthesis Optimization Complete : Time (s): cpu = 00:03:04 ; elapsed = 00:03:07 . Memory (MB): peak = 792.430 ; gain = 494.852
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 765 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2064,9 +2061,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 541 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 5 instances
 
-334 Infos, 323 Warnings, 0 Critical Warnings and 0 Errors encountered.
+333 Infos, 319 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:59 ; elapsed = 00:03:03 . Memory (MB): peak = 791.320 ; gain = 507.152
+synth_design: Time (s): cpu = 00:03:09 ; elapsed = 00:03:13 . Memory (MB): peak = 792.430 ; gain = 507.922
 INFO: [Common 17-1381] The checkpoint 'E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 791.320 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 21 16:17:26 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 792.430 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  9 15:18:57 2017...

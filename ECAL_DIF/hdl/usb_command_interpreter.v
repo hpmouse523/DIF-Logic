@@ -59,6 +59,7 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
       output reg            Out_Set_Register,
       output reg [3:0]      Out_Sel_Feedback_Capacitance,
       output reg [64:1]     Out_Choose_Channel_Resister,
+			output reg [64:1] 		Out_Set_Mask64,
       output reg [1:0]      Out_Sel_Cali_TA,
       output reg [11:0]     Out_Set_Cali_DAC,
       output reg [9:0]     Out_Set_TA_Thr_DAC_12,
@@ -77,6 +78,36 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
 
 
 localparam  [19:0]    TOTAL_NUM_EX_TRIG = 20'd500;
+
+
+
+/*-------Set Mask Channel------------*/
+	 always @ (posedge clk or negedge reset_n)                        
+   begin
+     if(~reset_n)
+       begin
+         Out_Set_Mask64                                <=  64'd0;        // Set Mask Channels 0means no mask 64~1 means mask 0~63 Channel. Defult no mask
+       end    
+     else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffdf)
+       begin
+         Out_Set_Mask64                                <=  64'd0;        // Set no mask
+       end    
+      else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffde)
+       begin
+         Out_Set_Mask64                                <=  64'hfffffffffffffffe;
+
+       end    
+       else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffdd)
+       begin
+         Out_Set_Mask64                                <=  64'h10200001; // Mask 36 43 64
+
+       end    
+			else
+        begin
+          Out_Set_Mask64                                <=  Out_Set_Mask64;
+        end   
+   end    
+
 /*-------Select Ramp_ADC------------*/
 always @ (posedge clk , negedge reset_n) begin
   if(~reset_n)

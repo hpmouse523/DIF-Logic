@@ -116,30 +116,30 @@ module Top_Level(
 	wire        Sig_Start_Auto_Scan;
 	//assign  Out_Resetb                          =   1'b1;
 
-	wire        Sig_Finish_Scan_Flag;
-	wire        Sig_Start_Readout;
-	wire        Sig_Ck_40;
-	wire        Out_Force_Trig;
-	wire        Sig_Raz_Chn;
-	wire        Sig_Ck_5;
-	wire        Clk_10M;
-	wire        Clk_40M;
-	wire        Sig_Pwr_On_D;
-	wire        Sig_Val_Evt;
-	wire        Sig_Main_Backup;
-	wire        Sig_Start_Register;
-	wire [64:1] Sig_Choose_Channel_Register;
-	wire        Sig_Select_Ramp_ADC;
-	wire        Sig_Select_TDC_On;
-	wire        Sig_Select_Start_SC;
-	wire        Sig_Set_SC_Auto_Scan;
-	wire        Sig_Start_SC_USB_Cmd;
-	wire [48:1]	Sig_Set_DAC_From_Auto;
-	wire	[9:0] Sig_TA_Thr_From_USB ;
-	wire [64:1] Sig_Mask_Word;
-	wire [64:1] Sig_Mask_Word_From_Auto;
+	wire         Sig_Finish_Scan_Flag;
+	wire         Sig_Start_Readout;
+	wire         Sig_Ck_40;
+	wire         Out_Force_Trig;
+	wire         Sig_Raz_Chn;
+	wire         Sig_Ck_5;
+	wire         Clk_10M;
+	wire         Clk_40M;
+	wire         Sig_Pwr_On_D;
+	wire         Sig_Val_Evt;
+	wire         Sig_Main_Backup;
+	wire         Sig_Start_Register;
+	wire [64:1]  Sig_Choose_Channel_Register;
+	wire         Sig_Select_Ramp_ADC;
+	wire         Sig_Select_TDC_On;
+	wire         Sig_Select_Start_SC;
+	wire         Sig_Set_SC_Auto_Scan;
+	wire         Sig_Start_SC_USB_Cmd;
+	wire         [48:1]	Sig_Set_DAC_From_Auto;
+	wire	[9:0]  Sig_TA_Thr_From_USB;
+	wire [64:1]  Sig_Mask_Word;
+	wire [64:1]  Sig_Mask_Word_From_Auto;
 	wire [256:1] Sig_Mask_Word_From_Auto_256bit;
-	
+	wire [64:1]  Sig_Set_Mask64;
 	assign Sig_Val_Evt = 1'b1; // 0 means disable discriminator outputsignal
 	// assign        Sig_Raz_Chn                   =   1'b1;//1means Erase active analogue column
 
@@ -409,16 +409,16 @@ ODDR_Clk ODDR_Clk_40M (
 
 	/*-----------PLL of 5M for Slow_Control-------*/
 
-	PLL_40M PLL_40M_Inst        // PLL 40MHz and 10MHz
+	PLL_40M PLL_40M_Inst     // PLL 40MHz and 10MHz
 	(
-		// Clock out ports
-		.clk_out1(Clk_40M),      // output clk_out1: 40MHz
-		.clk_out2(Clk_10M),      // output clk_out2
-		// Status and control signals
-		.reset(~Rst_n_Delay2),   // input reset
-		// Clock in ports
+                           // Clock out ports
+		.clk_out1(Clk_40M),    // output clk_out1: 40MHz
+		.clk_out2(Clk_10M),    // output clk_out2
+                           // Status and control signals
+		.reset(~Rst_n_Delay2), // input reset
+                           // Clock in ports
 		.clk_in1(Clk_Out_2_All)
-	); // input clk
+	);                       // input clk
 
 
 
@@ -427,16 +427,16 @@ ODDR_Clk ODDR_Clk_40M (
 
 
 	Fifo_Register Fifo_Register_Inst (
-		.clk(Clk_10M),      // input wire clk
-		.rst(~Rst_n_Delay2),      // input wire rst
+		.clk(Clk_10M),                // input wire clk
+		.rst(~Rst_n_Delay2),          // input wire rst
 		.din(In_To_Ex_Fifo_Din),      // input wire [7 : 0] din
 		.wr_en(In_To_Ex_Fifo_Wr_En),  // input wire wr_en
-		.rd_en(Sig_Ex_Fifo_SC_Rd_En),  // input wire rd_en
-		.dout(Sig_Ex_Fifo_SC_Dout),    // output wire [7 : 0] dout
-		.full(),    // output wire full
+		.rd_en(Sig_Ex_Fifo_SC_Rd_En), // input wire rd_en
+		.dout(Sig_Ex_Fifo_SC_Dout),   // output wire [7 : 0] dout
+		.full(),                      // output wire full
 		.empty(Sig_Ex_Fifo_SC_Empty)  // output wire empty
 		);
-	/*---------Prepare Register----------*/
+                                  /* ---------Prepare Register----------*/
 	Prepare_Register Prepare_Register_Inst(
 		.Clk(Clk_10M),
 		.Rst_N(Rst_n_Delay2),
@@ -500,26 +500,26 @@ ODDR_Clk ODDR_Clk_40M (
 	////////////////////
 	USB_Con USB_Con_Inst(
 
-		.USBCLK_i(Clk_Out_2_All),      //IN STD_LOGIC;-----IFCLK
-		.SLRD_o(Usb_Slrd),        //OUT STD_LOGIC;
-		.SLOE_o(Usb_Sloe),       //OUT STD_LOGIC;
-		.SLWR_o(Usb_Slwr),        //OUT STD_LOGIC;
-		.FlagA_i(Usb_Flaga),       // ----EP6 EMPTY FLAG // EP6 IS IN ENDPOINT // FLAGB=EP6 full flag  FLAGA=EP6 empty flag
-		.FlagB_i(Usb_Flagb),       // ----EP6 FULL FLAG
-		.FlagC_i(Usb_Flagc),       // ----EP2 EMPTY FLAG // EP2 IS OUT ENDPOINT // FLAGD=EP2 full flag  FLAGC=EP2 empty flag
-		.FlagD_i(Usb_Flagd),       // ----EP2 FULL FLAG
-		.PktEnd_o(Usb_Pktend),      //OUT STD_LOGIC;
-		.WAKEUP(Usb_Wu),        //OUT STD_LOGIC;  -- modified by Junbin 2014/1/20
-		.FifoAddr_o(Usb_Faddr),   //OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-		.USBData(Usb_Fdata),      //INOUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-		//connect with ExFifo
+		.USBCLK_i(Clk_Out_2_All),       // IN STD_LOGIC;-----IFCLK
+		.SLRD_o(Usb_Slrd),              // OUT STD_LOGIC;
+		.SLOE_o(Usb_Sloe),              // OUT STD_LOGIC;
+		.SLWR_o(Usb_Slwr),              // OUT STD_LOGIC;
+		.FlagA_i(Usb_Flaga),            // ----EP6 EMPTY FLAG // EP6 IS IN ENDPOINT // FLAGB=EP6 full flag  FLAGA=EP6 empty flag
+		.FlagB_i(Usb_Flagb),            // ----EP6 FULL FLAG
+		.FlagC_i(Usb_Flagc),            // ----EP2 EMPTY FLAG // EP2 IS OUT ENDPOINT // FLAGD=EP2 full flag  FLAGC=EP2 empty flag
+		.FlagD_i(Usb_Flagd),            // ----EP2 FULL FLAG
+		.PktEnd_o(Usb_Pktend),          // OUT STD_LOGIC;
+		.WAKEUP(Usb_Wu),                // OUT STD_LOGIC;  -- modified by Junbin 2014/1/20
+		.FifoAddr_o(Usb_Faddr),         // OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+		.USBData(Usb_Fdata),            // INOUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+                                    // connect with ExFifo
 		.ExFifoData_i(Fifo_Qout[15:0]), // command_out//IN(15 DOWNTO 0); data write to usb_infifo, almost from fpga_fifo 16'ha5a5
-		.ExFifoEmpty_i(Fifo_Empty), //IN
-		.ExFifoRdEn_o(Fifo_Rd_En),  //OUT STD_LOGIC;
-		//connect with CtrReg
+		.ExFifoEmpty_i(Fifo_Empty),     // IN
+		.ExFifoRdEn_o(Fifo_Rd_En),      // OUT STD_LOGIC;
+                                    // connect with CtrReg
 		.rst(Rst_n_Delay2),
-		.EndUsbWr_i(1'b0),    //IN STD_LOGIC;
-		.CtrData_o(Cmd_From_Usb[15:0]),     //OUT STD_LOGIC_VECTOR(15 DOWNTO 0);  data read from usb_outfifo
+		.EndUsbWr_i(1'b0),              // IN STD_LOGIC;
+		.CtrData_o(Cmd_From_Usb[15:0]), // OUT STD_LOGIC_VECTOR(15 DOWNTO 0);  data read from usb_outfifo
 		.CtrDataEn_o(Cmd_From_Usb_En)
 
 
@@ -528,15 +528,15 @@ ODDR_Clk ODDR_Clk_40M (
 
 
 		Ex_Fifo Ex_Fifo_Insst (
-			.rst(~Rst_n_Delay2),          // input wire rst
-			.wr_clk(Clk_40M),             // input wire wr_clk
-			.rd_clk(Clk_Out_2_All),       // input wire rd_clk
+			.rst(~Rst_n_Delay2),                       // input wire rst
+			.wr_clk(Clk_40M),                          // input wire wr_clk
+			.rd_clk(Clk_Out_2_All),                    // input wire rd_clk
 			.din(Sig_Parallel_Data_Into_Ex_Fifo),      // input wire [15 : 0] din
 			.wr_en(Sig_Parallel_Data_En_Into_Ex_Fifo), // input wire wr_en
-			.rd_en(Fifo_Rd_En),           // input wire rd_en
-			.dout(Fifo_Qout),             // output wire [15 : 0] dout
-			.full(),                      // output wire full
-			.empty(Fifo_Empty)            // output wire empty
+			.rd_en(Fifo_Rd_En),                        // input wire rd_en
+			.dout(Fifo_Qout),                          // output wire [15 : 0] dout
+			.full(),                                   // output wire full
+			.empty(Fifo_Empty)                         // output wire empty
 			);
 
 
@@ -656,6 +656,7 @@ ODDR_Clk ODDR_Clk_40M (
 					.Out_Set_Register(Sig_Start_Register),
 					.Out_Sel_Feedback_Capacitance(Sig_Sel_Feedback_Capacitance),
 					.Out_Choose_Channel_Resister(Sig_Choose_Channel_Register),
+					.Out_Set_Mask64(Sig_Set_Mask64),
 					.Out_Sel_Cali_TA(Sel_Cali_TA_Sig),
 					.Out_Set_Cali_DAC(Sig_Set_DAC),
 					.Out_Set_TA_Thr_DAC_12(Set_TA_Thr_DAC_Sig_12),
@@ -708,7 +709,7 @@ ODDR_Clk ODDR_Clk_40M (
 				assign Sig_Start_SC            = (Sig_Select_Start_SC == 1'b1)? Sig_Set_SC_Auto_Scan: Sig_Start_SC_USB_Cmd;
 				assign Set_TA_Thr_DAC_Sig_34   = (Sig_Select_Start_SC == 1'b1)? Sig_Set_DAC_From_Auto[46:37]:Sig_TA_Thr_From_USB;
 				assign Sig_Mask_Word_From_Auto = Sig_Mask_Word_From_Auto_256bit[256:193];
-				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? Sig_Mask_Word_From_Auto :64'd0;
+				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? Sig_Mask_Word_From_Auto :Sig_Set_Mask64;
 				assign Sig_Parallel_Data_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1) ? Sig_Parallel_Data_From_Auto_Scan:Sig_Parallel_Data;
 				assign Sig_Parallel_Data_En_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1)? Sig_Parallel_Data_En_From_Auto_Scan:Sig_Parallel_Data_En;
 				//Select Slow Control or Prob Register
@@ -731,17 +732,18 @@ ODDR_Clk ODDR_Clk_40M (
 
 
 				assign LED[1] = Sig_Start_Auto_Scan;
-				assign LED[2] = 1'b0;
-				assign LED[3] = Sig_Start_Acq;
-				assign LED[4] = 1'b1;
-				assign LED[5] = 1'b1;
+				assign LED[2] = Out_Sr_Rstb;
+				assign LED[3] = Out_Select;
+				assign LED[4] = Out_Sr_In;
+				assign LED[5] = Out_Sr_Ck;
 				assign LED[6] = Fifo_Empty;
 
 
-				(*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
-				(*mark_debug = "true"*) wire	Debug_Sig_Out_Din_Cali =	Out_Din_Cali;
-				(*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
+				// (*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
+				// (*mark_debug = "true"*) wire	Debug_Sig_Out_Din_Cali =	Out_Din_Cali;
+				// (*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
 				(*mark_debug = "true"*) wire	Debug_Sig_Sig_End_SC	=	Sig_End_SC;
+				(*mark_debug = "true"*) wire [64:1] Debug_Sig_Sig_Mask_Word	=	Sig_Mask_Word;
 				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;
 				(*mark_debug = "true"*) wire [10:1] Debug_Sig_Set_TA_Thr_DAC_Sig_34	=	Set_TA_Thr_DAC_Sig_34;
 				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Set_SC_Auto_Scan	=	Sig_Set_SC_Auto_Scan;
