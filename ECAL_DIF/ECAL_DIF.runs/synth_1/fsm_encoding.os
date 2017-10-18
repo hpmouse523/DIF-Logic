@@ -32,7 +32,7 @@
  add_fsm_encoding \
        {SKIROC2_S_Para_Scan.State_Fifo} \
        { }  \
-       {{0000 00} {0001 01} {0010 10} {0011 11} }
+       {{0000 000} {0001 001} {0010 010} {0011 100} {0100 011} }
 
  add_fsm_encoding \
        {SKIROC2_S_Para_Scan.State} \

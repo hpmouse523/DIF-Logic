@@ -11,15 +11,19 @@ module Prepare_Register
   input [9:0]       In_DAC_Gain_Select,
   input [9:0]       In_Dac_Trigger,
   input             In_Select_Main_Backup,//select main SCAs of backup SCA
-  input [3:0]       In_Sel_Feedback_Capacitance,// 4 bits input  indicate Callback capacitance 1111 means use all 4 capacitances. 1000 means use the smallest cap.
+  input             In_En_Trig_Discriminator,
+	input [3:0]       In_Sel_Feedback_Capacitance,// 4 bits input  indicate Callback capacitance 1111 means use all 4 capacitances. 1000 means use the smallest cap.
   input [2:0]       In_Sel_Comp_PA, //3bit select compensation capacitances commands default 111
   input             In_Sel_Work_Mode,//0means normal mode  1means Clai mode
 
   input             In_Sel_ADC_Test,//1means Select ADC test input as input to ADC
-  input [7:0]       In_Chip_ID_Bin, // 8 bits Chip ID 
+  input             In_Sel_OnlyExTrig,
+	input [7:0]       In_Chip_ID_Bin, // 8 bits Chip ID
+	input [8:1]       In_Delay_Trig, //8 bit Trig Delay From LSB to MSB 1000_0000 means 1 0000_1110 means h70 
   input             In_Select_TDC_On,
 
 	input [64:1]   		In_Mask_Word,
+	input [256:1]     In_DAC_Adj,
   /*-----------Exfifo--------------------------*/
   output reg        Out_Ex_Fifo_Wr_En,
   output reg  [7:0] Out_Ex_Fifo_Din,
@@ -40,7 +44,7 @@ assign        Parameter616[611]           =     1'b1;             // Start_Reado
 assign        Parameter616[610]           =     1'b1;             // End_Readout1   :  1means 1
 assign        Parameter616[609]           =     1'b1;             // LVDS rec On
 assign        Parameter616[608]           =     1'b1;             // Trigout Enable
-assign        Parameter616[607]           =     1'b0;             // Select Trig Ext or Trig In   1means only Ext Trig
+assign        Parameter616[607]           =     In_Sel_OnlyExTrig;             // Select Trig Ext or Trig In   1means only Ext Trig default 0
 assign        Parameter616[606:599]       =     Sig_Chip_ID_Gray; // Chip ID FF from MSB to LSB
 assign        Parameter616[598]           =     1'b0;             // Use ASIC commands
 assign        Parameter616[597]           =     1'b0;             // 0 if backup , In = 1
@@ -69,14 +73,14 @@ assign        Parameter616[557]           =     In_Sel_ADC_Test;       // OFF  A
 assign        Parameter616[556]           =     1'b0;                  // No bypass
 assign        Parameter616[555]           =     1'b0;                  // High gain:0  low gain :1
 assign        Parameter616[554]           =     1'b1;                  // Auto Gain:1 mains auto gaim 0means select
-assign        Parameter616[553:546]       =     8'b00001110;           // Delay for the trigger signals
+assign        Parameter616[553:546]       =     In_Delay_Trig;         // Delay for the trigger signals
 assign        Parameter616[545]           =     1'b0;                  // Power Pulsing mode
 assign        Parameter616[544]           =     1'b1;                  // Trig Delay Enabled
-assign        Parameter616[543:480]       =     In_Mask_Word;          // 64'b0;   //64'hffffffff00000000;//               //Alows to mask trigger channel 63:0 Low to H 0means no mask  ffffffff00000000 means mask 0~31
-assign        Parameter616[479:224]       =     256'b0;                // Discri 4bit DAC from channel0-63 (from 0-63) recommend 0001 , now is 0000
-assign        Parameter616[223]           =     1'b0;                  // Power Pulsing mode
-assign        Parameter616[222]           =     1'b1;                  // Trigger enabled
-assign        Parameter616[221]           =     1'b0;                  // Power Pulsing mode
+assign        Parameter616[543:480]       =     In_Mask_Word;             // 64'b0;   //64'hffffffff00000000;//               //Alows to mask trigger channel 63:0 Low to H 0means no mask  ffffffff00000000 means mask 0~31
+assign        Parameter616[479:224]       =     In_DAC_Adj;                // 256'b0;                // Discri 4bit DAC from channel0-63 (from 0-63) recommend 0001 , now is 0000,479:476 4'b1000 means Chn64 set 8
+assign        Parameter616[223]           =     1'b0;                     // Power Pulsing mode
+assign        Parameter616[222]           =     In_En_Trig_Discriminator; // Trigger enabled
+assign        Parameter616[221]           =     1'b0;                     // Power Pulsing mode
 assign        Parameter616[220]           =     1'b1;                  // Adjustment Enabled
 assign        Parameter616[219]           =     1'b0;                  // Power Pulsing mode
 assign        Parameter616[218]           =     1'b1;                  // Prob Enabled Enable prob OTA

@@ -27,7 +27,7 @@ module Prepare_Probe_Register(
     input [128:1] In_AnaProb_Thre_Fsb,
     input [128:1] In_Outt_Out_Delay,
     input [128:1] In_OutGain_Out_ADC,
-    input [2:1]   In_OR64_OR64delay,
+    input [2:1]   In_OR64_OR64delay,//10means ORdelay  01means OR
     output Out_Ex_Fifo_Wr_En,
     output [7:0] Out_Ex_Fifo_Din,
     output reg End_Flag

@@ -48,7 +48,7 @@ module Sci_Acq(
     reg     In_Ex_Trig_Delay1,
             In_Ex_Trig_Delay2;
 
- assign Cnt_Trig            = Cnt_Num_Ex_Trig;
+
 
  
   always  @ (posedge Clk or negedge Rst_N)
@@ -194,10 +194,10 @@ always  @ (*)
                 begin
                   State_Next        =   STATE_IDLE;
                 end   
-              else if(Cnt_Num_Ex_Trig     >= TOTAL_NUM_EX_TRIG)
-                begin
-                  State_Next        =   STATE_IDLE;
-                end   
+              // else if(Cnt_Num_Ex_Trig     >= TOTAL_NUM_EX_TRIG)
+              //   begin
+              //     State_Next        =   STATE_IDLE;
+              //   end
               else
                 begin
                   State_Next        =   STATE_WAIT_2_ACQ;
@@ -221,10 +221,14 @@ always  @ (*)
                 begin
                   State_Next        =   STATE_WAIT_2_CONVB;
                 end
-                else if(Cnt_Num_Ex_Trig     >= TOTAL_NUM_EX_TRIG )
-                begin
-                  State_Next        =   STATE_WAIT_2_CONVB;
-                end   
+							  else if(~In_Start_Work) //if stop acqing ,  force to Convb
+								begin
+									State_Next        =   STATE_WAIT_2_CONVB;
+								end		
+                // else if(Cnt_Num_Ex_Trig     >= TOTAL_NUM_EX_TRIG )
+                // begin
+                //   State_Next        =   STATE_WAIT_2_CONVB;
+                // end
               else
 
                 begin
@@ -577,7 +581,7 @@ always @ (posedge Clk or negedge Rst_N)
       end   
     else if(In_Ex_Trig_Delay1 && !In_Ex_Trig_Delay2)
       begin
-        Cnt_Num_Ex_Trig               <=  Cnt_Num_Ex_Trig + 1'b1;       
+				Cnt_Num_Ex_Trig               <=  Cnt_Num_Ex_Trig + 1'b1;
       end   
     else if(State == STATE_IDLE)
       begin
@@ -587,5 +591,7 @@ always @ (posedge Clk or negedge Rst_N)
       begin
         Cnt_Num_Ex_Trig               <=  Cnt_Num_Ex_Trig;
       end   
-  end   
+  end 
+
+ assign Cnt_Trig            = Cnt_Num_Ex_Trig;
 endmodule

@@ -113,9 +113,16 @@ module Top_Level(
 	/*------------------------------*/
 	wire        Sig_Sel_ADC_Test;
 	wire        Sig_End_SC;
+	wire				Sig_Hit_200ns;
 	wire        Sig_Start_Auto_Scan;
 	//assign  Out_Resetb                          =   1'b1;
-
+	wire        Sig_ExTrig_to_ExtPN;
+	wire        Sig_Ex_Trig_Only_Exmode;
+	wire        Sig_Sel_OnlyExTrig;
+	wire [8:1]	Sig_Delay_Trig;
+	wire [8:1]  Sig_Delay_Trig_Temp;//for translation
+	wire [12:1] Sig_Test_Cnt_Hit;
+	wire         Sig_Clk_2_Exfifo;//when Auto TA test, the Clk = 10MHz. Other Clk = 40MHz
 	wire         Sig_Finish_Scan_Flag;
 	wire         Sig_Start_Readout;
 	wire         Sig_Ck_40;
@@ -137,16 +144,34 @@ module Top_Level(
 	wire         [48:1]	Sig_Set_DAC_From_Auto;
 	wire	[9:0]  Sig_TA_Thr_From_USB;
 	wire [64:1]  Sig_Mask_Word;
+	wire [256:1] Sig_DAC_Adj;
+	wire [4:1]   Sig_DAC_Adj_Chn64;
 	wire [64:1]  Sig_Mask_Word_From_Auto;
 	wire [256:1] Sig_Mask_Word_From_Auto_256bit;
 	wire [64:1]  Sig_Set_Mask64;
-	assign Sig_Val_Evt = 1'b1; // 0 means disable discriminator outputsignal
+  wire [10:1]  Sig_Auto_Dac_Input_Chip1,
+							Sig_Auto_Dac_Input_Chip2,
+							Sig_Auto_Dac_Input_Chip3,
+							Sig_Auto_Dac_Input_Chip4;
+	// assign Sig_Val_Evt = 1'b1; // 0 means disable discriminator outputsignal
 	// assign        Sig_Raz_Chn                   =   1'b1;//1means Erase active analogue column
 
 
 
 	assign Out_Start_Readout1 = Sig_Start_Readout;
 	assign Out_Start_Readout2 = Out_Start_Readout1;
+
+	
+	assign Sig_Auto_Dac_Input_Chip1[1] = Sig_Set_DAC_From_Auto[46];
+	assign Sig_Auto_Dac_Input_Chip1[2] = Sig_Set_DAC_From_Auto[45];
+	assign Sig_Auto_Dac_Input_Chip1[3] = Sig_Set_DAC_From_Auto[44];
+	assign Sig_Auto_Dac_Input_Chip1[4] = Sig_Set_DAC_From_Auto[43];
+	assign Sig_Auto_Dac_Input_Chip1[5] = Sig_Set_DAC_From_Auto[42];
+	assign Sig_Auto_Dac_Input_Chip1[6] = Sig_Set_DAC_From_Auto[41];
+	assign Sig_Auto_Dac_Input_Chip1[7] = Sig_Set_DAC_From_Auto[40];
+	assign Sig_Auto_Dac_Input_Chip1[8] = Sig_Set_DAC_From_Auto[39];
+	assign Sig_Auto_Dac_Input_Chip1[9] = Sig_Set_DAC_From_Auto[38];
+	assign Sig_Auto_Dac_Input_Chip1[10] = Sig_Set_DAC_From_Auto[37];
 
 	/*---- Diff buffer for Out_Raz_Chn_P -----*/
 
@@ -175,7 +200,7 @@ module Top_Level(
 	) OBUFDS_Trig (
 		.O(Out_Trig_Ext_P),     // Diff_p output (connect directly to top-level port)
 		.OB(Out_Trig_Ext_N),    // Diff_n output (connect directly to top-level port)
-		.I(Out_Force_Trig)      // Buffer input
+		.I(Sig_ExTrig_to_ExtPN)      // Buffer input
 		);
 	/* -------Out_Ck_40P--------------*/
 
@@ -375,7 +400,14 @@ ODDR_Clk ODDR_Clk_40M (
 	assign				Sig_Parallel_Data_From_Auto_Scan[7:0]  = Sig_Parallel_Data_From_Auto_Scan_Temp[15:8];
 	assign        Sig_Parallel_Data[15:8]                = Sig_Parallel_Data_Temp[7:0];
 	assign        Sig_Parallel_Data[7:0]                 = Sig_Parallel_Data_Temp[15:8];
-
+	assign				Sig_Delay_Trig[8] = Sig_Delay_Trig_Temp[1];
+	assign				Sig_Delay_Trig[7] = Sig_Delay_Trig_Temp[2];
+	assign				Sig_Delay_Trig[6] = Sig_Delay_Trig_Temp[3];
+	assign				Sig_Delay_Trig[5] = Sig_Delay_Trig_Temp[4];
+	assign				Sig_Delay_Trig[4] = Sig_Delay_Trig_Temp[5];
+	assign				Sig_Delay_Trig[3] = Sig_Delay_Trig_Temp[6];
+	assign				Sig_Delay_Trig[2] = Sig_Delay_Trig_Temp[7];
+	assign				Sig_Delay_Trig[1] = Sig_Delay_Trig_Temp[8];
 
 	//////////////////////////////////
 	always @ (posedge Clk_Out_2_All)
@@ -449,14 +481,18 @@ ODDR_Clk ODDR_Clk_40M (
 		.In_DAC_Gain_Select(Set_TA_Thr_DAC_Sig_12),
 		.In_Dac_Trigger(Set_TA_Thr_DAC_Sig_34),
 		.In_Select_Main_Backup(~Sig_Main_Backup),
+		.In_En_Trig_Discriminator(Sig_Val_Evt),
 		.In_Sel_Feedback_Capacitance(Sig_Sel_Feedback_Capacitance),
 		.In_Sel_Comp_PA(Sig_Sel_Feedback_Capacitance[2:0]),
 		.In_Sel_Work_Mode(Sel_Work_Mode_Sig),
 		.In_Sel_ADC_Test(Sig_Sel_ADC_Test),
+		.In_Sel_OnlyExTrig(Sig_Sel_OnlyExTrig), //default 0 ,Select Trig only Ex  default 0 means In or Ex 1means Only Ex
 		.In_Chip_ID_Bin(8'h01),
+		.In_Delay_Trig(Sig_Delay_Trig), //default = 8'h70
 		.In_Select_TDC_On(Sig_Select_TDC_On),
 
 		.In_Mask_Word(Sig_Mask_Word),
+		.In_DAC_Adj(Sig_DAC_Adj),
 		/*-----------Exfifo--------------------------*/
 		.Out_Ex_Fifo_Wr_En(Sig_Ex_Fifo_SC_Wr_En),
 		.Out_Ex_Fifo_Din(Sig_Ex_Fifo_SC_Din),
@@ -529,7 +565,7 @@ ODDR_Clk ODDR_Clk_40M (
 
 		Ex_Fifo Ex_Fifo_Insst (
 			.rst(~Rst_n_Delay2),                       // input wire rst
-			.wr_clk(Clk_40M),                          // input wire wr_clk
+			.wr_clk(Sig_Clk_2_Exfifo),                 // input wire wr_clk
 			.rd_clk(Clk_Out_2_All),                    // input wire rd_clk
 			.din(Sig_Parallel_Data_Into_Ex_Fifo),      // input wire [15 : 0] din
 			.wr_en(Sig_Parallel_Data_En_Into_Ex_Fifo), // input wire wr_en
@@ -587,7 +623,7 @@ ODDR_Clk ODDR_Clk_40M (
 					.Rst_N(Rst_n_Delay2),
 					.Ini_DAC(Sig_Set_Ini_DAC_for_Auto_Scan[10:1]), // need 10 bit  assert 12bit
 					.In_Trig_Ex_From_Signal(SMA_ExTrig_Cnt),       // need rising edge
-					.In_Hit_From_SKIROC(In_Trig_Outb),
+					.In_Hit_From_SKIROC(~Sig_Hit_200ns),
 					.In_Start_Scan(Sig_Start_Auto_Scan),           // start auto scan
 					.In_Finish_Sc(Sig_End_SC),                     // at least last 1cyc
 					.Out_Finish_Scan(Sig_Finish_Scan_Flag),
@@ -596,7 +632,8 @@ ODDR_Clk ODDR_Clk_40M (
 					.Out_Mask_Code(Sig_Mask_Word_From_Auto_256bit),
 					.Out_Fifo_Din(Sig_Parallel_Data_From_Auto_Scan_Temp),
 					.Out_Token_All(Sig_Select_Start_SC),
-					.Out_Fifo_Wr(Sig_Parallel_Data_En_From_Auto_Scan)
+					.Out_Fifo_Wr(Sig_Parallel_Data_En_From_Auto_Scan),
+					.Out_Test_Cnt_Hit(Sig_Test_Cnt_Hit)
 					);
 				Read_Register_Set Read_Register_Set_Inst(                     // used for readout FIFO datas from SKIROC2
 					.Clk(Clk_10M),
@@ -633,11 +670,15 @@ ODDR_Clk ODDR_Clk_40M (
 					.out_to_usb_Acq_Start_Stop(Sig_Start_Acq),
 					.out_to_control_usb_data(Choose_Data_2_Exfifo),
 					.LED(),
+					.Out_DAC_Adj_Chn64(Sig_DAC_Adj_Chn64),
 					.Out_Sel_Work_Mode(Sel_Work_Mode_Sig),
 					.Out_Valid_TA_for_Self_Mod(),
+					.Out_Val_Evt(Sig_Val_Evt),//default 1 en discriminator
 					.Out_Trig_Start_Stop(Trig_Start_Stop_Sig),
+					.Out_Sel_OnlyExTrig(Sig_Sel_OnlyExTrig),
 					.Out_Hold(Out_Hold),
 					.Out_Control_Trig_Mode(Control_Trig_Mode_Sig),
+					.Out_Delay_Trig_Temp(Sig_Delay_Trig_Temp),
 					.Out_Set_Trig_Inside_Time(Sig_Set_Interval_Time),
 					.Out_Set_Constant_Interval_Time(Set_Constant_Interval_Time_Sig),
 					.Out_Set_Hold_Delay_Time(Sig_Set_Ini_DAC_for_Auto_Scan),
@@ -675,10 +716,22 @@ ODDR_Clk ODDR_Clk_40M (
 					.Clk_In(Clk_Out_2_All), //80MHz
 					.Rst_N(Rst_n_Delay2),
 					.In_Start_Light(Sig_Start_Auto_Scan),
-					.In_Stop_Extinguish(Out_Force_Trig),//(Sig_Finish_Scan_Flag),
-					.Out_LED(LED[7]),
+					.In_Stop_Extinguish(Sig_Finish_Scan_Flag),//(Sig_Finish_Scan_Flag),
+					.Out_LED(),
 					.Out_LED_Blink(LED[8])
 					);
+				Hit_50_to_200ns Hit_50_to_200ns_Inst(
+					.Clk_In(Clk_Out_2_All),//80MHz
+					.Rst_N(Rst_n_Delay2),
+					.In_Hit_Sig(In_Trig_Outb),//Enb
+					.Out_Hit_Sig(Sig_Hit_200ns)
+    			);
+		 		General_ExTrig General_ExTrig_Inst(
+    			.Clk(Clk_Out_2_All),
+    			.Rst_N(Rst_n_Delay2),
+    			.In_Trig_SMA(SMA_ExTrig_Cnt),
+    			.Out_Ex_Trig(Sig_Ex_Trig_Only_Exmode)
+    );
 
 				//DAC Cali mode
 
@@ -696,57 +749,50 @@ ODDR_Clk ODDR_Clk_40M (
 				assign Out_Start_Ramp_TDC_Ext  = 1'b0;
 				assign Out_Start_Rampb_ADC_Ext = 1'b0;
 				assign Out_Sr_Rstb             = 1'b1;
-
 				assign Out_Rstb_Pa             = Out_Resetb;
-
-
 				assign Out_Pwr_On_D            = Status_Power_On_Control;
-
 				//assign  Out_Pwr_On_D                        =   Sig_Pwr_On_D;
 				assign Out_Pwr_On_Dac          = 1'b1;
 				assign Out_Pwr_On_Adc          = Status_Power_On_Control;
 				assign Out_Pwr_On_A            = Status_Power_On_Control;
 				assign Sig_Start_SC            = (Sig_Select_Start_SC == 1'b1)? Sig_Set_SC_Auto_Scan: Sig_Start_SC_USB_Cmd;
-				assign Set_TA_Thr_DAC_Sig_34   = (Sig_Select_Start_SC == 1'b1)? Sig_Set_DAC_From_Auto[46:37]:Sig_TA_Thr_From_USB;
+				assign Set_TA_Thr_DAC_Sig_34   = (Sig_Select_Start_SC == 1'b1)? Sig_Auto_Dac_Input_Chip1:Sig_TA_Thr_From_USB;
 				assign Sig_Mask_Word_From_Auto = Sig_Mask_Word_From_Auto_256bit[256:193];
 				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? Sig_Mask_Word_From_Auto :Sig_Set_Mask64;
+				assign Sig_Clk_2_Exfifo        = (Sig_Select_Start_SC == 1'b1) ? Clk_10M : Clk_40M;
 				assign Sig_Parallel_Data_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1) ? Sig_Parallel_Data_From_Auto_Scan:Sig_Parallel_Data;
 				assign Sig_Parallel_Data_En_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1)? Sig_Parallel_Data_En_From_Auto_Scan:Sig_Parallel_Data_En;
 				//Select Slow Control or Prob Register
 				assign In_To_Ex_Fifo_Wr_En     = (Out_Select == 1'b1) ? Sig_Ex_Fifo_SC_Wr_En : Sig_Ex_Fifo_Wr_En_From_Prob_Register;
 				assign In_To_Ex_Fifo_Din       = (Out_Select == 1'b1) ? Sig_Ex_Fifo_SC_Din   : Sig_Ex_Fifo_Din_From_Register;
 				assign Start_In_SC_Prob        = (Out_Select == 1'b1) ? Sig_Fifo_Register_Done:End_Flag_From_Prob;
-
-
-
-
-
-
-
-
-
-
-
-
+				assign Sig_DAC_Adj = {Sig_DAC_Adj_Chn64,248'b0,Sig_DAC_Adj_Chn64};
 				assign SMA1 = SMA_ExTrig_Cnt;
+				assign Sig_ExTrig_to_ExtPN = (Sig_Sel_OnlyExTrig == 1'b1) ? Sig_Ex_Trig_Only_Exmode : Out_Force_Trig; 
 
-
-				assign LED[1] = Sig_Start_Auto_Scan;
-				assign LED[2] = Out_Sr_Rstb;
-				assign LED[3] = Out_Select;
-				assign LED[4] = Out_Sr_In;
-				assign LED[5] = Out_Sr_Ck;
-				assign LED[6] = Fifo_Empty;
+				assign LED[1] = In_Digital_Prob1;
+				assign LED[2] = Sig_Hit_200ns;
+				assign LED[3] = Sig_Sel_OnlyExTrig; //Sig_DAC_Adj[255];
+				assign LED[4] = SMA_ExTrig_Cnt;
+				assign LED[5] = Sig_Mask_Word[64];
+				assign LED[6] = Sig_Mask_Word[1];
 
 
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_Din_Cali =	Out_Din_Cali;
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
 				(*mark_debug = "true"*) wire	Debug_Sig_Sig_End_SC	=	Sig_End_SC;
-				(*mark_debug = "true"*) wire [64:1] Debug_Sig_Sig_Mask_Word	=	Sig_Mask_Word;
-				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;
+				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Set_SC_Auto_Scan	=	Sig_Set_SC_Auto_Scan;
+				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;//Sig_Select_Start_SC means token of AutoScan mode
 				(*mark_debug = "true"*) wire [10:1] Debug_Sig_Set_TA_Thr_DAC_Sig_34	=	Set_TA_Thr_DAC_Sig_34;
-				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Set_SC_Auto_Scan	=	Sig_Set_SC_Auto_Scan;
+				(*mark_debug = "true"*) wire [64:1] Debug_Sig_Sig_Mask_Word	=	Sig_Mask_Word;
+				(*mark_debug = "true"*) wire Debug_Sig_Sig_Start_SC	=	Sig_Start_SC;
+				(*mark_debug = "true"*) wire Debug_Sig_Sig_Parallel_Data_En_From_Auto_Scan	=	Sig_Parallel_Data_En_From_Auto_Scan;
+				(*mark_debug = "true"*) wire Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo	=	Sig_Parallel_Data_En_Into_Ex_Fifo;
+				(*mark_debug = "true"*) wire Debug_Sig_Sig_Clk_2_Exfifo	=	Sig_Clk_2_Exfifo;
+				(*mark_debug = "true"*) wire [12:1] Debug_Sig_Sig_Test_Cnt_Hit	=	Sig_Test_Cnt_Hit;
+				(*mark_debug = "true"*) wire [16:1] Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp	=	Sig_Parallel_Data_From_Auto_Scan_Temp;
+
 endmodule
 
 

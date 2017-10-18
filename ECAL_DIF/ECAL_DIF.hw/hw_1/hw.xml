@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7a100t_0" gui_info="dashboard1=hw_ila_1[xc7a100t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a100t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a100t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a100t_0/hw_ila_1/Status=ILA_STATUS_1;]"/>
+  <device name="xc7a100t_0" gui_info=""/>
   <ObjectList object_type="hw_cfgmem" gui_info="">
     <Object name="" gui_info="">
       <Properties Property="PROGRAM.ADDRESS_RANGE" value="use_file"/>
@@ -38,7 +38,12 @@
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="Debug_Sig_Out_CS_n_Cali" gui_info="Trigger Setup=0"/>
+    <Object name="Debug_Sig_Sig_End_SC" gui_info=""/>
+    <Object name="Debug_Sig_Sig_Mask_Word[64:1]" gui_info=""/>
+    <Object name="Debug_Sig_Sig_Parallel_Data_En_From_Auto_Scan" gui_info="Trigger Setup=0"/>
     <Object name="Debug_Sig_Sig_Select_Start_SC" gui_info=""/>
+    <Object name="Debug_Sig_Sig_Set_SC_Auto_Scan" gui_info=""/>
+    <Object name="Debug_Sig_Sig_Start_SC[64:1]" gui_info=""/>
     <Object name="Debug_Sig_Start_SC" gui_info="Trigger Setup=0"/>
     <Object name="Debug_Sig_Usb_FlagC" gui_info=""/>
     <Object name="Usb_Flagc_IBUF" gui_info="Trigger Setup=0"/>
@@ -95,14 +100,14 @@
         <net name="Debug_Sig_Out_SCLK_Cali"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq10&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq10&apos;hXXX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
-        <Option Id="MAP" value="probe0[9:0]"/>
+        <Option Id="MAP" value="probe3[9:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -128,7 +133,24 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
-        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Clk_2_Exfifo"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe5[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -140,12 +162,238 @@
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe0[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Mask_Word[64]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[63]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[62]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[61]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[60]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[59]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[58]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[57]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[56]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[55]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[54]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[53]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[52]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[51]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[50]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[49]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[48]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[47]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[46]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[45]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[44]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[43]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[42]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[41]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[40]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[39]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[38]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[37]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[36]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[35]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[34]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[33]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[32]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[31]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[30]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[29]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[28]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[27]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[26]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[25]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[24]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[23]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[22]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[21]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[20]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[19]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[18]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[17]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[16]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[15]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[14]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[13]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[12]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[11]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[10]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[9]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[8]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[7]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[6]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[5]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[4]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[3]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[2]"/>
+        <net name="Debug_Sig_Sig_Mask_Word[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe1[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[64]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[63]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[62]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[61]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[60]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[59]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[58]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[57]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[56]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[55]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[54]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[53]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[52]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[51]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[50]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[49]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[48]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[47]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[46]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[45]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[44]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[43]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[42]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[41]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[40]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[39]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[38]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[37]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[36]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[35]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[34]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[33]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[32]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[31]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[30]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[29]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[28]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[27]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[26]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[25]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[24]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[23]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[22]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[21]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[20]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[19]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[18]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[17]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[16]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[15]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[14]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[13]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[12]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[11]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[10]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[9]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[8]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[7]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[6]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[5]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[4]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[3]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[2]"/>
+        <net name="Debug_Sig_Sig_Mask_Word_From_Auto[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Parallel_Data_En_From_Auto_Scan"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
         <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
-        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe1[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[16]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[15]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[14]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[13]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[12]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[11]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[10]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[9]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[8]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[7]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[6]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[5]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[4]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[3]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[2]"/>
+        <net name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe8[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -162,7 +410,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
-        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="MAP" value="probe9[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -170,6 +418,131 @@
       </probeOptions>
       <nets>
         <net name="Debug_Sig_Sig_Set_SC_Auto_Scan"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Start_SC"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe0[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Start_SC[64]"/>
+        <net name="Debug_Sig_Sig_Start_SC[63]"/>
+        <net name="Debug_Sig_Sig_Start_SC[62]"/>
+        <net name="Debug_Sig_Sig_Start_SC[61]"/>
+        <net name="Debug_Sig_Sig_Start_SC[60]"/>
+        <net name="Debug_Sig_Sig_Start_SC[59]"/>
+        <net name="Debug_Sig_Sig_Start_SC[58]"/>
+        <net name="Debug_Sig_Sig_Start_SC[57]"/>
+        <net name="Debug_Sig_Sig_Start_SC[56]"/>
+        <net name="Debug_Sig_Sig_Start_SC[55]"/>
+        <net name="Debug_Sig_Sig_Start_SC[54]"/>
+        <net name="Debug_Sig_Sig_Start_SC[53]"/>
+        <net name="Debug_Sig_Sig_Start_SC[52]"/>
+        <net name="Debug_Sig_Sig_Start_SC[51]"/>
+        <net name="Debug_Sig_Sig_Start_SC[50]"/>
+        <net name="Debug_Sig_Sig_Start_SC[49]"/>
+        <net name="Debug_Sig_Sig_Start_SC[48]"/>
+        <net name="Debug_Sig_Sig_Start_SC[47]"/>
+        <net name="Debug_Sig_Sig_Start_SC[46]"/>
+        <net name="Debug_Sig_Sig_Start_SC[45]"/>
+        <net name="Debug_Sig_Sig_Start_SC[44]"/>
+        <net name="Debug_Sig_Sig_Start_SC[43]"/>
+        <net name="Debug_Sig_Sig_Start_SC[42]"/>
+        <net name="Debug_Sig_Sig_Start_SC[41]"/>
+        <net name="Debug_Sig_Sig_Start_SC[40]"/>
+        <net name="Debug_Sig_Sig_Start_SC[39]"/>
+        <net name="Debug_Sig_Sig_Start_SC[38]"/>
+        <net name="Debug_Sig_Sig_Start_SC[37]"/>
+        <net name="Debug_Sig_Sig_Start_SC[36]"/>
+        <net name="Debug_Sig_Sig_Start_SC[35]"/>
+        <net name="Debug_Sig_Sig_Start_SC[34]"/>
+        <net name="Debug_Sig_Sig_Start_SC[33]"/>
+        <net name="Debug_Sig_Sig_Start_SC[32]"/>
+        <net name="Debug_Sig_Sig_Start_SC[31]"/>
+        <net name="Debug_Sig_Sig_Start_SC[30]"/>
+        <net name="Debug_Sig_Sig_Start_SC[29]"/>
+        <net name="Debug_Sig_Sig_Start_SC[28]"/>
+        <net name="Debug_Sig_Sig_Start_SC[27]"/>
+        <net name="Debug_Sig_Sig_Start_SC[26]"/>
+        <net name="Debug_Sig_Sig_Start_SC[25]"/>
+        <net name="Debug_Sig_Sig_Start_SC[24]"/>
+        <net name="Debug_Sig_Sig_Start_SC[23]"/>
+        <net name="Debug_Sig_Sig_Start_SC[22]"/>
+        <net name="Debug_Sig_Sig_Start_SC[21]"/>
+        <net name="Debug_Sig_Sig_Start_SC[20]"/>
+        <net name="Debug_Sig_Sig_Start_SC[19]"/>
+        <net name="Debug_Sig_Sig_Start_SC[18]"/>
+        <net name="Debug_Sig_Sig_Start_SC[17]"/>
+        <net name="Debug_Sig_Sig_Start_SC[16]"/>
+        <net name="Debug_Sig_Sig_Start_SC[15]"/>
+        <net name="Debug_Sig_Sig_Start_SC[14]"/>
+        <net name="Debug_Sig_Sig_Start_SC[13]"/>
+        <net name="Debug_Sig_Sig_Start_SC[12]"/>
+        <net name="Debug_Sig_Sig_Start_SC[11]"/>
+        <net name="Debug_Sig_Sig_Start_SC[10]"/>
+        <net name="Debug_Sig_Sig_Start_SC[9]"/>
+        <net name="Debug_Sig_Sig_Start_SC[8]"/>
+        <net name="Debug_Sig_Sig_Start_SC[7]"/>
+        <net name="Debug_Sig_Sig_Start_SC[6]"/>
+        <net name="Debug_Sig_Sig_Start_SC[5]"/>
+        <net name="Debug_Sig_Sig_Start_SC[4]"/>
+        <net name="Debug_Sig_Sig_Start_SC[3]"/>
+        <net name="Debug_Sig_Sig_Start_SC[2]"/>
+        <net name="Debug_Sig_Sig_Start_SC[1]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="MAP" value="probe2[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[12]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[11]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[10]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[9]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[8]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[7]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[6]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[5]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[4]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[3]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[2]"/>
+        <net name="Debug_Sig_Sig_Test_Cnt_Hit[1]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

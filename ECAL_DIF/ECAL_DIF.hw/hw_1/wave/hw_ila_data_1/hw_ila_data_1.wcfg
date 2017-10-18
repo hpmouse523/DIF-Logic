@@ -9,46 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="89584fs"></ZoomStartTime>
-      <ZoomEndTime time="548085fs"></ZoomEndTime>
-      <Cursor1Time time="110000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1662674fs"></ZoomEndTime>
+      <Cursor1Time time="135000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="251"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="275"></NameColumnWidth>
+      <ValueColumnWidth column_width="65"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
-   <wave_markers>
-   </wave_markers>
-   <wvobject fp_name="Debug_Sig_Out_CS_n_Cali" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">Debug_Sig_Out_CS_n_Cali</obj_property>
-      <obj_property name="ObjectShortName">Debug_Sig_Out_CS_n_Cali</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="Debug_Sig_Out_Din_Cali" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">Debug_Sig_Out_Din_Cali</obj_property>
-      <obj_property name="ObjectShortName">Debug_Sig_Out_Din_Cali</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="Debug_Sig_Out_SCLK_Cali" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">Debug_Sig_Out_SCLK_Cali</obj_property>
-      <obj_property name="ObjectShortName">Debug_Sig_Out_SCLK_Cali</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="Debug_Sig_Set_TA_Thr_DAC_Sig_34" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">Debug_Sig_Set_TA_Thr_DAC_Sig_34[10:1]</obj_property>
-      <obj_property name="ObjectShortName">Debug_Sig_Set_TA_Thr_DAC_Sig_34[10:1]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
+   <WVObjectSize size="11" />
    <wvobject fp_name="Debug_Sig_Sig_End_SC" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">Debug_Sig_Sig_End_SC</obj_property>
@@ -67,6 +36,66 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
       <obj_property name="ObjectShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Set_TA_Thr_DAC_Sig_34" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Set_TA_Thr_DAC_Sig_34[10:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Set_TA_Thr_DAC_Sig_34[10:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Mask_Word" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Mask_Word[64:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Mask_Word[64:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Start_SC" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Start_SC</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Start_SC</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Set_SC_Auto_Scan" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[16:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[16:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Clk_2_Exfifo" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Clk_2_Exfifo</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Clk_2_Exfifo</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Test_Cnt_Hit" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Test_Cnt_Hit[12:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Test_Cnt_Hit[12:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

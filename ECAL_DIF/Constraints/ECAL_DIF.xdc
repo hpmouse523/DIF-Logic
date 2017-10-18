@@ -13,19 +13,11 @@ set_property BITSTREAM.CONFIG.SPI_FALL_EDGE Yes [current_design]
 set_property PACKAGE_PIN U20 [get_ports Clk_In]
 set_property IOSTANDARD LVCMOS33 [get_ports Clk_In]
 set_property IOSTANDARD LVCMOS33 [get_ports Rst_n]
-
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[4]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[5]}]
-
-
-
-
-
-
-
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[8]}]
@@ -74,9 +66,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports Usb_Sloe]
 set_property IOSTANDARD LVCMOS33 [get_ports Usb_Slrd]
 set_property IOSTANDARD LVCMOS33 [get_ports Usb_Slwr]
 set_property IOSTANDARD LVCMOS33 [get_ports Usb_Wu]
-
 set_property IOSTANDARD LVCMOS33 [get_ports Out_Ck40_Test]
-set_property PACKAGE_PIN AA8 [get_ports Out_Ck40_Test]
+set_property PACKAGE_PIN R3 [get_ports Out_Ck40_Test]
 set_property IOSTANDARD LVCMOS25 [get_ports In_Chipsatb]
 set_property IOSTANDARD LVCMOS25 [get_ports In_Digital_Prob1]
 set_property IOSTANDARD LVCMOS25 [get_ports In_Digital_Prob2]
@@ -123,18 +114,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports Out_Start_Readout1]
 set_property IOSTANDARD LVCMOS33 [get_ports Out_Start_Readout2]
 set_property IOSTANDARD LVDS_25 [get_ports Out_Trig_Ext_P]
 set_property IOSTANDARD LVCMOS33 [get_ports SMA_ExTrig_Cnt]
-
-
-
-
-
 set_property PACKAGE_PIN P16 [get_ports {Usb_Fdata[3]}]
-
-
-
-
-
-
 
 
 set_property IOSTANDARD LVCMOS25 [get_ports SMA4]
@@ -142,8 +122,6 @@ set_property IOSTANDARD LVCMOS25 [get_ports SMA5]
 set_property IOSTANDARD LVCMOS33 [get_ports SMA3]
 set_property IOSTANDARD LVCMOS33 [get_ports SMA1]
 set_property IOSTANDARD LVCMOS33 [get_ports SMA2]
-
-
 
 set_property PACKAGE_PIN A20 [get_ports {LED[1]}]
 set_property PACKAGE_PIN C22 [get_ports {LED[2]}]
@@ -167,7 +145,6 @@ set_property PACKAGE_PIN Y19 [get_ports Usb_Flagd]
 set_property PACKAGE_PIN W21 [get_ports Usb_Flagc]
 set_property PACKAGE_PIN W20 [get_ports Usb_Flagb]
 set_property PACKAGE_PIN V20 [get_ports Usb_Flaga]
-set_property PACKAGE_PIN R3 [get_ports SMA_ExTrig_Cnt]
 set_property PACKAGE_PIN G15 [get_ports SMA5]
 set_property PACKAGE_PIN G13 [get_ports SMA4]
 set_property PACKAGE_PIN B15 [get_ports SMA3]
@@ -210,6 +187,7 @@ set_property PACKAGE_PIN B1 [get_ports In_Digital_Prob2]
 set_property PACKAGE_PIN A1 [get_ports In_Digital_Prob1]
 set_property PACKAGE_PIN D1 [get_ports In_Chipsatb]
 set_property PACKAGE_PIN G1 [get_ports Out_Ck_5P]
+set_property PACKAGE_PIN A13 [get_ports SMA_ExTrig_Cnt]
 
 
 
@@ -230,16 +208,44 @@ set_property port_width 64 [get_debug_ports u_ila_0/probe0]
 connect_debug_port u_ila_0/probe0 [get_nets [list {Debug_Sig_Sig_Mask_Word[1]} {Debug_Sig_Sig_Mask_Word[2]} {Debug_Sig_Sig_Mask_Word[3]} {Debug_Sig_Sig_Mask_Word[4]} {Debug_Sig_Sig_Mask_Word[5]} {Debug_Sig_Sig_Mask_Word[6]} {Debug_Sig_Sig_Mask_Word[7]} {Debug_Sig_Sig_Mask_Word[8]} {Debug_Sig_Sig_Mask_Word[9]} {Debug_Sig_Sig_Mask_Word[10]} {Debug_Sig_Sig_Mask_Word[11]} {Debug_Sig_Sig_Mask_Word[12]} {Debug_Sig_Sig_Mask_Word[13]} {Debug_Sig_Sig_Mask_Word[14]} {Debug_Sig_Sig_Mask_Word[15]} {Debug_Sig_Sig_Mask_Word[16]} {Debug_Sig_Sig_Mask_Word[17]} {Debug_Sig_Sig_Mask_Word[18]} {Debug_Sig_Sig_Mask_Word[19]} {Debug_Sig_Sig_Mask_Word[20]} {Debug_Sig_Sig_Mask_Word[21]} {Debug_Sig_Sig_Mask_Word[22]} {Debug_Sig_Sig_Mask_Word[23]} {Debug_Sig_Sig_Mask_Word[24]} {Debug_Sig_Sig_Mask_Word[25]} {Debug_Sig_Sig_Mask_Word[26]} {Debug_Sig_Sig_Mask_Word[27]} {Debug_Sig_Sig_Mask_Word[28]} {Debug_Sig_Sig_Mask_Word[29]} {Debug_Sig_Sig_Mask_Word[30]} {Debug_Sig_Sig_Mask_Word[31]} {Debug_Sig_Sig_Mask_Word[32]} {Debug_Sig_Sig_Mask_Word[33]} {Debug_Sig_Sig_Mask_Word[34]} {Debug_Sig_Sig_Mask_Word[35]} {Debug_Sig_Sig_Mask_Word[36]} {Debug_Sig_Sig_Mask_Word[37]} {Debug_Sig_Sig_Mask_Word[38]} {Debug_Sig_Sig_Mask_Word[39]} {Debug_Sig_Sig_Mask_Word[40]} {Debug_Sig_Sig_Mask_Word[41]} {Debug_Sig_Sig_Mask_Word[42]} {Debug_Sig_Sig_Mask_Word[43]} {Debug_Sig_Sig_Mask_Word[44]} {Debug_Sig_Sig_Mask_Word[45]} {Debug_Sig_Sig_Mask_Word[46]} {Debug_Sig_Sig_Mask_Word[47]} {Debug_Sig_Sig_Mask_Word[48]} {Debug_Sig_Sig_Mask_Word[49]} {Debug_Sig_Sig_Mask_Word[50]} {Debug_Sig_Sig_Mask_Word[51]} {Debug_Sig_Sig_Mask_Word[52]} {Debug_Sig_Sig_Mask_Word[53]} {Debug_Sig_Sig_Mask_Word[54]} {Debug_Sig_Sig_Mask_Word[55]} {Debug_Sig_Sig_Mask_Word[56]} {Debug_Sig_Sig_Mask_Word[57]} {Debug_Sig_Sig_Mask_Word[58]} {Debug_Sig_Sig_Mask_Word[59]} {Debug_Sig_Sig_Mask_Word[60]} {Debug_Sig_Sig_Mask_Word[61]} {Debug_Sig_Sig_Mask_Word[62]} {Debug_Sig_Sig_Mask_Word[63]} {Debug_Sig_Sig_Mask_Word[64]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 1 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list Debug_Sig_Sig_End_SC]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[1]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[2]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[3]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[4]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[5]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[6]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[7]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[8]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[9]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[10]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[11]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[12]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[13]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[14]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[15]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[16]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-set_property port_width 1 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list Debug_Sig_Sig_Select_Start_SC]]
+set_property port_width 12 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {Debug_Sig_Sig_Test_Cnt_Hit[1]} {Debug_Sig_Sig_Test_Cnt_Hit[2]} {Debug_Sig_Sig_Test_Cnt_Hit[3]} {Debug_Sig_Sig_Test_Cnt_Hit[4]} {Debug_Sig_Sig_Test_Cnt_Hit[5]} {Debug_Sig_Sig_Test_Cnt_Hit[6]} {Debug_Sig_Sig_Test_Cnt_Hit[7]} {Debug_Sig_Sig_Test_Cnt_Hit[8]} {Debug_Sig_Sig_Test_Cnt_Hit[9]} {Debug_Sig_Sig_Test_Cnt_Hit[10]} {Debug_Sig_Sig_Test_Cnt_Hit[11]} {Debug_Sig_Sig_Test_Cnt_Hit[12]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-set_property port_width 1 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list Debug_Sig_Sig_Set_SC_Auto_Scan]]
+set_property port_width 10 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {Debug_Sig_Set_TA_Thr_DAC_Sig_34[1]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[2]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[3]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[4]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[5]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[6]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[7]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[8]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[9]} {Debug_Sig_Set_TA_Thr_DAC_Sig_34[10]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list Debug_Sig_Sig_Clk_2_Exfifo]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list Debug_Sig_Sig_End_SC]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list Debug_Sig_Sig_Parallel_Data_En_From_Auto_Scan]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list Debug_Sig_Sig_Select_Start_SC]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list Debug_Sig_Sig_Set_SC_Auto_Scan]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list Debug_Sig_Sig_Start_SC]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

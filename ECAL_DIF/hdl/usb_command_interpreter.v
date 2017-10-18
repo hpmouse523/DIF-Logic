@@ -33,12 +33,16 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
       output reg [5:0]      LED,
                                                        /* ------Select Work mode-----------*/
       output reg            Out_Sel_Work_Mode,
+			output reg [4:1]      Out_DAC_Adj_Chn64,
                                                        /* ------Control Trig and ADC module--------*/
       output reg [4:1]      Out_Valid_TA_for_Self_Mod, // Control which TA to use for Self Trig mode  1111for all use 0001for only use TA1
+			output reg            Out_Val_Evt,               //Default 1 En discriminator
 
-      output reg            Out_Trig_Start_Stop,  
+      output reg            Out_Trig_Start_Stop, 
+ 			output reg            Out_Sel_OnlyExTrig,	
       output reg            Out_Hold,
       output reg [3:0]      Out_Control_Trig_Mode,
+			output reg [8:1]      Out_Delay_Trig_Temp, //Set Delay time. order is from MSB to LSB
       output reg [7:0]      Out_Set_Trig_Inside_Time, 
       output reg [13:0]     Out_Set_Constant_Interval_Time,
       output reg [11:0]     Out_Set_Hold_Delay_Time,
@@ -80,6 +84,49 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
 localparam  [19:0]    TOTAL_NUM_EX_TRIG = 20'd500;
 
 
+/*--------Select Only Extrig or in and ex------*/
+always @ (posedge clk , negedge reset_n) begin
+  if(~reset_n)
+    Out_Sel_OnlyExTrig <= 1'b0;
+  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf5f1)
+    Out_Sel_OnlyExTrig <= 1'b1;
+  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf5f0)
+    Out_Sel_OnlyExTrig <= 1'b0;
+  else
+    Out_Sel_OnlyExTrig <= Out_Sel_OnlyExTrig;
+end
+/*--------Set Trig Delay time of SKIROC2-----*/
+always @ (posedge clk , negedge reset_n) begin
+  if(~reset_n)
+    Out_Delay_Trig_Temp <= 8'h70;
+  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:8] == 8'hf4)
+    Out_Delay_Trig_Temp <= in_from_usb_ControlWord[7:0];
+    else
+    Out_Delay_Trig_Temp <= Out_Delay_Trig_Temp;
+end
+
+/*---------Disable Val_Evt---------*/
+always @ (posedge clk , negedge reset_n) begin
+  if(~reset_n)
+    Out_Val_Evt <= 1'b1;
+  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf2f1)
+    Out_Val_Evt <= 1'b1;
+  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf2f0)
+    Out_Val_Evt <= 1'b0;
+  else
+    Out_Val_Evt <= Out_Val_Evt;
+end
+	
+/*-------Set Chn64 DAC Adjustment 4 bit------*/
+always @ (posedge clk or negedge reset_n)
+begin
+  if(~reset_n)
+    Out_DAC_Adj_Chn64 <= 4'd0;
+  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:4] == 12'hf1f)
+    Out_DAC_Adj_Chn64 <= in_from_usb_ControlWord[3:0];
+    else
+    Out_DAC_Adj_Chn64 <= Out_DAC_Adj_Chn64;
+end
 
 /*-------Set Mask Channel------------*/
 	 always @ (posedge clk or negedge reset_n)                        
@@ -90,19 +137,29 @@ localparam  [19:0]    TOTAL_NUM_EX_TRIG = 20'd500;
        end    
      else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffdf)
        begin
-         Out_Set_Mask64                                <=  64'd0;        // Set no mask
+         Out_Set_Mask64                                <=  64'd0;                // Set no mask
        end    
       else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffde)
        begin
          Out_Set_Mask64                                <=  64'hfffffffffffffffe;
-
        end    
        else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffdd)
        begin
-         Out_Set_Mask64                                <=  64'h10200001; // Mask 36 43 64
-
+         Out_Set_Mask64                                <=  64'h10200001;         // Mask 36 43 64
        end    
-			else
+       else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffdc)
+       begin
+         Out_Set_Mask64                                <=  64'hffffffffffffffff; // Mask all
+       end    
+		 	 else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:8] == 8'hfc)
+			 begin
+				 Out_Set_Mask64[65-in_from_usb_ControlWord[7:0]] <= 1'b1;
+			 end		
+		 	 else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:8] == 8'hfb)
+			 begin
+				 Out_Set_Mask64[65-in_from_usb_ControlWord[7:0]] <= 1'b0;
+			 end		
+			 else
         begin
           Out_Set_Mask64                                <=  Out_Set_Mask64;
         end   
@@ -770,7 +827,7 @@ always @ (posedge clk , negedge reset_n) begin
           end   
         STATE_SET_DAC_LOOP:
           begin
-            if(Cnt_State_Trig > 8'd40)//1 means 2clk 40ns 40 means 500ns
+            if(Cnt_State_Trig > 8'd5)//1 means 2clk 5= 6*12.5 = 75 ns   40 means 41*12.5 =  512ns
               begin
                 State_Trig     <=  STATE_SET_DAC_IDLE;
                 Out_Force_Trig  <=  1'b0;
@@ -919,10 +976,10 @@ always @ (posedge clk , negedge reset_n) begin
     out_to_usb_Acq_Start_Stop <= 1'b1;
   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf0f0)
     out_to_usb_Acq_Start_Stop <= 1'b0;
-  else if(Cnt_Trig    >=  TOTAL_NUM_EX_TRIG)
-  begin
-    out_to_usb_Acq_Start_Stop <=  1'b0;
-  end   
+  // else if(Cnt_Trig    >=  TOTAL_NUM_EX_TRIG)
+  // begin
+  //   out_to_usb_Acq_Start_Stop <=  1'b0;
+  // end
   else
     out_to_usb_Acq_Start_Stop <= out_to_usb_Acq_Start_Stop;
 end

@@ -34,7 +34,8 @@ module Auto_TA_Scan(
 	output [256:1] Out_Mask_Code,
 	output [16:1]  Out_Fifo_Din,
 	output         Out_Token_All,
-	output         Out_Fifo_Wr
+	output         Out_Fifo_Wr,
+	output [12:1]  Out_Test_Cnt_Hit
 	);
 
 
@@ -44,7 +45,8 @@ module Auto_TA_Scan(
 	reg         Out_Set_SC_Sig;
 	reg         Out_Fifo_Wr_Sig;
 	reg  [16:1] Out_Fifo_Din_Sig;
-
+	
+	wire [12:1] Sig_Test_Cnt_Hit;
 	wire [4:1]  Sel_Chip;
 	wire [12:1] Sig_Ini_DAC;
 	wire        Sig_Token_Chip1,Sig_Set_SC_Chip1;
@@ -128,7 +130,8 @@ module Auto_TA_Scan(
 		.Out_Mask_Code(Sig_Mask_Chip1),
 		.Out_DAC_Code(Sig_DAC_Chip1),
 		.Out_Fifo_Din(Sig_Fifo_Din_Chip1),
-		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip1)
+		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip1),
+		.Out_Test_Cnt_Hit(Sig_Test_Cnt_Hit)
 		);
 
 	SKIROC2_S_Para_Scan SKIROC_Auto_TA_Inst_Chip2(
@@ -147,7 +150,8 @@ module Auto_TA_Scan(
 		.Out_Mask_Code(Sig_Mask_Chip2),
 		.Out_DAC_Code(Sig_DAC_Chip2),
 		.Out_Fifo_Din(Sig_Fifo_Din_Chip2),
-		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip2)
+		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip2),
+		.Out_Test_Cnt_Hit()
 		);
 
 	SKIROC2_S_Para_Scan SKIROC_Auto_TA_Inst_Chip3(
@@ -166,7 +170,9 @@ module Auto_TA_Scan(
 		.Out_Mask_Code(Sig_Mask_Chip3),
 		.Out_DAC_Code(Sig_DAC_Chip3),
 		.Out_Fifo_Din(Sig_Fifo_Din_Chip3),
-		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip3)
+		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip3),
+		.Out_Test_Cnt_Hit()
+		
 		);
 
 	SKIROC2_S_Para_Scan SKIROC_Auto_TA_Inst_Chip4(
@@ -185,7 +191,9 @@ module Auto_TA_Scan(
 		.Out_Mask_Code(Sig_Mask_Chip4),
 		.Out_DAC_Code(Sig_DAC_Chip4),
 		.Out_Fifo_Din(Sig_Fifo_Din_Chip4),
-		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip4)
+		.Out_Fifo_Wr(Sig_Fifo_Wr_Chip4),
+		.Out_Test_Cnt_Hit()
+		
 		);
 
 	assign Sig_Ini_DAC   = {2'b0,Ini_DAC};
@@ -196,5 +204,5 @@ module Auto_TA_Scan(
 	assign Out_Fifo_Wr   = Out_Fifo_Wr_Sig;
 	assign Out_Fifo_Din  = Out_Fifo_Din_Sig;
 	assign Out_Token_All = Sig_Token_Chip1|Sig_Token_Chip2|Sig_Token_Chip3|Sig_Token_Chip4;
-
+	assign Out_Test_Cnt_Hit = Sig_Test_Cnt_Hit; 
 endmodule
