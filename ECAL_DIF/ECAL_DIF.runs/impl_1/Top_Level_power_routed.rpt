@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Tue Oct 17 14:19:26 2017
+| Date             : Wed Oct 18 10:51:27 2017
 | Host             : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file Top_Level_power_routed.rpt -pb Top_Level_power_summary_routed.pb -rpx Top_Level_power_routed.rpx
 | Design           : Top_Level
@@ -50,9 +50,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.017 |        7 |       --- |             --- |
+| Clocks                   |     0.018 |        7 |       --- |             --- |
 | Slice Logic              |    <0.001 |    16421 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     6600 |     63400 |           10.41 |
+|   LUT as Logic           |    <0.001 |     6603 |     63400 |           10.41 |
 |   Register               |    <0.001 |     7821 |    126800 |            6.17 |
 |   CARRY4                 |    <0.001 |      218 |     15850 |            1.38 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     19000 |            0.13 |
@@ -60,7 +60,7 @@ Table of Contents
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes            |    <0.001 |       13 |     63400 |            0.02 |
 |   Others                 |     0.000 |      438 |       --- |             --- |
-| Signals                  |     0.001 |    12054 |       --- |             --- |
+| Signals                  |     0.001 |    12052 |       --- |             --- |
 | Block RAM                |     0.003 |        8 |       135 |            5.93 |
 | PLL                      |     0.000 |        1 |         6 |           16.67 |
 | I/O                      |     0.196 |       81 |       285 |           28.42 |
@@ -256,9 +256,9 @@ Table of Contents
 |   Usb_Fdata_IOBUF[7]_inst                                                          |    <0.001 |
 |   Usb_Fdata_IOBUF[8]_inst                                                          |    <0.001 |
 |   Usb_Fdata_IOBUF[9]_inst                                                          |    <0.001 |
-|   dbg_hub                                                                          |     0.002 |
-|     inst                                                                           |     0.002 |
-|       BSCANID.u_xsdbm_id                                                           |     0.002 |
+|   dbg_hub                                                                          |     0.003 |
+|     inst                                                                           |     0.003 |
+|       BSCANID.u_xsdbm_id                                                           |     0.003 |
 |         CORE_XSDB.UUT_MASTER                                                       |     0.002 |
 |           U_ICON_INTERFACE                                                         |     0.001 |
 |             U_CMD1                                                                 |    <0.001 |

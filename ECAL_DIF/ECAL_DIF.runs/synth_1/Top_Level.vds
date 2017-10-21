@@ -2,8 +2,8 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Tue Oct 17 11:59:23 2017
-# Process ID: 5212
+# Start of session at: Wed Oct 18 10:44:13 2017
+# Process ID: 1552
 # Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1
 # Command line: vivado.exe -log Top_Level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level.tcl
 # Log file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.vds
@@ -15,12 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6264 
+INFO: Helper process launched with PID 3844 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 378.734 ; gain = 77.184
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 379.117 ; gain = 77.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top_Level' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:21]
 	Parameter DATA_2_USB bound to: 16'b1010101001010101 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:783]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:784]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:785]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:786]
@@ -31,14 +32,13 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:791]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:792]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:793]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:794]
 INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (1#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
-INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-5212-Msy-PC/realtime/ODDR_Clk_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-5212-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-1552-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-1552-Msy-PC/realtime/ODDR_Clk_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22272]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DRIVE bound to: 12 - type: integer 
@@ -751,7 +751,7 @@ WARNING: [Synth 8-3331] design rd_bin_cntr__parameterized0 has unconnected port 
 WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_EN_INTO_LOGIC
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:34 ; elapsed = 00:01:35 . Memory (MB): peak = 615.543 ; gain = 313.992
+Finished RTL Elaboration : Time (s): cpu = 00:01:37 ; elapsed = 00:01:39 . Memory (MB): peak = 615.926 ; gain = 313.863
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -773,7 +773,7 @@ WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[2] t
 WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[1] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:650]
 WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[0] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:650]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 615.543 ; gain = 313.992
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:37 ; elapsed = 00:01:39 . Memory (MB): peak = 615.926 ; gain = 313.863
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -782,10 +782,10 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-5212-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-5212-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-5212-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-5212-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-1552-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-1552-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-1552-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-1552-Msy-PC/dcp3/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
 Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Fifo_Register/Fifo_Register.xdc] for cell 'Fifo_Register_Inst/U0'
@@ -815,16 +815,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   OBUFDS => OBUFDS: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 798.180 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 798.430 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 798.180 ; gain = 496.629
+Finished Constraint Validation : Time (s): cpu = 00:01:53 ; elapsed = 00:01:55 . Memory (MB): peak = 798.430 ; gain = 496.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 798.180 ; gain = 496.629
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:53 ; elapsed = 00:01:55 . Memory (MB): peak = 798.430 ; gain = 496.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -838,7 +838,7 @@ Applied set_property DONT_TOUCH = true for ODDR_Clk_10M. (constraint file  auto 
 Applied set_property DONT_TOUCH = true for ODDR_Clk_40M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for PLL_40M_Inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 798.180 ; gain = 496.629
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:01:55 . Memory (MB): peak = 798.430 ; gain = 496.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Prepare_Register'
 WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:132]
@@ -1094,7 +1094,7 @@ WARNING: [Synth 8-6014] Unused sequential element Status_reg was removed.  [E:/W
 INFO: [Synth 8-3354] encoded FSM with state register 'Status_reg' using encoding 'sequential' in module 'Read_Register_Set'
 WARNING: [Synth 8-6014] Unused sequential element Status_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Read_Register_Set.v:79]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:54 ; elapsed = 00:01:56 . Memory (MB): peak = 798.180 ; gain = 496.629
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:57 ; elapsed = 00:02:00 . Memory (MB): peak = 798.430 ; gain = 496.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1870,7 +1870,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_S
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cnt_State_Rigister_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cnt_State_Readout_reg[5] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:24 ; elapsed = 00:02:26 . Memory (MB): peak = 798.180 ; gain = 496.629
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:28 ; elapsed = 00:02:31 . Memory (MB): peak = 798.430 ; gain = 496.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1882,13 +1882,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:35 ; elapsed = 00:02:37 . Memory (MB): peak = 798.180 ; gain = 496.629
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:39 ; elapsed = 00:02:42 . Memory (MB): peak = 798.430 ; gain = 496.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:38 ; elapsed = 00:02:40 . Memory (MB): peak = 798.180 ; gain = 496.629
+Finished Timing Optimization : Time (s): cpu = 00:02:41 ; elapsed = 00:02:45 . Memory (MB): peak = 798.430 ; gain = 496.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1900,7 +1900,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:44 ; elapsed = 00:02:47 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished Technology Mapping : Time (s): cpu = 00:02:49 ; elapsed = 00:02:52 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1924,7 +1924,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:46 ; elapsed = 00:02:48 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished IO Insertion : Time (s): cpu = 00:02:50 ; elapsed = 00:02:54 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1937,7 +1937,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:46 ; elapsed = 00:02:48 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:50 ; elapsed = 00:02:54 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1949,25 +1949,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2105,11 +2105,11 @@ Report Instance Areas:
 |89    |  usb_command_interpreter_Inst                                           |usb_command_interpreter                      |  1539|
 +------+-------------------------------------------------------------------------+---------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 803.313 ; gain = 501.762
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 803.875 ; gain = 501.813
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1269 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:02 ; elapsed = 00:02:38 . Memory (MB): peak = 803.313 ; gain = 319.125
-Synthesis Optimization Complete : Time (s): cpu = 00:02:48 ; elapsed = 00:02:50 . Memory (MB): peak = 803.313 ; gain = 501.762
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:03 ; elapsed = 00:02:44 . Memory (MB): peak = 803.875 ; gain = 319.309
+Synthesis Optimization Complete : Time (s): cpu = 00:02:52 ; elapsed = 00:02:56 . Memory (MB): peak = 803.875 ; gain = 501.813
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 787 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -2124,7 +2124,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 350 Infos, 325 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:52 ; elapsed = 00:02:56 . Memory (MB): peak = 803.898 ; gain = 515.648
+synth_design: Time (s): cpu = 00:02:57 ; elapsed = 00:03:02 . Memory (MB): peak = 804.398 ; gain = 515.941
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 803.898 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 17 12:02:29 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 804.398 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 18 10:47:24 2017...

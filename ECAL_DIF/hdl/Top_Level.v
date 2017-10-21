@@ -751,14 +751,13 @@ ODDR_Clk ODDR_Clk_40M (
 				assign Out_Sr_Rstb             = 1'b1;
 				assign Out_Rstb_Pa             = Out_Resetb;
 				assign Out_Pwr_On_D            = Status_Power_On_Control;
-				//assign  Out_Pwr_On_D                        =   Sig_Pwr_On_D;
 				assign Out_Pwr_On_Dac          = 1'b1;
 				assign Out_Pwr_On_Adc          = Status_Power_On_Control;
 				assign Out_Pwr_On_A            = Status_Power_On_Control;
 				assign Sig_Start_SC            = (Sig_Select_Start_SC == 1'b1)? Sig_Set_SC_Auto_Scan: Sig_Start_SC_USB_Cmd;
 				assign Set_TA_Thr_DAC_Sig_34   = (Sig_Select_Start_SC == 1'b1)? Sig_Auto_Dac_Input_Chip1:Sig_TA_Thr_From_USB;
 				assign Sig_Mask_Word_From_Auto = Sig_Mask_Word_From_Auto_256bit[256:193];
-				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? Sig_Mask_Word_From_Auto :Sig_Set_Mask64;
+				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? (Sig_Mask_Word_From_Auto|Sig_Set_Mask64) :Sig_Set_Mask64;//Auto Mask need to OR the Set
 				assign Sig_Clk_2_Exfifo        = (Sig_Select_Start_SC == 1'b1) ? Clk_10M : Clk_40M;
 				assign Sig_Parallel_Data_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1) ? Sig_Parallel_Data_From_Auto_Scan:Sig_Parallel_Data;
 				assign Sig_Parallel_Data_En_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1)? Sig_Parallel_Data_En_From_Auto_Scan:Sig_Parallel_Data_En;

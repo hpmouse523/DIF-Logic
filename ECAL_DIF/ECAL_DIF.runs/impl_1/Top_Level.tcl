@@ -50,6 +50,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
   open_checkpoint Top_Level_routed.dcp
   set_property webtalk.parent_dir E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.cache/wt [current_project]
