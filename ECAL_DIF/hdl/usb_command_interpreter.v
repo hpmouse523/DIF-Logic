@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
-      input                 IFCLK,
+
       input                 clk,
       input                 reset_n,
                                                        /* --------USB interface------------*/
@@ -32,7 +32,7 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
                                                        /* -------LED test------------------*/
       output reg [5:0]      LED,
                                                        /* ------Select Work mode-----------*/
-      output reg            Out_Sel_Work_Mode,
+      output             Out_Sel_Work_Mode,
 			output reg [4:1]      Out_DAC_Adj_Chn64,
                                                        /* ------Control Trig and ADC module--------*/
       output reg [4:1]      Out_Valid_TA_for_Self_Mod, // Control which TA to use for Self Trig mode  1111for all use 0001for only use TA1
@@ -580,16 +580,29 @@ Cmd_Boolean_Set
 
 
 //Select work mode
-always @ (posedge clk , negedge reset_n) begin
-  if(~reset_n)
-    Out_Sel_Work_Mode                             <= 1'b0;
-  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd40)     //normal mode
-    Out_Sel_Work_Mode                             <= 1'b0;                  
-  else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd41)     //Cali mode
-    Out_Sel_Work_Mode                             <= 1'b1;
-  else
-    Out_Sel_Work_Mode                             <= Out_Sel_Work_Mode;
-end
+	Cmd_Boolean_Set
+ 	 #(.EFFECT_1_CMD(16'hfd41), // Set the Cmd to set output 1
+		 .EFFECT_0_CMD(16'hfd40), // Set the Cmd to set output 0
+		 .DEFAULT_VALUE(1'b0)	 )  // Set the default value
+	 Cmd_Out_Sel_Work_Mode(
+    .Clk_In(clk),
+    .Rst_N(reset_n),
+    .Cmd(in_from_usb_ControlWord),                // input Cmd
+    .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
+    .Output_Valid_Sig(Out_Sel_Work_Mode)       // Output Signal
+    );
+
+	
+	// always @ (posedge clk , negedge reset_n) begin
+//   if(~reset_n)
+//     Out_Sel_Work_Mode                             <= 1'b0;
+//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd40)     //normal mode
+//     Out_Sel_Work_Mode                             <= 1'b0;
+//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd41)     //Cali mode
+//     Out_Sel_Work_Mode                             <= 1'b1;
+//   else
+//     Out_Sel_Work_Mode                             <= Out_Sel_Work_Mode;
+// end
 
 	Cmd_Boolean_Set
  	 #(.EFFECT_1_CMD(16'h0f01), // Set the Cmd to set output 1

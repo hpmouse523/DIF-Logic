@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2" LaunchTime="1509287377">
-  <File Type="PLACE-DCP" Name="Top_Level_placed.dcp"/>
-  <File Type="PA-DCP" Name="Top_Level.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2" LaunchTime="1509363967">
+  <File Type="PWROPT-DRC" Name="Top_Level_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Top_Level_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Top_Level_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="Top_Level_power_routed.rpx"/>
@@ -12,8 +11,8 @@
   <File Type="OPT-DRC" Name="Top_Level_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="Top_Level_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="Top_Level_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="Top_Level_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="Top_Level_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Top_Level_placed.dcp"/>
   <File Type="PLACE-IO" Name="Top_Level_io_placed.rpt"/>
   <File Type="PLACE-CLK" Name="Top_Level_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Top_Level_utilization_placed.rpt"/>

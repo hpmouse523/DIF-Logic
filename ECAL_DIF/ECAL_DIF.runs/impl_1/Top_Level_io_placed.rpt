@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date                      : Sun Oct 29 22:34:11 2017
+| Date                      : Mon Oct 30 19:52:13 2017
 | Host                      : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command                   : report_io -file Top_Level_io_placed.rpt
 | Design                    : Top_Level

@@ -195,6 +195,10 @@ set_property PACKAGE_PIN AB3 [get_ports In_Hv_Tx]
 
 
 
+
+
+
+
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
@@ -207,44 +211,36 @@ set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
 set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list Clk_Out_2_All]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 56 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {Debug_Sig_Sig_7byte_Hv[1]} {Debug_Sig_Sig_7byte_Hv[2]} {Debug_Sig_Sig_7byte_Hv[3]} {Debug_Sig_Sig_7byte_Hv[4]} {Debug_Sig_Sig_7byte_Hv[5]} {Debug_Sig_Sig_7byte_Hv[6]} {Debug_Sig_Sig_7byte_Hv[7]} {Debug_Sig_Sig_7byte_Hv[8]} {Debug_Sig_Sig_7byte_Hv[9]} {Debug_Sig_Sig_7byte_Hv[10]} {Debug_Sig_Sig_7byte_Hv[11]} {Debug_Sig_Sig_7byte_Hv[12]} {Debug_Sig_Sig_7byte_Hv[13]} {Debug_Sig_Sig_7byte_Hv[14]} {Debug_Sig_Sig_7byte_Hv[15]} {Debug_Sig_Sig_7byte_Hv[16]} {Debug_Sig_Sig_7byte_Hv[17]} {Debug_Sig_Sig_7byte_Hv[18]} {Debug_Sig_Sig_7byte_Hv[19]} {Debug_Sig_Sig_7byte_Hv[20]} {Debug_Sig_Sig_7byte_Hv[21]} {Debug_Sig_Sig_7byte_Hv[22]} {Debug_Sig_Sig_7byte_Hv[23]} {Debug_Sig_Sig_7byte_Hv[24]} {Debug_Sig_Sig_7byte_Hv[25]} {Debug_Sig_Sig_7byte_Hv[26]} {Debug_Sig_Sig_7byte_Hv[27]} {Debug_Sig_Sig_7byte_Hv[28]} {Debug_Sig_Sig_7byte_Hv[29]} {Debug_Sig_Sig_7byte_Hv[30]} {Debug_Sig_Sig_7byte_Hv[31]} {Debug_Sig_Sig_7byte_Hv[32]} {Debug_Sig_Sig_7byte_Hv[33]} {Debug_Sig_Sig_7byte_Hv[34]} {Debug_Sig_Sig_7byte_Hv[35]} {Debug_Sig_Sig_7byte_Hv[36]} {Debug_Sig_Sig_7byte_Hv[37]} {Debug_Sig_Sig_7byte_Hv[38]} {Debug_Sig_Sig_7byte_Hv[39]} {Debug_Sig_Sig_7byte_Hv[40]} {Debug_Sig_Sig_7byte_Hv[41]} {Debug_Sig_Sig_7byte_Hv[42]} {Debug_Sig_Sig_7byte_Hv[43]} {Debug_Sig_Sig_7byte_Hv[44]} {Debug_Sig_Sig_7byte_Hv[45]} {Debug_Sig_Sig_7byte_Hv[46]} {Debug_Sig_Sig_7byte_Hv[47]} {Debug_Sig_Sig_7byte_Hv[48]} {Debug_Sig_Sig_7byte_Hv[49]} {Debug_Sig_Sig_7byte_Hv[50]} {Debug_Sig_Sig_7byte_Hv[51]} {Debug_Sig_Sig_7byte_Hv[52]} {Debug_Sig_Sig_7byte_Hv[53]} {Debug_Sig_Sig_7byte_Hv[54]} {Debug_Sig_Sig_7byte_Hv[55]} {Debug_Sig_Sig_7byte_Hv[56]}]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list Debug_Sig_Out_Hv_Rx]]
 create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe1]
-set_property port_width 16 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {Debug_Sig_Sig_In_Hv_Control_Word[1]} {Debug_Sig_Sig_In_Hv_Control_Word[2]} {Debug_Sig_Sig_In_Hv_Control_Word[3]} {Debug_Sig_Sig_In_Hv_Control_Word[4]} {Debug_Sig_Sig_In_Hv_Control_Word[5]} {Debug_Sig_Sig_In_Hv_Control_Word[6]} {Debug_Sig_Sig_In_Hv_Control_Word[7]} {Debug_Sig_Sig_In_Hv_Control_Word[8]} {Debug_Sig_Sig_In_Hv_Control_Word[9]} {Debug_Sig_Sig_In_Hv_Control_Word[10]} {Debug_Sig_Sig_In_Hv_Control_Word[11]} {Debug_Sig_Sig_In_Hv_Control_Word[12]} {Debug_Sig_Sig_In_Hv_Control_Word[13]} {Debug_Sig_Sig_In_Hv_Control_Word[14]} {Debug_Sig_Sig_In_Hv_Control_Word[15]} {Debug_Sig_Sig_In_Hv_Control_Word[16]}]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list Debug_Sig_Out_Sr_Ck]]
 create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe2]
-set_property port_width 64 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {Debug_Sig_Sig_Mask_Word[1]} {Debug_Sig_Sig_Mask_Word[2]} {Debug_Sig_Sig_Mask_Word[3]} {Debug_Sig_Sig_Mask_Word[4]} {Debug_Sig_Sig_Mask_Word[5]} {Debug_Sig_Sig_Mask_Word[6]} {Debug_Sig_Sig_Mask_Word[7]} {Debug_Sig_Sig_Mask_Word[8]} {Debug_Sig_Sig_Mask_Word[9]} {Debug_Sig_Sig_Mask_Word[10]} {Debug_Sig_Sig_Mask_Word[11]} {Debug_Sig_Sig_Mask_Word[12]} {Debug_Sig_Sig_Mask_Word[13]} {Debug_Sig_Sig_Mask_Word[14]} {Debug_Sig_Sig_Mask_Word[15]} {Debug_Sig_Sig_Mask_Word[16]} {Debug_Sig_Sig_Mask_Word[17]} {Debug_Sig_Sig_Mask_Word[18]} {Debug_Sig_Sig_Mask_Word[19]} {Debug_Sig_Sig_Mask_Word[20]} {Debug_Sig_Sig_Mask_Word[21]} {Debug_Sig_Sig_Mask_Word[22]} {Debug_Sig_Sig_Mask_Word[23]} {Debug_Sig_Sig_Mask_Word[24]} {Debug_Sig_Sig_Mask_Word[25]} {Debug_Sig_Sig_Mask_Word[26]} {Debug_Sig_Sig_Mask_Word[27]} {Debug_Sig_Sig_Mask_Word[28]} {Debug_Sig_Sig_Mask_Word[29]} {Debug_Sig_Sig_Mask_Word[30]} {Debug_Sig_Sig_Mask_Word[31]} {Debug_Sig_Sig_Mask_Word[32]} {Debug_Sig_Sig_Mask_Word[33]} {Debug_Sig_Sig_Mask_Word[34]} {Debug_Sig_Sig_Mask_Word[35]} {Debug_Sig_Sig_Mask_Word[36]} {Debug_Sig_Sig_Mask_Word[37]} {Debug_Sig_Sig_Mask_Word[38]} {Debug_Sig_Sig_Mask_Word[39]} {Debug_Sig_Sig_Mask_Word[40]} {Debug_Sig_Sig_Mask_Word[41]} {Debug_Sig_Sig_Mask_Word[42]} {Debug_Sig_Sig_Mask_Word[43]} {Debug_Sig_Sig_Mask_Word[44]} {Debug_Sig_Sig_Mask_Word[45]} {Debug_Sig_Sig_Mask_Word[46]} {Debug_Sig_Sig_Mask_Word[47]} {Debug_Sig_Sig_Mask_Word[48]} {Debug_Sig_Sig_Mask_Word[49]} {Debug_Sig_Sig_Mask_Word[50]} {Debug_Sig_Sig_Mask_Word[51]} {Debug_Sig_Sig_Mask_Word[52]} {Debug_Sig_Sig_Mask_Word[53]} {Debug_Sig_Sig_Mask_Word[54]} {Debug_Sig_Sig_Mask_Word[55]} {Debug_Sig_Sig_Mask_Word[56]} {Debug_Sig_Sig_Mask_Word[57]} {Debug_Sig_Sig_Mask_Word[58]} {Debug_Sig_Sig_Mask_Word[59]} {Debug_Sig_Sig_Mask_Word[60]} {Debug_Sig_Sig_Mask_Word[61]} {Debug_Sig_Sig_Mask_Word[62]} {Debug_Sig_Sig_Mask_Word[63]} {Debug_Sig_Sig_Mask_Word[64]}]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list Debug_Sig_Out_Sr_In]]
 create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe3]
-set_property port_width 16 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[1]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[2]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[3]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[4]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[5]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[6]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[7]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[8]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[9]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[10]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[11]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[12]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[13]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[14]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[15]} {Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[16]}]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list Debug_Sig_Sig_Flag_Start_Stop_Hv]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
 set_property port_width 1 [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list Debug_Sig_Out_Hv_Rx]]
+connect_debug_port u_ila_0/probe4 [get_nets [list Debug_Sig_Sig_In_Hv_Control_En]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
 set_property port_width 1 [get_debug_ports u_ila_0/probe5]
-connect_debug_port u_ila_0/probe5 [get_nets [list Debug_Sig_Sig_Flag_Start_Stop_Hv]]
+connect_debug_port u_ila_0/probe5 [get_nets [list Debug_Sig_Sig_Select_Start_SC]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
 set_property port_width 1 [get_debug_ports u_ila_0/probe6]
-connect_debug_port u_ila_0/probe6 [get_nets [list Debug_Sig_Sig_In_Hv_Control_En]]
+connect_debug_port u_ila_0/probe6 [get_nets [list Debug_Sig_Sig_Start_SC]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
 set_property port_width 1 [get_debug_ports u_ila_0/probe7]
-connect_debug_port u_ila_0/probe7 [get_nets [list Debug_Sig_Sig_Select_Start_SC]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
-set_property port_width 1 [get_debug_ports u_ila_0/probe8]
-connect_debug_port u_ila_0/probe8 [get_nets [list Debug_Sig_Sig_Start_SC]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
-set_property port_width 1 [get_debug_ports u_ila_0/probe9]
-connect_debug_port u_ila_0/probe9 [get_nets [list Debug_Sig_Sig_Start_Stop_Hv]]
+connect_debug_port u_ila_0/probe7 [get_nets [list Debug_Sig_Sig_Start_Stop_Hv]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

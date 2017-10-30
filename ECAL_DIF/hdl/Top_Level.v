@@ -295,7 +295,7 @@ ODDR_Clk ODDR_Clk_40M (
 	reg  Rst_n_Delay1;
 	reg  Rst_n_Delay2;
 	/*-----Power on Reset -----*/
-	reg  [23:0]        Cnt_Power_On_Reset  =   24'h0;     //Used to cnt until FFFFFF then high Rst_n_Delay2. It's 1.3*256 ms about 300ms
+	// reg  [23:0]        Cnt_Power_On_Reset  =   24'h0;     //Used to cnt until FFFFFF then high Rst_n_Delay2. It's 1.3*256 ms about 300ms
 
 	/*Ex_Fifo*/
 	wire [15:0] Fifo_Qout;
@@ -324,7 +324,7 @@ ODDR_Clk ODDR_Clk_40M (
 
 
 	wire Clk_Out_2_All;
-
+	wire Clk_2_Rst;
 
 	/* -------- signals of DAC--------*/
 	wire             Sig_Start_Stop_ADG;
@@ -424,24 +424,24 @@ ODDR_Clk ODDR_Clk_40M (
 	assign				Sig_Delay_Trig[1] = Sig_Delay_Trig_Temp[8];
 
 	//////////////////////////////////
-	always @ (posedge Clk_Out_2_All)
-	begin
-		if(Cnt_Power_On_Reset   < 24'hFF_FFFD)
-		begin
-			Cnt_Power_On_Reset          <=  Cnt_Power_On_Reset  + 1'b1;
-		end
-		else
-		begin
-			Cnt_Power_On_Reset          <=  Cnt_Power_On_Reset;
-		end
-	end
-
+	// always @ (posedge Clk_2_Rst)
+	// begin
+	//   if(Cnt_Power_On_Reset   < 24'hFF_FFFD)
+	//   begin
+	//     Cnt_Power_On_Reset          <=  Cnt_Power_On_Reset  + 1'b1;
+	//   end
+	//   else
+	//   begin
+	//     Cnt_Power_On_Reset          <=  Cnt_Power_On_Reset;
+	//   end
+	// end
+  //
 
 
 
 	always @ (posedge Clk_Out_2_All )
 	begin
-		if( Cnt_Power_On_Reset    < 24'hFF_FFFD)
+		if( ~Rst_n   )
 		begin
 			Rst_n_Delay1        <=  1'b0;
 			Rst_n_Delay2        <=  1'b0;                 //Power on Reset
@@ -459,7 +459,8 @@ ODDR_Clk ODDR_Clk_40M (
 	(
                            // Clock out ports
 		.clk_out1(Clk_40M),    // output clk_out1: 40MHz
-		.clk_out2(Clk_10M),    // output clk_out2
+		.clk_out2(Clk_10M),    // output clk_out2: 10MHz
+
                            // Status and control signals
 		.reset(~Rst_n_Delay2), // input reset
                            // Clock in ports
@@ -675,7 +676,7 @@ ODDR_Clk ODDR_Clk_40M (
 
 				//Command(from USB Chip) interpreter
 				usb_command_interpreter usb_command_interpreter_Inst(
-					.IFCLK(Clk_Out_2_All),
+
 					.clk(Clk_Out_2_All),
 					.reset_n(Rst_n_Delay2),
 					.in_from_usb_Ctr_rd_en(Cmd_From_Usb_En),
@@ -832,25 +833,26 @@ ODDR_Clk ODDR_Clk_40M (
 				assign LED[1] = In_Digital_Prob1;
 				assign LED[2] = Sig_Hit_200ns;
 				assign LED[3] = Sig_Sel_OnlyExTrig; //Sig_DAC_Adj[255];
-				assign LED[4] = SMA_ExTrig_Cnt;
-				assign LED[5] = Sig_Mask_Word[64];
-				assign LED[6] = Sig_Mask_Word[1];
+				assign LED[4] = Sig_Raz_Chn;
+				assign LED[5] = Sig_Sel_Feedback_Capacitance[1];
+				assign LED[6] = Out_Select;
 
 
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_Din_Cali =	Out_Din_Cali;
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
-				(*mark_debug = "true"*) wire [56:1]	Debug_Sig_Sig_7byte_Hv	=	Sig_7byte_Hv;
-				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Start_Stop_Hv	=	Sig_Start_Stop_Hv;
-				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;//Sig_Select_Start_SC means token of AutoScan mode
-				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Flag_Start_Stop_Hv	=	Sig_Flag_Start_Stop_Hv;
-				(*mark_debug = "true"*) wire [64:1] Debug_Sig_Sig_Mask_Word	=	Sig_Mask_Word;
-				(*mark_debug = "true"*) wire Debug_Sig_Sig_Start_SC	=	Sig_Start_SC;
-				(*mark_debug = "true"*) wire [16:1] Debug_Sig_Sig_In_Hv_Control_Word	=	Sig_In_Hv_Control_Word;
-				(*mark_debug = "true"*) wire Debug_Sig_Sig_In_Hv_Control_En	=	Sig_In_Hv_Control_En;
-				(*mark_debug = "true"*) wire Debug_Sig_Out_Hv_Rx	=	Out_Hv_Rx;
 
-				(*mark_debug = "true"*) wire [16:1] Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp	=	Sig_Parallel_Data_From_Auto_Scan_Temp;
+
+				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Start_Stop_Hv	=	Sig_Start_Stop_Hv;//Start or Stop Hv
+				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;//Sig_Select_Start_SC means token of AutoScan mode
+				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Flag_Start_Stop_Hv	=	Sig_Flag_Start_Stop_Hv;//Flag of Start or stop Hv 
+				(*mark_debug = "true"*) wire Debug_Sig_Sig_Start_SC	=	Sig_Start_SC;//Set Sc configuration
+				(*mark_debug = "true"*) wire Debug_Sig_Out_Sr_Ck	=	Out_Sr_Ck;//Slow Control
+				(*mark_debug = "true"*) wire Debug_Sig_Out_Sr_In	=	Out_Sr_In;
+				(*mark_debug = "true"*) wire Debug_Sig_Sig_In_Hv_Control_En	=	Sig_In_Hv_Control_En;
+				(*mark_debug = "true"*) wire Debug_Sig_Out_Hv_Rx	=	Out_Hv_Rx;//Send out signal to Rx Hv module
+
+
 
 endmodule
 
