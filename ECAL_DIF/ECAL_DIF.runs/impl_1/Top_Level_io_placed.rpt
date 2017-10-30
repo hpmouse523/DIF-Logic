@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date                      : Wed Oct 18 10:50:13 2017
+| Date                      : Sun Oct 29 22:34:11 2017
 | Host                      : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command                   : report_io -file Top_Level_io_placed.rpt
 | Design                    : Top_Level
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            90 |
+|            92 |
 +---------------+
 
 
@@ -60,7 +60,7 @@ Table of Contents
 | AA1        | Out_Pwr_On_Adc          | High Range | IO_L7P_T1_34                 | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | AA2        |                         |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | AA3        | Out_Din_Cali            | High Range | IO_L9N_T1_DQS_34             | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| AA4        |                         | High Range | IO_L11N_T1_SRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| AA4        | Out_Hv_Rx               | High Range | IO_L11N_T1_SRCC_34           | TRISTATE      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | AA5        |                         | High Range | IO_L10P_T1_34                | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | AA6        |                         | High Range | IO_L18N_T2_34                | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | AA7        |                         | High Range | VCCO_34                      | VCCO          |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |
@@ -81,7 +81,7 @@ Table of Contents
 | AA22       |                         |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | AB1        | Out_Pwr_On_Dac          | High Range | IO_L7N_T1_34                 | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | AB2        | Out_SCLK_Cali           | High Range | IO_L8N_T1_34                 | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| AB3        |                         | High Range | IO_L8P_T1_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
+| AB3        | In_Hv_Tx                | High Range | IO_L8P_T1_34                 | INPUT         | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | AB4        |                         | High Range | VCCO_34                      | VCCO          |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |
 | AB5        |                         | High Range | IO_L10N_T1_34                | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | AB6        |                         | High Range | IO_L20N_T3_34                | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |

@@ -88,6 +88,9 @@ module Top_Level(
 	output Out_Din_Cali,
 	output Out_CS_n_Cali,
 	output Out_Control_ADG,
+	/*----IO of  HV_Control-------*/
+	input In_Hv_Tx,//input of return data
+  output Out_Hv_Rx,//output to Hv_Module	
 
 	// IO of LED and SMD    LED is also test point
 	output [8:1]   LED,
@@ -115,6 +118,12 @@ module Top_Level(
 	wire        Sig_End_SC;
 	wire				Sig_Hit_200ns;
 	wire        Sig_Start_Auto_Scan;
+	wire [8:1]  Sig_In_Hv_Control_Word;
+	wire        Sig_In_Hv_Control_En;
+	wire [4:1]  Sig_Set_Hv_1;
+	wire [4:1]  Sig_Set_Hv_2;	
+	wire [4:1]  Sig_Set_Hv_3;
+	wire [4:1]  Sig_Set_Hv_4;
 	//assign  Out_Resetb                          =   1'b1;
 	wire        Sig_ExTrig_to_ExtPN;
 	wire        Sig_Ex_Trig_Only_Exmode;
@@ -141,7 +150,12 @@ module Top_Level(
 	wire         Sig_Select_Start_SC;
 	wire         Sig_Set_SC_Auto_Scan;
 	wire         Sig_Start_SC_USB_Cmd;
-	wire         [48:1]	Sig_Set_DAC_From_Auto;
+	wire         Sig_Start_Cfg_Hv;
+	wire         Sig_Start_Stop_Hv;
+	wire [56:1]  Sig_7byte_Hv;
+
+	wire         Sig_Flag_Start_Stop_Hv;
+	wire  [48:1] Sig_Set_DAC_From_Auto;
 	wire	[9:0]  Sig_TA_Thr_From_USB;
 	wire [64:1]  Sig_Mask_Word;
 	wire [256:1] Sig_DAC_Adj;
@@ -682,6 +696,10 @@ ODDR_Clk ODDR_Clk_40M (
 					.Out_Set_Trig_Inside_Time(Sig_Set_Interval_Time),
 					.Out_Set_Constant_Interval_Time(Set_Constant_Interval_Time_Sig),
 					.Out_Set_Hold_Delay_Time(Sig_Set_Ini_DAC_for_Auto_Scan),
+					.Out_Set_Hv_1(Sig_Set_Hv_1),//highest 4bit
+					.Out_Set_Hv_2(Sig_Set_Hv_2),
+					.Out_Set_Hv_3(Sig_Set_Hv_3),
+					.Out_Set_Hv_4(Sig_Set_Hv_4),//lowest bit
 					.Out_Sel_ADC_Test(Sig_Sel_ADC_Test),
 					.Out_ADG_Switch(),
 					.Out_Reset_ASIC_b(),
@@ -689,6 +707,9 @@ ODDR_Clk ODDR_Clk_40M (
 					.Out_Start_Conver_b(Sig_Start_Auto_Scan),
 					.Out_Force_Trig(Out_Force_Trig),
 					.Out_Start_Readout1(Sig_Start_DAC),
+					.Out_Start_Cfg_Hv(Sig_Start_Cfg_Hv),
+					.Out_Start_Stop_Hv(Sig_Start_Stop_Hv),
+					.Out_Flag_Start_Stop_Hv(Sig_Flag_Start_Stop_Hv),
 					.Out_Start_Readout2(Out_Resetb),
 					.Out_Start_Stop_ADG(Sig_Start_Stop_ADG),
 					.Out_AnaProb_SS1_SS10_PA(Sig_AnaProb_SS1_SS10_PA),
@@ -732,10 +753,48 @@ ODDR_Clk ODDR_Clk_40M (
     			.In_Trig_SMA(SMA_ExTrig_Cnt),
     			.Out_Ex_Trig(Sig_Ex_Trig_Only_Exmode)
     );
+ Prepare_Hv_Cmd                   Prepare_Hv_Cmd_Inst(
+     .Clk_In(Clk_40M),//40MHz
+     .Rst_N(Rst_n_Delay2),
+     .Start_Cfg(Sig_Start_Cfg_Hv),//Start Cfg Hv
+     .Start_Stop_Hv(Sig_Start_Stop_Hv),//Start_Stop_Hv
+     .In_Hv_7Byte(Sig_7byte_Hv),//7byte value HBV_ _ _ _ need ASCII
+     .In_Flag_Start(Sig_Flag_Start_Stop_Hv),        //Set Start or Stop
+     .Out_Cmd(Sig_In_Hv_Control_Word),//to Hv_Control
+     .Out_En(Sig_In_Hv_Control_En)
+    );
 
-				//DAC Cali mode
+	hv_control	hv_control_Inst (
+				//input
+     .clk	(Clk_40M),
+     .rst_n	(Rst_n_Delay2),
+     .soft_rst	(Rst_n_Delay2),
+     .tx		(),
+     .din	(Sig_In_Hv_Control_Word),
+     .rx_en	(Sig_In_Hv_Control_En),
+				//output
+     .rx		(Out_Hv_Rx),
+     .dout	(),
+     .valid	(),
+     .idle	()
+		);
 
-
+ Hex_2_ASCII Out_Set_Hv_1(
+    .In_Hex(Sig_Set_Hv_1),//4bit Hex
+    .Out_ASCII(Sig_7byte_Hv[32:25])//8bit ASCII
+    );
+ Hex_2_ASCII Out_Set_Hv_2(
+    .In_Hex(Sig_Set_Hv_2),//4bit Hex
+    .Out_ASCII(Sig_7byte_Hv[24:17])//8bit ASCII
+    );
+ Hex_2_ASCII Out_Set_Hv_3(
+    .In_Hex(Sig_Set_Hv_3),//4bit Hex
+    .Out_ASCII(Sig_7byte_Hv[16:9])//8bit ASCII
+    );
+ Hex_2_ASCII Out_Set_Hv_4(
+    .In_Hex(Sig_Set_Hv_4),//4bit Hex
+    .Out_ASCII(Sig_7byte_Hv[8:1])//8bit ASCII
+    );
 
 
 
@@ -769,6 +828,7 @@ ODDR_Clk ODDR_Clk_40M (
 				assign SMA1 = SMA_ExTrig_Cnt;
 				assign Sig_ExTrig_to_ExtPN = (Sig_Sel_OnlyExTrig == 1'b1) ? Sig_Ex_Trig_Only_Exmode : Out_Force_Trig; 
 
+				assign Sig_7byte_Hv[56:33] = 24'h48_42_56;
 				assign LED[1] = In_Digital_Prob1;
 				assign LED[2] = Sig_Hit_200ns;
 				assign LED[3] = Sig_Sel_OnlyExTrig; //Sig_DAC_Adj[255];
@@ -780,16 +840,16 @@ ODDR_Clk ODDR_Clk_40M (
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_Din_Cali =	Out_Din_Cali;
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
-				(*mark_debug = "true"*) wire	Debug_Sig_Sig_End_SC	=	Sig_End_SC;
-				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Set_SC_Auto_Scan	=	Sig_Set_SC_Auto_Scan;
+				(*mark_debug = "true"*) wire [56:1]	Debug_Sig_Sig_7byte_Hv	=	Sig_7byte_Hv;
+				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Start_Stop_Hv	=	Sig_Start_Stop_Hv;
 				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;//Sig_Select_Start_SC means token of AutoScan mode
-				(*mark_debug = "true"*) wire [10:1] Debug_Sig_Set_TA_Thr_DAC_Sig_34	=	Set_TA_Thr_DAC_Sig_34;
+				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Flag_Start_Stop_Hv	=	Sig_Flag_Start_Stop_Hv;
 				(*mark_debug = "true"*) wire [64:1] Debug_Sig_Sig_Mask_Word	=	Sig_Mask_Word;
 				(*mark_debug = "true"*) wire Debug_Sig_Sig_Start_SC	=	Sig_Start_SC;
-				(*mark_debug = "true"*) wire Debug_Sig_Sig_Parallel_Data_En_From_Auto_Scan	=	Sig_Parallel_Data_En_From_Auto_Scan;
-				(*mark_debug = "true"*) wire Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo	=	Sig_Parallel_Data_En_Into_Ex_Fifo;
-				(*mark_debug = "true"*) wire Debug_Sig_Sig_Clk_2_Exfifo	=	Sig_Clk_2_Exfifo;
-				(*mark_debug = "true"*) wire [12:1] Debug_Sig_Sig_Test_Cnt_Hit	=	Sig_Test_Cnt_Hit;
+				(*mark_debug = "true"*) wire [16:1] Debug_Sig_Sig_In_Hv_Control_Word	=	Sig_In_Hv_Control_Word;
+				(*mark_debug = "true"*) wire Debug_Sig_Sig_In_Hv_Control_En	=	Sig_In_Hv_Control_En;
+				(*mark_debug = "true"*) wire Debug_Sig_Out_Hv_Rx	=	Out_Hv_Rx;
+
 				(*mark_debug = "true"*) wire [16:1] Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp	=	Sig_Parallel_Data_From_Auto_Scan_Temp;
 
 endmodule

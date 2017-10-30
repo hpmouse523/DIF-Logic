@@ -39,7 +39,7 @@
 
 
 module hv_control(
-		input		clk,
+		input		clk,//clk = 40MHz
 		input		rst_n,
 		input		soft_rst,
 		input		tx,
@@ -66,7 +66,21 @@ module hv_control(
 		);
 		wire rd_en;
 		wire [DATA_BIT_NUM - 1:0] buffer;
-		fifo_generator_0 hv_fifo (
+		
+	fifo_generator_0 hv_fifo (
+          .clk(clk),      // input wire clk
+          .rst(~soft_rst),      // input wire rst
+          .din(din),      // input wire [7 : 0] din
+          .wr_en(rx_en),  // input wire wr_en
+          .rd_en(rd_en),  // input wire rd_en
+          .dout(buffer),    // output wire [7 : 0] dout
+          .full(full),    // output wire full
+          .empty(empty),  // output wire empty
+          .valid(rx_valid)
+        );
+
+
+		/*fifo_generator_0 hv_fifo (
 				//input
 				.clk	(clk),
 				.rst	(soft_rst),
@@ -79,7 +93,7 @@ module hv_control(
 				.full	(full),
 				.empty	(empty),
 				.valid	(rx_valid)
-		);
+		);*/
 		//assign rd_en = 1;
 		assign rd_en = idle && ~empty;
 		wire rx_temp;

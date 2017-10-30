@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Wed Oct 18 10:49:36 2017
+| Date         : Sun Oct 29 22:33:32 2017
 | Host         : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc -file Top_Level_drc_opted.rpt
 | Design       : Top_Level
@@ -20,20 +20,19 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_Top_Level
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 44
-+-------------+----------+-------------------------------------------------------------+------------+
-| Rule        | Severity | Description                                                 | Violations |
-+-------------+----------+-------------------------------------------------------------+------------+
-| CHECK-3     | Warning  | Report rule limit reached                                   | 2          |
-| IOSR-1      | Warning  | IOB set reset sharing                                       | 1          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
-| REQP-1839   | Warning  | RAMB36 async control check                                  | 20         |
-| REQP-1840   | Warning  | RAMB18 async control check                                  | 20         |
-+-------------+----------+-------------------------------------------------------------+------------+
+             Violations found: 43
++-----------+----------+----------------------------+------------+
+| Rule      | Severity | Description                | Violations |
++-----------+----------+----------------------------+------------+
+| CHECK-3   | Warning  | Report rule limit reached  | 2          |
+| IOSR-1    | Warning  | IOB set reset sharing      | 1          |
+| REQP-1839 | Warning  | RAMB36 async control check | 20         |
+| REQP-1840 | Warning  | RAMB18 async control check | 20         |
++-----------+----------+----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -49,18 +48,7 @@ Related violations: <none>
 
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO SMA_ExTrig_Cnt connects to flops which have these Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Cnt_Hit_reg[5]_0, usb_command_interpreter_Inst/Out_Choose_Channel_Resister_reg[47]_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
-Related violations: <none>
-
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT Ex_Fifo_Insst_i_1 is driving clock pin of 108 cells. This could lead to large hold time violations. First few involved cells are:
-    Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[2].wr_stg_inst/Q_reg_reg[0] {FDCE}
-    Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[2].wr_stg_inst/Q_reg_reg[10] {FDCE}
-    Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[2].wr_stg_inst/Q_reg_reg[11] {FDCE}
-    Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[2].wr_stg_inst/Q_reg_reg[12] {FDCE}
-    Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[2].wr_stg_inst/Q_reg_reg[1] {FDCE}
-
+IO SMA_ExTrig_Cnt connects to flops which have these Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Cnt_Hit_reg[5]_0, Sci_Acq_Inst/FSM_sequential_State[3]_i_2_n_1 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 REQP-1839#1 Warning

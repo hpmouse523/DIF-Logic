@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../hdl/Cmd_Set_N_Bits_Value.v" --include "../../../ECAL_DIF.srcs/sources_1/ip/PLL_40M"
+verilog xil_defaultlib  "../../../hdl/Hex_2_ASCII.v" --include "../../../ECAL_DIF.srcs/sources_1/ip/PLL_40M"
+verilog xil_defaultlib  "../../../test_bentch/Test_Cmd_Set_N_Bits_Value.v" --include "../../../ECAL_DIF.srcs/sources_1/ip/PLL_40M"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -23,11 +23,16 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Auto_TA_Scan.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Bin_2_Gray.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Set_N_Bits_Value.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/DAC_TLV5618.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Flag_LED.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/General_ExTrig.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Gray_2_Bin.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Hex_2_ASCII.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Hit_50_to_200ns.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Hv_Cmd.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Probe_Register.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Read_Register_Set.v
@@ -35,6 +40,11 @@ read_verilog -library xil_defaultlib {
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Sci_Acq.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Slow_Control.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/clk_divider.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/hv_control.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/rx_module.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/topulsesignal.v
+  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/tx_module.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v
 }
@@ -61,6 +71,11 @@ set_property is_locked true [get_files E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DI
 
 read_ip -quiet E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/ODDR_Clk/ODDR_Clk.xci
 set_property is_locked true [get_files E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/ODDR_Clk/ODDR_Clk.xci]
+
+read_ip -quiet E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+set_property used_in_implementation false [get_files -all e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
+set_property used_in_implementation false [get_files -all e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_ooc.xdc]
+set_property is_locked true [get_files E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
