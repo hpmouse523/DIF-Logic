@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file E:\Work_File\CEPC\Logic\DIF-Logic\ECAL_DIF\ECAL_DIF.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 没有权限

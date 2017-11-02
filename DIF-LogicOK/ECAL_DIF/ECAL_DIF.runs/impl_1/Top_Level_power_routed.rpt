@@ -1,0 +1,279 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
+| Date             : Tue Oct 31 11:06:38 2017
+| Host             : Msy-PC running 64-bit Service Pack 1  (build 7601)
+| Command          : report_power -file Top_Level_power_routed.rpt -pb Top_Level_power_summary_routed.pb -rpx Top_Level_power_routed.rpx
+| Design           : Top_Level
+| Device           : xc7a100tfgg484-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 0.316 |
+| Dynamic (W)              | 0.209 |
+| Device Static (W)        | 0.108 |
+| Total Off-Chip Power (W) | 0.006 |
+| Effective TJA (C/W)      | 2.7   |
+| Max Ambient (C)          | 84.2  |
+| Junction Temperature (C) | 25.8  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.011 |        6 |       --- |             --- |
+| Slice Logic    |    <0.001 |    11675 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     5329 |     63400 |            8.41 |
+|   Register     |    <0.001 |     5346 |    126800 |            4.22 |
+|   CARRY4       |    <0.001 |      162 |     15850 |            1.02 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |      139 |       --- |             --- |
+| Signals        |    <0.001 |     8376 |       --- |             --- |
+| Block RAM      |     0.001 |      4.5 |       135 |            3.33 |
+| PLL            |     0.000 |        1 |         6 |           16.67 |
+| I/O            |     0.196 |       81 |       285 |           28.42 |
+| Static Power   |     0.108 |          |           |                 |
+| Total          |     0.316 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.028 |       0.013 |      0.015 |
+| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
+| Vcco25    |       2.500 |     0.081 |       0.077 |      0.004 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++------------------+------------------------------------+-----------------+
+| Clock            | Domain                             | Constraint (ns) |
++------------------+------------------------------------+-----------------+
+| Clk_In           | Clk_In                             |            12.5 |
+| clk_out1_PLL_40M | PLL_40M_Inst/inst/clk_out1_PLL_40M |            25.0 |
+| clk_out2_PLL_40M | PLL_40M_Inst/inst/clk_out2_PLL_40M |           100.0 |
+| clkfbout_PLL_40M | PLL_40M_Inst/inst/clkfbout_PLL_40M |            25.0 |
++------------------+------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------------------------------------+-----------+
+| Name                                                                   | Power (W) |
++------------------------------------------------------------------------+-----------+
+| Top_Level                                                              |     0.209 |
+|   Auto_TA_Scan_Inst                                                    |    <0.001 |
+|     SKIROC_Auto_TA_Inst_Chip1                                          |    <0.001 |
+|     SKIROC_Auto_TA_Inst_Chip2                                          |    <0.001 |
+|     SKIROC_Auto_TA_Inst_Chip3                                          |    <0.001 |
+|     SKIROC_Auto_TA_Inst_Chip4                                          |    <0.001 |
+|   Dac_For_Cali                                                         |    <0.001 |
+|   Ex_Fifo_Insst                                                        |     0.003 |
+|     U0                                                                 |     0.003 |
+|       inst_fifo_gen                                                    |     0.003 |
+|         gconvfifo.rf                                                   |     0.003 |
+|           grf.rf                                                       |     0.003 |
+|             gntv_or_sync_fifo.gcx.clkx                                 |    <0.001 |
+|               gnxpm_cdc.gsync_stage[1].rd_stg_inst                     |    <0.001 |
+|               gnxpm_cdc.gsync_stage[1].wr_stg_inst                     |    <0.001 |
+|               gnxpm_cdc.gsync_stage[2].rd_stg_inst                     |    <0.001 |
+|               gnxpm_cdc.gsync_stage[2].wr_stg_inst                     |    <0.001 |
+|             gntv_or_sync_fifo.gl0.rd                                   |    <0.001 |
+|               gras.rsts                                                |    <0.001 |
+|                 c0                                                     |    <0.001 |
+|                 c1                                                     |    <0.001 |
+|               rpntr                                                    |    <0.001 |
+|             gntv_or_sync_fifo.gl0.wr                                   |    <0.001 |
+|               gwas.wsts                                                |    <0.001 |
+|                 c1                                                     |    <0.001 |
+|                 c2                                                     |    <0.001 |
+|               wpntr                                                    |    <0.001 |
+|             gntv_or_sync_fifo.mem                                      |     0.002 |
+|               gbm.gbmg.gbmga.ngecc.bmg                                 |     0.002 |
+|                 inst_blk_mem_gen                                       |     0.002 |
+|                   gnbram.gnativebmg.native_blk_mem_gen                 |     0.002 |
+|                     valid.cstr                                         |     0.002 |
+|                       has_mux_b.B                                      |    <0.001 |
+|                       ramloop[0].ram.r                                 |    <0.001 |
+|                         prim_noinit.ram                                |    <0.001 |
+|                       ramloop[1].ram.r                                 |    <0.001 |
+|                         prim_noinit.ram                                |    <0.001 |
+|                       ramloop[2].ram.r                                 |    <0.001 |
+|                         prim_noinit.ram                                |    <0.001 |
+|                       ramloop[3].ram.r                                 |    <0.001 |
+|                         prim_noinit.ram                                |    <0.001 |
+|             rstblk                                                     |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst |    <0.001 |
+|   Fifo_Register_Inst                                                   |    <0.001 |
+|     U0                                                                 |    <0.001 |
+|       inst_fifo_gen                                                    |    <0.001 |
+|         gconvfifo.rf                                                   |    <0.001 |
+|           grf.rf                                                       |    <0.001 |
+|             gntv_or_sync_fifo.gl0.rd                                   |    <0.001 |
+|               grss.rsts                                                |    <0.001 |
+|                 c1                                                     |    <0.001 |
+|                 c2                                                     |     0.000 |
+|               rpntr                                                    |    <0.001 |
+|             gntv_or_sync_fifo.gl0.wr                                   |    <0.001 |
+|               gwss.wsts                                                |    <0.001 |
+|                 c0                                                     |    <0.001 |
+|                 c1                                                     |     0.000 |
+|               wpntr                                                    |    <0.001 |
+|             gntv_or_sync_fifo.mem                                      |    <0.001 |
+|               gbm.gbmg.gbmga.ngecc.bmg                                 |    <0.001 |
+|                 inst_blk_mem_gen                                       |    <0.001 |
+|                   gnbram.gnativebmg.native_blk_mem_gen                 |    <0.001 |
+|                     valid.cstr                                         |    <0.001 |
+|                       ramloop[0].ram.r                                 |    <0.001 |
+|                         prim_noinit.ram                                |    <0.001 |
+|             rstblk                                                     |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst |    <0.001 |
+|   Flag_LED8                                                            |    <0.001 |
+|   General_ExTrig_Inst                                                  |    <0.001 |
+|   Hit_50_to_200ns_Inst                                                 |    <0.001 |
+|   ODDR_Clk_10M                                                         |    <0.001 |
+|     inst                                                               |    <0.001 |
+|   ODDR_Clk_40M                                                         |    <0.001 |
+|     inst                                                               |    <0.001 |
+|   PLL_40M_Inst                                                         |    <0.001 |
+|     inst                                                               |    <0.001 |
+|   Prepare_Probe_Register_Inst                                          |     0.002 |
+|   Prepare_Register_Inst                                                |    <0.001 |
+|   Read_Register_Set_Inst                                               |    <0.001 |
+|   Readout_Dout_Inst                                                    |    <0.001 |
+|     Gray_2_Bin_Inst                                                    |    <0.001 |
+|   Sci_Acq_Inst                                                         |     0.001 |
+|   Slow_Control_or_Prob_Inst                                            |    <0.001 |
+|   USB_Con_Inst                                                         |    <0.001 |
+|     SlaveFifoRead_inst                                                 |    <0.001 |
+|     SlaveFifoWrite_inst                                                |    <0.001 |
+|   Usb_Fdata_IOBUF[0]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[10]_inst                                             |    <0.001 |
+|   Usb_Fdata_IOBUF[11]_inst                                             |    <0.001 |
+|   Usb_Fdata_IOBUF[12]_inst                                             |    <0.001 |
+|   Usb_Fdata_IOBUF[13]_inst                                             |    <0.001 |
+|   Usb_Fdata_IOBUF[14]_inst                                             |    <0.001 |
+|   Usb_Fdata_IOBUF[15]_inst                                             |    <0.001 |
+|   Usb_Fdata_IOBUF[1]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[2]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[3]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[4]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[5]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[6]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[7]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[8]_inst                                              |    <0.001 |
+|   Usb_Fdata_IOBUF[9]_inst                                              |    <0.001 |
+|   usb_command_interpreter_Inst                                         |     0.003 |
+|     Cmd_Out_Delay_Trig_Temp                                            |    <0.001 |
+|     Cmd_Out_Force_Trig                                                 |    <0.001 |
+|     Cmd_Out_Hold                                                       |    <0.001 |
+|     Cmd_Out_Sel_ADC_Test                                               |    <0.001 |
+|     Cmd_Out_Sel_Feedback_Capacitance                                   |    <0.001 |
+|     Cmd_Out_Sel_OnlyExTrig                                             |    <0.001 |
+|     Cmd_Out_Sel_Work_Mode                                              |    <0.001 |
+|     Cmd_Out_Select                                                     |    <0.001 |
+|     Cmd_Out_Select_Ramp_ADC                                            |    <0.001 |
+|     Cmd_Out_Select_TDC_On                                              |    <0.001 |
+|     Cmd_Out_Set_Cali_DAC                                               |    <0.001 |
+|     Cmd_Out_Set_Hold_Delay_Time                                        |    <0.001 |
+|     Cmd_Out_Set_Register                                               |    <0.001 |
+|     Cmd_Out_Start_Acq                                                  |    <0.001 |
+|     Cmd_Out_Start_Config                                               |    <0.001 |
+|     Cmd_Out_Start_Conver_b                                             |    <0.001 |
+|     Cmd_Out_Start_Readout1                                             |    <0.001 |
+|     Cmd_Out_Val_Evt                                                    |    <0.001 |
+|     Cmd_Select_Main_Backup                                             |    <0.001 |
+|     Cmd_Status_En_Out                                                  |    <0.001 |
+|     Cmd_out_to_usb_Acq_Start_Stop                                      |    <0.001 |
++------------------------------------------------------------------------+-----------+
+
+

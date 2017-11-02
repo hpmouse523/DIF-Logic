@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Fifo_Auto_TA/sim/Fifo_Auto_TA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fifo_Auto_TA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Auto_TA_Scan.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Auto_TA_Scan
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SKIROC2_S_Para_Scan
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/test_bentch/test_Auto_DAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_Auto_DAC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

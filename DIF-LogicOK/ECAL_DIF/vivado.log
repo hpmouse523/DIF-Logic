@@ -1,0 +1,426 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Oct 30 22:26:17 2017
+# Process ID: 38984
+# Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent53672 E:\Work_File\CEPC\Logic\DIF-Logic\DIF-LogicOK\ECAL_DIF\ECAL_DIF.xpr
+# Log file: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/vivado.log
+# Journal file: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.xpr
+INFO: [Project 1-313] Project file moved from 'E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK °æ±¾/ECAL_DIF' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 823.273 ; gain = 78.586
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Oct 30 22:26:46 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Mon Oct 30 22:30:19 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Oct 30 22:34:30 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.1
+  **** Build date : Apr 14 2017-19:11:07
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1014.496 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.1
+  **** Build date : Apr 14 2017-19:11:07
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1057.164 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Oct 30 22:48:39 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Oct 30 22:52:18 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Mon Oct 30 22:55:48 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Oct 30 23:00:02 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.1
+  **** Build date : Apr 14 2017-19:11:07
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1138.059 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+update_compile_order -fileset sources_1
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Xilinx/00000000000000.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct 31 09:53:08 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct 31 09:54:10 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct 31 10:00:10 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Tue Oct 31 10:05:28 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Oct 31 10:08:00 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.1
+  **** Build date : Apr 14 2017-19:11:07
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1197.102 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+update_compile_order -fileset sources_1
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a100t_0 and the probes file(s) .
+The device design has 1 ILA core(s) and 0 VIO core(s). The probes file(s) have 0 ILA core(s) and 0 VIO core(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Labtools 27-2058] connect_hw_server command cancelled.
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1197.102 ; gain = 0.000
+INFO: [Common 17-344] 'connect_hw_server' was cancelled
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtools 27-3366] Cannot support older hw_server version 
+ERROR: [Common 17-39] 'connect_hw_server' failed due to earlier errors.
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.1
+  **** Build date : Apr 14 2017-19:11:07
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1197.102 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct 31 10:27:08 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+close_hw
+launch_runs impl_1 -jobs 4
+[Tue Oct 31 10:30:43 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 202 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.1
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level_board.xdc]
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level_board.xdc]
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level_early.xdc]
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level_early.xdc]
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level.xdc]
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level.xdc]
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level_late.xdc]
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/.Xil/Vivado-38984-Msy-PC/dcp31/Top_Level_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1431.652 ; gain = 10.078
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1431.652 ; gain = 10.078
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+
+open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1548.746 ; gain = 351.645
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Oct 31 10:34:30 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.1
+  **** Build date : Apr 14 2017-19:11:07
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2013.328 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/00000000000000
+update_compile_order -fileset sources_1
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct 31 10:53:32 2017] Launched synth_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Tue Oct 31 11:04:18 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Oct 31 11:09:09 2017] Launched impl_1...
+Run output will be captured here: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.1
+  **** Build date : Apr 14 2017-19:11:07
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/Port_#0001.Hub_#0004
+ERROR: [Labtools 27-2270] Target localhost:3121/xilinx_tcf/Xilinx/Port_#0001.Hub_#0004 is no longer available.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a100t_0 and the probes file(s) .
+The device design has 1 ILA core(s) and 0 VIO core(s). The probes file(s) have 0 ILA core(s) and 0 VIO core(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2013.328 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7a100t_0 and the probes file(s) E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx.
+The device design has 0 ILA core(s) and 0 VIO core(s). The probes file(s) have 1 ILA core(s) and 0 VIO core(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+close_hw
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 11:53:55 2017...

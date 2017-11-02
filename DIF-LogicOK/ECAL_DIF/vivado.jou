@@ -1,0 +1,177 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Oct 30 22:26:17 2017
+# Process ID: 38984
+# Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent53672 E:\Work_File\CEPC\Logic\DIF-Logic\DIF-LogicOK\ECAL_DIF\ECAL_DIF.xpr
+# Log file: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/vivado.log
+# Journal file: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+save_wave_config {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+save_wave_config {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+disconnect_hw_server localhost:3121
+connect_hw_server
+connect_hw_server
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_hw
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_project

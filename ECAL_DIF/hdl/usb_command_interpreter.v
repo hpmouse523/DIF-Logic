@@ -45,7 +45,7 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
 			output  [8:1]      Out_Delay_Trig_Temp, //Set Delay time. order is from MSB to LSB
       output  [7:0]      Out_Set_Trig_Inside_Time, 
       output  [13:0]     Out_Set_Constant_Interval_Time,
-      output  [11:0]     Out_Set_Hold_Delay_Time,
+      output  [11:0]     Out_Set_Ini_DAC_for_Auto_Scan,
 	    output  [4:1]      Out_Set_Hv_1, //highest bit
 			output 	[4:1]	     Out_Set_Hv_2,
 			output  [4:1]      Out_Set_Hv_3,
@@ -84,7 +84,7 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
       output             Out_Select_TDC_On,
 
  //     output [15:0] Out_Ctr_Word,
-      output             Status_En_Out
+      output             Out_Status_Power_On_Control
     );
 
 
@@ -105,16 +105,7 @@ Cmd_Boolean_Set
     .Output_Valid_Sig(Out_Sel_OnlyExTrig)       // Output Signal
     );
 	
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Sel_OnlyExTrig <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf5f1)
-//     Out_Sel_OnlyExTrig <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf5f0)
-//     Out_Sel_OnlyExTrig <= 1'b0;
-//   else
-//     Out_Sel_OnlyExTrig <= Out_Sel_OnlyExTrig;
-// end
+
 /*--------Set Trig Delay time of SKIROC2-----*/
 
 	Cmd_Set_N_Bits_Value  
@@ -130,14 +121,7 @@ Cmd_Boolean_Set
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Out_Delay_Trig_Temp)
     );	
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Delay_Trig_Temp <= 8'h70;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:8] == 8'hf4)
-//     Out_Delay_Trig_Temp <= in_from_usb_ControlWord[7:0];
-//     else
-//     Out_Delay_Trig_Temp <= Out_Delay_Trig_Temp;
-// end
+
 
 /*---------Disable Val_Evt---------*/
  Cmd_Boolean_Set
@@ -151,16 +135,7 @@ Cmd_Boolean_Set
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(Out_Val_Evt)       // Output Signal
     );
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Val_Evt <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf2f1)
-//     Out_Val_Evt <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf2f0)
-//     Out_Val_Evt <= 1'b0;
-//   else
-//     Out_Val_Evt <= Out_Val_Evt;
-// end
+
 	
 /*-------Set Chn64 DAC Adjustment 4 bit------*/
 always @ (posedge clk or negedge reset_n)
@@ -222,20 +197,7 @@ end
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(Out_Select_Ramp_ADC)       // Output Signal
     );
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Select_Ramp_ADC                                          <= 1'b0;
-//
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:0] == 16'hfab1)
-//     Out_Select_Ramp_ADC                                          <= 1'b1;
-//
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:0] == 16'hfab0)
-//     Out_Select_Ramp_ADC                                          <= 1'b0;
-//
-//
-//   else
-//     Out_Select_Ramp_ADC                                          <= Out_Select_Ramp_ADC;
-// end
+
 /*--------Sel ADC Test----------*/
 Cmd_Boolean_Set
  	 #(.EFFECT_1_CMD(16'hf301), // Set the Cmd to set output 1
@@ -248,21 +210,6 @@ Cmd_Boolean_Set
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(Out_Sel_ADC_Test)       // Output Signal
     );
-//   always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Sel_ADC_Test                                             <= 1'b0;
-//
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:0] == 16'hf301)
-//     Out_Sel_ADC_Test                                             <= 1'b1;
-//
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:0] == 16'hf300)
-//     Out_Sel_ADC_Test                                             <= 1'b0;
-//
-//
-//   else
-//     Out_Sel_ADC_Test <= Out_Sel_ADC_Test;
-// end
-
 
 
 
@@ -518,16 +465,7 @@ Cmd_Boolean_Set
     .Output_Valid_Sig(Out_Hold)       // Output Signal
     );
 
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Hold                             <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffb1)
-//     Out_Hold                             <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffb0)
-//     Out_Hold                             <= 1'b0;
-//   else
-//     Out_Hold                             <= Out_Hold;
-// end
+
 
 /*-----Control ADG start stop----*/
 
@@ -543,16 +481,7 @@ Cmd_Boolean_Set
     .Output_Valid_Sig(Out_Start_Stop_ADG)       // Output Signal
     );
 	
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Start_Stop_ADG                             <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h0033)
-//     Out_Start_Stop_ADG                             <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h0044)
-//     Out_Start_Stop_ADG                             <= 1'b0;
-//   else
-//     Out_Start_Stop_ADG                             <= Out_Start_Stop_ADG;
-// end
+
 /*----------------Select main or backup---------*/
 
 		Cmd_Boolean_Set
@@ -566,16 +495,6 @@ Cmd_Boolean_Set
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(Select_Main_Backup)       // Output Signal
     );
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Select_Main_Backup                             <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd03)     //main
-//     Select_Main_Backup                             <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd04)     //backup
-//     Select_Main_Backup                             <= 1'b0;
-//   else
-//     Select_Main_Backup                             <= Select_Main_Backup;
-// end
 
 
 
@@ -593,16 +512,7 @@ Cmd_Boolean_Set
     );
 
 	
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Sel_Work_Mode                             <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd40)     //normal mode
-//     Out_Sel_Work_Mode                             <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hfd41)     //Cali mode
-//     Out_Sel_Work_Mode                             <= 1'b1;
-//   else
-//     Out_Sel_Work_Mode                             <= Out_Sel_Work_Mode;
-// end
+
 
 	Cmd_Boolean_Set
  	 #(.EFFECT_1_CMD(16'h0f01), // Set the Cmd to set output 1
@@ -615,17 +525,7 @@ Cmd_Boolean_Set
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(Out_ADG_Switch)       // Output Signal
     );
-// Control ADG Switch 1 for closed 
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_ADG_Switch                             <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h0f00)
-//     Out_ADG_Switch                             <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h0f01)
-//     Out_ADG_Switch                             <= 1'b1;
-//   else
-//     Out_ADG_Switch                             <= Out_ADG_Switch;
-// end
+
 
 
 //Set DAC Code for Cali and TA thr
@@ -691,14 +591,7 @@ end
     .Output_Valid_Sig(Out_Set_Cali_DAC)
     );		
 
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Set_Cali_DAC <= 12'h500;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:12] == 4'b0101)
-//     Out_Set_Cali_DAC <= in_from_usb_ControlWord[11:0];
-//     else
-//     Out_Set_Cali_DAC <= Out_Set_Cali_DAC;
-// end
+
 
 
 always @ (posedge clk , negedge reset_n) begin
@@ -735,57 +628,7 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Out_Start_Config)
     );
-// localparam    [3:0]   STATE_SET_DAC_IDLE = 4'd0,
-//                       STATE_SET_DAC_LOOP = 4'd1;
-// reg [3:0]             State,
-//                       State_Next;
-// reg [7:0]             Cnt_State;
-//
-//
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     begin
-//       State               <=  STATE_SET_DAC_IDLE;
-//       Out_Start_Config    <=  1'b0;
-//                 Cnt_State         <=  8'd0;
-//     end
-//   else
-//     begin
-//       case(State)
-//         STATE_SET_DAC_IDLE:
-//           begin
-//             if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h00b1)
-//               begin
-//                 State     <=  STATE_SET_DAC_LOOP;
-//                 Out_Start_Config  <=  1'b1;
-//                 Cnt_State         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State     <=  STATE_SET_DAC_IDLE;
-//                 Cnt_State         <=  8'd0;
-//                 Out_Start_Config    <=  1'b0;
-//               end
-//           end
-//         STATE_SET_DAC_LOOP:
-//           begin
-//             if(Cnt_State > 8'd16)
-//               begin
-//                 State     <=  STATE_SET_DAC_IDLE;
-//                 Out_Start_Config  <=  1'b0;
-//                 Cnt_State         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State       <=  STATE_SET_DAC_LOOP;
-//                 Cnt_State   <=  Cnt_State + 1'b1;
-//                 Out_Start_Config    <=  1'b1;
-//               end
-//           end
-//       endcase
-//     end
-//
-// end
+
 /*-------------Reset ASIC------------------*/
    
 Cmd_Rising_N_Clock 
@@ -799,55 +642,7 @@ Cmd_Rising_N_Clock
     .Output_Valid_Sig(~Out_Reset_ASIC_b)
     );
 
-// reg [3:0]             State_Reset;
-//
-// reg [7:0]             Cnt_State_Reset;
-//
-//
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     begin
-//       State_Reset               <=  STATE_SET_DAC_IDLE;
-//       Out_Reset_ASIC_b    <=  1'b1;
-//                 Cnt_State_Reset         <=  8'd0;
-//     end
-//   else
-//     begin
-//       case(State_Reset)
-//         STATE_SET_DAC_IDLE:
-//           begin
-//             if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffc0)
-//               begin
-//                 State_Reset     <=  STATE_SET_DAC_LOOP;
-//                 Out_Reset_ASIC_b  <=  1'b0;
-//                 Cnt_State_Reset         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Reset     <=  STATE_SET_DAC_IDLE;
-//                 Cnt_State_Reset         <=  8'd0;
-//                 Out_Reset_ASIC_b    <=  1'b1;
-//               end
-//           end
-//         STATE_SET_DAC_LOOP:
-//           begin
-//             if(Cnt_State_Reset > 8'd30)
-//               begin
-//                 State_Reset     <=  STATE_SET_DAC_IDLE;
-//                 Out_Reset_ASIC_b  <=  1'b1;
-//                 Cnt_State_Reset         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Reset       <=  STATE_SET_DAC_LOOP;
-//                 Cnt_State_Reset   <=  Cnt_State_Reset + 1'b1;
-//                 Out_Reset_ASIC_b    <=  1'b0;
-//               end
-//           end
-//       endcase
-//     end
-//
-// end
+
 /*------------Start Register--------------------*/
 
 
@@ -862,58 +657,6 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Out_Set_Register)
     );
-// reg [3:0]             State_Rigister;
-//
-// reg [7:0]             Cnt_State_Rigister;
-//
-//
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     begin
-//       State_Rigister               <=  STATE_SET_DAC_IDLE;
-//       Out_Set_Register    <=  1'b0;
-//                 Cnt_State_Rigister         <=  8'd0;
-//     end
-//   else
-//     begin
-//        State_Rigister     <=  STATE_SET_DAC_IDLE;
-//                 Cnt_State_Rigister         <=  8'd0;
-//                 Out_Set_Register    <=  1'b0;
-//       case(State_Rigister)
-//         STATE_SET_DAC_IDLE:
-//           begin
-//             if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h00b2)
-//               begin
-//                 State_Rigister     <=  STATE_SET_DAC_LOOP;
-//                 Out_Set_Register  <=  1'b1;
-//                 Cnt_State_Rigister         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Rigister     <=  STATE_SET_DAC_IDLE;
-//                 Cnt_State_Rigister         <=  8'd0;
-//                 Out_Set_Register    <=  1'b0;
-//               end
-//           end
-//         STATE_SET_DAC_LOOP:
-//           begin
-//             if(Cnt_State_Rigister > 8'd20) //2means last for 60ns
-//               begin
-//                 State_Rigister     <=  STATE_SET_DAC_IDLE;
-//                 Out_Set_Register  <=  1'b0;
-//                 Cnt_State_Rigister         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Rigister       <=  STATE_SET_DAC_LOOP;
-//                 Cnt_State_Rigister   <=  Cnt_State_Rigister + 1'b1;
-//                 Out_Set_Register    <=  1'b1;
-//               end
-//           end
-//       endcase
-//     end
-//
-// end
 
 
 /*-------------------Start_Convb------------------*/
@@ -927,55 +670,7 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Out_Start_Conver_b)
     );
-// reg [3:0]             State_Convb;
-//
-// reg [7:0]             Cnt_State_Conv;
-//
-//
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     begin
-//       State_Convb               <=  STATE_SET_DAC_IDLE;
-//       Out_Start_Conver_b    <=  1'b0;
-//                 Cnt_State_Conv         <=  8'd0;
-//     end
-//   else
-//     begin
-//       case(State_Convb)
-//         STATE_SET_DAC_IDLE:
-//           begin
-//             if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffd0)
-//               begin
-//                 State_Convb     <=  STATE_SET_DAC_LOOP;
-//                 Out_Start_Conver_b  <=  1'b1;
-//                 Cnt_State_Conv         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Convb     <=  STATE_SET_DAC_IDLE;
-//                 Cnt_State_Conv         <=  8'd0;
-//                 Out_Start_Conver_b    <=  1'b0;
-//               end
-//           end
-//         STATE_SET_DAC_LOOP:
-//           begin
-//             if(Cnt_State_Conv > 8'd40) //2means last for 37.5ns 40means 500+12.5
-//               begin
-//                 State_Convb     <=  STATE_SET_DAC_IDLE;
-//                 Out_Start_Conver_b  <=  1'b0;
-//                 Cnt_State_Conv         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Convb       <=  STATE_SET_DAC_LOOP;
-//                 Cnt_State_Conv   <=  Cnt_State_Conv + 1'b1;
-//                 Out_Start_Conver_b    <=  1'b1;
-//               end
-//           end
-//       endcase
-//     end
-//
-// end
+
 
 Cmd_Rising_N_Clock 
 	#(.EFFECT_CMD(16'hffe0), // Input effect words
@@ -988,61 +683,9 @@ Cmd_Rising_N_Clock
     .Output_Valid_Sig(Out_Force_Trig)
     );
 /*----------------------Force trigger--------------------*/
-// reg [3:0]             State_Trig;
-//
-// reg [7:0]             Cnt_State_Trig;
-//
-//
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     begin
-//       State_Trig               <=  STATE_SET_DAC_IDLE;
-//       Out_Force_Trig    <=  1'b0;
-//                 Cnt_State_Trig         <=  8'd0;
-//     end
-//   else
-//     begin
-//       case(State_Trig)
-//         STATE_SET_DAC_IDLE:
-//           begin
-//             if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffe0)
-//               begin
-//                 State_Trig     <=  STATE_SET_DAC_LOOP;
-//                 Out_Force_Trig  <=  1'b1;
-//                 Cnt_State_Trig         <=  Cnt_State_Trig + 1'b1;
-//               end
-//             else
-//               begin
-//                 State_Trig     <=  STATE_SET_DAC_IDLE;
-//                 Cnt_State_Trig         <=  8'd0;
-//                 Out_Force_Trig    <=  1'b0;
-//               end
-//           end
-//         STATE_SET_DAC_LOOP:
-//           begin
-//             if(Cnt_State_Trig > 8'd5)//1 means 2clk 5= 6*12.5 = 75 ns   40 means 41*12.5 =  512ns
-//               begin
-//                 State_Trig     <=  STATE_SET_DAC_IDLE;
-//                 Out_Force_Trig  <=  1'b0;
-//                 Cnt_State_Trig         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Trig       <=  STATE_SET_DAC_LOOP;
-//                 Cnt_State_Trig   <=  Cnt_State_Trig + 1'b1;
-//                 Out_Force_Trig    <=  1'b1;
-//               end
-//           end
-//       endcase
-//     end
-//
-// end
-//
+
 /*-------------------------Start_Readout---------------*/
-// reg [3:0]             State_Readout;
-//
-// reg [7:0]             Cnt_State_Readout;
-//
+
 
 Cmd_Rising_N_Clock 
 	#(.EFFECT_CMD(16'hffe3), // Input effect words
@@ -1055,57 +698,7 @@ Cmd_Rising_N_Clock
     .Output_Valid_Sig(Out_Start_Readout1)
     );
 
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     begin
-//       State_Readout               <=  STATE_SET_DAC_IDLE;
-//       Out_Start_Readout1    <=  1'b0;
-//       Out_Start_Readout2    <=  1'b1;
-//                 Cnt_State_Readout         <=  8'd0;
-//     end
-//   else
-//     begin
-//       case(State_Readout)
-//         STATE_SET_DAC_IDLE:
-//           begin
-//             if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hffe3)
-//               begin
-//                 State_Readout     <=  STATE_SET_DAC_LOOP;
-//                 Out_Start_Readout1  <=  1'b1;
-//                 Out_Start_Readout2  <=  1'b0;
-//                 Cnt_State_Readout         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Readout     <=  STATE_SET_DAC_IDLE;
-//                 Cnt_State_Readout         <=  8'd0;
-//                 Out_Start_Readout1    <=  1'b0;
-//                 Out_Start_Readout2    <=  1'b1;
-//               end
-//           end
-//         STATE_SET_DAC_LOOP:
-//           begin
-//             if(Cnt_State_Readout > 8'd25)
-//               begin
-//                 State_Readout     <=  STATE_SET_DAC_IDLE;
-//                 Out_Start_Readout1  <=  1'b0;
-//                 Out_Start_Readout2  <=  1'b1;
-//                 Cnt_State_Readout         <=  8'd0;
-//               end
-//             else
-//               begin
-//                 State_Readout       <=  STATE_SET_DAC_LOOP;
-//                 Cnt_State_Readout   <=  Cnt_State_Readout + 1'b1;
-//                 Out_Start_Readout1    <=  1'b1;
-//                 Out_Start_Readout2    <=  1'b0;
-//               end
-//           end
-//       endcase
-//     end
-//
-// end
-//
-//
+
 
 
 	Cmd_Boolean_Set
@@ -1120,20 +713,7 @@ Cmd_Rising_N_Clock
     .Output_Valid_Sig(Out_Start_Acq)       // Output Signal
     );
 
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Start_Acq <= 1'b1;
-//
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:0] == 16'hffa1)
-//     Out_Start_Acq <= 1'b1;
-//
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:0] == 16'hffa0)
-//     Out_Start_Acq <= 1'b0;
-//
-//
-//   else
-//     Out_Start_Acq <= Out_Start_Acq;
-// end
+
 /*---------Sel Feedback capacitance------*/
 	Cmd_Set_N_Bits_Value  
 	#(
@@ -1150,14 +730,6 @@ Cmd_Rising_N_Clock
     );		
 
 	
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Sel_Feedback_Capacitance <= 4'b1111;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:4] == 12'haca)
-//     Out_Sel_Feedback_Capacitance <= in_from_usb_ControlWord[3:0];
-//     else
-//     Out_Sel_Feedback_Capacitance <= Out_Sel_Feedback_Capacitance;
-// end
 
 //set Trigtime of Inside mode 0~256
 
@@ -1174,14 +746,6 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Out_Set_Trig_Inside_Time)
     );		
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Set_Trig_Inside_Time <= 8'd1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:8] == 8'hab)
-//     Out_Set_Trig_Inside_Time <= in_from_usb_ControlWord[7:0];
-//     else
-//     Out_Set_Trig_Inside_Time <= Out_Set_Trig_Inside_Time;
-// end
 
 //Set Hv
 	Cmd_Set_N_Bits_Value  
@@ -1245,23 +809,14 @@ Cmd_Rising_N_Clock
  .LENGTH_VALUE(4'd12),
  .EFFECT_CMD(4'h6),
  .DEFAULT_VALUE(12'h3ff))
-	Cmd_Out_Set_Hold_Delay_Time(
+	Cmd_Out_Set_Ini_DAC_for_Auto_Scan(
     .Clk_In(clk),
     .Rst_N(reset_n),
     .Cmd_In(in_from_usb_ControlWord),
     .Cmd_En(in_from_usb_Ctr_rd_en),
-    .Output_Valid_Sig(Out_Set_Hold_Delay_Time)
+    .Output_Valid_Sig(Out_Set_Ini_DAC_for_Auto_Scan)
     );		
 	
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Set_Hold_Delay_Time  <= 12'h3ff;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:12] == 4'h6)
-//     Out_Set_Hold_Delay_Time <= in_from_usb_ControlWord[11:0];
-//     else
-//     Out_Set_Hold_Delay_Time <= Out_Set_Hold_Delay_Time;
-// end
-
 
 
 
@@ -1280,14 +835,6 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Out_Set_Constant_Interval_Time)
     );		
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Set_Constant_Interval_Time <= 14'd20;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord[15:14] == 2'b01)
-//     Out_Set_Constant_Interval_Time <= in_from_usb_ControlWord[13:0];
-//     else
-//     Out_Set_Constant_Interval_Time <= Out_Set_Constant_Interval_Time;
-// end
 
 
 
@@ -1302,20 +849,7 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(out_to_usb_Acq_Start_Stop)       // Output Signal
     );
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     out_to_usb_Acq_Start_Stop <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf0f1)
-//     out_to_usb_Acq_Start_Stop <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf0f0)
-//     out_to_usb_Acq_Start_Stop <= 1'b0;
-//   // else if(Cnt_Trig    >=  TOTAL_NUM_EX_TRIG)
-//   // begin
-//   //   out_to_usb_Acq_Start_Stop <=  1'b0;
-//   // end
-//   else
-//     out_to_usb_Acq_Start_Stop <= out_to_usb_Acq_Start_Stop;
-// end
+
 
 
 
@@ -1326,24 +860,15 @@ Cmd_Rising_N_Clock
  	 #(.EFFECT_1_CMD(16'h55aa), // Set the Cmd to set output 1
 		 .EFFECT_0_CMD(16'heb90), // Set the Cmd to set output 0
 		 .DEFAULT_VALUE(1'b1)	 )  // Set the default value
-	 Cmd_Status_En_Out(
+	 Cmd_Out_Status_Power_On_Control(
     .Clk_In(clk),
     .Rst_N(reset_n),
     .Cmd(in_from_usb_ControlWord),                // input Cmd
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
-    .Output_Valid_Sig(Status_En_Out)       // Output Signal
+    .Output_Valid_Sig(Out_Status_Power_On_Control)       // Output Signal
     );
 	
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Status_En_Out <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h55aa)
-//     Status_En_Out <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'heb90)
-//     Status_En_Out <= 1'b0;
-//   else
-//     Status_En_Out <= Status_En_Out;
-// end
+
 
 
 
@@ -1400,16 +925,6 @@ always @ (posedge clk or negedge reset_n)
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(Out_Trig_Start_Stop)       // Output Signal
     );
-// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     Out_Trig_Start_Stop <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h00a1)
-//     Out_Trig_Start_Stop <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'h00a0)
-//     Out_Trig_Start_Stop <= 1'b0;
-//   else
-//     Out_Trig_Start_Stop <= Out_Trig_Start_Stop;
-// end
 
 
 
@@ -1427,16 +942,7 @@ always @ (posedge clk or negedge reset_n)
     .Output_Valid_Sig(out_to_control_usb_data)       // Output Signal
     );
 	
-	// always @ (posedge clk , negedge reset_n) begin
-//   if(~reset_n)
-//     out_to_control_usb_data <= 1'b1;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'ha0f0)
-//    out_to_control_usb_data <= 1'b0;
-//   else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'ha0f1)
-//     out_to_control_usb_data <= 1'b1;
-//   else
-//     out_to_control_usb_data <= out_to_control_usb_data;
-// end
+
 
 
 
@@ -1468,26 +974,7 @@ end
     .Output_Valid_Sig(Out_Select)       // Output Signal
     );
 	
-	// always @ (posedge clk or negedge reset_n)
- //   begin
- //     if(~reset_n)
- //       begin
- //         Out_Select                                <=  1'b1;
- //       end
- //     else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hbb01)
- //       begin
- //         Out_Select                                <=  1'b1;
- //       end
- //      else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hbb00)
- //       begin
- //         Out_Select                                <=  1'b0;
- //
- //       end
- //      else
- //        begin
- //          Out_Select                                <=  Out_Select;
- //        end
- //   end
+
 /*--------------------Out_Select_TDC_On----------------*/
 
 	 Cmd_Boolean_Set
@@ -1501,26 +988,7 @@ end
     .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
     .Output_Valid_Sig(Out_Select_TDC_On)       // Output Signal
     );
- // always @ (posedge clk or negedge reset_n)
- //   begin
- //     if(~reset_n)
- //       begin
- //         Out_Select_TDC_On                                <=  1'b1;
- //       end
- //     else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf901)
- //       begin
- //         Out_Select_TDC_On                                <=  1'b1;
- //       end
- //      else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hf900)
- //       begin
- //         Out_Select_TDC_On                                <=  1'b0;
- //
- //       end
- //      else
- //        begin
- //          Out_Select_TDC_On                                <=  Out_Select_TDC_On;
- //        end
- //   end
+
 
 /*---Set Start Stop Hv----*/
  Cmd_Boolean_Set
@@ -1535,25 +1003,7 @@ end
     .Output_Valid_Sig(Out_Flag_Start_Stop_Hv)       // Output Signal
     );
  
-	// always @ (posedge clk or negedge reset_n)
- //   begin
- //     if(~reset_n)
- //       begin
- //         Out_Flag_Start_Stop_Hv                                <= 1'b0;
- //       end
- //     else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord  == 16'hd0d1)
- //       begin
- //         Out_Flag_Start_Stop_Hv                                <= 1'b1;
- //       end
- //      else if(in_from_usb_Ctr_rd_en && in_from_usb_ControlWord == 16'hd0d0)
- //       begin
- //         Out_Flag_Start_Stop_Hv                                <= 1'b0;
- //       end
- //      else
- //        begin
- //          Out_Flag_Start_Stop_Hv                               <= Out_Flag_Start_Stop_Hv;
- //        end
- //   end
+
 Cmd_Rising_N_Clock 
 	#(.EFFECT_CMD(16'hd141), // Input effect words
 		.LAST_CYC(8'd10))       // Input Last Cyc
@@ -1584,6 +1034,6 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Sig_Stop_Hv)
     );
-	assign Out_Start_Readout2 = 1'b0; 
+	assign Out_Start_Readout2 = Out_Start_Readout1; 
 	assign Out_Start_Stop_Hv = Sig_Start_Hv || Sig_Stop_Hv;
 endmodule

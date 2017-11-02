@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Tue Oct 31 11:59:06 2017
+# Process ID: 63048
+# Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent47860 E:\Work_File\CEPC\Logic\DIF-Logic\ECAL_DIF\ECAL_DIF.xpr
+# Log file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/vivado.log
+# Journal file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.xpr
+INFO: [Project 1-313] Project file moved from 'E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF' since last save.
+WARNING: [Project 1-312] File not found as 'E:/Work_File/CEPC/SKIROC/test_bench/Test_Prepare_Register.v'; using path 'E:/Work_File/CEPC/Logic/SKIROC/test_bench/Test_Prepare_Register.v' instead.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.xpr
+INFO: [Project 1-313] Project file moved from 'E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF' since last save.
+WARNING: [Project 1-312] File not found as 'E:/Work_File/CEPC/SKIROC/test_bench/Test_Prepare_Register.v'; using path 'E:/Work_File/CEPC/Logic/SKIROC/test_bench/Test_Prepare_Register.v' instead.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.xpr
+INFO: [Project 1-313] Project file moved from 'E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF' since last save.
+WARNING: [Project 1-312] File not found as 'E:/Work_File/CEPC/SKIROC/test_bench/Test_Prepare_Register.v'; using path 'E:/Work_File/CEPC/Logic/SKIROC/test_bench/Test_Prepare_Register.v' instead.
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+open_project E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 908.430 ; gain = 92.383
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 31 11:59:52 2017...

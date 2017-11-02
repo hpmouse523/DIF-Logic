@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Oct 30 22:19:56 2017
+# Process ID: 53036
+# Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK °æ±¾/ECAL_DIF/ECAL_DIF.runs/ODDR_Clk_synth_1
+# Command line: vivado.exe -log ODDR_Clk.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ODDR_Clk.tcl
+# Log file: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK °æ±¾/ECAL_DIF/ECAL_DIF.runs/ODDR_Clk_synth_1/ODDR_Clk.vds
+# Journal file: E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK °æ±¾/ECAL_DIF/ECAL_DIF.runs/ODDR_Clk_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ODDR_Clk.tcl -notrace

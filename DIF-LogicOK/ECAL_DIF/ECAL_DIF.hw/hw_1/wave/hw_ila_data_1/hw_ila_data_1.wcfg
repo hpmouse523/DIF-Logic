@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Work_File/CEPC/Logic/DIF-Logic/DIF-LogicOK/ECAL_DIF/ECAL_DIF.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1430300897fs"></ZoomEndTime>
+      <Cursor1Time time="135000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="270"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="Debug_Sig_Sig_End_SC" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_End_SC</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_End_SC</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Select_Start_SC" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Select_Start_SC</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Select_Start_SC</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Set_SC_Auto_Scan" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Set_TA_Thr_DAC_Sig_34" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Set_TA_Thr_DAC_Sig_34[10:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Set_TA_Thr_DAC_Sig_34[10:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Mask_Word" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Mask_Word[64:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Mask_Word[64:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Start_SC" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Start_SC</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Start_SC</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Set_SC_Auto_Scan" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Set_SC_Auto_Scan</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[16:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Parallel_Data_From_Auto_Scan_Temp[16:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Parallel_Data_En_Into_Ex_Fifo</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Clk_2_Exfifo" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Clk_2_Exfifo</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Clk_2_Exfifo</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Debug_Sig_Sig_Test_Cnt_Hit" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Debug_Sig_Sig_Test_Cnt_Hit[12:1]</obj_property>
+      <obj_property name="ObjectShortName">Debug_Sig_Sig_Test_Cnt_Hit[12:1]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

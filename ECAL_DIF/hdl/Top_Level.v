@@ -72,8 +72,10 @@ module Top_Level(
 	output Out_Hold,                // Backup Analogue memory hold signal ActH def 0
 	input  In_End_Readout1,         // Digital RAM end readout signal ActH def 0
 	input  In_End_Readout2,
-	input  In_Digital_Prob1,        // Digital probe output
-	input  In_Digital_Prob2,
+	input  In_Digital_Prob1_SK1,        // Digital probe output
+	input  In_Digital_Prob2_SK1,
+	input  In_Digital_Prob1_SK2,
+	input  In_Digital_Prob2_SK2,
 	input  In_Srout_Read,           // Read register output
 	output Out_Pwr_On_D,            // Digital Power pulsing control Act H def 1
 	output Out_Pwr_On_Dac,          // DAC power pulsing control ACtH def 0
@@ -262,21 +264,7 @@ ODDR_Clk ODDR_Clk_40M (
 
 
 
-	// ODDR2 #(
-	//   .DDR_ALIGNMENT("NONE"), // Sets output alignment to "NONE", "C0" or "C1"
-	//   .INIT(1'b0),            // Sets initial state of the Q output to 1'b0 or 1'b1
-	//   .SRTYPE("SYNC")         // Specifies "SYNC" or "ASYNC" set/reset
-	// ) ODDR2_Clk_40M
-	// (
-	//   .Q(Sig_Ck_40),          // 1-bit DDR output data
-	//   .C0(Clk_40M),           // 1-bit clock input
-	//   .C1(~Clk_40M),          // 1-bit clock input
-	//   .CE(1'b1),              // 1-bit clock enable input
-	//   .D0(1'b1),              // 1-bit data input (associated with C0)
-	//   .D1(1'b0),              // 1-bit data input (associated with C1)
-	//   .R(1'b0),               // 1-bit reset input
-	//   .S(1'b0)                // 1-bit set input
-	//   );
+
 
 	OBUF #(
 		.DRIVE(12),             // Specify the output drive strength
@@ -367,7 +355,7 @@ ODDR_Clk ODDR_Clk_40M (
 	wire [1:0]                  Sel_Cali_TA_Sig;
 	wire [11:0]                 Set_Cali_DAC_Sig;
 	wire [9:0]                 Set_TA_Thr_DAC_Sig_12;
-	wire [9:0]                 Set_TA_Thr_DAC_Sig_34;
+	wire [9:0]                 Sig_In_Dac_Trigger;
 
 
 	//SC and Prob
@@ -494,7 +482,7 @@ ODDR_Clk ODDR_Clk_40M (
 		// necessary
 
 		.In_DAC_Gain_Select(Set_TA_Thr_DAC_Sig_12),
-		.In_Dac_Trigger(Set_TA_Thr_DAC_Sig_34),
+		.In_Dac_Trigger(Sig_In_Dac_Trigger),
 		.In_Select_Main_Backup(~Sig_Main_Backup),
 		.In_En_Trig_Discriminator(Sig_Val_Evt),
 		.In_Sel_Feedback_Capacitance(Sig_Sel_Feedback_Capacitance),
@@ -625,13 +613,7 @@ ODDR_Clk ODDR_Clk_40M (
 
 
 
-			/*Auto_Charge_Sent Auto_Charge_Sent_Inst(
-				.Clk(Clk_Out_2_All),
-				.Rst_N(Rst_n_Delay2),
-				.In_Interval_Time(Sig_Set_Interval_Time),//Range is 1-256ms
-				.In_Start_Stop(Sig_Start_Stop_ADG),
-				.Out_Control_ADG(Out_Control_ADG)
-);*/
+
 
 				Auto_TA_Scan Auto_TA_Scan_Inst(                  // used to scan the DAC threshold
 					.Clk_10MHz(Clk_10M),
@@ -696,14 +678,14 @@ ODDR_Clk ODDR_Clk_40M (
 					.Out_Delay_Trig_Temp(Sig_Delay_Trig_Temp),
 					.Out_Set_Trig_Inside_Time(Sig_Set_Interval_Time),
 					.Out_Set_Constant_Interval_Time(Set_Constant_Interval_Time_Sig),
-					.Out_Set_Hold_Delay_Time(Sig_Set_Ini_DAC_for_Auto_Scan),
+					.Out_Set_Ini_DAC_for_Auto_Scan(Sig_Set_Ini_DAC_for_Auto_Scan),
 					.Out_Set_Hv_1(Sig_Set_Hv_1),//highest 4bit
 					.Out_Set_Hv_2(Sig_Set_Hv_2),
 					.Out_Set_Hv_3(Sig_Set_Hv_3),
 					.Out_Set_Hv_4(Sig_Set_Hv_4),//lowest bit
 					.Out_Sel_ADC_Test(Sig_Sel_ADC_Test),
 					.Out_ADG_Switch(),
-					.Out_Reset_ASIC_b(),
+					.Out_Reset_ASIC_b(Out_Resetb),
 					.Out_Start_Acq(Sig_Raz_Chn),
 					.Out_Start_Conver_b(Sig_Start_Auto_Scan),
 					.Out_Force_Trig(Out_Force_Trig),
@@ -711,7 +693,7 @@ ODDR_Clk ODDR_Clk_40M (
 					.Out_Start_Cfg_Hv(Sig_Start_Cfg_Hv),
 					.Out_Start_Stop_Hv(Sig_Start_Stop_Hv),
 					.Out_Flag_Start_Stop_Hv(Sig_Flag_Start_Stop_Hv),
-					.Out_Start_Readout2(Out_Resetb),
+					.Out_Start_Readout2(),
 					.Out_Start_Stop_ADG(Sig_Start_Stop_ADG),
 					.Out_AnaProb_SS1_SS10_PA(Sig_AnaProb_SS1_SS10_PA),
 					.Out_AnaProb_Thre_Fsb(Sig_AnaProb_Thre_Fsb),
@@ -730,7 +712,7 @@ ODDR_Clk ODDR_Clk_40M (
 					.Out_Start_Config(Sig_Start_SC_USB_Cmd),
 					.Out_Select(Out_Select),
 					.Out_Select_TDC_On(Sig_Select_TDC_On),
-					.Status_En_Out(Status_Power_On_Control)
+					.Out_Status_Power_On_Control(Status_Power_On_Control)
 
 					);
 
@@ -815,7 +797,7 @@ ODDR_Clk ODDR_Clk_40M (
 				assign Out_Pwr_On_Adc          = Status_Power_On_Control;
 				assign Out_Pwr_On_A            = Status_Power_On_Control;
 				assign Sig_Start_SC            = (Sig_Select_Start_SC == 1'b1)? Sig_Set_SC_Auto_Scan: Sig_Start_SC_USB_Cmd;
-				assign Set_TA_Thr_DAC_Sig_34   = (Sig_Select_Start_SC == 1'b1)? Sig_Auto_Dac_Input_Chip1:Sig_TA_Thr_From_USB;
+				assign Sig_In_Dac_Trigger   = (Sig_Select_Start_SC == 1'b1)? Sig_Auto_Dac_Input_Chip1:Sig_TA_Thr_From_USB;
 				assign Sig_Mask_Word_From_Auto = Sig_Mask_Word_From_Auto_256bit[256:193];
 				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? (Sig_Mask_Word_From_Auto|Sig_Set_Mask64) :Sig_Set_Mask64;//Auto Mask need to OR the Set
 				assign Sig_Clk_2_Exfifo        = (Sig_Select_Start_SC == 1'b1) ? Clk_10M : Clk_40M;
@@ -830,12 +812,12 @@ ODDR_Clk ODDR_Clk_40M (
 				assign Sig_ExTrig_to_ExtPN = (Sig_Sel_OnlyExTrig == 1'b1) ? Sig_Ex_Trig_Only_Exmode : Out_Force_Trig; 
 
 				assign Sig_7byte_Hv[56:33] = 24'h48_42_56;
-				assign LED[1] = In_Digital_Prob1;
+				assign LED[1] = In_Digital_Prob1_SK1;
 				assign LED[2] = Sig_Hit_200ns;
 				assign LED[3] = Sig_Sel_OnlyExTrig; //Sig_DAC_Adj[255];
-				assign LED[4] = Sig_Raz_Chn;
-				assign LED[5] = Sig_Sel_Feedback_Capacitance[1];
-				assign LED[6] = Out_Select;
+				assign LED[4] = In_Digital_Prob1_SK2;
+				assign LED[5] = Out_Sr_In;
+				assign LED[6] = Sig_Start_Stop_Hv;
 
 
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
@@ -843,14 +825,14 @@ ODDR_Clk ODDR_Clk_40M (
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
 
 
-				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Start_Stop_Hv	=	Sig_Start_Stop_Hv;//Start or Stop Hv
-				(*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;//Sig_Select_Start_SC means token of AutoScan mode
-				(*mark_debug = "true"*) wire  Debug_Sig_Sig_Flag_Start_Stop_Hv	=	Sig_Flag_Start_Stop_Hv;//Flag of Start or stop Hv 
-				(*mark_debug = "true"*) wire Debug_Sig_Sig_Start_SC	=	Sig_Start_SC;//Set Sc configuration
-				(*mark_debug = "true"*) wire Debug_Sig_Out_Sr_Ck	=	Out_Sr_Ck;//Slow Control
-				(*mark_debug = "true"*) wire Debug_Sig_Out_Sr_In	=	Out_Sr_In;
-				(*mark_debug = "true"*) wire Debug_Sig_Sig_In_Hv_Control_En	=	Sig_In_Hv_Control_En;
-				(*mark_debug = "true"*) wire Debug_Sig_Out_Hv_Rx	=	Out_Hv_Rx;//Send out signal to Rx Hv module
+				// (*mark_debug = "true"*) wire  Debug_Sig_Sig_Start_Stop_Hv	=	Sig_Start_Stop_Hv;//Start or Stop Hv
+				// (*mark_debug = "true"*) wire	Debug_Sig_Sig_Select_Start_SC	=	Sig_Select_Start_SC;//Sig_Select_Start_SC means token of AutoScan mode
+				// (*mark_debug = "true"*) wire  Debug_Sig_Sig_Flag_Start_Stop_Hv	=	Sig_Flag_Start_Stop_Hv;//Flag of Start or stop Hv
+				// (*mark_debug = "true"*) wire Debug_Sig_Sig_Start_SC	=	Sig_Start_SC;//Set Sc configuration
+				// (*mark_debug = "true"*) wire Debug_Sig_Out_Sr_Ck	=	Out_Sr_Ck;//Slow Control
+				// (*mark_debug = "true"*) wire Debug_Sig_Out_Sr_In	=	Out_Sr_In;
+				// (*mark_debug = "true"*) wire Debug_Sig_Sig_In_Hv_Control_En	=	Sig_In_Hv_Control_En;
+				// (*mark_debug = "true"*) wire Debug_Sig_Out_Hv_Rx	=	Out_Hv_Rx;//Send out signal to Rx Hv module
 
 
 

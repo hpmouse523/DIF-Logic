@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="ODDR_Clk_synth_1" LaunchPart="xc7a100tfgg484-2" LaunchTime="1505977298">
-  <File Type="RDS-PROPCONSTRS" Name="ODDR_Clk_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="ODDR_Clk.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ODDR_Clk_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="ODDR_Clk.vds"/>
   <File Type="RDS-UTIL" Name="ODDR_Clk_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="ODDR_Clk_utilization_synth.pb"/>
