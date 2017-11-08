@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Wed Nov  1 15:04:21 2017
+| Date             : Wed Nov  8 15:37:36 2017
 | Host             : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file Top_Level_power_routed.rpt -pb Top_Level_power_summary_routed.pb -rpx Top_Level_power_routed.rpx
 | Design           : Top_Level
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.422 |
-| Dynamic (W)              | 0.314 |
+| Total On-Chip Power (W)  | 0.421 |
+| Dynamic (W)              | 0.313 |
 | Device Static (W)        | 0.108 |
 | Total Off-Chip Power (W) | 0.006 |
 | Effective TJA (C/W)      | 2.7   |
@@ -51,19 +51,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.011 |        6 |       --- |             --- |
-| Slice Logic    |     0.002 |    12658 |       --- |             --- |
-|   LUT as Logic |     0.002 |     5817 |     63400 |            9.18 |
-|   Register     |    <0.001 |     5683 |    126800 |            4.48 |
-|   CARRY4       |    <0.001 |      175 |     15850 |            1.10 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |        1 |     63400 |           <0.01 |
+| Slice Logic    |     0.002 |    12418 |       --- |             --- |
+|   LUT as Logic |     0.002 |     5734 |     63400 |            9.04 |
+|   Register     |    <0.001 |     5582 |    126800 |            4.40 |
+|   CARRY4       |    <0.001 |      161 |     15850 |            1.02 |
 |   Others       |     0.000 |      184 |       --- |             --- |
-| Signals        |     0.004 |     9068 |       --- |             --- |
-| Block RAM      |     0.001 |        5 |       135 |            3.70 |
+|   F7/F8 Muxes  |     0.000 |        1 |     63400 |           <0.01 |
+| Signals        |     0.004 |     8818 |       --- |             --- |
+| Block RAM      |    <0.001 |        5 |       135 |            3.70 |
 | PLL            |     0.096 |        1 |         6 |           16.67 |
-| I/O            |     0.199 |       83 |       285 |           29.12 |
+| I/O            |     0.200 |       83 |       285 |           29.12 |
 | Static Power   |     0.108 |          |           |                 |
-| Total          |     0.422 |          |           |                 |
+| Total          |     0.421 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.042 |       0.026 |      0.016 |
+| Vccint    |       1.000 |     0.040 |       0.025 |      0.016 |
 | Vccaux    |       1.800 |     0.068 |       0.050 |      0.018 |
 | Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
 | Vcco25    |       2.500 |     0.081 |       0.077 |      0.004 |
@@ -145,18 +144,18 @@ Table of Contents
 +--------------------------------------------------------------------------+-----------+
 | Name                                                                     | Power (W) |
 +--------------------------------------------------------------------------+-----------+
-| Top_Level                                                                |     0.314 |
+| Top_Level                                                                |     0.313 |
 |   Auto_TA_Scan_Inst                                                      |     0.002 |
 |     SKIROC_Auto_TA_Inst_Chip1                                            |    <0.001 |
 |     SKIROC_Auto_TA_Inst_Chip2                                            |    <0.001 |
 |     SKIROC_Auto_TA_Inst_Chip3                                            |    <0.001 |
 |     SKIROC_Auto_TA_Inst_Chip4                                            |    <0.001 |
 |   Dac_For_Cali                                                           |    <0.001 |
-|   Ex_Fifo_Insst                                                          |     0.003 |
-|     U0                                                                   |     0.003 |
-|       inst_fifo_gen                                                      |     0.003 |
-|         gconvfifo.rf                                                     |     0.003 |
-|           grf.rf                                                         |     0.003 |
+|   Ex_Fifo_Insst                                                          |     0.002 |
+|     U0                                                                   |     0.002 |
+|       inst_fifo_gen                                                      |     0.002 |
+|         gconvfifo.rf                                                     |     0.002 |
+|           grf.rf                                                         |     0.002 |
 |             gntv_or_sync_fifo.gcx.clkx                                   |    <0.001 |
 |               gnxpm_cdc.gsync_stage[1].rd_stg_inst                       |    <0.001 |
 |               gnxpm_cdc.gsync_stage[1].wr_stg_inst                       |    <0.001 |
@@ -172,11 +171,11 @@ Table of Contents
 |                 c1                                                       |    <0.001 |
 |                 c2                                                       |    <0.001 |
 |               wpntr                                                      |    <0.001 |
-|             gntv_or_sync_fifo.mem                                        |     0.001 |
-|               gbm.gbmg.gbmga.ngecc.bmg                                   |     0.001 |
-|                 inst_blk_mem_gen                                         |     0.001 |
-|                   gnbram.gnativebmg.native_blk_mem_gen                   |     0.001 |
-|                     valid.cstr                                           |     0.001 |
+|             gntv_or_sync_fifo.mem                                        |    <0.001 |
+|               gbm.gbmg.gbmga.ngecc.bmg                                   |    <0.001 |
+|                 inst_blk_mem_gen                                         |    <0.001 |
+|                   gnbram.gnativebmg.native_blk_mem_gen                   |    <0.001 |
+|                     valid.cstr                                           |    <0.001 |
 |                       has_mux_b.B                                        |    <0.001 |
 |                       ramloop[0].ram.r                                   |    <0.001 |
 |                         prim_noinit.ram                                  |    <0.001 |
@@ -218,7 +217,6 @@ Table of Contents
 |               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst   |    <0.001 |
 |               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst   |    <0.001 |
 |               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst   |    <0.001 |
-|   Flag_LED8                                                              |    <0.001 |
 |   General_ExTrig_Inst                                                    |    <0.001 |
 |   Hit_50_to_200ns_Inst                                                   |    <0.001 |
 |   ODDR_Clk_10M                                                           |    <0.001 |
@@ -239,7 +237,7 @@ Table of Contents
 |   Read_Register_Set_Inst                                                 |    <0.001 |
 |   Readout_Dout_Inst                                                      |    <0.001 |
 |     Gray_2_Bin_Inst                                                      |    <0.001 |
-|   Sci_Acq_Inst                                                           |     0.001 |
+|   Sci_Acq_Inst                                                           |    <0.001 |
 |   Slow_Control_or_Prob_Inst                                              |    <0.001 |
 |   USB_Con_Inst                                                           |    <0.001 |
 |     SlaveFifoRead_inst                                                   |    <0.001 |
@@ -296,8 +294,10 @@ Table of Contents
 |     Cmd_Out_Flag_Start_Stop_Hv                                           |    <0.001 |
 |     Cmd_Out_Force_Trig                                                   |    <0.001 |
 |     Cmd_Out_Hold                                                         |    <0.001 |
+|     Cmd_Out_Reset_ASIC_b                                                 |    <0.001 |
 |     Cmd_Out_Sel_ADC_Test                                                 |    <0.001 |
 |     Cmd_Out_Sel_Feedback_Capacitance                                     |    <0.001 |
+|     Cmd_Out_Sel_High_Low_Leakage                                         |    <0.001 |
 |     Cmd_Out_Sel_OnlyExTrig                                               |    <0.001 |
 |     Cmd_Out_Sel_Work_Mode                                                |    <0.001 |
 |     Cmd_Out_Select                                                       |    <0.001 |

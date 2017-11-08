@@ -1,9 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cmd_Boolean_Set
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cmd_Rising_N_Clock
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Set_N_Bits_Value.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Cmd_Set_N_Bits_Value
 WARNING: [VRFC 10-756] identifier LENGTH_VALUE is used before its declaration [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Set_N_Bits_Value.v:28]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Hex_2_ASCII.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Hex_2_ASCII
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/test_bentch/Test_Cmd_Set_N_Bits_Value.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Test_Cmd_Set_N_Bits_Value
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module usb_command_interpreter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/test_bentch/Test Usb_Command.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Test_Usb_Command
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Wed Nov  1 15:04:11 2017
+| Date         : Wed Nov  8 15:37:25 2017
 | Host         : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc -file Top_Level_drc_routed.rpt -pb Top_Level_drc_routed.pb -rpx Top_Level_drc_routed.rpx
 | Design       : Top_Level
@@ -50,647 +50,647 @@ Related violations: <none>
 
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO SMA_ExTrig_Cnt connects to flops which have these Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Out_End_reg_0, hv_control_Inst/uart_clk_gen/counter_reg[9]_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO SMA_ExTrig_Cnt connects to flops which have these Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Flag_Start_Wr_Delay1_reg_0, Prepare_Register_Inst/Para616_Shiftreg_reg[544]_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[17]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[17]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[17]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[17]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[18]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[18]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[18]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[18]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[19]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[19]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[19]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[19]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[20]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[20]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[20]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[20]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[21]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[21]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[21]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[21]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[21]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[21]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[22]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[22]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[22]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[22]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[23]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[23]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[23]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[23]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[24]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[24]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[24]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[24]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[24]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[24]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[25]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[25]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[25]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[25]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[26]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[26]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[26]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[26]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[27]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[27]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[27]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[27]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[27]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[27]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[28]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[28]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[28]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[28]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[28]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[28]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[33]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[33]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[33]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[33]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[33]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[33]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[34]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[34]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[34]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[34]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[34]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[34]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[35]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[35]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[35]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[35]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[35]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[35]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[36]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[36]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[36]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[36]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[36]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[36]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[37]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[37]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[37]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[37]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[37]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[37]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#18 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[38]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[38]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[38]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[38]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[38]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[38]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#19 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[39]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[39]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[39]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[39]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[39]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[39]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#20 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[40]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[40]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[40]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[40]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[40]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[40]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#21 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[41]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[41]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[41]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[41]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[41]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[41]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#22 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[42]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[42]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[42]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[42]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[42]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[42]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#23 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[43]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[43]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[43]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[43]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[43]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[43]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#24 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[44]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[44]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[44]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[44]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[44]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[44]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#25 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[49]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[49]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[49]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[49]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[49]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[49]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#26 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[50]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[50]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[50]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[50]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[50]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[50]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#27 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[51]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[51]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[51]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[51]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[51]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[51]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#28 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[52]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[52]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[52]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[52]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[52]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[52]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#29 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[53]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[53]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[53]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[53]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[53]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[53]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#30 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[54]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[54]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[54]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[54]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[54]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[54]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#31 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[55]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[55]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[55]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[55]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[55]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[55]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#32 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[56]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[56]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[56]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[56]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[56]_LDC_i_1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[56]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#33 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[17]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[17]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[17]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[17]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[17]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[17]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#34 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[18]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[18]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[18]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[18]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[18]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[18]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#35 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[19]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[19]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[19]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[19]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[19]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[19]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#36 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[20]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[20]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[20]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[20]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[20]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[20]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#37 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[21]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[21]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[21]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[21]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[21]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[21]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#38 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[22]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[22]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[22]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[22]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[22]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[22]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#39 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[23]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[23]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[23]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[23]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[23]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[23]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#40 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[24]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[24]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[24]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[24]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[24]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[24]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#41 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[25]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[25]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[25]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[25]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[25]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[25]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#42 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[26]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[26]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[26]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[26]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[26]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[26]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#43 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[27]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[27]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[27]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[27]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[27]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[27]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#44 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[28]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[28]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[28]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[28]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[28]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[28]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#45 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[33]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[33]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[33]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[33]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[33]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[33]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#46 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[34]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[34]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[34]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[34]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[34]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[34]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#47 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[35]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[35]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[35]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[35]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[35]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[35]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#48 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[36]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[36]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[36]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[36]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[36]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[36]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#49 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[37]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[37]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[37]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[37]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[37]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[37]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#50 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[38]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[38]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[38]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[38]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[38]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[38]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#51 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[39]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[39]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[39]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[39]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[39]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[39]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#52 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[40]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[40]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[40]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[40]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[40]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[40]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#53 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[41]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[41]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[41]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[41]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[41]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[41]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#54 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[42]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[42]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[42]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[42]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[42]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[42]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#55 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[43]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[43]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[43]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[43]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[43]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[43]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#56 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[44]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[44]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[44]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[44]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[44]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[44]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#57 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[49]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[49]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[49]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[49]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[49]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[49]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#58 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[50]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[50]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[50]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[50]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[50]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[50]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#59 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[51]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[51]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[51]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[51]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[51]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[51]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#60 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[52]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[52]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[52]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[52]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[52]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[52]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#61 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[53]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[53]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[53]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[53]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[53]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[53]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#62 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[54]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[54]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[54]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[54]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[54]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[54]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#63 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[55]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[55]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[55]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[55]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[55]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[55]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#64 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[56]_LDC_i_1__0_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[56]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[56]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[56]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[56]_LDC_i_1__0/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[56]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#65 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[17]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[17]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[17]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[17]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[17]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[17]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#66 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[18]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[18]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[18]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[18]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[18]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[18]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#67 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[19]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[19]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[19]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[19]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[19]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[19]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#68 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[20]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[20]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[20]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[20]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[20]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[20]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#69 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[21]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[21]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[21]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[21]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[21]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[21]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#70 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[22]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[22]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[22]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[22]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[22]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[22]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#71 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[23]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[23]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[23]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[23]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[23]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[23]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#72 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[24]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[24]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[24]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[24]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[24]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[24]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#73 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[25]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[25]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[25]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[25]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[25]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[25]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#74 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[26]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[26]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[26]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[26]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[26]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[26]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#75 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[27]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[27]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[27]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[27]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[27]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[27]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#76 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[28]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[28]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[28]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[28]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[28]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[28]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#77 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[33]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[33]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[33]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[33]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[33]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[33]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#78 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[34]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[34]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[34]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[34]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[34]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[34]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#79 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[35]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[35]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[35]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[35]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[35]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[35]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#80 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[36]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[36]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[36]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[36]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[36]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[36]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#81 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[37]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[37]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[37]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[37]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[37]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[37]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#82 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[38]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[38]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[38]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[38]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[38]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[38]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#83 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[39]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[39]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[39]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[39]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[39]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[39]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#84 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[40]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[40]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[40]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[40]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[40]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[40]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#85 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[41]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[41]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[41]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[41]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[41]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[41]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#86 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[42]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[42]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[42]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[42]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[42]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[42]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#87 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[43]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[43]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[43]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[43]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[43]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[43]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#88 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[44]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[44]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[44]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[44]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[44]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[44]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#89 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[49]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[49]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[49]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[49]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[49]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[49]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#90 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[50]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[50]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[50]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[50]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[50]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[50]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#91 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[51]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[51]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[51]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[51]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[51]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[51]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#92 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[52]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[52]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[52]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[52]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[52]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[52]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#93 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[53]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[53]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[53]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[53]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[53]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[53]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#94 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[54]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[54]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[54]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[54]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[54]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[54]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#95 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[55]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[55]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[55]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[55]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[55]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[55]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#96 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[56]_LDC_i_1__1_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[56]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[56]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[56]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[56]_LDC_i_1__1/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[56]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#97 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[17]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[17]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[17]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[17]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[17]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[17]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#98 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[18]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[18]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[18]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[18]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[18]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[18]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#99 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[19]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[19]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[19]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[19]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[19]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[19]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#100 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[20]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[20]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[20]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[20]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[20]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[20]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#101 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[21]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[21]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[21]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[21]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[21]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[21]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#102 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[22]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[22]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[22]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[22]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[22]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[22]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#103 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[23]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[23]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[23]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[23]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[23]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[23]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#104 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[24]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[24]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[24]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[24]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[24]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[24]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#105 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[25]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[25]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[25]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[25]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[25]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[25]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#106 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[26]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[26]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[26]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[26]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[26]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[26]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#107 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[27]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[27]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[27]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[27]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[27]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[27]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#108 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[28]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[28]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[28]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[28]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[28]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[28]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#109 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[33]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[33]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[33]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[33]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[33]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[33]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#110 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[34]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[34]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[34]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[34]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[34]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[34]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#111 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[35]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[35]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[35]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[35]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[35]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[35]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#112 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[36]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[36]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[36]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[36]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[36]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[36]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#113 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[37]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[37]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[37]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[37]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[37]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[37]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#114 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[38]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[38]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[38]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[38]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[38]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[38]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#115 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[39]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[39]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[39]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[39]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[39]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[39]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#116 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[40]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[40]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[40]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[40]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[40]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[40]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#117 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[41]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[41]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[41]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[41]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[41]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[41]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#118 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[42]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[42]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[42]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[42]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[42]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[42]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#119 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[43]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[43]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[43]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[43]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[43]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[43]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#120 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[44]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[44]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[44]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[44]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[44]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[44]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#121 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[49]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[49]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[49]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[49]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[49]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[49]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#122 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[50]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[50]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[50]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[50]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[50]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[50]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#123 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[51]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[51]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[51]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[51]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[51]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[51]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#124 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[52]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[52]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[52]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[52]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[52]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[52]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#125 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[53]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[53]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[53]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[53]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[53]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[53]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#126 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[54]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[54]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[54]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[54]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[54]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[54]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#127 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[55]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[55]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[55]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[55]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[55]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[55]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#128 Warning
 Gated clock check  
-Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[56]_LDC_i_1__2_n_1 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[56]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[56]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[56]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[56]_LDC_i_1__2/O, cell Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[56]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#129 Warning
@@ -1065,62 +1065,62 @@ Related violations: <none>
 
 PDRC-153#203 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[10]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[10]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[10]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#204 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[11]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[11]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[11]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#205 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[12]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[12]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[12]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#206 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[14]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[14]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[14]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#207 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[15]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[15]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[15]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#208 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[17]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[17]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[17]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[17]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#209 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[18]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[18]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[18]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[18]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#210 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[19]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[19]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[19]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[19]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#211 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[20]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[20]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[20]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[20]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#212 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[22]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[22]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[22]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[22]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#213 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[23]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[23]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[23]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[23]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#214 Warning
 Gated clock check  
-Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[9]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[9]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[9]_LDC_i_1/O, cell Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#215 Warning
@@ -3205,7 +3205,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-14 net(s) have no routable loads. The problem bus(es) and/or net(s) are Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i, hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i, Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[1], hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[1], Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[0], hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[0], Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2], Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2], hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2].
+14 net(s) have no routable loads. The problem bus(es) and/or net(s) are hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i, Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i, Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[1], hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[1], Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[0], hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[0], Fifo_Register_Inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2], Ex_Fifo_Insst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2], hv_control_Inst/hv_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg[2].
 Related violations: <none>
 
 

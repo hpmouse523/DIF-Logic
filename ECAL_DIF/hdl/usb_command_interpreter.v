@@ -33,6 +33,7 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
       output reg [5:0]      LED,
                                                        /* ------Select Work mode-----------*/
       output             Out_Sel_Work_Mode,
+	    output             Out_Sel_High_Low_Leakage,
 			output reg [4:1]      Out_DAC_Adj_Chn64,
                                                        /* ------Control Trig and ADC module--------*/
       output reg [4:1]      Out_Valid_TA_for_Self_Mod, // Control which TA to use for Self Trig mode  1111for all use 0001for only use TA1
@@ -92,6 +93,7 @@ localparam  [19:0]    TOTAL_NUM_EX_TRIG = 20'd500;
 
 	wire  Sig_Start_Hv;
 	wire  Sig_Stop_Hv;
+	wire  Sig_Reset;
 /*--------Select Only Extrig or in and ex------*/
 Cmd_Boolean_Set
  	 #(.EFFECT_1_CMD(16'hf5f1), // Set the Cmd to set output 1
@@ -497,6 +499,18 @@ Cmd_Boolean_Set
     );
 
 
+//Select High low leakage Rf 1G:0 or 60Mohm :1 
+	Cmd_Boolean_Set
+ 	 #(.EFFECT_1_CMD(16'hd151), // Set the Cmd to set output 1
+		 .EFFECT_0_CMD(16'hd150), // Set the Cmd to set output 0
+		 .DEFAULT_VALUE(1'b0)	 )  // Set the default value
+	 Cmd_Out_Sel_High_Low_Leakage(
+    .Clk_In(clk),
+    .Rst_N(reset_n),
+    .Cmd(in_from_usb_ControlWord),                // input Cmd
+    .Cmd_En(in_from_usb_Ctr_rd_en),          // input Cmd_En
+    .Output_Valid_Sig(Out_Sel_High_Low_Leakage)       // Output Signal
+    );
 
 //Select work mode
 	Cmd_Boolean_Set
@@ -639,7 +653,7 @@ Cmd_Rising_N_Clock
     .Rst_N(reset_n),
     .Cmd_In(in_from_usb_ControlWord),
     .Cmd_En(in_from_usb_Ctr_rd_en),
-    .Output_Valid_Sig(~Out_Reset_ASIC_b)
+    .Output_Valid_Sig(Sig_Reset)
     );
 
 
@@ -1034,6 +1048,7 @@ Cmd_Rising_N_Clock
     .Cmd_En(in_from_usb_Ctr_rd_en),
     .Output_Valid_Sig(Sig_Stop_Hv)
     );
-	assign Out_Start_Readout2 = Out_Start_Readout1; 
-	assign Out_Start_Stop_Hv = Sig_Start_Hv || Sig_Stop_Hv;
+	assign Out_Start_Readout2 = Out_Start_Readout1;
+	assign Out_Start_Stop_Hv  = Sig_Start_Hv || Sig_Stop_Hv;
+	assign Out_Reset_ASIC_b   = ~Sig_Reset;
 endmodule

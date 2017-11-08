@@ -15,6 +15,7 @@ module Prepare_Register
 	input [3:0]       In_Sel_Feedback_Capacitance,// 4 bits input  indicate Callback capacitance 1111 means use all 4 capacitances. 1000 means use the smallest cap.
   input [2:0]       In_Sel_Comp_PA, //3bit select compensation capacitances commands default 111
   input             In_Sel_Work_Mode,//0means normal mode  1means Clai mode
+	input 						In_Sel_High_Low_Leakage,// 0 means Weak leakage 1 means high leakage default 0
 
   input             In_Sel_ADC_Test,//1means Select ADC test input as input to ADC
   input             In_Sel_OnlyExTrig,
@@ -27,6 +28,7 @@ module Prepare_Register
   /*-----------Exfifo--------------------------*/
   output reg        Out_Ex_Fifo_Wr_En,
   output reg  [7:0] Out_Ex_Fifo_Din,
+	output [3:1]      Out_3Test_Pins,
 
   /*-----------End_Flag-----*/
   output reg        End_Flag
@@ -99,7 +101,8 @@ assign        Parameter616[205]           =     1'b0;                  // Power 
 assign        Parameter616[204]           =     1'b1;                  // SS_G10 Enable slow shaper G10
 assign        Parameter616[203]           =     1'b0;                  // Power Pulsing mode
 assign        Parameter616[202]           =     1'b1;                  // Enable slow shaper G1 1 Enabled
-assign        Parameter616[201:10]        =   (In_Sel_Work_Mode == 1'b0)?192'h0:192'h492492492492492492492492492492492492492492492492;//192'h924924924924924924924924924924924924924924924924;//924means 100 which means high leakge normal mode//192'h492492492492492492492492492492492492492492492492; // 192'b0;  492means 010 all  cali             //All PA on No Ctest weak leakage  110means on ,high leakege cali mode
+//assign        Parameter616[201:10]        =   (In_Sel_Work_Mode == 1'b0)?192'h0:192'h492492492492492492492492492492492492492492492492;//192'h924924924924924924924924924924924924924924924924;//924means 100 which means high leakge normal mode//192'h492492492492492492492492492492492492492492492492; // 192'b0;  492means 010 all  cali             //All PA on No Ctest weak leakage DB6 = 110means on ,high leakege cali mode
+assign        Parameter616[201:10]        =     Sig_Work_Mode_Leakage; 
 assign        Parameter616[9:6]           =     In_Sel_Feedback_Capacitance; // PreAmp feedback capacitance commands
 assign        Parameter616[5:3]           =     In_Sel_Comp_PA;              // PreAmp compensation capacitances commands (2бн0)
 assign        Parameter616[2]             =     1'b0;                        // Power Pulsing mode
@@ -107,6 +110,36 @@ assign        Parameter616[1]             =     1'b1;                        // 
 
 /*------------------Tell rising edge of Start_In-------*/
 reg                     Start_In_Delay;
+	reg [192:1] Sig_Work_Mode_Leakage;
+	wire [2:1]  Sig_Flag_Mode_Leakage;
+
+	assign Sig_Flag_Mode_Leakage = {In_Sel_Work_Mode,In_Sel_High_Low_Leakage};// default = 2'b00
+	assign Out_3Test_Pins = Parameter616[201:199];//Channel 63's Leakage(1high leakage) Ctest(1 test) PA(0 on) on 
+
+always @ (*)
+begin
+	if(~Rst_N)
+	begin
+		Sig_Work_Mode_Leakage = 192'h0;
+	end		
+	else
+	begin
+		case(Sig_Flag_Mode_Leakage)
+			2'b00:
+				Sig_Work_Mode_Leakage = 192'h0;
+			2'b10:
+				Sig_Work_Mode_Leakage = 192'h492492492492492492492492492492492492492492492492;//cali mode low leakage
+			2'b01:
+				Sig_Work_Mode_Leakage = 192'h924924924924924924924924924924924924924924924924;//normal mode high leakage
+			2'b11:
+				Sig_Work_Mode_Leakage = 192'hDB6DB6DB6DB6DB6DB6DB6DB6DB6DB6DB6DB6DB6DB6DB6DB6;//cali mode high leakage
+			default:
+				Sig_Work_Mode_Leakage = 192'h0;
+		endcase												
+	end		
+end		
+
+
 always @(posedge Clk)
   begin
     Start_In_Delay        <=    Start_In;

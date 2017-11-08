@@ -382,6 +382,7 @@ ODDR_Clk ODDR_Clk_40M (
 
 	/*-------Select Normal or Cali mode-----*/
 	wire                        Sel_Work_Mode_Sig;
+	wire                        Sig_Sel_High_Low_Leakage;
 	/*-------Output of Cali and Normal mode-*/
 
 	/*---------CLK 40M-------------*/
@@ -488,6 +489,7 @@ ODDR_Clk ODDR_Clk_40M (
 		.In_Sel_Feedback_Capacitance(Sig_Sel_Feedback_Capacitance),
 		.In_Sel_Comp_PA(Sig_Sel_Feedback_Capacitance[2:0]),
 		.In_Sel_Work_Mode(Sel_Work_Mode_Sig),
+		.In_Sel_High_Low_Leakage(Sig_Sel_High_Low_Leakage),//1 means High leakage default 0
 		.In_Sel_ADC_Test(Sig_Sel_ADC_Test),
 		.In_Sel_OnlyExTrig(Sig_Sel_OnlyExTrig), //default 0 ,Select Trig only Ex  default 0 means In or Ex 1means Only Ex
 		.In_Chip_ID_Bin(8'h01),
@@ -499,7 +501,7 @@ ODDR_Clk ODDR_Clk_40M (
 		/*-----------Exfifo--------------------------*/
 		.Out_Ex_Fifo_Wr_En(Sig_Ex_Fifo_SC_Wr_En),
 		.Out_Ex_Fifo_Din(Sig_Ex_Fifo_SC_Din),
-
+		.Out_3Test_Pins(LED[8:6]),// 8:Leakage   7 Ctest   6 PAon
 		/*-----------End_Flag-----*/
 		.End_Flag(Sig_Fifo_Register_Done)
 		);
@@ -669,6 +671,7 @@ ODDR_Clk ODDR_Clk_40M (
 					.LED(),
 					.Out_DAC_Adj_Chn64(Sig_DAC_Adj_Chn64),
 					.Out_Sel_Work_Mode(Sel_Work_Mode_Sig),
+					.Out_Sel_High_Low_Leakage(Sig_Sel_High_Low_Leakage),
 					.Out_Valid_TA_for_Self_Mod(),
 					.Out_Val_Evt(Sig_Val_Evt),//default 1 en discriminator
 					.Out_Trig_Start_Stop(Trig_Start_Stop_Sig),
@@ -722,7 +725,7 @@ ODDR_Clk ODDR_Clk_40M (
 					.In_Start_Light(Sig_Start_Auto_Scan),
 					.In_Stop_Extinguish(Sig_Finish_Scan_Flag),//(Sig_Finish_Scan_Flag),
 					.Out_LED(),
-					.Out_LED_Blink(LED[8])
+					.Out_LED_Blink()
 					);
 				Hit_50_to_200ns Hit_50_to_200ns_Inst(
 					.Clk_In(Clk_Out_2_All),//80MHz
@@ -816,8 +819,10 @@ ODDR_Clk ODDR_Clk_40M (
 				assign LED[2] = Sig_Hit_200ns;
 				assign LED[3] = Sig_Sel_OnlyExTrig; //Sig_DAC_Adj[255];
 				assign LED[4] = In_Digital_Prob1_SK2;
-				assign LED[5] = Out_Sr_In;
-				assign LED[6] = Sig_Start_Stop_Hv;
+				assign LED[5] = Out_Resetb;
+				// assign LED[6] = Out_Force_Trig;
+				// assign LED[7] = Sig_Start_Cfg_Hv;
+				// assign LED[8] = Sig_Start_SC_USB_Cmd;
 
 
 				// (*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;

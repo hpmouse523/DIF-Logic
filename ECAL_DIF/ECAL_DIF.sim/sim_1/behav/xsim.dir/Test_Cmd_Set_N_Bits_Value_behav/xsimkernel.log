@@ -1,7 +1,0 @@
-Running: xsim.dir/Test_Cmd_Set_N_Bits_Value_behav/xsimk.exe -simmode gui -wdb Test_Cmd_Set_N_Bits_Value_behav.wdb -simrunnum 0 -socket 51629
-Design successfully loaded
-Design Loading Memory Usage: 5904 KB (Peak: 5904 KB)
-Design Loading CPU Usage: 31 ms
-Simulation completed
-Simulation Memory Usage: 6628 KB (Peak: 6628 KB)
-Simulation CPU Usage: 31 ms

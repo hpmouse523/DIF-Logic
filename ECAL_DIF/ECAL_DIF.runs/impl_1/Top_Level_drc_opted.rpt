@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Wed Nov  1 15:02:46 2017
+| Date         : Wed Nov  8 15:36:02 2017
 | Host         : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc -file Top_Level_drc_opted.rpt
 | Design       : Top_Level
@@ -48,7 +48,7 @@ Related violations: <none>
 
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO SMA_ExTrig_Cnt connects to flops which have these Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip1/Out_End_reg_0, hv_control_Inst/uart_clk_gen/counter_reg[9]_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO SMA_ExTrig_Cnt connects to flops which have these Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Flag_Start_Wr_Delay1_reg_0, Prepare_Register_Inst/Para616_Shiftreg_reg[544]_0 set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 REQP-1839#1 Warning

@@ -2,8 +2,8 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Wed Nov  1 14:57:17 2017
-# Process ID: 72308
+# Start of session at: Wed Nov  8 15:30:20 2017
+# Process ID: 17448
 # Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1
 # Command line: vivado.exe -log Top_Level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level.tcl
 # Log file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 71376 
+INFO: Helper process launched with PID 22404 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 381.082 ; gain = 77.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 382.070 ; gain = 77.027
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top_Level' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:21]
 	Parameter DATA_2_USB bound to: 16'b1010101001010101 
@@ -26,8 +26,8 @@ INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2017.1/script
 	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (1#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
-INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/realtime/ODDR_Clk_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/realtime/ODDR_Clk_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22272]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DRIVE bound to: 12 - type: integer 
@@ -286,6 +286,7 @@ INFO: [Synth 8-638] synthesizing module 'Prepare_Register' [E:/Work_File/CEPC/Lo
 	Parameter STATE_SC_LOOP bound to: 4'b0010 
 	Parameter STATE_SC_END bound to: 4'b0011 
 	Parameter SC_NUM bound to: 12'b000001001101 
+INFO: [Synth 8-226] default block is never used [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:127]
 INFO: [Synth 8-638] synthesizing module 'Bin_2_Gray' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Bin_2_Gray.v:21]
 	Parameter SIZE bound to: 5'b01000 
 INFO: [Synth 8-256] done synthesizing module 'Bin_2_Gray' (33#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Bin_2_Gray.v:21]
@@ -643,15 +644,20 @@ INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized5' [E:/Wo
 	Parameter DEFAULT_VALUE bound to: 1'b1 
 INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized5' (54#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized6' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
-	Parameter EFFECT_1_CMD bound to: 16'b1111110101000001 
-	Parameter EFFECT_0_CMD bound to: 16'b1111110101000000 
+	Parameter EFFECT_1_CMD bound to: 16'b1101000101010001 
+	Parameter EFFECT_0_CMD bound to: 16'b1101000101010000 
 	Parameter DEFAULT_VALUE bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized6' (54#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized7' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+	Parameter EFFECT_1_CMD bound to: 16'b1111110101000001 
+	Parameter EFFECT_0_CMD bound to: 16'b1111110101000000 
+	Parameter DEFAULT_VALUE bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized7' (54#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized8' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b0000111100000001 
 	Parameter EFFECT_0_CMD bound to: 16'b0000111100000000 
 	Parameter DEFAULT_VALUE bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized7' (54#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized8' (54#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 INFO: [Synth 8-638] synthesizing module 'Cmd_Set_N_Bits_Value__parameterized0' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Set_N_Bits_Value.v:23]
 	Parameter LENGTH_CMD bound to: 4'b0100 
 	Parameter LENGTH_VALUE bound to: 4'b1100 
@@ -672,7 +678,6 @@ INFO: [Synth 8-638] synthesizing module 'Cmd_Rising_N_Clock__parameterized0' [E:
 	Parameter STATE_LOOP bound to: 4'b0001 
 INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:57]
 INFO: [Synth 8-256] done synthesizing module 'Cmd_Rising_N_Clock__parameterized0' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:23]
-WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:642]
 INFO: [Synth 8-638] synthesizing module 'Cmd_Rising_N_Clock__parameterized1' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:23]
 	Parameter EFFECT_CMD bound to: 16'b0000000010110010 
 	Parameter LAST_CYC bound to: 8'b00010101 
@@ -701,11 +706,11 @@ INFO: [Synth 8-638] synthesizing module 'Cmd_Rising_N_Clock__parameterized4' [E:
 	Parameter STATE_LOOP bound to: 4'b0001 
 INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:57]
 INFO: [Synth 8-256] done synthesizing module 'Cmd_Rising_N_Clock__parameterized4' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized8' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized9' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b1111111110100001 
 	Parameter EFFECT_0_CMD bound to: 16'b1111111110100000 
 	Parameter DEFAULT_VALUE bound to: 1'b1 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized8' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized9' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 INFO: [Synth 8-638] synthesizing module 'Cmd_Set_N_Bits_Value__parameterized1' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Set_N_Bits_Value.v:23]
 	Parameter LENGTH_CMD bound to: 4'b1100 
 	Parameter LENGTH_VALUE bound to: 4'b0100 
@@ -754,41 +759,41 @@ INFO: [Synth 8-638] synthesizing module 'Cmd_Set_N_Bits_Value__parameterized8' [
 	Parameter EFFECT_CMD bound to: 2'b01 
 	Parameter DEFAULT_VALUE bound to: 14'b00000000010100 
 INFO: [Synth 8-256] done synthesizing module 'Cmd_Set_N_Bits_Value__parameterized8' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Set_N_Bits_Value.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized9' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized10' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b1111000011110001 
 	Parameter EFFECT_0_CMD bound to: 16'b1111000011110000 
 	Parameter DEFAULT_VALUE bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized9' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized10' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized10' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized11' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b0101010110101010 
 	Parameter EFFECT_0_CMD bound to: 16'b1110101110010000 
 	Parameter DEFAULT_VALUE bound to: 1'b1 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized10' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized11' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized11' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized12' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b0000000010100001 
 	Parameter EFFECT_0_CMD bound to: 16'b0000000010100000 
 	Parameter DEFAULT_VALUE bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized11' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized12' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized12' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized13' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b1010000011110001 
 	Parameter EFFECT_0_CMD bound to: 16'b1010000011110000 
 	Parameter DEFAULT_VALUE bound to: 1'b1 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized12' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized13' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized13' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized14' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b1011101100000001 
 	Parameter EFFECT_0_CMD bound to: 16'b1011101100000000 
 	Parameter DEFAULT_VALUE bound to: 1'b1 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized13' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized14' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized14' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized15' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b1111100100000001 
 	Parameter EFFECT_0_CMD bound to: 16'b1111100100000000 
 	Parameter DEFAULT_VALUE bound to: 1'b1 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized14' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
-INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized15' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized15' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set__parameterized16' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 	Parameter EFFECT_1_CMD bound to: 16'b1101000011010001 
 	Parameter EFFECT_0_CMD bound to: 16'b1101000011010000 
 	Parameter DEFAULT_VALUE bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized15' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Cmd_Boolean_Set__parameterized16' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
 INFO: [Synth 8-638] synthesizing module 'Cmd_Rising_N_Clock__parameterized5' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:23]
 	Parameter EFFECT_CMD bound to: 16'b1101000101000001 
 	Parameter LAST_CYC bound to: 8'b00001010 
@@ -810,8 +815,8 @@ INFO: [Synth 8-638] synthesizing module 'Cmd_Rising_N_Clock__parameterized7' [E:
 	Parameter STATE_LOOP bound to: 4'b0001 
 INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:57]
 INFO: [Synth 8-256] done synthesizing module 'Cmd_Rising_N_Clock__parameterized7' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:23]
-WARNING: [Synth 8-3848] Net Out_Reset_ASIC_b in module/entity usb_command_interpreter does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:57]
 INFO: [Synth 8-256] done synthesizing module 'usb_command_interpreter' (56#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:21]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:722]
 INFO: [Synth 8-638] synthesizing module 'Flag_LED' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Flag_LED.v:23]
 	Parameter TIME_05S bound to: 28'b0010011000100101101000000000 
 	Parameter STATE_IDLE bound to: 4'b0000 
@@ -864,8 +869,8 @@ INFO: [Synth 8-638] synthesizing module 'hv_control' [E:/Work_File/CEPC/Logic/DI
 INFO: [Synth 8-638] synthesizing module 'clk_divider' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/clk_divider.v:27]
 	Parameter DIV_RATE bound to: 1042 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'clk_divider' (62#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/clk_divider.v:27]
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (63#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (63#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/realtime/fifo_generator_0_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'rx_module' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/rx_module.v:29]
 	Parameter DATA_BIT_NUM bound to: 8 - type: integer 
 	Parameter IDLE bound to: 3'b000 
@@ -903,7 +908,6 @@ WARNING: [Synth 8-3917] design Top_Level has port Out_Sr_Rstb driven by constant
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Ramp_TDC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Rampb_ADC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Pwr_On_Dac driven by constant 1
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Out_Reset_ASIC_b
 WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[19]
 WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[18]
 WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[17]
@@ -1003,9 +1007,10 @@ WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_P
 WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[0]
 WARNING: [Synth 8-3331] design rd_bin_cntr__parameterized0 has unconnected port SRST
 WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_RST_INTO_LOGIC
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 618.422 ; gain = 314.738
+Finished RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:01:36 . Memory (MB): peak = 618.934 ; gain = 313.891
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1014,35 +1019,35 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[11] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[10] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[9] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[8] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[7] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[6] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[5] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[4] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[3] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[2] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[1] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[0] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:647]
-WARNING: [Synth 8-3295] tying undriven pin hv_control_Inst:tx to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:750]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[11] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[10] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[9] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[8] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[7] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[6] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[5] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[4] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[3] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[2] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[1] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[0] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
+WARNING: [Synth 8-3295] tying undriven pin hv_control_Inst:tx to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:753]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:35 ; elapsed = 00:01:37 . Memory (MB): peak = 618.422 ; gain = 314.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 618.934 ; gain = 313.891
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-72308-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-17448-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
 Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Fifo_Register/Fifo_Register.xdc] for cell 'Fifo_Register_Inst/U0'
@@ -1072,16 +1077,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   OBUFDS => OBUFDS: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 805.859 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 807.156 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:50 ; elapsed = 00:01:53 . Memory (MB): peak = 805.859 ; gain = 502.176
+Finished Constraint Validation : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 807.156 ; gain = 502.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:50 ; elapsed = 00:01:53 . Memory (MB): peak = 805.859 ; gain = 502.176
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 807.156 ; gain = 502.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1096,10 +1101,10 @@ Applied set_property DONT_TOUCH = true for ODDR_Clk_40M. (constraint file  auto 
 Applied set_property DONT_TOUCH = true for PLL_40M_Inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for hv_control_Inst/hv_fifo. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 805.859 ; gain = 502.176
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 807.156 ; gain = 502.113
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Prepare_Register'
-WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:132]
+WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:165]
 INFO: [Synth 8-5544] ROM "Out_Ex_Fifo_Wr_En" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Out_Ex_Fifo_Din" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Para616_Shiftreg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -1236,8 +1241,8 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'tx_mo
 WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/tx_module.v:37]
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:132]
-WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:132]
+WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:165]
+WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:165]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1247,7 +1252,7 @@ WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Wo
             STATE_SC_END |                               11 |                             0011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'sequential' in module 'Prepare_Register'
-WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:132]
+WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:165]
 WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Probe_Register.v:79]
 WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Probe_Register.v:79]
 ---------------------------------------------------------------------------------------------------
@@ -1412,7 +1417,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/tx_module.v:37]
 WARNING: [Synth 8-327] inferring latch for variable 'dout_reg_reg' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/tx_module.v:107]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:55 ; elapsed = 00:01:58 . Memory (MB): peak = 805.859 ; gain = 502.176
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:56 ; elapsed = 00:01:58 . Memory (MB): peak = 807.156 ; gain = 502.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1477,12 +1482,13 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 28    
 	                3 Bit    Registers := 7     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 197   
+	                1 Bit    Registers := 198   
 +---Muxes : 
 	   2 Input   1544 Bit        Muxes := 2     
 	   4 Input   1544 Bit        Muxes := 1     
 	   2 Input    616 Bit        Muxes := 2     
 	   4 Input    616 Bit        Muxes := 1     
+	   5 Input    192 Bit        Muxes := 1     
 	   2 Input    192 Bit        Muxes := 1     
 	   2 Input    128 Bit        Muxes := 1     
 	   2 Input     96 Bit        Muxes := 2     
@@ -1536,7 +1542,7 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 17    
-	   2 Input      1 Bit        Muxes := 125   
+	   2 Input      1 Bit        Muxes := 126   
 	   9 Input      1 Bit        Muxes := 8     
 	   6 Input      1 Bit        Muxes := 19    
 	  10 Input      1 Bit        Muxes := 5     
@@ -1610,6 +1616,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input    616 Bit        Muxes := 2     
 	   4 Input    616 Bit        Muxes := 1     
+	   5 Input    192 Bit        Muxes := 1     
 	   4 Input     12 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
 	   8 Input      2 Bit        Muxes := 1     
@@ -1886,6 +1893,12 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
+Module Cmd_Boolean_Set__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module Cmd_Set_N_Bits_Value__parameterized0 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1962,7 +1975,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 3     
 	   2 Input      4 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 6     
-Module Cmd_Boolean_Set__parameterized8 
+Module Cmd_Boolean_Set__parameterized9 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
@@ -2000,12 +2013,6 @@ Module Cmd_Set_N_Bits_Value__parameterized8
 Detailed RTL Component Info : 
 +---Registers : 
 	               14 Bit    Registers := 1     
-Module Cmd_Boolean_Set__parameterized9 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module Cmd_Boolean_Set__parameterized10 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -2037,6 +2044,12 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
 Module Cmd_Boolean_Set__parameterized15 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Cmd_Boolean_Set__parameterized16 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
@@ -2279,11 +2292,11 @@ WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip1/Cnt_
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip2/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip3/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip4/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
-WARNING: [Synth 8-6014] Unused sequential element Cmd_Out_Reset_ASIC_b/Cnt_State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:53]
-WARNING: [Synth 8-6014] Unused sequential element Cmd_Out_Reset_ASIC_b/State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:51]
-WARNING: [Synth 8-6014] Unused sequential element Cmd_Out_Reset_ASIC_b/Output_Valid_Sig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:52]
 WARNING: [Synth 8-6014] Unused sequential element Cnt_Sent_Bit_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Slow_Control.v:107]
 WARNING: [Synth 8-6014] Unused sequential element Cnt_Num_Ex_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Sci_Acq.v:595]
+WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip1/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
+WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip2/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
+WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip3/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "uart_clk_gen/clk_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "tx_receiver/tx_clk_gen/clk_out" won't be mapped to RAM because it is too sparse
@@ -2309,6 +2322,10 @@ INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[
 INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[6]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[7]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[8] )
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/Output_Valid_Sig_reg'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[1]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Conver_b/State_reg[1] )
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Config/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Config/Output_Valid_Sig_reg'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Config/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Config/State_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Config/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Config/State_reg[1]'
@@ -2317,6 +2334,14 @@ INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Star
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Cfg_Hv/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Cfg_Hv/State_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Cfg_Hv/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Cfg_Hv/State_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Cfg_Hv/State_reg[1] )
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/Output_Valid_Sig_reg'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[1]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Stop_Hv/State_reg[1] )
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/Output_Valid_Sig_reg'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[1]'
+INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Hv/State_reg[1] )
 INFO: [Synth 8-3886] merging instance 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[9]' (FDCE) to 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Data_to_Fifo_Shift_reg[16]'
 INFO: [Synth 8-3886] merging instance 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[9]' (FDCE) to 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[16]'
 INFO: [Synth 8-3886] merging instance 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[9]' (FDCE) to 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[16]'
@@ -2383,10 +2408,6 @@ INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Set_
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Set_Register/State_reg[1] )
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/Output_Valid_Sig_reg'
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[1]'
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Conver_b/State_reg[1] )
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/Output_Valid_Sig_reg'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[1]'
@@ -2400,18 +2421,10 @@ INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Forc
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Force_Trig/State_reg[1] )
 INFO: [Synth 8-3886] merging instance 'Hit_50_to_200ns_Inst/State_reg[2]' (FDC) to 'Hit_50_to_200ns_Inst/State_reg[1]'
 INFO: [Synth 8-3886] merging instance 'Hit_50_to_200ns_Inst/State_reg[3]' (FDC) to 'Hit_50_to_200ns_Inst/State_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Hit_50_to_200ns_Inst/\State_reg[1] )
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/Output_Valid_Sig_reg'
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[1]'
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Stop_Hv/State_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Stop_Hv/State_reg[1] )
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/Output_Valid_Sig_reg'
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[1]'
-INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Hv/State_reg[1]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Hv/State_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Flag_LED8/\State_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Hit_50_to_200ns_Inst/\State_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Dac_For_Cali/\State_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Reset_ASIC_b/State_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (USB_Con_Inst/\SlaveFifoWrite_inst/FifoAddr_o_reg[0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (USB_Con_Inst/\SlaveFifoWrite_inst/FifoAddr_o_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[16] )
@@ -2422,7 +2435,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_H
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[48] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[56] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[64] )
-WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[18]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[10]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[2]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (Out_Sr_Rstb_reg) is unused and will be removed from module Slow_Control.
@@ -2522,17 +2534,19 @@ WARNING: [Synth 8-3332] Sequential element (SKIROC_Auto_TA_Inst_Chip3/Out_Mask_C
 WARNING: [Synth 8-3332] Sequential element (SKIROC_Auto_TA_Inst_Chip3/Out_Mask_Code_reg[62]) is unused and will be removed from module Auto_TA_Scan.
 WARNING: [Synth 8-3332] Sequential element (SKIROC_Auto_TA_Inst_Chip3/Out_Mask_Code_reg[61]) is unused and will be removed from module Auto_TA_Scan.
 WARNING: [Synth 8-3332] Sequential element (SKIROC_Auto_TA_Inst_Chip3/Out_Mask_Code_reg[60]) is unused and will be removed from module Auto_TA_Scan.
+WARNING: [Synth 8-3332] Sequential element (SKIROC_Auto_TA_Inst_Chip3/Out_Mask_Code_reg[59]) is unused and will be removed from module Auto_TA_Scan.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Conver_b/Cnt_State_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Config/Cnt_State_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Cfg_Hv/Cnt_State_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Set_Register/Cnt_State_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Conver_b/Cnt_State_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Readout1/Cnt_State_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Force_Trig/Cnt_State_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Stop_Hv/Cnt_State_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Hv/Cnt_State_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Set_Register/Cnt_State_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Readout1/Cnt_State_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Force_Trig/Cnt_State_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Reset_ASIC_b/Cnt_State_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:31 ; elapsed = 00:02:35 . Memory (MB): peak = 805.859 ; gain = 502.176
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:32 ; elapsed = 00:02:35 . Memory (MB): peak = 807.156 ; gain = 502.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2544,13 +2558,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:02:46 . Memory (MB): peak = 805.859 ; gain = 502.176
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:02:46 . Memory (MB): peak = 807.156 ; gain = 502.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:46 ; elapsed = 00:02:49 . Memory (MB): peak = 805.859 ; gain = 502.176
+Finished Timing Optimization : Time (s): cpu = 00:02:46 ; elapsed = 00:02:49 . Memory (MB): peak = 807.156 ; gain = 502.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2562,7 +2576,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:52 ; elapsed = 00:02:56 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished Technology Mapping : Time (s): cpu = 00:02:53 ; elapsed = 00:02:56 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2586,7 +2600,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished IO Insertion : Time (s): cpu = 00:02:55 ; elapsed = 00:02:58 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2599,7 +2613,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:55 ; elapsed = 00:02:58 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2611,25 +2625,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:56 ; elapsed = 00:03:00 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:56 ; elapsed = 00:03:00 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2650,35 +2664,35 @@ Report Cell Usage:
 |1     |ODDR_Clk         |     1|
 |2     |ODDR_Clk__1      |     1|
 |3     |fifo_generator_0 |     1|
-|4     |BUFG             |     5|
-|5     |CARRY4           |   156|
-|6     |LUT1             |   562|
-|7     |LUT2             |  1389|
-|8     |LUT3             |  1935|
-|9     |LUT4             |  1235|
-|10    |LUT5             |   871|
-|11    |LUT6             |  1113|
+|4     |BUFG             |     4|
+|5     |CARRY4           |   142|
+|6     |LUT1             |   510|
+|7     |LUT2             |  1379|
+|8     |LUT3             |  1889|
+|9     |LUT4             |  1185|
+|10    |LUT5             |   877|
+|11    |LUT6             |  1089|
 |12    |MUXCY            |    48|
 |13    |MUXF7            |     1|
 |14    |PLLE2_ADV        |     1|
 |15    |RAMB18E1         |     1|
 |16    |RAMB36E1         |     4|
-|17    |FDCE             |  3958|
-|18    |FDPE             |   932|
-|19    |FDRE             |   168|
-|20    |LDC              |   591|
+|17    |FDCE             |  3902|
+|18    |FDPE             |   892|
+|19    |FDRE             |   165|
+|20    |LDC              |   590|
 |21    |IBUF             |    12|
 |22    |IOBUF            |    16|
-|23    |OBUF             |    36|
+|23    |OBUF             |    39|
 |24    |OBUFDS           |     5|
-|25    |OBUFT            |     9|
+|25    |OBUFT            |     6|
 +------+-----------------+------+
 
 Report Instance Areas: 
 +------+-------------------------------------------------------------------------+---------------------------------------------+------+
 |      |Instance                                                                 |Module                                       |Cells |
 +------+-------------------------------------------------------------------------+---------------------------------------------+------+
-|1     |top                                                                      |                                             | 13061|
+|1     |top                                                                      |                                             | 12770|
 |2     |  PLL_40M_Inst                                                           |PLL_40M                                      |     4|
 |3     |    inst                                                                 |PLL_40M_clk_wiz                              |     4|
 |4     |  Fifo_Register_Inst                                                     |Fifo_Register                                |   137|
@@ -2747,90 +2761,91 @@ Report Instance Areas:
 |67    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_8                            |     2|
 |68    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_9                            |     2|
 |69    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_10                           |     2|
-|70    |  Auto_TA_Scan_Inst                                                      |Auto_TA_Scan                                 |  2800|
-|71    |    SKIROC_Auto_TA_Inst_Chip1                                            |SKIROC2_S_Para_Scan                          |   824|
-|72    |    SKIROC_Auto_TA_Inst_Chip2                                            |SKIROC2_S_Para_Scan_5                        |   598|
-|73    |    SKIROC_Auto_TA_Inst_Chip3                                            |SKIROC2_S_Para_Scan_6                        |   595|
-|74    |    SKIROC_Auto_TA_Inst_Chip4                                            |SKIROC2_S_Para_Scan_7                        |   781|
+|70    |  Auto_TA_Scan_Inst                                                      |Auto_TA_Scan                                 |  2797|
+|71    |    SKIROC_Auto_TA_Inst_Chip1                                            |SKIROC2_S_Para_Scan                          |   821|
+|72    |    SKIROC_Auto_TA_Inst_Chip2                                            |SKIROC2_S_Para_Scan_5                        |   599|
+|73    |    SKIROC_Auto_TA_Inst_Chip3                                            |SKIROC2_S_Para_Scan_6                        |   596|
+|74    |    SKIROC_Auto_TA_Inst_Chip4                                            |SKIROC2_S_Para_Scan_7                        |   779|
 |75    |  Dac_For_Cali                                                           |DAC_TLV5618                                  |    20|
-|76    |  Flag_LED8                                                              |Flag_LED                                     |   203|
-|77    |  General_ExTrig_Inst                                                    |General_ExTrig                               |    27|
-|78    |  Hit_50_to_200ns_Inst                                                   |Hit_50_to_200ns                              |    27|
-|79    |  Out_Set_Hv_1                                                           |Hex_2_ASCII                                  |     5|
-|80    |  Out_Set_Hv_2                                                           |Hex_2_ASCII_0                                |     5|
-|81    |  Out_Set_Hv_3                                                           |Hex_2_ASCII_1                                |     5|
-|82    |  Out_Set_Hv_4                                                           |Hex_2_ASCII_2                                |     5|
-|83    |  Prepare_Hv_Cmd_Inst                                                    |Prepare_Hv_Cmd                               |   419|
-|84    |    Tell_Start_Cfg                                                       |topulsesignal_3                              |     4|
-|85    |    Tell_Start_Stop                                                      |topulsesignal_4                              |     2|
-|86    |  Prepare_Probe_Register_Inst                                            |Prepare_Probe_Register                       |  4127|
-|87    |  Prepare_Register_Inst                                                  |Prepare_Register                             |  1514|
-|88    |  Read_Register_Set_Inst                                                 |Read_Register_Set                            |   202|
-|89    |  Readout_Dout_Inst                                                      |Readout_Dout                                 |   101|
-|90    |    Gray_2_Bin_Inst                                                      |Gray_2_Bin                                   |     9|
-|91    |  Sci_Acq_Inst                                                           |Sci_Acq                                      |   574|
-|92    |  Slow_Control_or_Prob_Inst                                              |Slow_Control                                 |   130|
-|93    |  USB_Con_Inst                                                           |USB_Con                                      |   632|
-|94    |    SlaveFifoRead_inst                                                   |SlaveFifoRead                                |   586|
-|95    |    SlaveFifoWrite_inst                                                  |SlaveFifoWrite                               |    46|
-|96    |  hv_control_Inst                                                        |hv_control                                   |   214|
-|97    |    rx_sender                                                            |rx_module                                    |    36|
-|98    |    tx_receiver                                                          |tx_module                                    |    94|
-|99    |      start_detect                                                       |topulsesignal                                |     3|
-|100   |      tx_clk_gen                                                         |clk_divider__parameterized0                  |    75|
-|101   |    uart_clk_gen                                                         |clk_divider                                  |    73|
-|102   |  usb_command_interpreter_Inst                                           |usb_command_interpreter                      |  1423|
-|103   |    Cmd_Out_Delay_Trig_Temp                                              |Cmd_Set_N_Bits_Value                         |    24|
-|104   |    Cmd_Out_Flag_Start_Stop_Hv                                           |Cmd_Boolean_Set__parameterized15             |     2|
-|105   |    Cmd_Out_Force_Trig                                                   |Cmd_Rising_N_Clock__parameterized3           |     9|
-|106   |    Cmd_Out_Hold                                                         |Cmd_Boolean_Set__parameterized3              |     2|
+|76    |  General_ExTrig_Inst                                                    |General_ExTrig                               |    27|
+|77    |  Hit_50_to_200ns_Inst                                                   |Hit_50_to_200ns                              |    27|
+|78    |  Out_Set_Hv_1                                                           |Hex_2_ASCII                                  |     5|
+|79    |  Out_Set_Hv_2                                                           |Hex_2_ASCII_0                                |     5|
+|80    |  Out_Set_Hv_3                                                           |Hex_2_ASCII_1                                |     5|
+|81    |  Out_Set_Hv_4                                                           |Hex_2_ASCII_2                                |     5|
+|82    |  Prepare_Hv_Cmd_Inst                                                    |Prepare_Hv_Cmd                               |   420|
+|83    |    Tell_Start_Cfg                                                       |topulsesignal_3                              |     5|
+|84    |    Tell_Start_Stop                                                      |topulsesignal_4                              |     2|
+|85    |  Prepare_Probe_Register_Inst                                            |Prepare_Probe_Register                       |  4128|
+|86    |  Prepare_Register_Inst                                                  |Prepare_Register                             |  1476|
+|87    |  Read_Register_Set_Inst                                                 |Read_Register_Set                            |   203|
+|88    |  Readout_Dout_Inst                                                      |Readout_Dout                                 |   101|
+|89    |    Gray_2_Bin_Inst                                                      |Gray_2_Bin                                   |     9|
+|90    |  Sci_Acq_Inst                                                           |Sci_Acq                                      |   574|
+|91    |  Slow_Control_or_Prob_Inst                                              |Slow_Control                                 |   130|
+|92    |  USB_Con_Inst                                                           |USB_Con                                      |   565|
+|93    |    SlaveFifoRead_inst                                                   |SlaveFifoRead                                |   519|
+|94    |    SlaveFifoWrite_inst                                                  |SlaveFifoWrite                               |    46|
+|95    |  hv_control_Inst                                                        |hv_control                                   |   213|
+|96    |    rx_sender                                                            |rx_module                                    |    36|
+|97    |    tx_receiver                                                          |tx_module                                    |    94|
+|98    |      start_detect                                                       |topulsesignal                                |     3|
+|99    |      tx_clk_gen                                                         |clk_divider__parameterized0                  |    75|
+|100   |    uart_clk_gen                                                         |clk_divider                                  |    72|
+|101   |  usb_command_interpreter_Inst                                           |usb_command_interpreter                      |  1438|
+|102   |    Cmd_Out_Delay_Trig_Temp                                              |Cmd_Set_N_Bits_Value                         |    24|
+|103   |    Cmd_Out_Flag_Start_Stop_Hv                                           |Cmd_Boolean_Set__parameterized16             |     2|
+|104   |    Cmd_Out_Force_Trig                                                   |Cmd_Rising_N_Clock__parameterized3           |     9|
+|105   |    Cmd_Out_Hold                                                         |Cmd_Boolean_Set__parameterized3              |     2|
+|106   |    Cmd_Out_Reset_ASIC_b                                                 |Cmd_Rising_N_Clock__parameterized0           |    14|
 |107   |    Cmd_Out_Sel_ADC_Test                                                 |Cmd_Boolean_Set__parameterized2              |     3|
 |108   |    Cmd_Out_Sel_Feedback_Capacitance                                     |Cmd_Set_N_Bits_Value__parameterized1         |    12|
-|109   |    Cmd_Out_Sel_OnlyExTrig                                               |Cmd_Boolean_Set                              |     3|
-|110   |    Cmd_Out_Sel_Work_Mode                                                |Cmd_Boolean_Set__parameterized6              |     3|
-|111   |    Cmd_Out_Select                                                       |Cmd_Boolean_Set__parameterized13             |     1|
-|112   |    Cmd_Out_Select_Ramp_ADC                                              |Cmd_Boolean_Set__parameterized1              |     4|
-|113   |    Cmd_Out_Select_TDC_On                                                |Cmd_Boolean_Set__parameterized14             |     3|
-|114   |    Cmd_Out_Set_Cali_DAC                                                 |Cmd_Set_N_Bits_Value__parameterized0         |    15|
-|115   |    Cmd_Out_Set_Hv_1                                                     |Cmd_Set_N_Bits_Value__parameterized3         |    19|
-|116   |    Cmd_Out_Set_Hv_2                                                     |Cmd_Set_N_Bits_Value__parameterized4         |    29|
-|117   |    Cmd_Out_Set_Hv_3                                                     |Cmd_Set_N_Bits_Value__parameterized5         |    22|
-|118   |    Cmd_Out_Set_Hv_4                                                     |Cmd_Set_N_Bits_Value__parameterized6         |    25|
-|119   |    Cmd_Out_Set_Ini_DAC_for_Auto_Scan                                    |Cmd_Set_N_Bits_Value__parameterized7         |    10|
-|120   |    Cmd_Out_Set_Register                                                 |Cmd_Rising_N_Clock__parameterized1           |    12|
-|121   |    Cmd_Out_Start_Acq                                                    |Cmd_Boolean_Set__parameterized8              |     1|
-|122   |    Cmd_Out_Start_Cfg_Hv                                                 |Cmd_Rising_N_Clock__parameterized5           |    11|
-|123   |    Cmd_Out_Start_Config                                                 |Cmd_Rising_N_Clock                           |    12|
-|124   |    Cmd_Out_Start_Conver_b                                               |Cmd_Rising_N_Clock__parameterized2           |    17|
-|125   |    Cmd_Out_Start_Hv                                                     |Cmd_Rising_N_Clock__parameterized6           |    10|
-|126   |    Cmd_Out_Start_Readout1                                               |Cmd_Rising_N_Clock__parameterized4           |    12|
-|127   |    Cmd_Out_Status_Power_On_Control                                      |Cmd_Boolean_Set__parameterized10             |     1|
-|128   |    Cmd_Out_Stop_Hv                                                      |Cmd_Rising_N_Clock__parameterized7           |    11|
-|129   |    Cmd_Out_Val_Evt                                                      |Cmd_Boolean_Set__parameterized0              |     3|
-|130   |    Cmd_Select_Main_Backup                                               |Cmd_Boolean_Set__parameterized5              |     3|
-|131   |    Cmd_out_to_usb_Acq_Start_Stop                                        |Cmd_Boolean_Set__parameterized9              |     1|
+|109   |    Cmd_Out_Sel_High_Low_Leakage                                         |Cmd_Boolean_Set__parameterized6              |     2|
+|110   |    Cmd_Out_Sel_OnlyExTrig                                               |Cmd_Boolean_Set                              |     3|
+|111   |    Cmd_Out_Sel_Work_Mode                                                |Cmd_Boolean_Set__parameterized7              |     2|
+|112   |    Cmd_Out_Select                                                       |Cmd_Boolean_Set__parameterized14             |     1|
+|113   |    Cmd_Out_Select_Ramp_ADC                                              |Cmd_Boolean_Set__parameterized1              |     3|
+|114   |    Cmd_Out_Select_TDC_On                                                |Cmd_Boolean_Set__parameterized15             |     3|
+|115   |    Cmd_Out_Set_Cali_DAC                                                 |Cmd_Set_N_Bits_Value__parameterized0         |    15|
+|116   |    Cmd_Out_Set_Hv_1                                                     |Cmd_Set_N_Bits_Value__parameterized3         |    19|
+|117   |    Cmd_Out_Set_Hv_2                                                     |Cmd_Set_N_Bits_Value__parameterized4         |    29|
+|118   |    Cmd_Out_Set_Hv_3                                                     |Cmd_Set_N_Bits_Value__parameterized5         |    22|
+|119   |    Cmd_Out_Set_Hv_4                                                     |Cmd_Set_N_Bits_Value__parameterized6         |    25|
+|120   |    Cmd_Out_Set_Ini_DAC_for_Auto_Scan                                    |Cmd_Set_N_Bits_Value__parameterized7         |    11|
+|121   |    Cmd_Out_Set_Register                                                 |Cmd_Rising_N_Clock__parameterized1           |    12|
+|122   |    Cmd_Out_Start_Acq                                                    |Cmd_Boolean_Set__parameterized9              |     1|
+|123   |    Cmd_Out_Start_Cfg_Hv                                                 |Cmd_Rising_N_Clock__parameterized5           |    11|
+|124   |    Cmd_Out_Start_Config                                                 |Cmd_Rising_N_Clock                           |    12|
+|125   |    Cmd_Out_Start_Conver_b                                               |Cmd_Rising_N_Clock__parameterized2           |    17|
+|126   |    Cmd_Out_Start_Hv                                                     |Cmd_Rising_N_Clock__parameterized6           |    11|
+|127   |    Cmd_Out_Start_Readout1                                               |Cmd_Rising_N_Clock__parameterized4           |    12|
+|128   |    Cmd_Out_Status_Power_On_Control                                      |Cmd_Boolean_Set__parameterized11             |     1|
+|129   |    Cmd_Out_Stop_Hv                                                      |Cmd_Rising_N_Clock__parameterized7           |    12|
+|130   |    Cmd_Out_Val_Evt                                                      |Cmd_Boolean_Set__parameterized0              |     3|
+|131   |    Cmd_Select_Main_Backup                                               |Cmd_Boolean_Set__parameterized5              |     3|
+|132   |    Cmd_out_to_usb_Acq_Start_Stop                                        |Cmd_Boolean_Set__parameterized10             |     1|
 +------+-------------------------------------------------------------------------+---------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 815.980 ; gain = 512.297
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:56 ; elapsed = 00:03:00 . Memory (MB): peak = 816.719 ; gain = 511.676
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1514 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:09 ; elapsed = 00:02:48 . Memory (MB): peak = 815.980 ; gain = 324.859
-Synthesis Optimization Complete : Time (s): cpu = 00:02:56 ; elapsed = 00:02:59 . Memory (MB): peak = 815.980 ; gain = 512.297
+Synthesis finished with 0 errors, 0 critical warnings and 1655 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:02:48 . Memory (MB): peak = 816.719 ; gain = 323.453
+Synthesis Optimization Complete : Time (s): cpu = 00:02:57 ; elapsed = 00:03:00 . Memory (MB): peak = 816.719 ; gain = 511.676
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 834 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 819 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 628 instances were transformed.
+  A total of 627 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 16 instances
   IOBUF => IOBUF (IBUF, OBUFT): 16 instances
-  LDC => LDCE: 591 instances
+  LDC => LDCE: 590 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 5 instances
 
-472 Infos, 336 Warnings, 0 Critical Warnings and 0 Errors encountered.
+476 Infos, 335 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:01 ; elapsed = 00:03:06 . Memory (MB): peak = 815.980 ; gain = 524.176
+synth_design: Time (s): cpu = 00:03:01 ; elapsed = 00:03:06 . Memory (MB): peak = 816.719 ; gain = 525.102
 INFO: [Common 17-1381] The checkpoint 'E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 815.980 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  1 15:00:34 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 816.719 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  8 15:33:38 2017...
