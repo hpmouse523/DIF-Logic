@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Wed Nov  8 15:37:36 2017
+| Date             : Thu Nov  9 11:00:24 2017
 | Host             : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file Top_Level_power_routed.rpt -pb Top_Level_power_summary_routed.pb -rpx Top_Level_power_routed.rpx
 | Design           : Top_Level
@@ -51,13 +51,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.011 |        6 |       --- |             --- |
-| Slice Logic    |     0.002 |    12418 |       --- |             --- |
-|   LUT as Logic |     0.002 |     5734 |     63400 |            9.04 |
-|   Register     |    <0.001 |     5582 |    126800 |            4.40 |
+| Slice Logic    |     0.002 |    12425 |       --- |             --- |
+|   LUT as Logic |     0.002 |     5738 |     63400 |            9.05 |
+|   Register     |    <0.001 |     5585 |    126800 |            4.40 |
 |   CARRY4       |    <0.001 |      161 |     15850 |            1.02 |
 |   Others       |     0.000 |      184 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |        1 |     63400 |           <0.01 |
-| Signals        |     0.004 |     8818 |       --- |             --- |
+| Signals        |     0.004 |     8820 |       --- |             --- |
 | Block RAM      |    <0.001 |        5 |       135 |            3.70 |
 | PLL            |     0.096 |        1 |         6 |           16.67 |
 | I/O            |     0.200 |       83 |       285 |           29.12 |

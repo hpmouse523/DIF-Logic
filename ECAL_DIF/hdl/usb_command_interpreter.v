@@ -647,7 +647,7 @@ Cmd_Rising_N_Clock
    
 Cmd_Rising_N_Clock 
 	#(.EFFECT_CMD(16'hffc0), // Input effect words
-		.LAST_CYC(8'd31))       // Input Last Cyc
+		.LAST_CYC(8'hff))       // Input Last Cyc  31 means 31*12.5 = 387.5ns 255 *12.5 = 3187.5ns = 3.2us 
 		Cmd_Out_Reset_ASIC_b(
     .Clk_In(clk),
     .Rst_N(reset_n),

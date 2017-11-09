@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Nov  8 15:43:24 2017">
+<application name="pa" timeStamp="Thu Nov  9 10:57:51 2017">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="e762fabe892746daa7405c1e5d6a46cc" type="ProjectID"/>
-<property name="ProjectIteration" value="120" type="ProjectIteration"/>
+<property name="ProjectIteration" value="121" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -53,10 +53,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ReportMethodology" value="1" type="JavaHandler"/>
 <property name="ReportTimingSummary" value="9" type="JavaHandler"/>
 <property name="ResetLayout" value="1" type="JavaHandler"/>
-<property name="RunBitgen" value="51" type="JavaHandler"/>
+<property name="RunBitgen" value="52" type="JavaHandler"/>
 <property name="RunImplementation" value="78" type="JavaHandler"/>
 <property name="RunSchematic" value="25" type="JavaHandler"/>
-<property name="RunSynthesis" value="112" type="JavaHandler"/>
+<property name="RunSynthesis" value="113" type="JavaHandler"/>
 <property name="RunTrigger" value="137" type="JavaHandler"/>
 <property name="SaveDesign" value="25" type="JavaHandler"/>
 <property name="SaveLayoutAs" value="1" type="JavaHandler"/>
@@ -106,8 +106,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="BaseDialogUtils_OPEN_IN_SPECIFIED_LAYOUT" value="1" type="GuiResourceData"/>
 <property name="BaseDialog_APPLY" value="2" type="GuiResourceData"/>
 <property name="BaseDialog_CANCEL" value="60" type="GuiResourceData"/>
-<property name="BaseDialog_OK" value="633" type="GuiResourceData"/>
-<property name="BaseDialog_YES" value="12" type="GuiResourceData"/>
+<property name="BaseDialog_OK" value="636" type="GuiResourceData"/>
+<property name="BaseDialog_YES" value="13" type="GuiResourceData"/>
 <property name="CfgMemPartChooser_DENSITY_CHOOSER" value="19" type="GuiResourceData"/>
 <property name="CfgMemPartChooser_MANUFACTURER_CHOOSER" value="16" type="GuiResourceData"/>
 <property name="CfgMemPartChooser_TABLE" value="31" type="GuiResourceData"/>
@@ -151,12 +151,12 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ExploreAheadView_EXPAND_ALL" value="1" type="GuiResourceData"/>
 <property name="ExploreAheadView_SHOW_PERCENTAGE" value="12" type="GuiResourceData"/>
 <property name="ExportToSpreadsheetDialog_CHOOSE_MICROSOFT_EXCEL_FILE_TO_EXPORT" value="1" type="GuiResourceData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="1321" type="GuiResourceData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="1322" type="GuiResourceData"/>
 <property name="FileSetPanel_MESSAGES" value="8" type="GuiResourceData"/>
 <property name="FilterCheckBox_SHOW_ONLY" value="1" type="GuiResourceData"/>
 <property name="FilterToolBar_HIDE_ALL" value="5" type="GuiResourceData"/>
 <property name="FilterToolBar_SHOW_ALL" value="8" type="GuiResourceData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="775" type="GuiResourceData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="777" type="GuiResourceData"/>
 <property name="GeneratedClockTablePanel_TABLE" value="1" type="GuiResourceData"/>
 <property name="HACGCIPSymbol_SHOW_DISABLED_PORTS" value="5" type="GuiResourceData"/>
 <property name="HCodeEditor_CLOSE" value="2" type="GuiResourceData"/>
@@ -213,7 +213,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MainWinMenuMgr_LAYOUT" value="56" type="GuiResourceData"/>
 <property name="MainWinMenuMgr_LOAD" value="1" type="GuiResourceData"/>
 <property name="MainWinToolbarMgr_SELECT_OR_SAVE_WINDOW_LAYOUT" value="16" type="GuiResourceData"/>
-<property name="MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN" value="19" type="GuiResourceData"/>
+<property name="MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN" value="21" type="GuiResourceData"/>
 <property name="ModifiedConstraintsWithoutTargetDialog_UPDATE" value="1" type="GuiResourceData"/>
 <property name="MsgTreePanel_DISCARD_USER_CREATED_MESSAGES" value="8" type="GuiResourceData"/>
 <property name="MsgTreePanel_EXPORT_TO_SPREADSHEET" value="1" type="GuiResourceData"/>
@@ -373,7 +373,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="StaleRunDialog_OPEN_DESIGN" value="3" type="GuiResourceData"/>
 <property name="StaleRunDialog_RUN_SYNTHESIS" value="1" type="GuiResourceData"/>
 <property name="StaleRunDialog_YES" value="1" type="GuiResourceData"/>
-<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="74" type="GuiResourceData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="75" type="GuiResourceData"/>
 <property name="SyntheticaStateMonitor_CANCEL" value="8" type="GuiResourceData"/>
 <property name="TaskBanner_CLOSE" value="69" type="GuiResourceData"/>
 <property name="TclConsoleView_FIND" value="1" type="GuiResourceData"/>
@@ -413,11 +413,6 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="XdcCategoryTree_XDC_CATEGORY_TREE" value="16" type="GuiResourceData"/>
 <property name="XdcEditorPanel_CREATE_CLOCK_CONSTRAINT" value="1" type="GuiResourceData"/>
 <property name="XdcEditorPanel_CREATE_INPUT_CONSTRAINT" value="1" type="GuiResourceData"/>
-</item>
-<item name="Other">
-<property name="GuiMode" value="95" type="GuiMode"/>
-<property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="88" type="TclMode"/>
 </item>
 </section>
 </application>
