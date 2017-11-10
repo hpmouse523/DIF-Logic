@@ -25,7 +25,7 @@ module usb_command_interpreter( 						//The Clk cyc = 12.5ns not 20ns
                                                        /* --------USB interface------------*/
       input                 in_from_usb_Ctr_rd_en,
       input [15:0]          in_from_usb_ControlWord,
-      input [19:0]          Cnt_Trig,
+
       output             out_to_usb_Acq_Start_Stop,
                                                        /* -------clear usb fifo------------*/
       output             out_to_control_usb_data,   // control USB choose input Data ADC_Constant_Data or Normal Data

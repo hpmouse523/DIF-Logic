@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Thu Nov  9 11:00:21 2017
+| Date         : Thu Nov  9 17:37:22 2017
 | Host         : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_methodology -file Top_Level_methodology_drc_routed.rpt -rpx Top_Level_methodology_drc_routed.rpx
 | Design       : Top_Level
@@ -23,23 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 660
-+-----------+----------+------------------------------------------------+------------+
-| Rule      | Severity | Description                                    | Violations |
-+-----------+----------+------------------------------------------------+------------+
-| TIMING-14 | Warning  | LUT on the clock tree                          | 1          |
-| TIMING-18 | Warning  | Missing input or output delay                  | 67         |
-| TIMING-20 | Warning  | Non-clocked latch                              | 590        |
-| TIMING-38 | Warning  | Bus skew constraint applied on multiple clocks | 2          |
-+-----------+----------+------------------------------------------------+------------+
+             Violations found: 657
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 67         |
+| TIMING-20 | Warning  | Non-clocked latch             | 590        |
++-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-14#1 Warning
-LUT on the clock tree  
-The LUT Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip4/Ex_Fifo_Insst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
-Related violations: <none>
-
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on In_Chipsatb relative to clock(s) Clk_In 
@@ -77,82 +70,82 @@ Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[0] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[0] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[10] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[10] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[11] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[11] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[12] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[12] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[13] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[13] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[14] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[14] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[15] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[15] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[1] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[1] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#16 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[2] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[2] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#17 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[3] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[3] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#18 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[4] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[4] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#19 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[5] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[5] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#20 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[6] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[6] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#21 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[7] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[7] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#22 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[8] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[8] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#23 Warning
 Missing input or output delay  
-An input delay is missing on Usb_Fdata[9] relative to clock(s) Clk_In 
+An input delay is missing on Usb_Fdata[9] relative to clock(s) Clk_In VIRTUAL_clk_out2_PLL_40M 
 Related violations: <none>
 
 TIMING-18#24 Warning
@@ -3323,16 +3316,6 @@ Related violations: <none>
 TIMING-20#590 Warning
 Non-clocked latch  
 The latch Prepare_Register_Inst/Para616_Shiftreg_reg[9]_LDC cannot be properly analyzed as its control pin Prepare_Register_Inst/Para616_Shiftreg_reg[9]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-38#1 Warning
-Bus skew constraint applied on multiple clocks  
-Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 7 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint
-Related violations: <none>
-
-TIMING-38#2 Warning
-Bus skew constraint applied on multiple clocks  
-Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 9 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint
 Related violations: <none>
 
 

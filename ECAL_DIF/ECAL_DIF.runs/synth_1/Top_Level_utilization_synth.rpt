@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date         : Thu Nov  9 10:13:22 2017
+| Date         : Thu Nov  9 17:34:41 2017
 | Host         : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file Top_Level_utilization_synth.rpt -pb Top_Level_utilization_synth.pb
 | Design       : Top_Level
@@ -30,12 +30,12 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 6187 |     0 |     63400 |  9.76 |
-|   LUT as Logic          | 6187 |     0 |     63400 |  9.76 |
+| Slice LUTs*             | 6368 |     0 |     63400 | 10.04 |
+|   LUT as Logic          | 6368 |     0 |     63400 | 10.04 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         | 5552 |     0 |    126800 |  4.38 |
-|   Register as Flip Flop | 4962 |     0 |    126800 |  3.91 |
-|   Register as Latch     |  590 |     0 |    126800 |  0.47 |
+| Slice Registers         | 5749 |     0 |    126800 |  4.53 |
+|   Register as Flip Flop | 5151 |     0 |    126800 |  4.06 |
+|   Register as Latch     |  598 |     0 |    126800 |  0.47 |
 | F7 Muxes                |    1 |     0 |     31700 | <0.01 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
@@ -54,10 +54,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 892   |          Yes |           - |          Set |
-| 4495  |          Yes |           - |        Reset |
+| 932   |          Yes |           - |          Set |
+| 4736  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 165   |          Yes |       Reset |            - |
+| 81    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,9 +67,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  4.5 |     0 |       135 |  3.33 |
-|   RAMB36/FIFO*    |    4 |     0 |       135 |  2.96 |
-|     RAMB36E1 only |    4 |       |           |       |
+| Block RAM Tile    |  8.5 |     0 |       135 |  6.30 |
+|   RAMB36/FIFO*    |    8 |     0 |       135 |  5.93 |
+|     RAMB36E1 only |    8 |       |           |       |
 |   RAMB18          |    1 |     0 |       270 |  0.37 |
 |     RAMB18E1 only |    1 |       |           |       |
 +-------------------+------+-------+-----------+-------+
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   83 |     0 |       285 | 29.12 |
+| Bonded IOB                  |   78 |     0 |       285 | 27.37 |
 | Bonded IPADs                |    0 |     0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         8 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
@@ -151,23 +151,23 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDCE      | 3905 |        Flop & Latch |
-| LUT3      | 1892 |                 LUT |
-| LUT2      | 1379 |                 LUT |
-| LUT4      | 1189 |                 LUT |
-| LUT6      | 1087 |                 LUT |
-| FDPE      |  892 |        Flop & Latch |
-| LUT5      |  876 |                 LUT |
-| LDCE      |  590 |        Flop & Latch |
-| LUT1      |  510 |                 LUT |
-| FDRE      |  165 |        Flop & Latch |
-| CARRY4    |  158 |          CarryLogic |
+| FDCE      | 4138 |        Flop & Latch |
+| LUT3      | 1916 |                 LUT |
+| LUT2      | 1427 |                 LUT |
+| LUT4      | 1264 |                 LUT |
+| LUT6      | 1106 |                 LUT |
+| FDPE      |  932 |        Flop & Latch |
+| LUT5      |  884 |                 LUT |
+| LDCE      |  598 |        Flop & Latch |
+| LUT1      |  534 |                 LUT |
+| CARRY4    |  174 |          CarryLogic |
+| FDRE      |   81 |        Flop & Latch |
 | OBUF      |   39 |                  IO |
 | IBUF      |   28 |                  IO |
-| OBUFT     |   22 |                  IO |
+| OBUFT     |   17 |                  IO |
 | OBUFDS    |   10 |                  IO |
+| RAMB36E1  |    8 |        Block Memory |
 | INV       |    5 |                 LUT |
-| RAMB36E1  |    4 |        Block Memory |
 | BUFG      |    4 |               Clock |
 | RAMB18E1  |    1 |        Block Memory |
 | PLLE2_ADV |    1 |               Clock |

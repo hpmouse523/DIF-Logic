@@ -2,8 +2,8 @@
 # Vivado v2017.1 (64-bit)
 # SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
 # IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
-# Start of session at: Thu Nov  9 10:09:58 2017
-# Process ID: 28132
+# Start of session at: Thu Nov  9 17:31:18 2017
+# Process ID: 34208
 # Current directory: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1
 # Command line: vivado.exe -log Top_Level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level.tcl
 # Log file: E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-fgg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28076 
+INFO: Helper process launched with PID 27884 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 381.570 ; gain = 76.855
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 381.598 ; gain = 76.730
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Top_Level' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:21]
 	Parameter DATA_2_USB bound to: 16'b1010101001010101 
@@ -26,8 +26,8 @@ INFO: [Synth 8-638] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2017.1/script
 	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (1#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22286]
-INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/realtime/ODDR_Clk_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ODDR_Clk' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/realtime/ODDR_Clk_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ODDR_Clk' (2#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/realtime/ODDR_Clk_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'OBUF' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:22272]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DRIVE bound to: 12 - type: integer 
@@ -584,7 +584,6 @@ INFO: [Synth 8-638] synthesizing module 'SKIROC2_S_Para_Scan' [E:/Work_File/CEPC
 	Parameter STATE_FIFO_LOOP bound to: 4'b0010 
 	Parameter STATE_FIFO_END bound to: 4'b0011 
 	Parameter STATE_FIFO_WR_5AA5 bound to: 4'b0100 
-WARNING: [Synth 8-5788] Register Cnt_End_reg in module SKIROC2_S_Para_Scan is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:539]
 INFO: [Synth 8-256] done synthesizing module 'SKIROC2_S_Para_Scan' (48#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:23]
 INFO: [Synth 8-256] done synthesizing module 'Auto_TA_Scan' (49#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Auto_TA_Scan.v:23]
 INFO: [Synth 8-638] synthesizing module 'Read_Register_Set' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Read_Register_Set.v:21]
@@ -599,7 +598,9 @@ INFO: [Synth 8-638] synthesizing module 'Readout_Dout' [E:/Work_File/CEPC/Logic/
 INFO: [Synth 8-638] synthesizing module 'Gray_2_Bin' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Gray_2_Bin.v:21]
 	Parameter SIZE bound to: 5'b01100 
 INFO: [Synth 8-256] done synthesizing module 'Gray_2_Bin' (51#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Gray_2_Bin.v:21]
+WARNING: [Synth 8-6014] Unused sequential element Cnt_2_30000_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:71]
 INFO: [Synth 8-256] done synthesizing module 'Readout_Dout' (52#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:21]
+WARNING: [Synth 8-350] instance 'Readout_Dout_Inst' of module 'Readout_Dout' requires 7 connections, but only 6 given [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:665]
 INFO: [Synth 8-638] synthesizing module 'usb_command_interpreter' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:21]
 	Parameter TOTAL_NUM_EX_TRIG bound to: 20'b00000000000111110100 
 INFO: [Synth 8-638] synthesizing module 'Cmd_Boolean_Set' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v:23]
@@ -816,7 +817,7 @@ INFO: [Synth 8-638] synthesizing module 'Cmd_Rising_N_Clock__parameterized7' [E:
 INFO: [Synth 8-155] case statement is not full and has no default [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:57]
 INFO: [Synth 8-256] done synthesizing module 'Cmd_Rising_N_Clock__parameterized7' (55#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v:23]
 INFO: [Synth 8-256] done synthesizing module 'usb_command_interpreter' (56#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/usb_command_interpreter.v:21]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:722]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:734]
 INFO: [Synth 8-638] synthesizing module 'Flag_LED' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Flag_LED.v:23]
 	Parameter TIME_05S bound to: 28'b0010011000100101101000000000 
 	Parameter STATE_IDLE bound to: 4'b0000 
@@ -828,7 +829,6 @@ INFO: [Synth 8-638] synthesizing module 'Hit_50_to_200ns' [E:/Work_File/CEPC/Log
 	Parameter CNT_SPREAD bound to: 8'b00010100 
 	Parameter STATE_LOOP bound to: 4'b0001 
 	Parameter STATE_IDLE bound to: 4'b0000 
-WARNING: [Synth 8-5788] Register In_Hit_Sig_Delay2_reg in module Hit_50_to_200ns is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Hit_50_to_200ns.v:51]
 INFO: [Synth 8-256] done synthesizing module 'Hit_50_to_200ns' (58#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Hit_50_to_200ns.v:23]
 INFO: [Synth 8-638] synthesizing module 'General_ExTrig' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/General_ExTrig.v:23]
 	Parameter STATE_SET_DAC_IDLE bound to: 4'b0000 
@@ -850,11 +850,9 @@ INFO: [Synth 8-226] default block is never used [E:/Work_File/CEPC/Logic/DIF-Log
 INFO: [Synth 8-638] synthesizing module 'topulsesignal' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/topulsesignal.v:24]
 	Parameter size bound to: 1 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'topulsesignal' (60#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/topulsesignal.v:24]
-WARNING: [Synth 8-3936] Found unconnected internal register 'Sum_Of_Hv_7Byte_reg' and it is trimmed from '16' to '8' bits. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Hv_Cmd.v:62]
 WARNING: [Synth 8-6014] Unused sequential element Check_Hv_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Hv_Cmd.v:68]
 WARNING: [Synth 8-6014] Unused sequential element Check_Hv_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Hv_Cmd.v:92]
 WARNING: [Synth 8-5788] Register Shift_In_Hv_7Byte_reg in module Prepare_Hv_Cmd is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Hv_Cmd.v:194]
-WARNING: [Synth 8-5788] Register Shift_Start_Stop_reg in module Prepare_Hv_Cmd is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Hv_Cmd.v:215]
 INFO: [Synth 8-256] done synthesizing module 'Prepare_Hv_Cmd' (61#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Hv_Cmd.v:23]
 INFO: [Synth 8-638] synthesizing module 'hv_control' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/hv_control.v:41]
 	Parameter BAUD_RATE bound to: 38400 - type: integer 
@@ -869,8 +867,8 @@ INFO: [Synth 8-638] synthesizing module 'hv_control' [E:/Work_File/CEPC/Logic/DI
 INFO: [Synth 8-638] synthesizing module 'clk_divider' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/clk_divider.v:27]
 	Parameter DIV_RATE bound to: 1042 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'clk_divider' (62#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/clk_divider.v:27]
-INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/realtime/fifo_generator_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (63#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (63#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/realtime/fifo_generator_0_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'rx_module' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/rx_module.v:29]
 	Parameter DATA_BIT_NUM bound to: 8 - type: integer 
 	Parameter IDLE bound to: 3'b000 
@@ -898,36 +896,11 @@ WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [
 INFO: [Synth 8-256] done synthesizing module 'hv_control' (66#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/hv_control.v:41]
 INFO: [Synth 8-638] synthesizing module 'Hex_2_ASCII' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Hex_2_ASCII.v:23]
 INFO: [Synth 8-256] done synthesizing module 'Hex_2_ASCII' (67#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Hex_2_ASCII.v:23]
-WARNING: [Synth 8-3848] Net Out_Control_ADG in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:92]
-WARNING: [Synth 8-3848] Net SMA2 in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:101]
-WARNING: [Synth 8-3848] Net SMA3 in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:102]
-WARNING: [Synth 8-3848] Net SMA4 in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:103]
-WARNING: [Synth 8-3848] Net SMA5 in module/entity Top_Level does not have driver. [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:104]
 INFO: [Synth 8-256] done synthesizing module 'Top_Level' (68#1) [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:21]
 WARNING: [Synth 8-3917] design Top_Level has port Out_Sr_Rstb driven by constant 1
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Ramp_TDC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Start_Rampb_ADC_Ext driven by constant 0
 WARNING: [Synth 8-3917] design Top_Level has port Out_Pwr_On_Dac driven by constant 1
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[19]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[18]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[17]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[16]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[15]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[14]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[13]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[12]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[11]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[10]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[9]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[8]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[7]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[6]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[5]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[4]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[3]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[2]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[1]
-WARNING: [Synth 8-3331] design usb_command_interpreter has unconnected port Cnt_Trig[0]
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[12]
@@ -1008,9 +981,29 @@ WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_P
 WARNING: [Synth 8-3331] design rd_bin_cntr__parameterized0 has unconnected port SRST
 WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_EN_INTO_LOGIC
 WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RD_RST_BUSY
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RAM_WR_EN
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port ALMOST_FULL_FB
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port FULL
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[12]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[11]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[10]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[9]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[8]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[7]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[6]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[5]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[4]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[3]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[2]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[1]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port WR_PNTR_PLUS1_RD[0]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[12]
+WARNING: [Synth 8-3331] design rd_logic__parameterized0 has unconnected port PROG_EMPTY_THRESH[11]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:37 ; elapsed = 00:01:39 . Memory (MB): peak = 618.887 ; gain = 314.172
+Finished RTL Elaboration : Time (s): cpu = 00:01:37 ; elapsed = 00:01:38 . Memory (MB): peak = 618.270 ; gain = 313.402
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1019,37 +1012,26 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[11] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[10] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[9] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[8] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[7] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[6] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[5] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[4] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[3] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[2] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[1] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin Readout_Dout_Inst:In_Num_Receive[0] to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:649]
-WARNING: [Synth 8-3295] tying undriven pin hv_control_Inst:tx to constant 0 [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Top_Level.v:753]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:37 ; elapsed = 00:01:40 . Memory (MB): peak = 618.887 ; gain = 314.172
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:37 ; elapsed = 00:01:38 . Memory (MB): peak = 618.270 ; gain = 313.402
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 91 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
-Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
-Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-28132-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
-Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
-Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_Insst/U0'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_10M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/dcp5/ODDR_Clk_in_context.xdc] for cell 'ODDR_Clk_40M'
+Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
+Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/.Xil/Vivado-34208-Msy-PC/dcp7/fifo_generator_0_in_context.xdc] for cell 'hv_control_Inst/hv_fifo'
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_For_AutoTA/U0'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_For_AutoTA/U0'
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_For_ReadoutSKIROC2/U0'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo.xdc] for cell 'Ex_Fifo_For_ReadoutSKIROC2/U0'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Fifo_Register/Fifo_Register.xdc] for cell 'Fifo_Register_Inst/U0'
 Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Fifo_Register/Fifo_Register.xdc] for cell 'Fifo_Register_Inst/U0'
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_board.xdc] for cell 'PLL_40M_Inst/inst'
@@ -1065,8 +1047,10 @@ Finished Parsing XDC File [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.r
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_Insst/U0'
-Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_Insst/U0'
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_For_AutoTA/U0'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_For_AutoTA/U0'
+Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_For_ReadoutSKIROC2/U0'
+Finished Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc] for cell 'Ex_Fifo_For_ReadoutSKIROC2/U0'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/Ex_Fifo/Ex_Fifo_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Level_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [e:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.srcs/sources_1/ip/PLL_40M/PLL_40M_late.xdc] for cell 'PLL_40M_Inst/inst'
@@ -1077,31 +1061,33 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   OBUFDS => OBUFDS: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 806.391 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 809.504 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:53 ; elapsed = 00:01:56 . Memory (MB): peak = 806.391 ; gain = 501.676
+Finished Constraint Validation : Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 809.504 ; gain = 504.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:53 ; elapsed = 00:01:56 . Memory (MB): peak = 806.391 ; gain = 501.676
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 809.504 ; gain = 504.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for Ex_Fifo_Insst/U0. (constraint file  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc, line 16).
+Applied set_property DONT_TOUCH = true for Ex_Fifo_For_AutoTA/U0. (constraint file  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc, line 16).
+Applied set_property DONT_TOUCH = true for Ex_Fifo_For_ReadoutSKIROC2/U0. (constraint file  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc, line 16).
 Applied set_property DONT_TOUCH = true for Fifo_Register_Inst/U0. (constraint file  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc, line 22).
 Applied set_property DONT_TOUCH = true for PLL_40M_Inst/inst. (constraint file  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/dont_touch.xdc, line 25).
-Applied set_property DONT_TOUCH = true for Ex_Fifo_Insst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Ex_Fifo_For_AutoTA. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Ex_Fifo_For_ReadoutSKIROC2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Fifo_Register_Inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ODDR_Clk_10M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ODDR_Clk_40M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for PLL_40M_Inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for hv_control_Inst/hv_fifo. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:01:57 . Memory (MB): peak = 806.391 ; gain = 501.676
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:01:56 . Memory (MB): peak = 809.504 ; gain = 504.637
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Prepare_Register'
 WARNING: [Synth 8-6014] Unused sequential element State_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Prepare_Register.v:165]
@@ -1163,7 +1149,7 @@ INFO: [Synth 8-5544] ROM "State_Next" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "State_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element Cnt_Num_Ex_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Sci_Acq.v:595]
+WARNING: [Synth 8-6014] Unused sequential element Cnt_Num_Ex_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Sci_Acq.v:577]
 INFO: [Synth 8-5546] ROM "Next_State" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'SKIROC2_S_Para_Scan'
 INFO: [Synth 8-802] inferred FSM for state register 'State_Fifo_reg' in module 'SKIROC2_S_Para_Scan'
@@ -1188,8 +1174,8 @@ INFO: [Synth 8-5544] ROM "State_Next" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "Out_Fifo_Wr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Cnt_Wr_Fifo" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Flag_End_Wr_Fifo" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "Data_to_Fifo_Shift" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Cnt_End" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Data_to_Fifo_Shift" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Fifo_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Fifo_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
@@ -1202,10 +1188,8 @@ INFO: [Synth 8-5544] ROM "Sig_Srin_Read" won't be mapped to Block RAM because ad
 INFO: [Synth 8-5544] ROM "Status_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element Cnt_Sent_Bit_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Read_Register_Set.v:51]
 INFO: [Synth 8-5544] ROM "Cnt_Receive" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element Cnt_2_25000_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:72]
-WARNING: [Synth 8-6014] Unused sequential element Cnt_2_30000_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:73]
-WARNING: [Synth 8-6014] Unused sequential element Cnt_Receive_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:54]
-WARNING: [Synth 8-6014] Unused sequential element Cnt_2_30000_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:73]
+WARNING: [Synth 8-6014] Unused sequential element Cnt_2_25000_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:70]
+WARNING: [Synth 8-6014] Unused sequential element Cnt_Receive_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Readout_Dout.v:52]
 INFO: [Synth 8-5544] ROM "State" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -1228,7 +1212,6 @@ INFO: [Synth 8-5544] ROM "Cnt_Sending_Cfg" won't be mapped to Block RAM because 
 INFO: [Synth 8-5544] ROM "Cnt_Sending_Start" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Sig_Out_En" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "Sig_Out_Cmd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "Shift_Start_Stop" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "State_Next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "clk_out" won't be mapped to RAM because it is too sparse
@@ -1404,20 +1387,20 @@ WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/Wo
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                          0000001 |                              000
-                   START |                          0000010 |                              001
-                    DATA |                          0000100 |                              011
-                   CHECK |                          0001000 |                              111
-                  iSTATE |                          0010000 |                              110
+                    IDLE |                              000 |                              000
+                   START |                              001 |                              001
+                    DATA |                              010 |                              011
+                   CHECK |                              011 |                              111
+                  iSTATE |                              100 |                              110
 *
-                    STOP |                          0100000 |                              101
-                   VALID |                          1000000 |                              100
+                    STOP |                              101 |                              101
+                   VALID |                              110 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'tx_module'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'tx_module'
 WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/tx_module.v:37]
 WARNING: [Synth 8-327] inferring latch for variable 'dout_reg_reg' [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/tx_module.v:107]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:58 ; elapsed = 00:02:02 . Memory (MB): peak = 806.391 ; gain = 501.676
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:59 ; elapsed = 00:02:01 . Memory (MB): peak = 809.504 ; gain = 504.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1445,20 +1428,20 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit       Adders := 3     
 	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 134   
+	   2 Input      1 Bit         XORs := 210   
 +---XORs : 
-	               13 Bit    Wide XORs := 2     
-	               12 Bit    Wide XORs := 2     
-	               11 Bit    Wide XORs := 2     
-	               10 Bit    Wide XORs := 2     
-	                9 Bit    Wide XORs := 2     
-	                8 Bit    Wide XORs := 4     
-	                7 Bit    Wide XORs := 2     
-	                6 Bit    Wide XORs := 2     
-	                5 Bit    Wide XORs := 2     
-	                4 Bit    Wide XORs := 2     
-	                3 Bit    Wide XORs := 2     
-	                2 Bit    Wide XORs := 2     
+	               13 Bit    Wide XORs := 4     
+	               12 Bit    Wide XORs := 4     
+	               11 Bit    Wide XORs := 4     
+	               10 Bit    Wide XORs := 4     
+	                9 Bit    Wide XORs := 4     
+	                8 Bit    Wide XORs := 6     
+	                7 Bit    Wide XORs := 4     
+	                6 Bit    Wide XORs := 4     
+	                5 Bit    Wide XORs := 4     
+	                4 Bit    Wide XORs := 4     
+	                3 Bit    Wide XORs := 4     
+	                2 Bit    Wide XORs := 4     
 +---Registers : 
 	             1544 Bit    Registers := 1     
 	              616 Bit    Registers := 1     
@@ -1472,7 +1455,7 @@ Detailed RTL Component Info :
 	               20 Bit    Registers := 10    
 	               16 Bit    Registers := 7     
 	               14 Bit    Registers := 1     
-	               13 Bit    Registers := 11    
+	               13 Bit    Registers := 22    
 	               12 Bit    Registers := 24    
 	               10 Bit    Registers := 6     
 	                9 Bit    Registers := 1     
@@ -1480,9 +1463,9 @@ Detailed RTL Component Info :
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 28    
-	                3 Bit    Registers := 7     
+	                3 Bit    Registers := 9     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 198   
+	                1 Bit    Registers := 217   
 +---Muxes : 
 	   2 Input   1544 Bit        Muxes := 2     
 	   4 Input   1544 Bit        Muxes := 1     
@@ -1505,7 +1488,7 @@ Detailed RTL Component Info :
 	   4 Input     28 Bit        Muxes := 2     
 	  10 Input     20 Bit        Muxes := 8     
 	   2 Input     20 Bit        Muxes := 2     
-	   2 Input     16 Bit        Muxes := 7     
+	   2 Input     16 Bit        Muxes := 9     
 	   5 Input     16 Bit        Muxes := 4     
 	   4 Input     12 Bit        Muxes := 2     
 	   5 Input     12 Bit        Muxes := 4     
@@ -1517,8 +1500,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit        Muxes := 36    
 	   9 Input      8 Bit        Muxes := 4     
 	   5 Input      8 Bit        Muxes := 1     
-	   7 Input      8 Bit        Muxes := 1     
-	  10 Input      7 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 4     
 	   3 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
@@ -1532,7 +1514,7 @@ Detailed RTL Component Info :
 	   6 Input      3 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 1     
 	  15 Input      3 Bit        Muxes := 1     
-	  10 Input      3 Bit        Muxes := 4     
+	  10 Input      3 Bit        Muxes := 5     
 	  11 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   8 Input      2 Bit        Muxes := 2     
@@ -1542,11 +1524,11 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 17    
-	   2 Input      1 Bit        Muxes := 126   
+	   2 Input      1 Bit        Muxes := 131   
 	   9 Input      1 Bit        Muxes := 8     
 	   6 Input      1 Bit        Muxes := 19    
 	  10 Input      1 Bit        Muxes := 5     
-	   5 Input      1 Bit        Muxes := 35    
+	   5 Input      1 Bit        Muxes := 34    
 	  12 Input      1 Bit        Muxes := 44    
 	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -1566,7 +1548,7 @@ Detailed RTL Component Info :
 	   2 Input     16 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 5     
 Module synchronizer_ff 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -2180,7 +2162,7 @@ Detailed RTL Component Info :
 	   5 Input      8 Bit        Muxes := 1     
 	   5 Input      4 Bit        Muxes := 2     
 	  11 Input      3 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 4     
 Module clk_divider 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2224,10 +2206,10 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   7 Input      8 Bit        Muxes := 1     
-	  10 Input      7 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
 Module Hex_2_ASCII 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -2293,10 +2275,11 @@ WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip2/Cnt_
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip3/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip4/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 WARNING: [Synth 8-6014] Unused sequential element Cnt_Sent_Bit_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Slow_Control.v:107]
-WARNING: [Synth 8-6014] Unused sequential element Cnt_Num_Ex_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Sci_Acq.v:595]
+WARNING: [Synth 8-6014] Unused sequential element Cnt_Num_Ex_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Sci_Acq.v:577]
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip1/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip2/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip3/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
+WARNING: [Synth 8-6014] Unused sequential element SKIROC_Auto_TA_Inst_Chip4/Cnt_Trig_reg was removed.  [E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/SKIROC2_S_Para_Scan.v:126]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "uart_clk_gen/clk_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "tx_receiver/tx_clk_gen/clk_out" won't be mapped to RAM because it is too sparse
@@ -2315,12 +2298,12 @@ INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg
 INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[6]' (FDCE) to 'Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[8]'
 INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[7]' (FDCE) to 'Prepare_Hv_Cmd_Inst/Shift_In_Hv_7Byte_reg[8]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_In_Hv_7Byte_reg[8] )
-INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[1]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[4]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[2]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[3]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[4]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[5]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[6]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
-INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[7]' (FDE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[1]' (FDPE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[2]' (FDCE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[3]' (FDPE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[5]' (FDCE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[6]' (FDCE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[7]' (FDCE) to 'Prepare_Hv_Cmd_Inst/Shift_Start_Stop_reg[8]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[8] )
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/Output_Valid_Sig_reg'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Conver_b/State_reg[1]'
@@ -2402,12 +2385,12 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_S
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip3/Data_to_Fifo_Shift_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip2/Data_to_Fifo_Shift_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip1/Data_to_Fifo_Shift_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip2/In_Start_Delay1_reg )
-INFO: [Synth 8-3886] merging instance 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/In_Start_Delay2_reg' (FDC) to 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/In_Start_Delay1_reg'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/Output_Valid_Sig_reg'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Set_Register/State_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Set_Register/State_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip2/In_Start_Delay1_reg )
+INFO: [Synth 8-3886] merging instance 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/In_Start_Delay2_reg' (FDC) to 'Auto_TA_Scan_Inst/SKIROC_Auto_TA_Inst_Chip2/In_Start_Delay1_reg'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[0]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/Output_Valid_Sig_reg'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[2]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[1]'
 INFO: [Synth 8-3886] merging instance 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[3]' (FDCE) to 'usb_command_interpreter_Inst/Cmd_Out_Start_Readout1/State_reg[1]'
@@ -2427,14 +2410,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (Dac_For_C
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Reset_ASIC_b/State_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (USB_Con_Inst/\SlaveFifoWrite_inst/FifoAddr_o_reg[0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (USB_Con_Inst/\SlaveFifoWrite_inst/FifoAddr_o_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Auto_TA_Scan_Inst/\SKIROC_Auto_TA_Inst_Chip2/In_Start_Delay1_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[32] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[40] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[48] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[56] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Prepare_Hv_Cmd_Inst/\Shift_Start_Stop_reg[64] )
 WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[10]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (Para616_Shiftreg_reg[2]) is unused and will be removed from module Prepare_Register.
 WARNING: [Synth 8-3332] Sequential element (Out_Sr_Rstb_reg) is unused and will be removed from module Slow_Control.
@@ -2545,7 +2521,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_comma
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Start_Readout1/Cnt_State_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (usb_command_interpreter_Inst/\Cmd_Out_Force_Trig/Cnt_State_reg[5] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:35 ; elapsed = 00:02:39 . Memory (MB): peak = 806.391 ; gain = 501.676
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:36 ; elapsed = 00:02:39 . Memory (MB): peak = 809.504 ; gain = 504.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2557,13 +2533,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:47 ; elapsed = 00:02:51 . Memory (MB): peak = 806.391 ; gain = 501.676
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 809.504 ; gain = 504.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:50 ; elapsed = 00:02:54 . Memory (MB): peak = 806.391 ; gain = 501.676
+Finished Timing Optimization : Time (s): cpu = 00:02:50 ; elapsed = 00:02:53 . Memory (MB): peak = 809.504 ; gain = 504.637
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2575,7 +2551,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:57 ; elapsed = 00:03:01 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished Technology Mapping : Time (s): cpu = 00:02:57 ; elapsed = 00:03:00 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2599,7 +2575,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:59 ; elapsed = 00:03:03 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished IO Insertion : Time (s): cpu = 00:02:59 ; elapsed = 00:03:02 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2612,7 +2588,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:59 ; elapsed = 00:03:03 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:59 ; elapsed = 00:03:02 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2624,25 +2600,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:00 ; elapsed = 00:03:05 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:01 ; elapsed = 00:03:04 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:00 ; elapsed = 00:03:05 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:01 ; elapsed = 00:03:04 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:01 ; elapsed = 00:03:05 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:01 ; elapsed = 00:03:04 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:01 ; elapsed = 00:03:05 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:01 ; elapsed = 00:03:04 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2664,187 +2640,228 @@ Report Cell Usage:
 |2     |ODDR_Clk__1      |     1|
 |3     |fifo_generator_0 |     1|
 |4     |BUFG             |     4|
-|5     |CARRY4           |   142|
-|6     |LUT1             |   510|
-|7     |LUT2             |  1379|
-|8     |LUT3             |  1892|
-|9     |LUT4             |  1189|
-|10    |LUT5             |   876|
-|11    |LUT6             |  1087|
-|12    |MUXCY            |    48|
+|5     |CARRY4           |   150|
+|6     |LUT1             |   534|
+|7     |LUT2             |  1427|
+|8     |LUT3             |  1916|
+|9     |LUT4             |  1264|
+|10    |LUT5             |   884|
+|11    |LUT6             |  1106|
+|12    |MUXCY            |    76|
 |13    |MUXF7            |     1|
 |14    |PLLE2_ADV        |     1|
 |15    |RAMB18E1         |     1|
-|16    |RAMB36E1         |     4|
-|17    |FDCE             |  3905|
-|18    |FDPE             |   892|
-|19    |FDRE             |   165|
-|20    |LDC              |   590|
-|21    |IBUF             |    12|
-|22    |IOBUF            |    16|
-|23    |OBUF             |    39|
-|24    |OBUFDS           |     5|
-|25    |OBUFT            |     6|
+|16    |RAMB36E1         |     8|
+|17    |FDCE             |  4138|
+|18    |FDPE             |   932|
+|19    |FDRE             |    81|
+|20    |LD               |     8|
+|21    |LDC              |   590|
+|22    |IBUF             |    12|
+|23    |IOBUF            |    16|
+|24    |OBUF             |    39|
+|25    |OBUFDS           |     5|
+|26    |OBUFT            |     1|
 +------+-----------------+------+
 
 Report Instance Areas: 
-+------+-------------------------------------------------------------------------+---------------------------------------------+------+
-|      |Instance                                                                 |Module                                       |Cells |
-+------+-------------------------------------------------------------------------+---------------------------------------------+------+
-|1     |top                                                                      |                                             | 12777|
-|2     |  PLL_40M_Inst                                                           |PLL_40M                                      |     4|
-|3     |    inst                                                                 |PLL_40M_clk_wiz                              |     4|
-|4     |  Fifo_Register_Inst                                                     |Fifo_Register                                |   137|
-|5     |    U0                                                                   |fifo_generator_v13_1_4                       |   137|
-|6     |      inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth                 |   137|
-|7     |        \gconvfifo.rf                                                    |fifo_generator_top                           |   137|
-|8     |          \grf.rf                                                        |fifo_generator_ramfifo                       |   137|
-|9     |            \gntv_or_sync_fifo.gl0.rd                                    |rd_logic                                     |    45|
-|10    |              \grss.rsts                                                 |rd_status_flags_ss                           |    14|
-|11    |                c1                                                       |compare_22                                   |     6|
-|12    |                c2                                                       |compare_23                                   |     5|
-|13    |              rpntr                                                      |rd_bin_cntr                                  |    31|
-|14    |            \gntv_or_sync_fifo.gl0.wr                                    |wr_logic                                     |    67|
-|15    |              \gwss.wsts                                                 |wr_status_flags_ss                           |    16|
-|16    |                c0                                                       |compare                                      |     6|
-|17    |                c1                                                       |compare_21                                   |     5|
-|18    |              wpntr                                                      |wr_bin_cntr                                  |    51|
-|19    |            \gntv_or_sync_fifo.mem                                       |memory                                       |     1|
-|20    |              \gbm.gbmg.gbmga.ngecc.bmg                                  |blk_mem_gen_v8_3_6                           |     1|
-|21    |                inst_blk_mem_gen                                         |blk_mem_gen_v8_3_6_synth                     |     1|
-|22    |                  \gnbram.gnativebmg.native_blk_mem_gen                  |blk_mem_gen_top                              |     1|
-|23    |                    \valid.cstr                                          |blk_mem_gen_generic_cstr                     |     1|
-|24    |                      \ramloop[0].ram.r                                  |blk_mem_gen_prim_width                       |     1|
-|25    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper                     |     1|
-|26    |            rstblk                                                       |reset_blk_ramfifo                            |    24|
-|27    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff_17                           |     2|
-|28    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_18                           |     2|
-|29    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_19                           |     2|
-|30    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_20                           |     2|
-|31    |  Ex_Fifo_Insst                                                          |Ex_Fifo                                      |   368|
-|32    |    U0                                                                   |fifo_generator_v13_1_4__parameterized1       |   368|
-|33    |      inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth__parameterized0 |   368|
-|34    |        \gconvfifo.rf                                                    |fifo_generator_top__parameterized0           |   368|
-|35    |          \grf.rf                                                        |fifo_generator_ramfifo__parameterized0       |   368|
-|36    |            \gntv_or_sync_fifo.gcx.clkx                                  |clk_x_pntrs                                  |   134|
-|37    |              \gnxpm_cdc.gsync_stage[1].rd_stg_inst                      |synchronizer_ff__parameterized0              |    13|
-|38    |              \gnxpm_cdc.gsync_stage[1].wr_stg_inst                      |synchronizer_ff__parameterized0_14           |    13|
-|39    |              \gnxpm_cdc.gsync_stage[2].rd_stg_inst                      |synchronizer_ff__parameterized0_15           |    27|
-|40    |              \gnxpm_cdc.gsync_stage[2].wr_stg_inst                      |synchronizer_ff__parameterized0_16           |    27|
-|41    |            \gntv_or_sync_fifo.gl0.rd                                    |rd_logic__parameterized0                     |    90|
-|42    |              \gras.rsts                                                 |rd_status_flags_as                           |    31|
-|43    |                c0                                                       |compare__parameterized0_12                   |    13|
-|44    |                c1                                                       |compare__parameterized0_13                   |    13|
-|45    |              rpntr                                                      |rd_bin_cntr__parameterized0                  |    59|
-|46    |            \gntv_or_sync_fifo.gl0.wr                                    |wr_logic__parameterized0                     |   100|
-|47    |              \gwas.wsts                                                 |wr_status_flags_as                           |    31|
-|48    |                c1                                                       |compare__parameterized0                      |    13|
-|49    |                c2                                                       |compare__parameterized0_11                   |    13|
-|50    |              wpntr                                                      |wr_bin_cntr__parameterized0                  |    69|
-|51    |            \gntv_or_sync_fifo.mem                                       |memory__parameterized0                       |    21|
-|52    |              \gbm.gbmg.gbmga.ngecc.bmg                                  |blk_mem_gen_v8_3_6__parameterized1           |    21|
-|53    |                inst_blk_mem_gen                                         |blk_mem_gen_v8_3_6_synth__parameterized0     |    21|
-|54    |                  \gnbram.gnativebmg.native_blk_mem_gen                  |blk_mem_gen_top__parameterized0              |    21|
-|55    |                    \valid.cstr                                          |blk_mem_gen_generic_cstr__parameterized0     |    21|
-|56    |                      \has_mux_b.B                                       |blk_mem_gen_mux__parameterized0              |    17|
-|57    |                      \ramloop[0].ram.r                                  |blk_mem_gen_prim_width__parameterized0       |     1|
-|58    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized0     |     1|
-|59    |                      \ramloop[1].ram.r                                  |blk_mem_gen_prim_width__parameterized1       |     1|
-|60    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized1     |     1|
-|61    |                      \ramloop[2].ram.r                                  |blk_mem_gen_prim_width__parameterized2       |     1|
-|62    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized2     |     1|
-|63    |                      \ramloop[3].ram.r                                  |blk_mem_gen_prim_width__parameterized3       |     1|
-|64    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized3     |     1|
-|65    |            rstblk                                                       |reset_blk_ramfifo__parameterized0            |    23|
-|66    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff                              |     2|
-|67    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_8                            |     2|
-|68    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_9                            |     2|
-|69    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_10                           |     2|
-|70    |  Auto_TA_Scan_Inst                                                      |Auto_TA_Scan                                 |  2797|
-|71    |    SKIROC_Auto_TA_Inst_Chip1                                            |SKIROC2_S_Para_Scan                          |   821|
-|72    |    SKIROC_Auto_TA_Inst_Chip2                                            |SKIROC2_S_Para_Scan_5                        |   599|
-|73    |    SKIROC_Auto_TA_Inst_Chip3                                            |SKIROC2_S_Para_Scan_6                        |   596|
-|74    |    SKIROC_Auto_TA_Inst_Chip4                                            |SKIROC2_S_Para_Scan_7                        |   779|
-|75    |  Dac_For_Cali                                                           |DAC_TLV5618                                  |    20|
-|76    |  General_ExTrig_Inst                                                    |General_ExTrig                               |    27|
-|77    |  Hit_50_to_200ns_Inst                                                   |Hit_50_to_200ns                              |    27|
-|78    |  Out_Set_Hv_1                                                           |Hex_2_ASCII                                  |     5|
-|79    |  Out_Set_Hv_2                                                           |Hex_2_ASCII_0                                |     5|
-|80    |  Out_Set_Hv_3                                                           |Hex_2_ASCII_1                                |     5|
-|81    |  Out_Set_Hv_4                                                           |Hex_2_ASCII_2                                |     5|
-|82    |  Prepare_Hv_Cmd_Inst                                                    |Prepare_Hv_Cmd                               |   420|
-|83    |    Tell_Start_Cfg                                                       |topulsesignal_3                              |     5|
-|84    |    Tell_Start_Stop                                                      |topulsesignal_4                              |     2|
-|85    |  Prepare_Probe_Register_Inst                                            |Prepare_Probe_Register                       |  4128|
-|86    |  Prepare_Register_Inst                                                  |Prepare_Register                             |  1476|
-|87    |  Read_Register_Set_Inst                                                 |Read_Register_Set                            |   203|
-|88    |  Readout_Dout_Inst                                                      |Readout_Dout                                 |   101|
-|89    |    Gray_2_Bin_Inst                                                      |Gray_2_Bin                                   |     9|
-|90    |  Sci_Acq_Inst                                                           |Sci_Acq                                      |   574|
-|91    |  Slow_Control_or_Prob_Inst                                              |Slow_Control                                 |   130|
-|92    |  USB_Con_Inst                                                           |USB_Con                                      |   562|
-|93    |    SlaveFifoRead_inst                                                   |SlaveFifoRead                                |   516|
-|94    |    SlaveFifoWrite_inst                                                  |SlaveFifoWrite                               |    46|
-|95    |  hv_control_Inst                                                        |hv_control                                   |   213|
-|96    |    rx_sender                                                            |rx_module                                    |    36|
-|97    |    tx_receiver                                                          |tx_module                                    |    94|
-|98    |      start_detect                                                       |topulsesignal                                |     3|
-|99    |      tx_clk_gen                                                         |clk_divider__parameterized0                  |    75|
-|100   |    uart_clk_gen                                                         |clk_divider                                  |    72|
-|101   |  usb_command_interpreter_Inst                                           |usb_command_interpreter                      |  1448|
-|102   |    Cmd_Out_Delay_Trig_Temp                                              |Cmd_Set_N_Bits_Value                         |    24|
-|103   |    Cmd_Out_Flag_Start_Stop_Hv                                           |Cmd_Boolean_Set__parameterized16             |     2|
-|104   |    Cmd_Out_Force_Trig                                                   |Cmd_Rising_N_Clock__parameterized3           |     9|
-|105   |    Cmd_Out_Hold                                                         |Cmd_Boolean_Set__parameterized3              |     2|
-|106   |    Cmd_Out_Reset_ASIC_b                                                 |Cmd_Rising_N_Clock__parameterized0           |    24|
-|107   |    Cmd_Out_Sel_ADC_Test                                                 |Cmd_Boolean_Set__parameterized2              |     3|
-|108   |    Cmd_Out_Sel_Feedback_Capacitance                                     |Cmd_Set_N_Bits_Value__parameterized1         |    12|
-|109   |    Cmd_Out_Sel_High_Low_Leakage                                         |Cmd_Boolean_Set__parameterized6              |     2|
-|110   |    Cmd_Out_Sel_OnlyExTrig                                               |Cmd_Boolean_Set                              |     3|
-|111   |    Cmd_Out_Sel_Work_Mode                                                |Cmd_Boolean_Set__parameterized7              |     2|
-|112   |    Cmd_Out_Select                                                       |Cmd_Boolean_Set__parameterized14             |     1|
-|113   |    Cmd_Out_Select_Ramp_ADC                                              |Cmd_Boolean_Set__parameterized1              |     3|
-|114   |    Cmd_Out_Select_TDC_On                                                |Cmd_Boolean_Set__parameterized15             |     3|
-|115   |    Cmd_Out_Set_Cali_DAC                                                 |Cmd_Set_N_Bits_Value__parameterized0         |    15|
-|116   |    Cmd_Out_Set_Hv_1                                                     |Cmd_Set_N_Bits_Value__parameterized3         |    19|
-|117   |    Cmd_Out_Set_Hv_2                                                     |Cmd_Set_N_Bits_Value__parameterized4         |    29|
-|118   |    Cmd_Out_Set_Hv_3                                                     |Cmd_Set_N_Bits_Value__parameterized5         |    22|
-|119   |    Cmd_Out_Set_Hv_4                                                     |Cmd_Set_N_Bits_Value__parameterized6         |    25|
-|120   |    Cmd_Out_Set_Ini_DAC_for_Auto_Scan                                    |Cmd_Set_N_Bits_Value__parameterized7         |    11|
-|121   |    Cmd_Out_Set_Register                                                 |Cmd_Rising_N_Clock__parameterized1           |    12|
-|122   |    Cmd_Out_Start_Acq                                                    |Cmd_Boolean_Set__parameterized9              |     1|
-|123   |    Cmd_Out_Start_Cfg_Hv                                                 |Cmd_Rising_N_Clock__parameterized5           |    11|
-|124   |    Cmd_Out_Start_Config                                                 |Cmd_Rising_N_Clock                           |    12|
-|125   |    Cmd_Out_Start_Conver_b                                               |Cmd_Rising_N_Clock__parameterized2           |    17|
-|126   |    Cmd_Out_Start_Hv                                                     |Cmd_Rising_N_Clock__parameterized6           |    11|
-|127   |    Cmd_Out_Start_Readout1                                               |Cmd_Rising_N_Clock__parameterized4           |    12|
-|128   |    Cmd_Out_Status_Power_On_Control                                      |Cmd_Boolean_Set__parameterized11             |     1|
-|129   |    Cmd_Out_Stop_Hv                                                      |Cmd_Rising_N_Clock__parameterized7           |    12|
-|130   |    Cmd_Out_Val_Evt                                                      |Cmd_Boolean_Set__parameterized0              |     3|
-|131   |    Cmd_Select_Main_Backup                                               |Cmd_Boolean_Set__parameterized5              |     3|
-|132   |    Cmd_out_to_usb_Acq_Start_Stop                                        |Cmd_Boolean_Set__parameterized10             |     1|
-+------+-------------------------------------------------------------------------+---------------------------------------------+------+
++------+-------------------------------------------------------------------------+------------------------------------------------+------+
+|      |Instance                                                                 |Module                                          |Cells |
++------+-------------------------------------------------------------------------+------------------------------------------------+------+
+|1     |top                                                                      |                                                | 13207|
+|2     |  PLL_40M_Inst                                                           |PLL_40M                                         |     4|
+|3     |    inst                                                                 |PLL_40M_clk_wiz                                 |     4|
+|4     |  Fifo_Register_Inst                                                     |Fifo_Register                                   |   137|
+|5     |    U0                                                                   |fifo_generator_v13_1_4                          |   137|
+|6     |      inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth                    |   137|
+|7     |        \gconvfifo.rf                                                    |fifo_generator_top                              |   137|
+|8     |          \grf.rf                                                        |fifo_generator_ramfifo                          |   137|
+|9     |            \gntv_or_sync_fifo.gl0.rd                                    |rd_logic                                        |    45|
+|10    |              \grss.rsts                                                 |rd_status_flags_ss                              |    14|
+|11    |                c1                                                       |compare_59                                      |     6|
+|12    |                c2                                                       |compare_60                                      |     5|
+|13    |              rpntr                                                      |rd_bin_cntr                                     |    31|
+|14    |            \gntv_or_sync_fifo.gl0.wr                                    |wr_logic                                        |    67|
+|15    |              \gwss.wsts                                                 |wr_status_flags_ss                              |    16|
+|16    |                c0                                                       |compare                                         |     6|
+|17    |                c1                                                       |compare_58                                      |     5|
+|18    |              wpntr                                                      |wr_bin_cntr                                     |    51|
+|19    |            \gntv_or_sync_fifo.mem                                       |memory                                          |     1|
+|20    |              \gbm.gbmg.gbmga.ngecc.bmg                                  |blk_mem_gen_v8_3_6                              |     1|
+|21    |                inst_blk_mem_gen                                         |blk_mem_gen_v8_3_6_synth                        |     1|
+|22    |                  \gnbram.gnativebmg.native_blk_mem_gen                  |blk_mem_gen_top                                 |     1|
+|23    |                    \valid.cstr                                          |blk_mem_gen_generic_cstr                        |     1|
+|24    |                      \ramloop[0].ram.r                                  |blk_mem_gen_prim_width                          |     1|
+|25    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper                        |     1|
+|26    |            rstblk                                                       |reset_blk_ramfifo                               |    24|
+|27    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff_54                              |     2|
+|28    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_55                              |     2|
+|29    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_56                              |     2|
+|30    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_57                              |     2|
+|31    |  Ex_Fifo_For_AutoTA                                                     |Ex_Fifo__xdcDup__1                              |   368|
+|32    |    U0                                                                   |fifo_generator_v13_1_4__parameterized1__2       |   368|
+|33    |      inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth__parameterized0_17 |   368|
+|34    |        \gconvfifo.rf                                                    |fifo_generator_top__parameterized0_18           |   368|
+|35    |          \grf.rf                                                        |fifo_generator_ramfifo__parameterized0_19       |   368|
+|36    |            \gntv_or_sync_fifo.gcx.clkx                                  |clk_x_pntrs_20                                  |   134|
+|37    |              \gnxpm_cdc.gsync_stage[1].rd_stg_inst                      |synchronizer_ff__parameterized0_50              |    13|
+|38    |              \gnxpm_cdc.gsync_stage[1].wr_stg_inst                      |synchronizer_ff__parameterized0_51              |    13|
+|39    |              \gnxpm_cdc.gsync_stage[2].rd_stg_inst                      |synchronizer_ff__parameterized0_52              |    27|
+|40    |              \gnxpm_cdc.gsync_stage[2].wr_stg_inst                      |synchronizer_ff__parameterized0_53              |    27|
+|41    |            \gntv_or_sync_fifo.gl0.rd                                    |rd_logic__parameterized0_21                     |    90|
+|42    |              \gras.rsts                                                 |rd_status_flags_as_46                           |    31|
+|43    |                c0                                                       |compare__parameterized0_48                      |    13|
+|44    |                c1                                                       |compare__parameterized0_49                      |    13|
+|45    |              rpntr                                                      |rd_bin_cntr__parameterized0_47                  |    59|
+|46    |            \gntv_or_sync_fifo.gl0.wr                                    |wr_logic__parameterized0_22                     |   100|
+|47    |              \gwas.wsts                                                 |wr_status_flags_as_42                           |    31|
+|48    |                c1                                                       |compare__parameterized0_44                      |    13|
+|49    |                c2                                                       |compare__parameterized0_45                      |    13|
+|50    |              wpntr                                                      |wr_bin_cntr__parameterized0_43                  |    69|
+|51    |            \gntv_or_sync_fifo.mem                                       |memory__parameterized0_23                       |    21|
+|52    |              \gbm.gbmg.gbmga.ngecc.bmg                                  |blk_mem_gen_v8_3_6__parameterized1_29           |    21|
+|53    |                inst_blk_mem_gen                                         |blk_mem_gen_v8_3_6_synth__parameterized0_30     |    21|
+|54    |                  \gnbram.gnativebmg.native_blk_mem_gen                  |blk_mem_gen_top__parameterized0_31              |    21|
+|55    |                    \valid.cstr                                          |blk_mem_gen_generic_cstr__parameterized0_32     |    21|
+|56    |                      \has_mux_b.B                                       |blk_mem_gen_mux__parameterized0_33              |    17|
+|57    |                      \ramloop[0].ram.r                                  |blk_mem_gen_prim_width__parameterized0_34       |     1|
+|58    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized0_41     |     1|
+|59    |                      \ramloop[1].ram.r                                  |blk_mem_gen_prim_width__parameterized1_35       |     1|
+|60    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized1_40     |     1|
+|61    |                      \ramloop[2].ram.r                                  |blk_mem_gen_prim_width__parameterized2_36       |     1|
+|62    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized2_39     |     1|
+|63    |                      \ramloop[3].ram.r                                  |blk_mem_gen_prim_width__parameterized3_37       |     1|
+|64    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized3_38     |     1|
+|65    |            rstblk                                                       |reset_blk_ramfifo__parameterized0_24            |    23|
+|66    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff_25                              |     2|
+|67    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_26                              |     2|
+|68    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_27                              |     2|
+|69    |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_28                              |     2|
+|70    |  Ex_Fifo_For_ReadoutSKIROC2                                             |Ex_Fifo                                         |   368|
+|71    |    U0                                                                   |fifo_generator_v13_1_4__parameterized1          |   368|
+|72    |      inst_fifo_gen                                                      |fifo_generator_v13_1_4_synth__parameterized0    |   368|
+|73    |        \gconvfifo.rf                                                    |fifo_generator_top__parameterized0              |   368|
+|74    |          \grf.rf                                                        |fifo_generator_ramfifo__parameterized0          |   368|
+|75    |            \gntv_or_sync_fifo.gcx.clkx                                  |clk_x_pntrs                                     |   134|
+|76    |              \gnxpm_cdc.gsync_stage[1].rd_stg_inst                      |synchronizer_ff__parameterized0                 |    13|
+|77    |              \gnxpm_cdc.gsync_stage[1].wr_stg_inst                      |synchronizer_ff__parameterized0_14              |    13|
+|78    |              \gnxpm_cdc.gsync_stage[2].rd_stg_inst                      |synchronizer_ff__parameterized0_15              |    27|
+|79    |              \gnxpm_cdc.gsync_stage[2].wr_stg_inst                      |synchronizer_ff__parameterized0_16              |    27|
+|80    |            \gntv_or_sync_fifo.gl0.rd                                    |rd_logic__parameterized0                        |    90|
+|81    |              \gras.rsts                                                 |rd_status_flags_as                              |    31|
+|82    |                c0                                                       |compare__parameterized0_12                      |    13|
+|83    |                c1                                                       |compare__parameterized0_13                      |    13|
+|84    |              rpntr                                                      |rd_bin_cntr__parameterized0                     |    59|
+|85    |            \gntv_or_sync_fifo.gl0.wr                                    |wr_logic__parameterized0                        |   100|
+|86    |              \gwas.wsts                                                 |wr_status_flags_as                              |    31|
+|87    |                c1                                                       |compare__parameterized0                         |    13|
+|88    |                c2                                                       |compare__parameterized0_11                      |    13|
+|89    |              wpntr                                                      |wr_bin_cntr__parameterized0                     |    69|
+|90    |            \gntv_or_sync_fifo.mem                                       |memory__parameterized0                          |    21|
+|91    |              \gbm.gbmg.gbmga.ngecc.bmg                                  |blk_mem_gen_v8_3_6__parameterized1              |    21|
+|92    |                inst_blk_mem_gen                                         |blk_mem_gen_v8_3_6_synth__parameterized0        |    21|
+|93    |                  \gnbram.gnativebmg.native_blk_mem_gen                  |blk_mem_gen_top__parameterized0                 |    21|
+|94    |                    \valid.cstr                                          |blk_mem_gen_generic_cstr__parameterized0        |    21|
+|95    |                      \has_mux_b.B                                       |blk_mem_gen_mux__parameterized0                 |    17|
+|96    |                      \ramloop[0].ram.r                                  |blk_mem_gen_prim_width__parameterized0          |     1|
+|97    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized0        |     1|
+|98    |                      \ramloop[1].ram.r                                  |blk_mem_gen_prim_width__parameterized1          |     1|
+|99    |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized1        |     1|
+|100   |                      \ramloop[2].ram.r                                  |blk_mem_gen_prim_width__parameterized2          |     1|
+|101   |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized2        |     1|
+|102   |                      \ramloop[3].ram.r                                  |blk_mem_gen_prim_width__parameterized3          |     1|
+|103   |                        \prim_noinit.ram                                 |blk_mem_gen_prim_wrapper__parameterized3        |     1|
+|104   |            rstblk                                                       |reset_blk_ramfifo__parameterized0               |    23|
+|105   |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst  |synchronizer_ff                                 |     2|
+|106   |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst  |synchronizer_ff_8                               |     2|
+|107   |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst  |synchronizer_ff_9                               |     2|
+|108   |              \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst  |synchronizer_ff_10                              |     2|
+|109   |  Auto_TA_Scan_Inst                                                      |Auto_TA_Scan                                    |  2851|
+|110   |    SKIROC_Auto_TA_Inst_Chip1                                            |SKIROC2_S_Para_Scan                             |   833|
+|111   |    SKIROC_Auto_TA_Inst_Chip2                                            |SKIROC2_S_Para_Scan_5                           |   608|
+|112   |    SKIROC_Auto_TA_Inst_Chip3                                            |SKIROC2_S_Para_Scan_6                           |   605|
+|113   |    SKIROC_Auto_TA_Inst_Chip4                                            |SKIROC2_S_Para_Scan_7                           |   803|
+|114   |  Dac_For_Cali                                                           |DAC_TLV5618                                     |    20|
+|115   |  General_ExTrig_Inst                                                    |General_ExTrig                                  |    27|
+|116   |  Hit_50_to_200ns_Inst                                                   |Hit_50_to_200ns                                 |    26|
+|117   |  Out_Set_Hv_1                                                           |Hex_2_ASCII                                     |     5|
+|118   |  Out_Set_Hv_2                                                           |Hex_2_ASCII_0                                   |     5|
+|119   |  Out_Set_Hv_3                                                           |Hex_2_ASCII_1                                   |     5|
+|120   |  Out_Set_Hv_4                                                           |Hex_2_ASCII_2                                   |     5|
+|121   |  Prepare_Hv_Cmd_Inst                                                    |Prepare_Hv_Cmd                                  |   420|
+|122   |    Tell_Start_Cfg                                                       |topulsesignal_3                                 |     4|
+|123   |    Tell_Start_Stop                                                      |topulsesignal_4                                 |     3|
+|124   |  Prepare_Probe_Register_Inst                                            |Prepare_Probe_Register                          |  4128|
+|125   |  Prepare_Register_Inst                                                  |Prepare_Register                                |  1476|
+|126   |  Read_Register_Set_Inst                                                 |Read_Register_Set                               |   203|
+|127   |  Readout_Dout_Inst                                                      |Readout_Dout                                    |   102|
+|128   |    Gray_2_Bin_Inst                                                      |Gray_2_Bin                                      |     9|
+|129   |  Sci_Acq_Inst                                                           |Sci_Acq                                         |   574|
+|130   |  Slow_Control_or_Prob_Inst                                              |Slow_Control                                    |   130|
+|131   |  USB_Con_Inst                                                           |USB_Con                                         |   561|
+|132   |    SlaveFifoRead_inst                                                   |SlaveFifoRead                                   |   516|
+|133   |    SlaveFifoWrite_inst                                                  |SlaveFifoWrite                                  |    45|
+|134   |  hv_control_Inst                                                        |hv_control                                      |   228|
+|135   |    rx_sender                                                            |rx_module                                       |    36|
+|136   |    tx_receiver                                                          |tx_module                                       |   109|
+|137   |      start_detect                                                       |topulsesignal                                   |     4|
+|138   |      tx_clk_gen                                                         |clk_divider__parameterized0                     |    73|
+|139   |    uart_clk_gen                                                         |clk_divider                                     |    72|
+|140   |  usb_command_interpreter_Inst                                           |usb_command_interpreter                         |  1447|
+|141   |    Cmd_Out_Delay_Trig_Temp                                              |Cmd_Set_N_Bits_Value                            |    24|
+|142   |    Cmd_Out_Flag_Start_Stop_Hv                                           |Cmd_Boolean_Set__parameterized16                |     1|
+|143   |    Cmd_Out_Force_Trig                                                   |Cmd_Rising_N_Clock__parameterized3              |     9|
+|144   |    Cmd_Out_Hold                                                         |Cmd_Boolean_Set__parameterized3                 |     2|
+|145   |    Cmd_Out_Reset_ASIC_b                                                 |Cmd_Rising_N_Clock__parameterized0              |    24|
+|146   |    Cmd_Out_Sel_ADC_Test                                                 |Cmd_Boolean_Set__parameterized2                 |     3|
+|147   |    Cmd_Out_Sel_Feedback_Capacitance                                     |Cmd_Set_N_Bits_Value__parameterized1            |    12|
+|148   |    Cmd_Out_Sel_High_Low_Leakage                                         |Cmd_Boolean_Set__parameterized6                 |     2|
+|149   |    Cmd_Out_Sel_OnlyExTrig                                               |Cmd_Boolean_Set                                 |     3|
+|150   |    Cmd_Out_Sel_Work_Mode                                                |Cmd_Boolean_Set__parameterized7                 |     2|
+|151   |    Cmd_Out_Select                                                       |Cmd_Boolean_Set__parameterized14                |     1|
+|152   |    Cmd_Out_Select_Ramp_ADC                                              |Cmd_Boolean_Set__parameterized1                 |     3|
+|153   |    Cmd_Out_Select_TDC_On                                                |Cmd_Boolean_Set__parameterized15                |     3|
+|154   |    Cmd_Out_Set_Cali_DAC                                                 |Cmd_Set_N_Bits_Value__parameterized0            |    15|
+|155   |    Cmd_Out_Set_Hv_1                                                     |Cmd_Set_N_Bits_Value__parameterized3            |    19|
+|156   |    Cmd_Out_Set_Hv_2                                                     |Cmd_Set_N_Bits_Value__parameterized4            |    29|
+|157   |    Cmd_Out_Set_Hv_3                                                     |Cmd_Set_N_Bits_Value__parameterized5            |    22|
+|158   |    Cmd_Out_Set_Hv_4                                                     |Cmd_Set_N_Bits_Value__parameterized6            |    25|
+|159   |    Cmd_Out_Set_Ini_DAC_for_Auto_Scan                                    |Cmd_Set_N_Bits_Value__parameterized7            |    10|
+|160   |    Cmd_Out_Set_Register                                                 |Cmd_Rising_N_Clock__parameterized1              |    12|
+|161   |    Cmd_Out_Start_Acq                                                    |Cmd_Boolean_Set__parameterized9                 |     1|
+|162   |    Cmd_Out_Start_Cfg_Hv                                                 |Cmd_Rising_N_Clock__parameterized5              |    11|
+|163   |    Cmd_Out_Start_Config                                                 |Cmd_Rising_N_Clock                              |    13|
+|164   |    Cmd_Out_Start_Conver_b                                               |Cmd_Rising_N_Clock__parameterized2              |    17|
+|165   |    Cmd_Out_Start_Hv                                                     |Cmd_Rising_N_Clock__parameterized6              |    11|
+|166   |    Cmd_Out_Start_Readout1                                               |Cmd_Rising_N_Clock__parameterized4              |    12|
+|167   |    Cmd_Out_Status_Power_On_Control                                      |Cmd_Boolean_Set__parameterized11                |     1|
+|168   |    Cmd_Out_Stop_Hv                                                      |Cmd_Rising_N_Clock__parameterized7              |    12|
+|169   |    Cmd_Out_Val_Evt                                                      |Cmd_Boolean_Set__parameterized0                 |     3|
+|170   |    Cmd_Select_Main_Backup                                               |Cmd_Boolean_Set__parameterized5                 |     3|
+|171   |    Cmd_out_to_usb_Acq_Start_Stop                                        |Cmd_Boolean_Set__parameterized10                |     1|
++------+-------------------------------------------------------------------------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:01 ; elapsed = 00:03:05 . Memory (MB): peak = 815.699 ; gain = 510.984
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:01 ; elapsed = 00:03:04 . Memory (MB): peak = 818.563 ; gain = 513.695
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1654 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:02:53 . Memory (MB): peak = 815.699 ; gain = 323.480
-Synthesis Optimization Complete : Time (s): cpu = 00:03:01 ; elapsed = 00:03:05 . Memory (MB): peak = 815.699 ; gain = 510.984
+Synthesis finished with 0 errors, 0 critical warnings and 1626 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:02:52 . Memory (MB): peak = 818.563 ; gain = 322.461
+Synthesis Optimization Complete : Time (s): cpu = 00:03:01 ; elapsed = 00:03:04 . Memory (MB): peak = 818.563 ; gain = 513.695
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 819 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 867 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 627 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 16 instances
+  A total of 643 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 24 instances
   IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  LD => LDCE: 8 instances
   LDC => LDCE: 590 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 5 instances
 
-475 Infos, 335 Warnings, 0 Critical Warnings and 0 Errors encountered.
+467 Infos, 314 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:07 ; elapsed = 00:03:12 . Memory (MB): peak = 815.699 ; gain = 524.070
+synth_design: Time (s): cpu = 00:03:06 ; elapsed = 00:03:11 . Memory (MB): peak = 818.563 ; gain = 526.855
 INFO: [Common 17-1381] The checkpoint 'E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/synth_1/Top_Level.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 815.699 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  9 10:13:22 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 818.563 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  9 17:34:41 2017...

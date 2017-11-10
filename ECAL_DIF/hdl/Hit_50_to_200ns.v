@@ -43,7 +43,7 @@ module Hit_50_to_200ns(
 		if(~Rst_N)
 		begin
 			In_Hit_Sig_Delay1 <= 1'b1;
-			In_Hit_Sig_Delay1 <= 1'b1;			
+			In_Hit_Sig_Delay2 <= 1'b1;			
 		end		
 		else
 		begin

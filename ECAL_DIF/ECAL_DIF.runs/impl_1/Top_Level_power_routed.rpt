@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.1 (win64) Build 1846317 Fri Apr 14 18:55:03 MDT 2017
-| Date             : Thu Nov  9 11:00:24 2017
+| Date             : Thu Nov  9 17:37:25 2017
 | Host             : Msy-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file Top_Level_power_routed.rpt -pb Top_Level_power_summary_routed.pb -rpx Top_Level_power_routed.rpx
 | Design           : Top_Level
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.421 |
-| Dynamic (W)              | 0.313 |
+| Total On-Chip Power (W)  | 0.422 |
+| Dynamic (W)              | 0.314 |
 | Device Static (W)        | 0.108 |
 | Total Off-Chip Power (W) | 0.006 |
 | Effective TJA (C/W)      | 2.7   |
@@ -51,18 +51,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.011 |        6 |       --- |             --- |
-| Slice Logic    |     0.002 |    12425 |       --- |             --- |
-|   LUT as Logic |     0.002 |     5738 |     63400 |            9.05 |
-|   Register     |    <0.001 |     5585 |    126800 |            4.40 |
-|   CARRY4       |    <0.001 |      161 |     15850 |            1.02 |
-|   Others       |     0.000 |      184 |       --- |             --- |
+| Slice Logic    |     0.002 |    12851 |       --- |             --- |
+|   LUT as Logic |     0.002 |     5891 |     63400 |            9.29 |
+|   Register     |    <0.001 |     5779 |    126800 |            4.56 |
+|   CARRY4       |    <0.001 |      177 |     15850 |            1.12 |
+|   Others       |     0.000 |      233 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |        1 |     63400 |           <0.01 |
-| Signals        |     0.004 |     8820 |       --- |             --- |
-| Block RAM      |    <0.001 |        5 |       135 |            3.70 |
+| Signals        |     0.004 |     9151 |       --- |             --- |
+| Block RAM      |    <0.001 |        9 |       135 |            6.67 |
 | PLL            |     0.096 |        1 |         6 |           16.67 |
-| I/O            |     0.200 |       83 |       285 |           29.12 |
+| I/O            |     0.201 |       78 |       285 |           27.37 |
 | Static Power   |     0.108 |          |           |                 |
-| Total          |     0.421 |          |           |                 |
+| Total          |     0.422 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.040 |       0.025 |      0.016 |
+| Vccint    |       1.000 |     0.041 |       0.025 |      0.016 |
 | Vccaux    |       1.800 |     0.068 |       0.050 |      0.018 |
 | Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
 | Vcco25    |       2.500 |     0.081 |       0.077 |      0.004 |
@@ -81,7 +81,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -144,14 +144,53 @@ Table of Contents
 +--------------------------------------------------------------------------+-----------+
 | Name                                                                     | Power (W) |
 +--------------------------------------------------------------------------+-----------+
-| Top_Level                                                                |     0.313 |
+| Top_Level                                                                |     0.314 |
 |   Auto_TA_Scan_Inst                                                      |     0.002 |
 |     SKIROC_Auto_TA_Inst_Chip1                                            |    <0.001 |
 |     SKIROC_Auto_TA_Inst_Chip2                                            |    <0.001 |
 |     SKIROC_Auto_TA_Inst_Chip3                                            |    <0.001 |
 |     SKIROC_Auto_TA_Inst_Chip4                                            |    <0.001 |
 |   Dac_For_Cali                                                           |    <0.001 |
-|   Ex_Fifo_Insst                                                          |     0.002 |
+|   Ex_Fifo_For_AutoTA                                                     |    <0.001 |
+|     U0                                                                   |    <0.001 |
+|       inst_fifo_gen                                                      |    <0.001 |
+|         gconvfifo.rf                                                     |    <0.001 |
+|           grf.rf                                                         |    <0.001 |
+|             gntv_or_sync_fifo.gcx.clkx                                   |    <0.001 |
+|               gnxpm_cdc.gsync_stage[1].rd_stg_inst                       |    <0.001 |
+|               gnxpm_cdc.gsync_stage[1].wr_stg_inst                       |    <0.001 |
+|               gnxpm_cdc.gsync_stage[2].rd_stg_inst                       |    <0.001 |
+|               gnxpm_cdc.gsync_stage[2].wr_stg_inst                       |    <0.001 |
+|             gntv_or_sync_fifo.gl0.rd                                     |    <0.001 |
+|               gras.rsts                                                  |    <0.001 |
+|                 c0                                                       |    <0.001 |
+|                 c1                                                       |    <0.001 |
+|               rpntr                                                      |    <0.001 |
+|             gntv_or_sync_fifo.gl0.wr                                     |    <0.001 |
+|               gwas.wsts                                                  |    <0.001 |
+|                 c1                                                       |    <0.001 |
+|                 c2                                                       |    <0.001 |
+|               wpntr                                                      |    <0.001 |
+|             gntv_or_sync_fifo.mem                                        |    <0.001 |
+|               gbm.gbmg.gbmga.ngecc.bmg                                   |    <0.001 |
+|                 inst_blk_mem_gen                                         |    <0.001 |
+|                   gnbram.gnativebmg.native_blk_mem_gen                   |    <0.001 |
+|                     valid.cstr                                           |    <0.001 |
+|                       has_mux_b.B                                        |    <0.001 |
+|                       ramloop[0].ram.r                                   |    <0.001 |
+|                         prim_noinit.ram                                  |    <0.001 |
+|                       ramloop[1].ram.r                                   |    <0.001 |
+|                         prim_noinit.ram                                  |    <0.001 |
+|                       ramloop[2].ram.r                                   |    <0.001 |
+|                         prim_noinit.ram                                  |    <0.001 |
+|                       ramloop[3].ram.r                                   |    <0.001 |
+|                         prim_noinit.ram                                  |    <0.001 |
+|             rstblk                                                       |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst   |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst   |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst   |    <0.001 |
+|               ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst   |    <0.001 |
+|   Ex_Fifo_For_ReadoutSKIROC2                                             |     0.002 |
 |     U0                                                                   |     0.002 |
 |       inst_fifo_gen                                                      |     0.002 |
 |         gconvfifo.rf                                                     |     0.002 |

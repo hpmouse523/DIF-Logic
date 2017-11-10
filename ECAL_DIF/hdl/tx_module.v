@@ -150,6 +150,7 @@ module tx_module(
 
 						default: begin
 								next_state <= IDLE;
+								dout_reg   <= 8'd0;
 						end
 				endcase
 		end

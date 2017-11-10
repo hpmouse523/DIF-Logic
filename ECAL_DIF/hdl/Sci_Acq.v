@@ -454,27 +454,9 @@ always  @ (*)
              Cnt_Wait_2_Next           <=  20'd0;
             end   
           STATE_START_CONVB:
-            begin/*
-              if(Cnt_Start_Convb > 20'd15 && Cnt_Start_Convb < 20'd30)
-                begin
+            begin
+
              Out_Acqing                <=  1'b0;
-             Out_Start_Acq             <=  1'b0;
-             Out_Start_Convb           <=  1'b1;//Start Convb Signal Active L
-             Out_Resetb_ASIC           <=  1'b1;
-             Out_Start_Readout         <=  1'b0;
-             Cnt_Reset                 <=  20'd0;
-             Cnt_Wait_2_Acq            <=  20'd0;
-             Cnt_Wait_2_Convb          <=  20'd0;
-             Cnt_Start_Convb           <=  Cnt_Start_Convb  + 1'b1;
-             Cnt_Wait_2_Readout        <=  20'd0;
-             Cnt_Start_Readout         <=  20'd0;
-             Cnt_Wait_2_End            <=  20'd0;
-             Cnt_Start_Acq             <=  20'd0;
-             Cnt_Wait_2_Next           <=  20'd0;
-                end
-             else
-              begin*/
-                Out_Acqing                <=  1'b0;
              Out_Start_Acq             <=  1'b0;
              Out_Start_Convb           <=  1'b0;//Start Convb Signal Active L
              Out_Resetb_ASIC           <=  1'b1;

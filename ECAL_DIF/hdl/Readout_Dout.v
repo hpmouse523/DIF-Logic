@@ -23,10 +23,8 @@ module Readout_Dout(
     input Rst_N,
     input In_Doutb,
     input In_TransmitOnb,
-    input  [11:0] In_Num_Receive,
     output [15:0] Out_Parallel_Data,
     output     Reach_25000,
-    output     Reach_30000,
     output Out_Parallel_Data_En
     );
 
@@ -93,7 +91,7 @@ always  @ (posedge Clk or negedge Rst_N)
   end   
 
 assign Reach_25000    =   (Cnt_2_25000  > 16'd1579) ? 1'b1 : 1'b0;
-assign Reach_30000    =   (Cnt_2_30000  > In_Num_Receive) ? 1'b1 : 1'b0;
+
 
 
 /*-------------------------------------*/

@@ -50,7 +50,7 @@ module Prepare_Hv_Cmd(
 	reg        [8:1] Sig_Out_Cmd;
 	reg        Sig_Out_En;
 	reg        [16:1] Check_Hv;
-	reg        [16:1]  Sum_Of_Hv_7Byte;
+	reg        [8:1]  Sum_Of_Hv_7Byte;
 	reg        [96:1] Shift_In_Hv_7Byte;
 	reg        [64:1] Shift_Start_Stop;
 	localparam [64:1] START_CMD = 64'h02_48_4f_4e_03_45_41_0d; // 3byte ASCII "HON" Check EA = 45_41
@@ -187,15 +187,17 @@ module Prepare_Hv_Cmd(
 	begin
 		if(~Rst_N)
 		begin
-			Cnt_Sending_Cfg                <= 4'd0;
-			Cnt_Sending_Start              <= 4'd0;
-			Sig_Out_En                     <= 1'b0;
-			Sig_Out_Cmd                    <= 8'd0;
-			Shift_In_Hv_7Byte[96:89]       <= 8'h02;
-			Shift_In_Hv_7Byte[8:1]         <= 8'h0d;
-			Shift_In_Hv_7Byte[24:9]        <= Check_Hv;
-			Shift_In_Hv_7Byte[88:33]       <= In_Hv_7Byte;
-			Shift_In_Hv_7Byte[32:25]       <= 8'h03;
+			Cnt_Sending_Cfg          <= 4'd0;
+			Cnt_Sending_Start        <= 4'd0;
+			Sig_Out_En               <= 1'b0;
+			Sig_Out_Cmd              <= 8'd0;
+			Shift_In_Hv_7Byte[96:89] <= 8'h02;
+			Shift_In_Hv_7Byte[8:1]   <= 8'h0d;
+			Shift_In_Hv_7Byte[24:9]  <= Check_Hv;
+			Shift_In_Hv_7Byte[88:33] <= In_Hv_7Byte;
+			Shift_In_Hv_7Byte[32:25] <= 8'h03;
+			Shift_Start_Stop         <= STOP_CMD;
+			
 		end		
 		else
 		begin
@@ -244,7 +246,12 @@ module Prepare_Hv_Cmd(
 						Cnt_Sending_Start        <= 4'd0;
 						Sig_Out_En               <= 1'b0;
 						Sig_Out_Cmd              <= 8'd0;
-						Shift_In_Hv_7Byte        <= In_Hv_7Byte;
+						Shift_In_Hv_7Byte[96:89] <= 8'h02;
+						Shift_In_Hv_7Byte[8:1]   <= 8'h0d;
+						Shift_In_Hv_7Byte[24:9]  <= Check_Hv;
+						Shift_In_Hv_7Byte[88:33] <= In_Hv_7Byte;
+						Shift_In_Hv_7Byte[32:25] <= 8'h03;
+						Shift_Start_Stop         <= STOP_CMD;
 					end		
 			endcase			
 		end		

@@ -89,7 +89,7 @@ module Top_Level(
 	output Out_SCLK_Cali,
 	output Out_Din_Cali,
 	output Out_CS_n_Cali,
-	output Out_Control_ADG,
+
 	/*----IO of  HV_Control-------*/
 	input In_Hv_Tx,//input of return data
   output Out_Hv_Rx,//output to Hv_Module	
@@ -97,11 +97,8 @@ module Top_Level(
 	// IO of LED and SMD    LED is also test point
 	output [8:1]   LED,
 	input  SMA_ExTrig_Cnt, //
-	output SMA1,
-	output SMA2,
-	output SMA3,
-	output SMA4,
-	output SMA5	//
+	output SMA1
+
 
 
 
@@ -133,7 +130,7 @@ module Top_Level(
 	wire [8:1]	Sig_Delay_Trig;
 	wire [8:1]  Sig_Delay_Trig_Temp;//for translation
 	wire [12:1] Sig_Test_Cnt_Hit;
-	wire         Sig_Clk_2_Exfifo;//when Auto TA test, the Clk = 10MHz. Other Clk = 40MHz
+
 	wire         Sig_Finish_Scan_Flag;
 	wire         Sig_Start_Readout;
 	wire         Sig_Ck_40;
@@ -287,8 +284,17 @@ ODDR_Clk ODDR_Clk_40M (
 
 	/*Ex_Fifo*/
 	wire [15:0] Fifo_Qout;
+
+	wire [15:0] Sig_dout_Fifo_SKIROC2;
+	wire [15:0] Sig_dout_Fifo_AutoTA;
 	wire Fifo_Empty;
+
+	wire Sig_Fifo_Empty_SKIROC2;
+	wire Sig_Fifo_Empty_AutoTA;
 	wire Fifo_Rd_En;
+
+	wire Sig_Rd_Fifo_SKRIOC2;
+	wire Sig_Rd_Fifo_AutoTA;
 	/*for usb command*/
 	wire [15:0] Cmd_From_Usb;
 	wire Cmd_From_Usb_En;
@@ -391,12 +397,11 @@ ODDR_Clk ODDR_Clk_40M (
 	wire        Sig_Parallel_Data_En;
 	wire [15:0] Sig_Parallel_Data;
 	wire [15:0] Sig_Parallel_Data_Temp;
-	wire [19:0] Cnt_Trig;
 	wire [15:0] Sig_Parallel_Data_From_Auto_Scan;
 	wire [15:0] Sig_Parallel_Data_From_Auto_Scan_Temp;
 	wire				Sig_Parallel_Data_En_From_Auto_Scan;
-	wire [15:0] Sig_Parallel_Data_Into_Ex_Fifo;
-	wire 				Sig_Parallel_Data_En_Into_Ex_Fifo;
+
+
 
 
 	assign				Sig_Parallel_Data_From_Auto_Scan[15:8] = Sig_Parallel_Data_From_Auto_Scan_Temp[7:0];
@@ -566,18 +571,29 @@ ODDR_Clk ODDR_Clk_40M (
 
 		);
 
-
-
-		Ex_Fifo Ex_Fifo_Insst (
+		Ex_Fifo Ex_Fifo_For_AutoTA(
 			.rst(~Rst_n_Delay2),                       // input wire rst
-			.wr_clk(Sig_Clk_2_Exfifo),                 // input wire wr_clk
+			.wr_clk(Clk_10M),                 // input wire wr_clk
 			.rd_clk(Clk_Out_2_All),                    // input wire rd_clk
-			.din(Sig_Parallel_Data_Into_Ex_Fifo),      // input wire [15 : 0] din
-			.wr_en(Sig_Parallel_Data_En_Into_Ex_Fifo), // input wire wr_en
-			.rd_en(Fifo_Rd_En),                        // input wire rd_en
-			.dout(Fifo_Qout),                          // output wire [15 : 0] dout
+			.din(Sig_Parallel_Data_From_Auto_Scan),      // input wire [15 : 0] din
+			.wr_en(Sig_Parallel_Data_En_From_Auto_Scan), // input wire wr_en
+			.rd_en(Sig_Rd_Fifo_AutoTA),                        // input wire rd_en
+			.dout(Sig_dout_Fifo_AutoTA),                          // output wire [15 : 0] dout
 			.full(),                                   // output wire full
-			.empty(Fifo_Empty)                         // output wire empty
+			.empty(Sig_Fifo_Empty_AutoTA)                         // output wire empty
+			);
+
+
+		Ex_Fifo Ex_Fifo_For_ReadoutSKIROC2(
+			.rst(~Rst_n_Delay2),                       // input wire rst
+			.wr_clk(Clk_40M),                 // input wire wr_clk
+			.rd_clk(Clk_Out_2_All),                    // input wire rd_clk
+			.din(Sig_Parallel_Data),      // input wire [15 : 0] din
+			.wr_en(Sig_Parallel_Data_En), // input wire wr_en
+			.rd_en(Sig_Rd_Fifo_SKRIOC2),                        // input wire rd_en
+			.dout(Sig_dout_Fifo_SKIROC2),                          // output wire [15 : 0] dout
+			.full(),                                   // output wire full
+			.empty(Sig_Fifo_Empty_SKIROC2)                         // output wire empty
 			);
 
 
@@ -592,7 +608,7 @@ ODDR_Clk ODDR_Clk_40M (
 			.In_Chipsatb(In_Chipsatb),
 			.In_End_Readout(In_End_Readout1),
 			.In_Ex_Trig(SMA_ExTrig_Cnt),//Rising edge
-			.Cnt_Trig(Cnt_Trig),
+			.Cnt_Trig(),
 			.Out_Start_Acq(Out_Start_Acq),
 			.Out_Start_Convb(Out_Start_Convb),
 			.Out_Start_Readout(Sig_Start_Readout),
@@ -651,10 +667,7 @@ ODDR_Clk ODDR_Clk_40M (
 					.Rst_N(Rst_n_Delay2),
 					.In_Doutb(In_Dout_1b),
 					.In_TransmitOnb(In_TransmitOn_1B),
-					.In_Num_Receive(),
 					.Out_Parallel_Data(Sig_Parallel_Data_Temp),
-					.Reach_25000(),
-					.Reach_30000(),
 					.Out_Parallel_Data_En(Sig_Parallel_Data_En)
 					);
 
@@ -665,7 +678,6 @@ ODDR_Clk ODDR_Clk_40M (
 					.reset_n(Rst_n_Delay2),
 					.in_from_usb_Ctr_rd_en(Cmd_From_Usb_En),
 					.in_from_usb_ControlWord(Cmd_From_Usb[15:0]),
-					.Cnt_Trig(Cnt_Trig),
 					.out_to_usb_Acq_Start_Stop(Sig_Start_Acq),
 					.out_to_control_usb_data(Choose_Data_2_Exfifo),
 					.LED(),
@@ -755,7 +767,7 @@ ODDR_Clk ODDR_Clk_40M (
      .clk	(Clk_40M),
      .rst_n	(Rst_n_Delay2),
      .soft_rst	(Rst_n_Delay2),
-     .tx		(),
+     .tx		(1'b0),
      .din	(Sig_In_Hv_Control_Word),
      .rx_en	(Sig_In_Hv_Control_En),
 				//output
@@ -800,19 +812,20 @@ ODDR_Clk ODDR_Clk_40M (
 				assign Out_Pwr_On_Adc          = Status_Power_On_Control;
 				assign Out_Pwr_On_A            = Status_Power_On_Control;
 				assign Sig_Start_SC            = (Sig_Select_Start_SC == 1'b1)? Sig_Set_SC_Auto_Scan: Sig_Start_SC_USB_Cmd;
-				assign Sig_In_Dac_Trigger   = (Sig_Select_Start_SC == 1'b1)? Sig_Auto_Dac_Input_Chip1:Sig_TA_Thr_From_USB;
+				assign Sig_In_Dac_Trigger      = (Sig_Select_Start_SC == 1'b1)? Sig_Auto_Dac_Input_Chip1:Sig_TA_Thr_From_USB;
 				assign Sig_Mask_Word_From_Auto = Sig_Mask_Word_From_Auto_256bit[256:193];
 				assign Sig_Mask_Word           = (Sig_Select_Start_SC == 1'b1) ? (Sig_Mask_Word_From_Auto|Sig_Set_Mask64) :Sig_Set_Mask64;//Auto Mask need to OR the Set
-				assign Sig_Clk_2_Exfifo        = (Sig_Select_Start_SC == 1'b1) ? Clk_10M : Clk_40M;
-				assign Sig_Parallel_Data_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1) ? Sig_Parallel_Data_From_Auto_Scan:Sig_Parallel_Data;
-				assign Sig_Parallel_Data_En_Into_Ex_Fifo = (Sig_Select_Start_SC == 1'b1)? Sig_Parallel_Data_En_From_Auto_Scan:Sig_Parallel_Data_En;
+				assign Fifo_Qout               = (Sig_Select_Start_SC == 1) ? Sig_dout_Fifo_AutoTA:  Sig_dout_Fifo_SKIROC2;
+				assign Sig_Rd_Fifo_SKRIOC2     = (Sig_Select_Start_SC == 1) ? 1'b0 : Fifo_Rd_En;
+				assign Sig_Rd_Fifo_AutoTA      = (Sig_Select_Start_SC == 1) ? Fifo_Rd_En : 1'b0;
+				assign Fifo_Empty              = (Sig_Select_Start_SC == 1) ? Sig_Fifo_Empty_AutoTA: Sig_Fifo_Empty_SKIROC2;
 				//Select Slow Control or Prob Register
 				assign In_To_Ex_Fifo_Wr_En     = (Out_Select == 1'b1) ? Sig_Ex_Fifo_SC_Wr_En : Sig_Ex_Fifo_Wr_En_From_Prob_Register;
 				assign In_To_Ex_Fifo_Din       = (Out_Select == 1'b1) ? Sig_Ex_Fifo_SC_Din   : Sig_Ex_Fifo_Din_From_Register;
 				assign Start_In_SC_Prob        = (Out_Select == 1'b1) ? Sig_Fifo_Register_Done:End_Flag_From_Prob;
-				assign Sig_DAC_Adj = {Sig_DAC_Adj_Chn64,248'b0,Sig_DAC_Adj_Chn64};
-				assign SMA1 = SMA_ExTrig_Cnt;
-				assign Sig_ExTrig_to_ExtPN = (Sig_Sel_OnlyExTrig == 1'b1) ? Sig_Ex_Trig_Only_Exmode : Out_Force_Trig; 
+				assign Sig_DAC_Adj             = {Sig_DAC_Adj_Chn64,248'b0,Sig_DAC_Adj_Chn64};
+				assign SMA1                    = SMA_ExTrig_Cnt;
+				assign Sig_ExTrig_to_ExtPN     = (Sig_Sel_OnlyExTrig == 1'b1) ? Sig_Ex_Trig_Only_Exmode : Out_Force_Trig;
 
 				assign Sig_7byte_Hv[56:33] = 24'h48_42_56;
 				assign LED[1] = In_Digital_Prob1_SK1;

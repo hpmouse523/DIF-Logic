@@ -504,11 +504,12 @@ module SKIROC2_S_Para_Scan(
 	begin
 		if(~Rst_N)
 		begin
-			Out_Fifo_Wr      <= 1'b0;
-			Out_Fifo_Din     <= 16'h0;
-			Cnt_Wr_Fifo      <= 4'd0;
-			Flag_End_Wr_Fifo <= 1'b0;
-			Data_to_Fifo_Shift <= Data_to_Fifo;
+			Out_Fifo_Wr              <= 1'b0;
+			Out_Fifo_Din             <= 16'h0;
+			Cnt_Wr_Fifo              <= 4'd0;
+			Flag_End_Wr_Fifo         <= 1'b0;
+			Cnt_End                  <= 12'd0;
+			Data_to_Fifo_Shift       <= Data_to_Fifo;
 		end
 		else
 		begin
