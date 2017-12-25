@@ -62,7 +62,7 @@ module Top_Level(
 	output Out_Start_Acq,           // Start_alow acquisition on analogue memory ActH def0  Level active
 	output Out_Ck_40P,              // 40MHz Clock
 	output Out_Ck_40N,
-	output Out_Ck40_Test,           // Test 40MHz sigle input
+	//output Out_Ck40_Test,           // Test 40MHz sigle input
 	output Out_Ck_5P,
 	output Out_Ck_5N,
 	output Out_Start_Convb,         // Start conversion signal Act L def 1 Rising edge
@@ -74,8 +74,8 @@ module Top_Level(
 	input  In_End_Readout2,
 	input  In_Digital_Prob1_SK1,        // Digital probe output
 	input  In_Digital_Prob2_SK1,
-	input  In_Digital_Prob1_SK2,
-	input  In_Digital_Prob2_SK2,
+	// input  In_Digital_Prob1_SK2,
+	// input  In_Digital_Prob2_SK2,
 	input  In_Srout_Read,           // Read register output
 	output Out_Pwr_On_D,            // Digital Power pulsing control Act H def 1
 	output Out_Pwr_On_Dac,          // DAC power pulsing control ACtH def 0
@@ -86,13 +86,13 @@ module Top_Level(
 	output Out_Rstb_Pa,             // Charge PreAmp Reset Signal Act L def 1
 
 	/*---IO of DAC -----*/
-	output Out_SCLK_Cali,
-	output Out_Din_Cali,
-	output Out_CS_n_Cali,
+	// output Out_SCLK_Cali,
+	// output Out_Din_Cali,
+	// output Out_CS_n_Cali,
 
 	/*----IO of  HV_Control-------*/
-	input In_Hv_Tx,//input of return data
-  output Out_Hv_Rx,//output to Hv_Module	
+	// input In_Hv_Tx,//input of return data
+  // output Out_Hv_Rx,//output to Hv_Module
 
 	// IO of LED and SMD    LED is also test point
 	output [8:1]   LED,
@@ -263,14 +263,14 @@ ODDR_Clk ODDR_Clk_40M (
 
 
 
-	OBUF #(
-		.DRIVE(12),             // Specify the output drive strength
-		.IOSTANDARD("DEFAULT"), // Specify the output I/O standard
-		.SLEW("SLOW")           // Specify the output slew rate
-	) OBUF_inst (
-		.O(Out_Ck40_Test),      // Buffer output (connect directly to top-level port)
-		.I(Clk_40M)             // Buffer input
-		);
+	// OBUF #(
+	//   .DRIVE(12),             // Specify the output drive strength
+	//   .IOSTANDARD("DEFAULT"), // Specify the output I/O standard
+	//   .SLEW("SLOW")           // Specify the output slew rate
+	// ) OBUF_inst (
+	//   .O(Out_Ck40_Test),      // Buffer output (connect directly to top-level port)
+	//   .I(Clk_40M)             // Buffer input
+	//   );
 
 
 
@@ -616,18 +616,18 @@ ODDR_Clk ODDR_Clk_40M (
 			.Out_Resetb_ASIC()
 			);
 
-		DAC_TLV5618 Dac_For_Cali(
-			.Clk(Clk_10M),
-			.Rst_n(Rst_n_Delay2),
-			.Usb_Cmd_En(Sig_Start_DAC),
-			.In_Sel_A_B(1'b1),//Set Channel A
-			.In_Set_Chn_DAC_Code(Sig_Set_DAC),
-
-			//IO of TLV5618
-			.Out_SCLK(Out_SCLK_Cali),
-			.Out_Din(Out_Din_Cali),
-			.Out_CS_n(Out_CS_n_Cali)
-);
+//     DAC_TLV5618 Dac_For_Cali(
+//       .Clk(Clk_10M),
+//       .Rst_n(Rst_n_Delay2),
+//       .Usb_Cmd_En(Sig_Start_DAC),
+//       .In_Sel_A_B(1'b1),//Set Channel A
+//       .In_Set_Chn_DAC_Code(Sig_Set_DAC),
+//
+//       //IO of TLV5618
+//       .Out_SCLK(Out_SCLK_Cali),
+//       .Out_Din(Out_Din_Cali),
+//       .Out_CS_n(Out_CS_n_Cali)
+// );
 
 
 
@@ -771,7 +771,8 @@ ODDR_Clk ODDR_Clk_40M (
      .din	(Sig_In_Hv_Control_Word),
      .rx_en	(Sig_In_Hv_Control_En),
 				//output
-     .rx		(Out_Hv_Rx),
+     .rx		(),
+		// .rx		(Out_Hv_Rx),
      .dout	(),
      .valid	(),
      .idle	()
@@ -831,16 +832,14 @@ ODDR_Clk ODDR_Clk_40M (
 				assign LED[1] = In_Digital_Prob1_SK1;
 				assign LED[2] = Sig_Hit_200ns;
 				assign LED[3] = Sig_Sel_OnlyExTrig; //Sig_DAC_Adj[255];
-				assign LED[4] = In_Digital_Prob1_SK2;
+				assign LED[4] = In_Digital_Prob2_SK1;
 				assign LED[5] = Out_Resetb;
 				// assign LED[6] = Out_Force_Trig;
 				// assign LED[7] = Sig_Start_Cfg_Hv;
 				// assign LED[8] = Sig_Start_SC_USB_Cmd;
 
 
-				// (*mark_debug = "true"*) wire	Debug_Sig_Out_SCLK_Cali =	Out_SCLK_Cali;
-				// (*mark_debug = "true"*) wire	Debug_Sig_Out_Din_Cali =	Out_Din_Cali;
-				// (*mark_debug = "true"*) wire	Debug_Sig_Out_CS_n_Cali	=	Out_CS_n_Cali;
+
 
 
 				// (*mark_debug = "true"*) wire  Debug_Sig_Sig_Start_Stop_Hv	=	Sig_Start_Stop_Hv;//Start or Stop Hv

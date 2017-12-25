@@ -24,7 +24,6 @@ read_verilog -library xil_defaultlib {
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Boolean_Set.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Rising_N_Clock.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Cmd_Set_N_Bits_Value.v
-  E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/DAC_TLV5618.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Flag_LED.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/General_ExTrig.v
   E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/hdl/Gray_2_Bin.v

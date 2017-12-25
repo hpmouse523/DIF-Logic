@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+Checksum           0xC56CCB95
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                                                                          Checksum
+0x00000000    0x003A607B    Dec 14 12:50:59 2017    E:/Work_File/CEPC/Logic/DIF-Logic/ECAL_DIF/ECAL_DIF.runs/impl_1/Top_Level.bit    0x0092E719
+File Checksum Total                                                                                                                  0x0092E719

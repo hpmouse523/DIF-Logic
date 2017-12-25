@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2" LaunchTime="1510220098">
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2" LaunchTime="1513226475">
   <File Type="PWROPT-DRC" Name="Top_Level_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Top_Level_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Top_Level_timing_summary_init.rpt"/>
@@ -112,13 +112,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/hdl/Cmd_Set_N_Bits_Value.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/hdl/DAC_TLV5618.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
